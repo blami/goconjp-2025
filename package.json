@@ -10,9 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.16.13",
+    "astro": "^4.16.14",
     "@astrojs/check": "^0.9.4",
     "typescript": "^5.7.2"
   },
-  "packageManager": "pnpm@8.15.8+sha256.691fe176eea9a8a80df20e4976f3dfb44a04841ceb885638fe2a26174f81e65e"
+  "packageManager": "pnpm@9.14.2"
 }
