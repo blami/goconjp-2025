@@ -1,7 +1,12 @@
 {
-  "name": "",
-  "type": "module",
+  "name": "gocon-website-2025",
   "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@9.14.2",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -13,6 +18,5 @@
     "astro": "^4.16.14",
     "@astrojs/check": "^0.9.4",
     "typescript": "^5.7.2"
-  },
-  "packageManager": "pnpm@9.14.2"
+  }
 }
