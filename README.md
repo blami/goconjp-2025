@@ -1,5 +1,7 @@
 # Go Conference 2025 Website
 
+https://gocon.github.io/2025/ (redirected to https://gocon.jp/2025/)
+
 ## Getting Started
 
 **Prerequisites**
