@@ -4,6 +4,14 @@ on:
   push:
     branches:
       - main
+    paths:
+      - ".github/workflows/deploy.yml"
+      - "public/**"
+      - "src/**"
+      - "astro.config.mjs"
+      - "package.json"
+      - "pnpm-lock.yaml"
+      - "tsconfig.json"
   workflow_dispatch:
 
 permissions:
