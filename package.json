@@ -12,11 +12,16 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier --write '**/*.{astro,js,mjs,json,json5,ts,yaml,yml}'"
   },
   "dependencies": {
-    "astro": "^4.16.14",
     "@astrojs/check": "^0.9.4",
+    "astro": "^4.16.14",
     "typescript": "^5.7.2"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }
