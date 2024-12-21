@@ -11,19 +11,19 @@ https://gocon.github.io/2025/ (redirected to https://gocon.jp/2025/)
 
 1. Enable corepack.
 
-    ```shell
+    ```sh
     corepack enable
     ```
 
 2. Install dependencies.
 
-    ```shell
+    ```sh
     pnpm install
     ```
 
 3. Start the development server.
 
-    ```shell
+    ```sh
     pnpm run dev
     ```
 
