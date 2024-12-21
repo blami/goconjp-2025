@@ -13,7 +13,8 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "format": "prettier --write '**/*.{astro,js,mjs,json,json5,ts,yaml,yml}'"
+    "format": "prettier --write '**/*.{astro,js,mjs,json,json5,ts,yaml,yml}'",
+    "prepare": "husky"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -21,6 +22,8 @@
     "typescript": "^5.7.2"
   },
   "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.11",
     "prettier": "^3.4.2",
     "prettier-plugin-astro": "^0.14.1"
   }
