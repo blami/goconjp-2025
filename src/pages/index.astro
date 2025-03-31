@@ -2,8 +2,54 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
+<style>
+  .container {
+    display: flex;
+    max-width: 100%;
+    height: 20em;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    padding: 8px;
+
+    background-color: #e6e6e6;
+    border-radius: 4px;
+  }
+</style>
+
 <Layout title="Go Conference 2025">
   <main>
-    <h1>Hello, world!</h1>
+    <h1>GoConference2025</h1>
+    <div style="display: flex; flex-wrap: wrap;">
+      <span>GoConference2025 の公式ページになります</span>
+      <span></span>
+    </div>
+    <div style="display: flex; flex-wrap: wrap;">
+      <span>本ページは随時更新予定なのでご了承ください</span>
+    </div>
+    <div style="display: flex; flex-wrap: wrap;"></div>
+    <div class="container">
+      <div>
+        <div class="card">
+          <h3 style="margin: 0; padding: 8px;">
+            現段階(2025/03/31)での情報になります
+          </h3>
+          <ul>
+            <li>
+              <span style="font-weight: bold">開催日時：</span> 2025年 9月 (日付に関しては未定です)
+            </li>
+            <li>
+              <span style="font-weight: bold">CfP 募集期間：</span> 未定(随時Xアカウントおよび本ホームページで公表する予定です)
+            </li>
+            <li>
+              <span style="font-weight: bold">スポンサー募集期間：</span> 未定(随時Xアカウントおよび本ホームページで公表する予定です)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </main>
 </Layout>
