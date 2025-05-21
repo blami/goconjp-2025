@@ -1,7 +1,7 @@
 ---
-import { constants } from "../constants";
 import Logo from "../assets/logo.svg";
 import XLogo from "../assets/x-logo.svg";
+import { constants } from "../constants";
 ---
 
 <footer>
@@ -99,7 +99,7 @@ import XLogo from "../assets/x-logo.svg";
     width: 100%;
     background: var(--primitive-light-blue);
     padding: 40px 0;
-    border-radius: 40px 40px 0 0;
+    border-radius: 80px 80px 0 0;
   }
 
   .footer-body {
@@ -227,6 +227,10 @@ import XLogo from "../assets/x-logo.svg";
   }
 
   @media (max-width: 768px) {
+    .footer-navigation {
+      border-radius: 40px 40px 0 0;
+    }
+
     .link-list {
       display: none;
     }
