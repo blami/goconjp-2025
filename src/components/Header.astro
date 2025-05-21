@@ -26,6 +26,15 @@ import Button from "./Button.astro";
     }
   }
 
+  .header-space {
+    height: 88px;
+    @media screen and (max-width: 860px) {
+      & {
+        height: 66px;
+      }
+    }
+  }
+
   .header-logo {
     margin: 0;
 
@@ -156,3 +165,4 @@ import Button from "./Button.astro";
     <Button href="/" target="_blank">イベントに申し込む</Button>
   </div>
 </nav>
+<div class="header-space"></div>
