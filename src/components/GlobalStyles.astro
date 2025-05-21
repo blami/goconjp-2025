@@ -29,4 +29,22 @@
     margin: 0;
     padding: 0;
   }
+
+  .section-title {
+    margin: 0 0 24px;
+    font-size: 48px;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+
+    @media screen and (max-width: 860px) {
+      & {
+        margin: 0 0 16px;
+        font-size: 32px;
+      }
+    }
+
+    &::first-letter {
+      color: var(--text-accent);
+    }
+  }
 </style>
