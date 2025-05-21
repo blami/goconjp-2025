@@ -99,7 +99,7 @@ import XLogo from "../assets/x-logo.svg";
     width: 100%;
     background: var(--primitive-light-blue);
     padding: 40px 0;
-    border-radius: 80px 80px 0 0;
+    border-radius: 40px 40px 0 0;
   }
 
   .footer-body {
@@ -110,6 +110,7 @@ import XLogo from "../assets/x-logo.svg";
     margin: 0 auto;
     gap: 24px;
     padding: 0 20px;
+    box-sizing: border-box;
   }
 
   .link-list {
@@ -185,6 +186,7 @@ import XLogo from "../assets/x-logo.svg";
     width: 100%;
     flex-wrap: wrap;
     gap: 24px;
+    box-sizing: border-box;
   }
 
   .logo-container {
@@ -214,6 +216,8 @@ import XLogo from "../assets/x-logo.svg";
     color: var(--text-primary);
     margin: 0;
     text-align: right;
+    max-width: 100%;
+    word-wrap: break-word;
   }
 
   .footer-gradient {
@@ -223,14 +227,28 @@ import XLogo from "../assets/x-logo.svg";
   }
 
   @media (max-width: 768px) {
+    .link-list {
+      display: none;
+    }
+
+    hr {
+      display: none;
+    }
+
     .footer-info {
       flex-direction: column;
-      align-items: center;
-      text-align: center;
+      align-items: flex-start;
+      margin-top: 0;
+      width: 100%;
     }
 
     .copyright {
-      text-align: center;
+      text-align: left;
+      width: 100%;
+    }
+
+    .logo-container {
+      width: 100%;
     }
 
     .link-column {
