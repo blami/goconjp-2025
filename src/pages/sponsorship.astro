@@ -1,0 +1,55 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Tip from "../components/Tip.astro";
+import Button from "../components/Button.astro";
+import { constants } from "../constants";
+---
+
+<style>
+  .contents {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .summary {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding: 16px 0;
+  }
+
+  .sponsorship-date {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    min-width: 200px;
+  }
+</style>
+
+<Layout title="プロポーザル" titleEn="Proposal">
+  <div class="section-title">スポンサーの募集について</div>
+  <div class="contents">
+    <span>Go Conferenceではスポンサーを募集します。</span>
+    <div class="summary">
+      <Tip variant="secondary" size="small">募集期間</Tip>
+      <span class="sponsorship-date">
+        <div class="inner">
+          <div>{constants.sponsorship.start}</div>
+          <div>~</div>
+          <div>{constants.sponsorship.end}</div>
+        </div>
+      </span>
+    </div>
+    <div>
+      <Button size="large">申し込みはこちら</Button>
+    </div>
+  </div>
+</Layout>
