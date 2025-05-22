@@ -8,16 +8,24 @@ const { variant = "primary" } = Astro.props;
 
 <style>
   .chip {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     padding: 8px 24px;
     background-color: var(--surface-primary-dark);
     color: var(--text-on-fill);
-    text-decoration: none;
     border-radius: 12px;
     font-size: 20px;
     font-weight: 700;
-    box-sizing: border-box;
     text-align: center;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 860px) {
+      & {
+        border-radius: 10px;
+        padding: 4px 16px;
+        font-size: 18px;
+      }
+    }
   }
 
   .chip--primary {
