@@ -11,6 +11,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
+    "preview-build": "astro check && astro build --config astro.netlify.config.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write '**/*.{astro,js,mjs,json,json5,ts,yaml,yml}'",
