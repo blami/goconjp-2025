@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Tip from "../components/Tip.astro";
 import Button from "../components/Button.astro";
+import Chip from "../components/Chip.astro";
 import { constants } from "../constants";
 ---
 
@@ -39,7 +40,7 @@ import { constants } from "../constants";
   <div class="contents">
     <span>Go Conferenceではスポンサーを募集します。</span>
     <div class="summary">
-      <Tip variant="secondary" size="small">募集期間</Tip>
+      <Chip variant="secondary">募集期間</Chip>
       <span class="sponsorship-date">
         <div class="inner">
           <div>{constants.sponsorship.start}</div>
