@@ -17,6 +17,12 @@ import Button from "../components/Button.astro";
     align-items: center;
     font-weight: 700;
     padding: 32px 0;
+
+    @media screen and (max-width: 860px) {
+      padding: 24px 0;
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   .period-badge {
@@ -29,11 +35,24 @@ import Button from "../components/Button.astro";
     color: var(--text-on-fill);
     border-radius: 16px;
     font-size: 24px;
+
+    @media screen and (max-width: 860px) {
+      width: 120px;
+      height: 40px;
+      font-size: 16px;
+      border-radius: 12px;
+    }
   }
 
   .period-date {
     margin-left: 40px;
     font-size: 16px;
+
+    @media screen and (max-width: 860px) {
+      margin-left: 0;
+      margin-top: 16px;
+      font-size: 14px;
+    }
   }
 
   .button-wrapper {
@@ -43,9 +62,7 @@ import Button from "../components/Button.astro";
 
 <Layout title="プロポーザル" titleEn="Proposal">
   <main style="margin-bottom: 0;">
-    <h2 class="section-title">
-      <span class="accent">プ</span>ロポーザルの募集について
-    </h2>
+    <h2 class="section-title">プロポーザルの募集について</h2>
 
     <p class="description">Go Conferenceではプロポーザルを募集します。</p>
 
