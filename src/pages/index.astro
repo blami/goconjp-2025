@@ -16,8 +16,16 @@ import FluidLayout from "../layouts/FluidLayout.astro";
     padding: 80px 40px;
     text-align: center;
 
+    @media screen and (max-width: 860px) {
+      padding: 40px 24px;
+    }
+
     &.event {
       padding: 40px 40px 80px;
+
+      @media screen and (max-width: 860px) {
+        padding: 40px 24px;
+      }
     }
   }
 
