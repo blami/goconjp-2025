@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import Gopher from "../assets/mv-gophers.png";
 import Logo from "../assets/mv-logo.svg";
+import { concatWithBase } from "../utils/concatWithBase";
 import Button from "./Button.astro";
 ---
 
@@ -194,7 +195,9 @@ import Button from "./Button.astro";
     </aside>
     <div class="cta-button">
       <div class="cta-button-inner">
-        <Button href="/2025/proposal" size="large">プロポーザルに応募</Button>
+        <Button href={concatWithBase("proposal")} size="large"
+          >プロポーザルに応募</Button
+        >
       </div>
     </div>
   </div>

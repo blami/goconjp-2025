@@ -3,6 +3,7 @@ import Button from "../components/Button.astro";
 import Chip from "../components/Chip.astro";
 import MainVisual from "../components/MainVisual.astro";
 import FluidLayout from "../layouts/FluidLayout.astro";
+import { concatWithBase } from "../utils/concatWithBase";
 ---
 
 <style>
@@ -130,7 +131,11 @@ import FluidLayout from "../layouts/FluidLayout.astro";
     <h2 class="section-title">スポンサー募集中</h2>
     <p>Go Conferenceへのスポンサー応募は以下リンクからできます</p>
     <p class="cta-button">
-      <Button href="/2025/sponsorship" size="large" variant="secondary">
+      <Button
+        href={concatWithBase("sponsorship")}
+        size="large"
+        variant="secondary"
+      >
         スポンサー募集フォーム
       </Button>
     </p>
