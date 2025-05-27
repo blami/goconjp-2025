@@ -162,7 +162,6 @@ const pageTitle =
     <link rel="icon" type="image/svg+xml" href={concatWithBase(Favicon.src)} />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
-    <GlobalStyles />
 
     <meta property="og:site_name" content={constants.pageTitle} />
     <meta property="og:type" content="website" />
@@ -182,6 +181,7 @@ const pageTitle =
       property="twitter:image"
       content={new URL(concatWithBase(OgImageMd.src), Astro.url)}
     />
+    <GlobalStyles />
   </head>
   <body class="body">
     <Header />
