@@ -1,0 +1,39 @@
+.description {
+  margin-top: 24px;
+}
+
+.info-box {
+  margin-top: 24px;
+}
+
+.period-container {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  padding: 32px 0;
+
+  @media screen and (max-width: 860px) {
+    padding: 24px 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.period-title {
+  margin: 0;
+}
+
+.period-date {
+  margin-left: 40px;
+  font-size: 16px;
+
+  @media screen and (max-width: 860px) {
+    margin-left: 0;
+    margin-top: 16px;
+    font-size: 14px;
+  }
+}
+
+.button-wrapper {
+  margin-top: 64px;
+}

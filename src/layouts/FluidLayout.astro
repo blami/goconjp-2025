@@ -13,14 +13,20 @@ import { concatWithBase } from "../utils/concatWithBase";
 
 interface Props {
   title?: string;
+  titleEn?: string;
 }
 
-const { title } = Astro.props;
+const { title, titleEn } = Astro.props;
+
+const currentLocale = Astro.currentLocale || "ja";
+
+// 現在のロケールに応じてタイトルを設定
+const currentLocaleTitle = currentLocale === "ja" ? title : titleEn;
 
 // ページタイトルの指定があれば固定のページ名と合わせて表示する
 const pageTitle =
-  !!title && title.length > 0
-    ? `${title} | ${constants.pageTitle}`
+  !!currentLocaleTitle && currentLocaleTitle.length > 0
+    ? `${currentLocaleTitle} | ${constants.pageTitle}`
     : constants.pageTitle;
 ---
 
@@ -35,7 +41,7 @@ const pageTitle =
   }
 </style>
 
-<html lang="en">
+<html lang={currentLocale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />

@@ -1,10 +1,10 @@
 ---
 import "@fontsource/barlow/700.css";
 import { Image } from "astro:assets";
-import Gopher from "../assets/page-header-gopher.png";
 import Favicon from "../assets/favicon.svg";
 import OgImageLg from "../assets/og_image_lg.png";
 import OgImageMd from "../assets/og_image_md.png";
+import Gopher from "../assets/page-header-gopher.png";
 
 import Footer from "../components/Footer.astro";
 import GlobalStyles from "../components/GlobalStyles.astro";
@@ -23,10 +23,15 @@ interface Props {
 
 const { title, titleEn } = Astro.props;
 
+const currentLocale = Astro.currentLocale || "ja";
+
+// 現在のロケールに応じてタイトルを設定
+const currentLocaleTitle = currentLocale === "ja" ? title : titleEn;
+
 // ページタイトルの指定があれば固定のページ名と合わせて表示する
 const pageTitle =
-  !!title && title.length > 0
-    ? `${title} | ${constants.pageTitle}`
+  !!currentLocaleTitle && currentLocaleTitle.length > 0
+    ? `${currentLocaleTitle} | ${constants.pageTitle}`
     : constants.pageTitle;
 ---
 
@@ -154,7 +159,7 @@ const pageTitle =
   }
 </style>
 
-<html lang="en">
+<html lang={currentLocale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -189,8 +194,12 @@ const pageTitle =
       <header class="page-header">
         <div class="inner">
           <h1 class="page-title">
-            <span class="jp">{title}</span>
-            <span class="en">{titleEn}</span>
+            <span class="jp" aria-hidden={currentLocale === "en"}>
+              {title}
+            </span>
+            <span class="en" aria-hidden={currentLocale === "ja"}>
+              {titleEn}
+            </span>
           </h1>
           <Image
             src={Gopher}

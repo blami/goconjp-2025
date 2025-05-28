@@ -6,7 +6,7 @@ export default defineConfig({
   base: "/2025",
   i18n: {
     defaultLocale: "ja",
-    locales: ["ja"],
+    locales: ["ja", "en"],
     routing: {
       prefixDefaultLocale: false,
     },

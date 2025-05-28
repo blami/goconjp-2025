@@ -1,0 +1,29 @@
+---
+import Button from "../../components/Button.astro";
+import Chip from "../../components/Chip.astro";
+import { constants } from "../../constants";
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/sponsorship.css";
+---
+
+<Layout title="スポンサー" titleEn="Sponsorship">
+  <h2 class="section-title">Call for Sponsors</h2>
+  <div class="contents">
+    <p>Go Conference is looking for sponsors.</p>
+    <div class="summary">
+      <h3 class="sponsorship-title">
+        <Chip variant="secondary">Application Period</Chip>
+      </h3>
+      <div class="sponsorship-date">
+        <p class="inner">
+          <span>{constants.sponsorship.start}</span>
+          <span>~</span>
+          <span>{constants.sponsorship.end}</span>
+        </p>
+      </div>
+    </div>
+    <p>
+      <Button size="large">Apply Here</Button>
+    </p>
+  </div>
+</Layout>
