@@ -1,0 +1,149 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import Button from "../../components/Button.astro";
+import Chip from "../../components/Chip.astro";
+import MainVisual from "../../components/MainVisual.astro";
+import FluidLayout from "../../layouts/FluidLayout.astro";
+
+const currentLocale = Astro.currentLocale || "ja";
+---
+
+<style>
+  .section-title > .accent {
+    color: var(--text-accent);
+  }
+
+  .section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    text-align: center;
+
+    @media screen and (max-width: 860px) {
+      padding: 40px 24px;
+    }
+
+    &.event {
+      padding: 40px 40px 80px;
+
+      & .section-title::first-letter {
+        color: inherit;
+      }
+
+      @media screen and (max-width: 860px) {
+        padding: 40px 24px;
+      }
+    }
+  }
+
+  .event-table {
+    margin: 40px auto 0;
+
+    @media screen and (max-width: 860px) {
+      display: block;
+    }
+
+    & tbody,
+    & tr,
+    & th,
+    & td {
+      @media screen and (max-width: 860px) {
+        display: block;
+      }
+    }
+
+    & tr {
+      @media screen and (max-width: 860px) {
+        padding: 24px 0;
+        border-bottom: 1px solid var(--surface-tertiary);
+      }
+    }
+
+    & th,
+    & td {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--surface-tertiary);
+
+      @media screen and (max-width: 860px) {
+        padding: 0;
+        border-bottom: none;
+      }
+    }
+
+    & th {
+      @media screen and (max-width: 860px) {
+        margin-bottom: 16px;
+      }
+    }
+
+    & td {
+      text-align: left;
+      padding-left: 40px;
+      font-weight: 700;
+
+      @media screen and (max-width: 860px) {
+        padding-left: 0;
+        text-align: center;
+      }
+    }
+
+    .chip {
+      width: 100%;
+
+      @media screen and (max-width: 860px) {
+        width: 160px;
+      }
+    }
+  }
+
+  .sponsorship {
+    & .cta-button {
+      margin-top: 24px;
+    }
+  }
+</style>
+
+<FluidLayout title="Go Conference - English">
+  <MainVisual />
+  <section class="section event">
+    <h2 class="section-title">
+      What is <span class="accent">Go Conference</span>?
+    </h2>
+    <p>
+      Go Conference is a conference for users of the programming language "Go".
+    </p>
+    <table class="event-table">
+      <tbody>
+        <tr>
+          <th><Chip class="chip" variant="secondary">Date & Time</Chip></th>
+          <td>
+            Day 1: September 27, 2025 (Sat) 10:00 - 19:00 (Doors open 9:00)<br
+            />
+            Day 2: September 28, 2025 (Sun) 10:00 - 19:00 (Doors open 9:00)
+          </td>
+        </tr>
+        <tr>
+          <th><Chip class="chip" variant="secondary">Venue</Chip></th>
+          <td>Abema Towers 10F / 11F, 40-1 Udagawacho, Shibuya-ku, Tokyo</td>
+        </tr>
+        <tr>
+          <th><Chip class="chip" variant="secondary">Fee</Chip></th>
+          <td>To be determined</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="section sponsorship">
+    <h2 class="section-title">Call for Sponsors</h2>
+    <p>You can apply to sponsor Go Conference from the link below.</p>
+    <p class="cta-button">
+      <Button
+        href={getRelativeLocaleUrl(currentLocale, "sponsorship")}
+        size="large"
+        variant="secondary"
+      >
+        Sponsorship Application Form
+      </Button>
+    </p>
+  </section>
+</FluidLayout>
