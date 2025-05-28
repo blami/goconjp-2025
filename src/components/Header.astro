@@ -154,7 +154,7 @@ const currentLocale = Astro.currentLocale || "ja";
 <nav class="header">
   <h1 class="header-logo">
     <a href={getRelativeLocaleUrl(currentLocale)}>
-      <Image src={Logo} alt={constants.pageTitle} width={122} />
+      <Image src={Logo} alt={constants.pageTitle} width={122} priority />
     </a>
   </h1>
   <input type="checkbox" id="navigation-toggle" class="navigation-toggle" />
