@@ -4,6 +4,7 @@ import Chip from "../components/Chip.astro";
 import { constants } from "../constants";
 import Layout from "../layouts/Layout.astro";
 import "../styles/sponsorship.css";
+import { formatDate } from "../utils/dateFormat";
 ---
 
 <Layout title="スポンサー" titleEn="Sponsorship">
@@ -16,9 +17,9 @@ import "../styles/sponsorship.css";
       </h3>
       <div class="sponsorship-date">
         <p class="inner">
-          <span>{constants.sponsorship.start}</span>
+          <span>{formatDate(constants.sponsorship.start)}</span>
           <span>~</span>
-          <span>{constants.sponsorship.end}</span>
+          <span>{formatDate(constants.sponsorship.end)}</span>
         </p>
       </div>
     </div>
