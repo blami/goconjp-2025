@@ -1,10 +1,10 @@
 ---
 import "@fontsource/barlow/700.css";
 import { Image } from "astro:assets";
-import Gopher from "../assets/page-header-gopher.png";
 import Favicon from "../assets/favicon.svg";
 import OgImageLg from "../assets/og_image_lg.png";
 import OgImageMd from "../assets/og_image_md.png";
+import Gopher from "../assets/page-header-gopher.png";
 
 import Footer from "../components/Footer.astro";
 import GlobalStyles from "../components/GlobalStyles.astro";
@@ -28,6 +28,8 @@ const pageTitle =
   !!title && title.length > 0
     ? `${title} | ${constants.pageTitle}`
     : constants.pageTitle;
+
+const currentLocale = Astro.currentLocale || "ja";
 ---
 
 <style>
@@ -154,7 +156,7 @@ const pageTitle =
   }
 </style>
 
-<html lang="en">
+<html lang={currentLocale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />

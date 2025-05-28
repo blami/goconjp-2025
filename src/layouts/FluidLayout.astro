@@ -22,6 +22,8 @@ const pageTitle =
   !!title && title.length > 0
     ? `${title} | ${constants.pageTitle}`
     : constants.pageTitle;
+
+const currentLocale = Astro.currentLocale || "ja";
 ---
 
 <style>
@@ -35,7 +37,7 @@ const pageTitle =
   }
 </style>
 
-<html lang="en">
+<html lang={currentLocale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
