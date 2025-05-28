@@ -19,23 +19,8 @@
   }
 }
 
-.period-badge {
-  width: 160px;
-  height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--surface-secondary-dark);
-  color: var(--text-on-fill);
-  border-radius: 16px;
-  font-size: 24px;
-
-  @media screen and (max-width: 860px) {
-    width: 120px;
-    height: 40px;
-    font-size: 16px;
-    border-radius: 12px;
-  }
+.period-title {
+  margin: 0;
 }
 
 .period-date {
