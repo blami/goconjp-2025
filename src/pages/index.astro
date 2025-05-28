@@ -1,9 +1,11 @@
 ---
+import { getRelativeLocaleUrl } from "astro:i18n";
 import Button from "../components/Button.astro";
 import Chip from "../components/Chip.astro";
 import MainVisual from "../components/MainVisual.astro";
 import FluidLayout from "../layouts/FluidLayout.astro";
-import { concatWithBase } from "../utils/concatWithBase";
+
+const currentLocale = Astro.currentLocale || "ja";
 ---
 
 <style>
@@ -132,7 +134,7 @@ import { concatWithBase } from "../utils/concatWithBase";
     <p>Go Conferenceへのスポンサー応募は以下リンクからできます</p>
     <p class="cta-button">
       <Button
-        href={concatWithBase("sponsorship")}
+        href={getRelativeLocaleUrl(currentLocale, "sponsorship")}
         size="large"
         variant="secondary"
       >
