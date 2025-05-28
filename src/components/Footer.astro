@@ -1,8 +1,10 @@
 ---
+import { getRelativeLocaleUrl } from "astro:i18n";
 import Logo from "../assets/logo.svg";
 import XLogo from "../assets/x-logo.svg";
 import { constants } from "../constants";
-import { concatWithBase } from "../utils/concatWithBase";
+
+const currentLocale = Astro.currentLocale || "ja";
 ---
 
 <footer>
@@ -11,8 +13,13 @@ import { concatWithBase } from "../utils/concatWithBase";
       <div class="link-list">
         <div class="link-column">
           <div class="link-group">
-            <a href={concatWithBase()} class="text-link">Home</a>
-            <a href={concatWithBase("proposal")} class="text-link">Proposal</a>
+            <a href={getRelativeLocaleUrl(currentLocale)} class="text-link"
+              >Home</a
+            >
+            <a
+              href={getRelativeLocaleUrl(currentLocale, "proposal")}
+              class="text-link">Proposal</a
+            >
           </div>
         </div>
         <div class="link-column">
@@ -24,8 +31,14 @@ import { concatWithBase } from "../utils/concatWithBase";
             <a href="mailto:info@gocon.jp" class="text-link">INFO@GOCON.JP</a>
             <a
               href="https://drive.google.com/file/d/1Xon1uyLT-810sxnkLMngmL67z68K3XJG/view"
-              class="text-link">特定商取引法に基づく表記</a
+              class="text-link"
             >
+              {
+                currentLocale === "ja"
+                  ? "特定商取引法に基づく表記"
+                  : "Act on Specified Commercial Transactions"
+              }
+            </a>
           </div>
         </div>
         <div class="link-column">
