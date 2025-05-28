@@ -1,65 +1,8 @@
 ---
 import Button from "../../components/Button.astro";
 import Layout from "../../layouts/Layout.astro";
+import "../../styles/proposal.css";
 ---
-
-<style>
-  /* Styles are the same as the Japanese version */
-  .description {
-    margin-top: 24px;
-  }
-
-  .info-box {
-    margin-top: 24px;
-  }
-
-  .period-container {
-    display: flex;
-    align-items: center;
-    font-weight: 700;
-    padding: 32px 0;
-
-    @media screen and (max-width: 860px) {
-      padding: 24px 0;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
-
-  .period-badge {
-    width: 160px;
-    height: 52px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--surface-secondary-dark);
-    color: var(--text-on-fill);
-    border-radius: 16px;
-    font-size: 24px;
-
-    @media screen and (max-width: 860px) {
-      width: 120px;
-      height: 40px;
-      font-size: 16px;
-      border-radius: 12px;
-    }
-  }
-
-  .period-date {
-    margin-left: 40px;
-    font-size: 16px;
-
-    @media screen and (max-width: 860px) {
-      margin-left: 0;
-      margin-top: 16px;
-      font-size: 14px;
-    }
-  }
-
-  .button-wrapper {
-    margin-top: 64px;
-  }
-</style>
 
 <Layout title="プロポーザル" titleEn="Proposal">
   <main>
