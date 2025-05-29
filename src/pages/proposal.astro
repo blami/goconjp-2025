@@ -3,34 +3,32 @@ import Button from "../components/Button.astro";
 import Chip from "../components/Chip.astro";
 import { constants } from "../constants";
 import Layout from "../layouts/Layout.astro";
-import "../styles/proposal.css";
+import "../styles/sub-page.css";
 import { formatDate } from "../utils/dateFormat";
 ---
 
 <Layout title="プロポーザル" titleEn="Proposal">
-  <main>
-    <h2 class="section-title">プロポーザルの募集について</h2>
-
-    <p class="description">Go Conferenceではプロポーザルを募集します。</p>
-
-    <div class="info-box">
-      <div class="period-container">
-        <h3 class="period-title">
-          <Chip variant="secondary">募集期間</Chip>
-        </h3>
-        <div class="period-date">
-          {formatDate(constants.proposal.start)} ~ {
-            formatDate(constants.proposal.end)
-          }
-        </div>
-      </div>
-      <div class="button-wrapper">
-        <Button
-          href="https://sessionize.com/go-conference-2025/"
-          size="large"
-          target="_blank">申し込みはこちら</Button
-        >
+  <h2 class="section-title">プロポーザルの募集について</h2>
+  <div class="contents">
+    <p>Go Conferenceではプロポーザルを募集します。</p>
+    <div class="summary">
+      <h3 class="sponsorship-title">
+        <Chip variant="secondary">募集期間</Chip>
+      </h3>
+      <div class="sponsorship-date">
+        <p class="inner">
+          <span>{formatDate(constants.proposal.start)}</span>
+          <span>~</span>
+          <span>{formatDate(constants.proposal.end)}</span>
+        </p>
       </div>
     </div>
-  </main>
+    <p>
+      <Button
+        href="https://sessionize.com/go-conference-2025/"
+        size="large"
+        target="_blank">申し込みはこちら</Button
+      >
+    </p>
+  </div>
 </Layout>
