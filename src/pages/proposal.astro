@@ -1,8 +1,10 @@
 ---
 import Button from "../components/Button.astro";
 import Chip from "../components/Chip.astro";
+import { constants } from "../constants";
 import Layout from "../layouts/Layout.astro";
 import "../styles/proposal.css";
+import { formatDate } from "../utils/dateFormat";
 ---
 
 <Layout title="プロポーザル" titleEn="Proposal">
@@ -16,7 +18,11 @@ import "../styles/proposal.css";
         <h3 class="period-title">
           <Chip variant="secondary">募集期間</Chip>
         </h3>
-        <div class="period-date">2025/05/13 12:00:00 ~ 2025/06/18 23:59:59</div>
+        <div class="period-date">
+          {formatDate(constants.proposal.start)} ~ {
+            formatDate(constants.proposal.end)
+          }
+        </div>
       </div>
       <div class="button-wrapper">
         <Button
