@@ -3,36 +3,34 @@ import Button from "../../components/Button.astro";
 import Chip from "../../components/Chip.astro";
 import { constants } from "../../constants";
 import Layout from "../../layouts/Layout.astro";
-import "../../styles/proposal.css";
+import "../../styles/sub-page.css";
 import { formatDate } from "../../utils/dateFormat";
 
 const currentLocale = Astro.currentLocale || "ja";
 ---
 
 <Layout title="プロポーザル" titleEn="Proposal">
-  <main>
-    <h2 class="section-title">Call for Proposals</h2>
-
-    <p class="description">Go Conference is calling for proposals.</p>
-
-    <div class="info-box">
-      <div class="period-container">
-        <h3 class="period-title">
-          <Chip variant="secondary">Submission Period</Chip>
-        </h3>
-        <div class="period-date">
-          {formatDate(constants.proposal.start, currentLocale)} ~ {
-            formatDate(constants.proposal.end, currentLocale)
-          }
-        </div>
-      </div>
-      <div class="button-wrapper">
-        <Button
-          href="https://sessionize.com/go-conference-2025/"
-          size="large"
-          target="_blank">Apply Here</Button
-        >
+  <h2 class="section-title">Call for Proposals</h2>
+  <div class="contents">
+    <p>Go Conference is calling for proposals.</p>
+    <div class="summary">
+      <h3 class="sponsorship-title">
+        <Chip variant="secondary">Submission Period</Chip>
+      </h3>
+      <div class="sponsorship-date">
+        <p class="inner">
+          <span>{formatDate(constants.proposal.start, currentLocale)}</span>
+          <span>~</span>
+          <span>{formatDate(constants.proposal.end, currentLocale)}</span>
+        </p>
       </div>
     </div>
-  </main>
+    <p>
+      <Button
+        href="https://sessionize.com/go-conference-2025/"
+        size="large"
+        target="_blank">Apply Here</Button
+      >
+    </p>
+  </div>
 </Layout>
