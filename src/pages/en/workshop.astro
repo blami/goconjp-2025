@@ -9,28 +9,24 @@ import { formatDate } from "../../utils/dateFormat";
 const currentLocale = Astro.currentLocale || "ja";
 ---
 
-<Layout title="スポンサー" titleEn="Sponsorship">
-  <h2 class="section-title">Call for Sponsors</h2>
+<Layout title="ワークショップ" titleEn="Workshop">
+  <h2 class="section-title">Call for Workshops</h2>
   <div class="contents">
-    <p>Go Conference is looking for sponsors.</p>
+    <p>Go Conference is looking for workshops.</p>
     <div class="summary">
       <h3 class="sponsorship-title">
         <Chip variant="secondary">Application Period</Chip>
       </h3>
       <div class="sponsorship-date">
         <p class="inner">
-          <span>{formatDate(constants.sponsorship.start, currentLocale)}</span>
+          <span>{formatDate(constants.workshop.start, currentLocale)}</span>
           <span>~</span>
-          <span>{formatDate(constants.sponsorship.end, currentLocale)}</span>
+          <span>{formatDate(constants.workshop.end, currentLocale)}</span>
         </p>
       </div>
     </div>
     <p>
-      <Button
-        href="https://forms.gle/M2XAgH53HKiHJTGE9"
-        target="_blank"
-        size="large">Apply Here</Button
-      >
+      <Button size="large">Apply here</Button>
     </p>
   </div>
 </Layout>
