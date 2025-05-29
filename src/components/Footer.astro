@@ -90,7 +90,10 @@ const currentLocale = Astro.currentLocale || "ja";
           <span>{constants.pageTitle}</span>
         </div>
         <p class="copyright">
-          The Go gopher was designed by Renée French. Illustrations by tottie.
+          The Go gopher was designed by <a
+            href="https://reneefrench.blogspot.com/">Renée French</a
+          >. Illustrations by
+          <a href="https://x.com/avocadoneko">avocadoneko</a>.
         </p>
       </div>
     </div>
@@ -224,6 +227,11 @@ const currentLocale = Astro.currentLocale || "ja";
     text-align: right;
     max-width: 100%;
     word-wrap: break-word;
+  }
+
+  .copyright a {
+    color: var(--text-primary);
+    text-decoration: underline;
   }
 
   .footer-gradient {
