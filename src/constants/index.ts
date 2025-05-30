@@ -14,7 +14,7 @@ export const constants = {
     end: new Date(Date.UTC(2025, 5, 18, 14, 59, 59)), // 2025/06/18 23:59:59 JST
   },
   workshop: {
-    start: new Date(Date.UTC(2023, 11, 31, 15, 0, 0)), // 2024/01/01 00:00:00 JST
-    end: new Date(Date.UTC(2024, 2, 31, 14, 59, 59)), // 2024/03/31 23:59:59 JST
+    start: new Date(Date.UTC(2025, 4, 31, 15, 0, 0)), // 2025/06/01 00:00:00 JST
+    end: new Date(Date.UTC(2025, 5, 30, 14, 59, 59)), // 2024/06/30 23:59:59 JST
   },
 };
