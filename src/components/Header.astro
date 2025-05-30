@@ -59,7 +59,7 @@ const currentLocale = Astro.currentLocale || "ja";
     align-items: center;
     gap: 26px;
 
-    & ul {
+    & .navigation-menu {
       display: flex;
       gap: 26px;
       list-style: none;
@@ -95,7 +95,7 @@ const currentLocale = Astro.currentLocale || "ja";
         backdrop-filter: blur(32px);
         z-index: 1000;
 
-        & ul {
+        & .navigation-menu {
           flex-direction: column;
           padding: 0 16px;
           gap: 32px;
@@ -149,6 +149,46 @@ const currentLocale = Astro.currentLocale || "ja";
       display: flex;
     }
   }
+
+  .language-switcher {
+    display: flex;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media screen and (max-width: 860px) {
+      & {
+        padding: 0 8px;
+      }
+    }
+
+    & .language-link {
+      display: inline-block;
+
+      & + &::before {
+        content: "/";
+        color: var(--text-primary);
+      }
+
+      & a {
+        padding: 8px;
+        text-decoration: none;
+        color: var(--text-secondary);
+        font-size: 16px;
+        font-weight: 700;
+        transition: opacity 0.3s ease;
+
+        &[href] {
+          color: var(--text-primary);
+        }
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
 </style>
 
 <nav class="header">
@@ -163,7 +203,7 @@ const currentLocale = Astro.currentLocale || "ja";
     <CloseIcon class="close-icon" />
   </label>
   <div class="navigation">
-    <ul>
+    <ul class="navigation-menu">
       <li><a href={getRelativeLocaleUrl(currentLocale)}>Home</a></li>
       <li>
         <a href={getRelativeLocaleUrl(currentLocale, "sponsorship")}>
@@ -177,6 +217,20 @@ const currentLocale = Astro.currentLocale || "ja";
     <Button href={getRelativeLocaleUrl(currentLocale, "proposal")}>
       {currentLocale === "ja" ? "プロポーザルに応募" : "Call for Proposals"}
     </Button>
+    <ul class="language-switcher">
+      <li class="language-link">
+        <a
+          href={currentLocale !== "ja" ? getRelativeLocaleUrl("ja") : undefined}
+          >JP
+        </a>
+      </li>
+      <li class="language-link">
+        <a
+          href={currentLocale !== "en" ? getRelativeLocaleUrl("en") : undefined}
+          >EN
+        </a>
+      </li>
+    </ul>
   </div>
 </nav>
 <div class="header-space"></div>
