@@ -1,0 +1,80 @@
+---
+import Favicon from "../assets/favicon.svg";
+import OgImageLg from "../assets/og_image_lg.png";
+import OgImageMd from "../assets/og_image_md.png";
+
+import Footer from "../components/Footer.astro";
+import GlobalStyles from "../components/GlobalStyles.astro";
+import Header from "../components/Header.astro";
+import { constants } from "../constants";
+import { concatWithBase } from "../utils/concatWithBase";
+
+/** 最大幅の指定がないレイアウト（トップページや凝ったページ作成時に利用してください） */
+
+interface Props {
+  title?: string;
+  titleEn?: string;
+}
+
+const { title, titleEn } = Astro.props;
+
+const currentLocale = Astro.currentLocale || "ja";
+
+// 現在のロケールに応じてタイトルを設定
+const currentLocaleTitle = currentLocale === "ja" ? title : titleEn;
+
+// ページタイトルの指定があれば固定のページ名と合わせて表示する
+const pageTitle =
+  !!currentLocaleTitle && currentLocaleTitle.length > 0
+    ? `${currentLocaleTitle} | ${constants.pageTitle}`
+    : constants.pageTitle;
+---
+
+<style>
+  .body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+  }
+  .main {
+    flex: 1;
+  }
+</style>
+
+<html lang={currentLocale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href={concatWithBase(Favicon.src)} />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+
+    <meta property="og:site_name" content={constants.pageTitle} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={constants.pageDescription} />
+    <meta
+      property="og:image"
+      content={new URL(concatWithBase(OgImageLg.src), Astro.url)}
+    />
+
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={pageTitle} />
+    <meta property="twitter:description" content={constants.pageDescription} />
+    <meta
+      property="twitter:image"
+      content={new URL(concatWithBase(OgImageMd.src), Astro.url)}
+    />
+    <GlobalStyles />
+  </head>
+  <body class="body">
+    <Header />
+    <main class="main">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

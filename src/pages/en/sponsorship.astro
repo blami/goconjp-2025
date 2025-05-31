@@ -1,0 +1,36 @@
+---
+import Button from "../../components/Button.astro";
+import Chip from "../../components/Chip.astro";
+import { constants } from "../../constants";
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/sub-page.css";
+import { formatDate } from "../../utils/dateFormat";
+
+const currentLocale = Astro.currentLocale || "ja";
+---
+
+<Layout title="スポンサー" titleEn="Sponsorship">
+  <h2 class="section-title">Call for Sponsors</h2>
+  <div class="contents">
+    <p>Go Conference is looking for sponsors.</p>
+    <div class="summary">
+      <h3 class="sponsorship-title">
+        <Chip variant="secondary">Application Period</Chip>
+      </h3>
+      <div class="sponsorship-date">
+        <p class="inner">
+          <span>{formatDate(constants.sponsorship.start, currentLocale)}</span>
+          <span>~</span>
+          <span>{formatDate(constants.sponsorship.end, currentLocale)}</span>
+        </p>
+      </div>
+    </div>
+    <p>
+      <Button
+        href="https://forms.gle/M2XAgH53HKiHJTGE9"
+        target="_blank"
+        size="large">Apply Here</Button
+      >
+    </p>
+  </div>
+</Layout>
