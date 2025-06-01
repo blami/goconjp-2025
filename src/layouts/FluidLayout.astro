@@ -57,7 +57,7 @@ const pageTitle =
     <meta property="og:description" content={constants.pageDescription} />
     <meta
       property="og:image"
-      content={new URL(concatWithBase(OgImageLg.src), Astro.url)}
+      content={new URL(concatWithBase(OgImageLg.src), Astro.url.origin)}
     />
 
     <meta property="twitter:card" content="summary" />
@@ -66,7 +66,7 @@ const pageTitle =
     <meta property="twitter:description" content={constants.pageDescription} />
     <meta
       property="twitter:image"
-      content={new URL(concatWithBase(OgImageMd.src), Astro.url)}
+      content={new URL(concatWithBase(OgImageMd.src), Astro.url.origin)}
     />
     <GlobalStyles />
   </head>
