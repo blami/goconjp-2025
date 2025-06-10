@@ -1,6 +1,4 @@
 ---
-import Favicon from "../assets/favicon.svg";
-
 import Footer from "../components/Footer.astro";
 import GlobalStyles from "../components/GlobalStyles.astro";
 import Header from "../components/Header.astro";
@@ -44,7 +42,11 @@ const pageTitle =
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href={concatWithBase(Favicon.src)} />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href={new URL(concatWithBase("favicon.svg"), Astro.url)}
+    />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
 
