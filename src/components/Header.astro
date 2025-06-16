@@ -210,12 +210,9 @@ const currentLocale = Astro.currentLocale || "ja";
           Sponsorship
         </a>
       </li>
-      <li>
-        <a href={getRelativeLocaleUrl(currentLocale, "workshop")}>Workshop</a>
-      </li>
     </ul>
-    <Button href={getRelativeLocaleUrl(currentLocale, "proposal")}>
-      {currentLocale === "ja" ? "プロポーザルに応募" : "Call for Proposals"}
+    <Button href={getRelativeLocaleUrl(currentLocale, "workshop")}>
+      {currentLocale === "ja" ? "ワークショップに応募" : "Apply for Workshop"}
     </Button>
     <ul class="language-switcher">
       <li class="language-link">
