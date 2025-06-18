@@ -200,10 +200,14 @@ const currentLocale = Astro.currentLocale || "ja";
     <div class="cta-button">
       <div class="cta-button-inner">
         <Button
-          href={getRelativeLocaleUrl(currentLocale, "proposal")}
+          href={getRelativeLocaleUrl(currentLocale, "workshop")}
           size="large"
         >
-          {currentLocale === "ja" ? "プロポーザルに応募" : "Call for Proposals"}
+          {
+            currentLocale === "ja"
+              ? "ワークショップに応募"
+              : "Apply for Workshop"
+          }
         </Button>
       </div>
     </div>
