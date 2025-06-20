@@ -207,7 +207,8 @@ const currentLocale = Astro.currentLocale || "ja";
 
     @media screen and (max-width: 860px) {
       & {
-        padding-left: 24px;
+        padding-left: 16px;
+        font-size: 24px;
       }
     }
   }
@@ -216,6 +217,13 @@ const currentLocale = Astro.currentLocale || "ja";
     width: 20px;
     height: 20px;
     fill: currentColor;
+
+    @media screen and (max-width: 860px) {
+      & {
+        width: 24px;
+        height: 24px;
+      }
+    }
   }
 </style>
 
@@ -245,7 +253,7 @@ const currentLocale = Astro.currentLocale || "ja";
       target="_blank"
       rel="noopener noreferrer"
     >
-      <span>FAQ</span>
+      <span>Sponsor FAQ</span>
       <OpenInNewIcon class="external-icon" />
     </a>
     <Button href={getRelativeLocaleUrl(currentLocale, "workshop")}>
