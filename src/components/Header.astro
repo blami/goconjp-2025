@@ -13,7 +13,7 @@ const currentLocale = Astro.currentLocale || "ja";
 
 <style>
   .header {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
@@ -27,15 +27,6 @@ const currentLocale = Astro.currentLocale || "ja";
     @media screen and (max-width: 992px) {
       & {
         padding: 8px 24px;
-      }
-    }
-  }
-
-  .header-space {
-    height: 88px;
-    @media screen and (max-width: 860px) {
-      & {
-        height: 66px;
       }
     }
   }
@@ -275,4 +266,3 @@ const currentLocale = Astro.currentLocale || "ja";
     </ul>
   </div>
 </nav>
-<div class="header-space"></div>
