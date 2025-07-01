@@ -1,10 +1,6 @@
 ---
-import Button from "../../components/Button.astro";
-import Chip from "../../components/Chip.astro";
-import { constants } from "../../constants";
 import Layout from "../../layouts/Layout.astro";
 import "../../styles/sub-page.css";
-import { formatDate } from "../../utils/dateFormat";
 
 const currentLocale = Astro.currentLocale || "ja";
 ---
@@ -12,27 +8,7 @@ const currentLocale = Astro.currentLocale || "ja";
 <Layout title="ワークショップ" titleEn="Workshop">
   <h2 class="section-title">Call for Workshops</h2>
   <div class="contents">
-    <p>Go Conference is looking for workshops.</p>
-    <div class="summary">
-      <h3 class="sponsorship-title">
-        <Chip variant="secondary">Application Period</Chip>
-      </h3>
-      <div class="sponsorship-date">
-        <p class="inner">
-          <span>{formatDate(constants.workshop.start, currentLocale)}</span>
-          <span>~</span>
-          <span>{formatDate(constants.workshop.end, currentLocale)}</span>
-        </p>
-      </div>
-    </div>
-    <p>
-      <Button
-        href="https://forms.gle/3Edurmgxbbdmmxm89"
-        target="_blank"
-        size="large"
-      >
-        Apply here
-      </Button>
-    </p>
+    <p>The call for workshops has ended.</p>
+    <p>Thank you for all the submissions we received.</p>
   </div>
 </Layout>
