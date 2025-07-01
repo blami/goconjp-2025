@@ -241,11 +241,6 @@ const currentLocale = Astro.currentLocale || "ja";
   <div class="navigation">
     <ul class="navigation-menu">
       <li><a href={getRelativeLocaleUrl(currentLocale)}>Home</a></li>
-      <li>
-        <a href={getRelativeLocaleUrl(currentLocale, "sponsorship")}>
-          Sponsorship
-        </a>
-      </li>
     </ul>
     <a
       href="https://docs.google.com/document/d/1LxjzxHK23aTAFvGZeR-BpHf8sC6RKAqbImtnUtxQ3Yo/edit?tab=t.0#heading=h.n5j5dks9hlev"
@@ -256,9 +251,6 @@ const currentLocale = Astro.currentLocale || "ja";
       <span>Sponsor FAQ</span>
       <OpenInNewIcon class="external-icon" />
     </a>
-    <Button href={getRelativeLocaleUrl(currentLocale, "workshop")}>
-      {currentLocale === "ja" ? "ワークショップに応募" : "Apply for Workshop"}
-    </Button>
     <ul class="language-switcher">
       <li class="language-link">
         <a
