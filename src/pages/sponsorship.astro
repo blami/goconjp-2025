@@ -10,7 +10,29 @@ import { formatDate } from "../utils/dateFormat";
 <Layout title="スポンサー" titleEn="Sponsorship">
   <h2 class="section-title">スポンサーの募集について</h2>
   <div class="contents">
-    <p>スポンサーの募集は終了いたしました。</p>
-    <p>たくさんのご応募をいただき、ありがとうございました。</p>
+    <p>Go Conferenceではスポンサーを募集します。</p>
+    <strong>
+      Go Conference 2025 の プラチナGoルド / Goルド / シルバー
+      スポンサーの募集は終了しました。
+    </strong>
+    <div class="summary">
+      <h3 class="sponsorship-title">
+        <Chip variant="secondary">募集期間</Chip>
+      </h3>
+      <div class="sponsorship-date">
+        <p class="inner">
+          <span>{formatDate(constants.sponsorship.start)}</span>
+          <span>~</span>
+          <span>{formatDate(constants.sponsorship.end)}</span>
+        </p>
+      </div>
+    </div>
+    <p>
+      <Button
+        href="https://forms.gle/M2XAgH53HKiHJTGE9"
+        target="_blank"
+        size="large">申し込みはこちら</Button
+      >
+    </p>
   </div>
 </Layout>
