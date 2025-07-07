@@ -5,6 +5,7 @@ import Chip from "../components/Chip.astro";
 import MainVisual from "../components/MainVisual.astro";
 import FluidLayout from "../layouts/FluidLayout.astro";
 import "../styles/top-page.css";
+import JobBoard from "../components/JobBoard.astro";
 
 const currentLocale = Astro.currentLocale || "ja";
 ---
@@ -38,5 +39,11 @@ const currentLocale = Astro.currentLocale || "ja";
         </tr>
       </tbody>
     </table>
+  </section>
+  <section class="section">
+    <h2 class="section-title">
+      <span class="accent">ス</span>ポンサー
+    </h2>
+    <JobBoard />
   </section>
 </FluidLayout>

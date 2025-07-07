@@ -1,0 +1,257 @@
+---
+import { Image } from "astro:assets";
+import { constants } from "../constants";
+import { concatWithBase } from "../utils/concatWithBase";
+---
+
+<style>
+  .venue-sponsor {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .venue-sponsor li {
+    width: 100%;
+    list-style: none;
+  }
+
+  .platinum-gold-sponsor-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .platinum-gold-sponsor-list li {
+    flex: 1 1 calc(50% - 10px);
+    min-width: 150px;
+    box-sizing: border-box;
+  }
+  .platinum-gold-sponsor-list li :is(img, astro-island) {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .platinum-gold-sponsor-list li {
+      flex: 1 1 100%;
+    }
+  }
+
+  .gold-sponsor-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .gold-sponsor-list li {
+    flex: 1 1 calc(50% - 10px);
+    min-width: 150px;
+    box-sizing: border-box;
+  }
+
+  .gold-sponsor-list li :is(img, astro-island) {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .silver-sponsor-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .silver-sponsor-list li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 calc(33.333% - 13.333px);
+    min-width: 150px;
+    box-sizing: border-box;
+    height: 120px;
+    padding: 10px;
+  }
+
+  .silver-sponsor-list li :is(img, astro-island) {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .bronze-sponsor-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .bronze-sponsor-list li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 calc(25% - 15px);
+    min-width: 120px;
+    box-sizing: border-box;
+    height: 100px;
+    padding: 10px;
+  }
+
+  .bronze-sponsor-list li :is(img, astro-island) {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .gopher-sponsor-list {
+  }
+
+  .tool-sponsor-list {
+  }
+
+  @media (max-width: 768px) {
+    .bronze-sponsor-list li,
+    .silver-sponsor-list li,
+    .gold-sponsor-list li,
+    .platinum-gold-sponsor-list li {
+      flex: 1 1 calc(50% - 10px);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .bronze-sponsor-list li,
+    .silver-sponsor-list li,
+    .gold-sponsor-list li,
+    .platinum-gold-sponsor-list li {
+      flex: 1 1 100%;
+    }
+  }
+</style>
+
+<div>
+  <h3>会場スポンサー</h3>
+  <ul class="venue-sponsor">
+    <li>
+      <Image
+        src={constants.jobBoard.venueSponsor.imageSrc}
+        alt={constants.jobBoard.venueSponsor.name}
+        width={constants.jobBoard.venueSponsor.width}
+        height={constants.jobBoard.venueSponsor.height}
+        loading="lazy"
+        priority
+      />
+    </li>
+  </ul>
+
+  <h3>Platinum "<span class="accent">Go</span> "ld</h3>
+  <ul class="platinum-gold-sponsor-list">
+    {
+      constants.jobBoard.platinumGoldSponsors.map((sponsor) => (
+        <li>
+          <Image
+            src={sponsor.imageSrc}
+            alt={sponsor.name}
+            width={sponsor.width}
+            height={sponsor.height}
+            loading="lazy"
+            priority
+          />
+        </li>
+      ))
+    }
+  </ul>
+
+  <h3>Gold</h3>
+  <ul class="gold-sponsor-list">
+    {
+      constants.jobBoard.goldSponsors.map((sponsor) => (
+        <li>
+          <Image
+            src={sponsor.imageSrc}
+            alt={sponsor.name}
+            width={sponsor.width}
+            height={sponsor.height}
+            loading="lazy"
+            priority
+          />
+        </li>
+      ))
+    }
+  </ul>
+
+  <h3>Silver</h3>
+  <ul class="silver-sponsor-list">
+    {
+      constants.jobBoard.silverSponsors.map((sponsor) => (
+        <li>
+          <Image
+            src={sponsor.imageSrc}
+            alt={sponsor.name}
+            width={sponsor.width}
+            height={sponsor.height}
+            loading="lazy"
+            priority
+          />
+        </li>
+      ))
+    }
+  </ul>
+
+  <h3>Bronze</h3>
+  <ul class="bronze-sponsor-list">
+    {
+      constants.jobBoard.bronzeSponsors.map((sponsor) => (
+        <li>
+          <Image
+            src={sponsor.imageSrc}
+            alt={sponsor.name}
+            width={sponsor.width}
+            height={sponsor.height}
+            loading="lazy"
+            priority
+          />
+        </li>
+      ))
+    }
+  </ul>
+
+  <h3>Gopher</h3>
+  <ul class="gopher-sponsor-list"></ul>
+
+  <h3>ツールスポンサー</h3>
+  <ul class="tool-sponsor-list"></ul>
+</div>
