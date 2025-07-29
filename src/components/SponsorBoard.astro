@@ -1,7 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import { constants } from "../constants";
-import { concatWithBase } from "../utils/concatWithBase";
+
+const currentLocale = Astro.currentLocale || "ja";
 ---
 
 <style>
@@ -163,7 +164,7 @@ import { concatWithBase } from "../utils/concatWithBase";
 </style>
 
 <div>
-  <h3>会場スポンサー</h3>
+  <h3>{currentLocale === "ja" ? "会場スポンサー" : "Venue Sponsor"}</h3>
   <ul class="venue-sponsor">
     <li>
       <Image
@@ -250,8 +251,38 @@ import { concatWithBase } from "../utils/concatWithBase";
   </ul>
 
   <h3>Gopher</h3>
-  <ul class="gopher-sponsor-list"></ul>
+  <ul class="gopher-sponsor-list">
+    {
+      constants.jobBoard.gopherSponsors.map((sponsor) => (
+        <li>
+          <Image
+            src={sponsor.imageSrc}
+            alt={sponsor.name}
+            width={sponsor.width}
+            height={sponsor.height}
+            loading="lazy"
+            priority
+          />
+        </li>
+      ))
+    }
+  </ul>
 
-  <h3>ツールスポンサー</h3>
-  <ul class="tool-sponsor-list"></ul>
+  <h3>{currentLocale === "ja" ? "ツールスポンサー" : "Tool Sponsor"}</h3>
+  <ul class="tool-sponsor-list">
+    {
+      (
+        <li>
+          <Image
+            src={constants.jobBoard.toolSponsor.imageSrc}
+            alt={constants.jobBoard.toolSponsor.name}
+            width={constants.jobBoard.toolSponsor.width}
+            height={constants.jobBoard.toolSponsor.height}
+            loading="lazy"
+            priority
+          />
+        </li>
+      )
+    }
+  </ul>
 </div>
