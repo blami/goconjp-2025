@@ -66,6 +66,15 @@ export const constants = {
       imageSrc: NoImage,
       height: venueSponsorImageSize.height,
       width: venueSponsorImageSize.width,
+      dialog: {
+        openId: "sponsor-dialog-1",
+        height: 120,
+        width: 520,
+        imageSrc: NoImage,
+        link: "https://www.cyberagent.co.jp/",
+        description:
+          "メディア事業、広告事業、ゲーム事業と多様な事業を展開するサイバーエージェントでは、新しい未来のテレビ「ABEMA」や、事前に広告配信効果を予測する「効果予測AI」を活用して広告クリエイティブを制作する「極予測AI」、プロレス動画配信サービス「WRESTLE UNIVERSE」などドメインの異なる様々なプロダクトでGoを採用しています。 なお、サイバーエージェントのGoにおけるNext Expertsである渋谷拓真 (@sivchari) が、当カンファレンスのオーガナイザーを務めます。",
+      },
     },
     specialSponsor: {
       // 特別スポンサー
@@ -73,6 +82,15 @@ export const constants = {
       imageSrc: NoImage,
       height: specialSponsorImageSize.height,
       width: specialSponsorImageSize.width,
+      dialog: {
+        openId: "sponsor-dialog-2",
+        height: 120,
+        width: 520,
+        imageSrc: NoImage,
+        link: "https://www.cyberagent.co.jp/",
+        description:
+          "メディア事業、広告事業、ゲーム事業と多様な事業を展開するサイバーエージェントでは、新しい未来のテレビ「ABEMA」や、事前に広告配信効果を予測する「効果予測AI」を活用して広告クリエイティブを制作する「極予測AI」、プロレス動画配信サービス「WRESTLE UNIVERSE」などドメインの異なる様々なプロダクトでGoを採用しています。 なお、サイバーエージェントのGoにおけるNext Expertsである渋谷拓真 (@sivchari) が、当カンファレンスのオーガナイザーを務めます。",
+      },
     },
     platinumGoldSponsors: [
       {
@@ -80,12 +98,30 @@ export const constants = {
         imageSrc: NoImage,
         height: platinumGoldSponsorImageSize.height,
         width: platinumGoldSponsorImageSize.width,
+        dialog: {
+          openId: "sponsor-dialog-3",
+          height: 120,
+          width: 520,
+          imageSrc: NoImage,
+          link: "https://www.cyberagent.co.jp/",
+          description:
+            "メディア事業、広告事業、ゲーム事業と多様な事業を展開するサイバーエージェントでは、新しい未来のテレビ「ABEMA」や、事前に広告配信効果を予測する「効果予測AI」を活用して広告クリエイティブを制作する「極予測AI」、プロレス動画配信サービス「WRESTLE UNIVERSE」などドメインの異なる様々なプロダクトでGoを採用しています。 なお、サイバーエージェントのGoにおけるNext Expertsである渋谷拓真 (@sivchari) が、当カンファレンスのオーガナイザーを務めます。",
+        },
       },
       {
         name: "株式会社エブリー",
         imageSrc: NoImage,
         height: platinumGoldSponsorImageSize.height,
         width: platinumGoldSponsorImageSize.width,
+        dialog: {
+          openId: "sponsor-dialog-4",
+          height: 120,
+          width: 520,
+          imageSrc: NoImage,
+          link: "https://www.cyberagent.co.jp/",
+          description:
+            "メディア事業、広告事業、ゲーム事業と多様な事業を展開するサイバーエージェントでは、新しい未来のテレビ「ABEMA」や、事前に広告配信効果を予測する「効果予測AI」を活用して広告クリエイティブを制作する「極予測AI」、プロレス動画配信サービス「WRESTLE UNIVERSE」などドメインの異なる様々なプロダクトでGoを採用しています。 なお、サイバーエージェントのGoにおけるNext Expertsである渋谷拓真 (@sivchari) が、当カンファレンスのオーガナイザーを務めます。",
+        },
       },
     ],
     goldSponsors: [
@@ -94,12 +130,30 @@ export const constants = {
         imageSrc: NoImage,
         height: goldSponsorImageSize.height,
         width: goldSponsorImageSize.width,
+        dialog: {
+          openId: "sponsor-dialog-5",
+          height: 120,
+          width: 520,
+          imageSrc: NoImage,
+          link: "https://www.cyberagent.co.jp/",
+          description:
+            "メディア事業、広告事業、ゲーム事業と多様な事業を展開するサイバーエージェントでは、新しい未来のテレビ「ABEMA」や、事前に広告配信効果を予測する「効果予測AI」を活用して広告クリエイティブを制作する「極予測AI」、プロレス動画配信サービス「WRESTLE UNIVERSE」などドメインの異なる様々なプロダクトでGoを採用しています。 なお、サイバーエージェントのGoにおけるNext Expertsである渋谷拓真 (@sivchari) が、当カンファレンスのオーガナイザーを務めます。",
+        },
       },
       {
         name: "株式会社OPTiM",
         imageSrc: NoImage,
         height: goldSponsorImageSize.height,
         width: goldSponsorImageSize.width,
+        dialog: {
+          openId: "sponsor-dialog-6",
+          height: 120,
+          width: 520,
+          imageSrc: NoImage,
+          link: "https://www.cyberagent.co.jp/",
+          description:
+            "メディア事業、広告事業、ゲーム事業と多様な事業を展開するサイバーエージェントでは、新しい未来のテレビ「ABEMA」や、事前に広告配信効果を予測する「効果予測AI」を活用して広告クリエイティブを制作する「極予測AI」、プロレス動画配信サービス「WRESTLE UNIVERSE」などドメインの異なる様々なプロダクトでGoを採用しています。 なお、サイバーエージェントのGoにおけるNext Expertsである渋谷拓真 (@sivchari) が、当カンファレンスのオーガナイザーを務めます。",
+        },
       },
     ],
     silverSponsors: [

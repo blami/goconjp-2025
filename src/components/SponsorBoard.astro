@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import { constants } from "../constants";
+import Dialog from "./Dialog.astro";
 
 const currentLocale = Astro.currentLocale || "ja";
 ---
@@ -19,7 +20,6 @@ const currentLocale = Astro.currentLocale || "ja";
   }
 
   .venue-sponsor li {
-    width: 100%;
     list-style: none;
   }
 
@@ -42,7 +42,6 @@ const currentLocale = Astro.currentLocale || "ja";
     box-sizing: border-box;
   }
   .platinum-gold-sponsor-list li :is(img, astro-island) {
-    max-width: 100%;
     height: auto;
     display: block;
   }
@@ -73,7 +72,6 @@ const currentLocale = Astro.currentLocale || "ja";
   }
 
   .gold-sponsor-list li :is(img, astro-island) {
-    max-width: 100%;
     height: auto;
     display: block;
   }
@@ -103,7 +101,6 @@ const currentLocale = Astro.currentLocale || "ja";
   }
 
   .silver-sponsor-list li :is(img, astro-island) {
-    max-width: 100%;
     height: auto;
     display: block;
   }
@@ -133,7 +130,6 @@ const currentLocale = Astro.currentLocale || "ja";
   }
 
   .bronze-sponsor-list li :is(img, astro-island) {
-    max-width: 100%;
     height: auto;
     display: block;
   }
@@ -174,6 +170,16 @@ const currentLocale = Astro.currentLocale || "ja";
         height={constants.jobBoard.venueSponsor.height}
         loading="lazy"
         priority
+        style="cursor:pointer"
+        onclick={`const dialog = document.getElementById('sponsor-dialog-${constants.jobBoard.venueSponsor.dialog.openId}'); if (dialog) dialog.showModal();`}
+      />
+
+      <Dialog
+        openId={constants.jobBoard.venueSponsor.dialog.openId}
+        sponsorSectionTitle={currentLocale === "ja"
+          ? "会場スポンサー"
+          : "Venue Sponsor"}
+        sponsor={constants.jobBoard.venueSponsor}
       />
     </li>
   </ul>
@@ -190,6 +196,18 @@ const currentLocale = Astro.currentLocale || "ja";
             height={sponsor.height}
             loading="lazy"
             priority
+            style="cursor:pointer"
+            onclick={`const dialog = document.getElementById('sponsor-dialog-${sponsor.dialog.openId}'); if (dialog) dialog.showModal();`}
+          />
+
+          <Dialog
+            openId={sponsor.dialog.openId}
+            sponsorSectionTitle={
+              currentLocale === "ja"
+                ? "プラチナGoルド スポンサー"
+                : `Platinum "Go"ld Sponsor`
+            }
+            sponsor={sponsor}
           />
         </li>
       ))
@@ -208,6 +226,15 @@ const currentLocale = Astro.currentLocale || "ja";
             height={sponsor.height}
             loading="lazy"
             priority
+            style="cursor:pointer"
+            onclick={`const dialog = document.getElementById('sponsor-dialog-${sponsor.dialog.openId}'); if (dialog) dialog.showModal();`}
+          />
+          <Dialog
+            openId={sponsor.dialog.openId}
+            sponsorSectionTitle={
+              currentLocale === "ja" ? "Goルドスポンサー" : `"Go"ld Sponsor`
+            }
+            sponsor={sponsor}
           />
         </li>
       ))
