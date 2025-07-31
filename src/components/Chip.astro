@@ -1,7 +1,9 @@
 ---
 interface Props {
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "surface-secondary";
   class?: string;
+  fontSize?: string;
+  borderRadius?: string;
 }
 
 const { variant = "primary", class: className } = Astro.props;
@@ -15,7 +17,7 @@ const { variant = "primary", class: className } = Astro.props;
     padding: 8px 24px;
     background-color: var(--surface-primary-dark);
     color: var(--text-on-fill);
-    border-radius: 12px;
+    border-radius: 16px;
     font-size: 20px;
     font-weight: 700;
     text-align: center;
@@ -40,6 +42,13 @@ const { variant = "primary", class: className } = Astro.props;
     background-color: var(--surface-secondary-dark);
     border: 2px solid var(--surface-secondary-dark);
     color: var(--text-on-fill);
+  }
+
+  .chip--surface-secondary {
+    background-color: var(--surface-secondary);
+    border: 2px solid var(--surface-secondary);
+    /* setup font color */
+    color: var(--text-accent);
   }
 </style>
 
