@@ -23,7 +23,7 @@ const venueSponsorImageSize = {
 };
 
 const specialSponsorImageSize = {
-  height: 242,
+  height: 241,
   width: 448,
 };
 
