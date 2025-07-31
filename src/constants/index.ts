@@ -1,4 +1,21 @@
 import NoImage from "../assets/sponsors/no-image.png";
+import GoogleLogo from "../assets/sponsors/0_S001.png";
+import GMOFSLogo from "../assets/sponsors/1_S101.png";
+import EVERYLogo from "../assets/sponsors/2_S102.png";
+import ResilireLogo from "../assets/sponsors/3_S201.png";
+import OPTiMLogo from "../assets/sponsors/4_S202.png";
+import LayerXLogo from "../assets/sponsors/5_S309.png";
+import UbieLogo from "../assets/sponsors/6_S314.jpg";
+import FindyLogo from "../assets/sponsors/7_S303.png";
+import UNextLogo from "../assets/sponsors/9_S312.png";
+import SakuraLogo from "../assets/sponsors/11_S311.png";
+import TokyuLogo from "../assets/sponsors/12_S305.png";
+import KnoledgeWorkLogo from "../assets/sponsors/14_S308.png";
+import SODALogo from "../assets/sponsors/15_S307.png";
+import TopotalLogo from "../assets/sponsors/17_S310.png";
+import TechTouchLogo from "../assets/sponsors/19_S304.png";
+import HatenaLogo from "../assets/sponsors/20_S306.png";
+import IssueHuntLogo from "../assets/sponsors/22_S313.png";
 
 const venueSponsorImageSize = {
   height: 242,
@@ -36,8 +53,8 @@ const gopherSponsorImageSize = {
 };
 
 const toolSponsorImageSize = {
-  height: 242,
-  width: 448,
+  height: 163,
+  width: 290,
 };
 
 /**
@@ -67,7 +84,7 @@ export const constants = {
       height: venueSponsorImageSize.height,
       width: venueSponsorImageSize.width,
       dialog: {
-        openId: "sponsor-dialog-1",
+        openId: "0_V001",
         height: 120,
         width: 520,
         imageSrc: NoImage,
@@ -79,15 +96,11 @@ export const constants = {
     specialSponsor: {
       // 特別スポンサー
       name: "Google LLC",
-      imageSrc: NoImage,
+      imageSrc: GoogleLogo,
       height: specialSponsorImageSize.height,
       width: specialSponsorImageSize.width,
       dialog: {
-        openId: "sponsor-dialog-2",
-        height: 120,
-        width: 520,
-        imageSrc: NoImage,
-        link: "https://www.cyberagent.co.jp/",
+        openId: "0_S001",
         description:
           "メディア事業、広告事業、ゲーム事業と多様な事業を展開するサイバーエージェントでは、新しい未来のテレビ「ABEMA」や、事前に広告配信効果を予測する「効果予測AI」を活用して広告クリエイティブを制作する「極予測AI」、プロレス動画配信サービス「WRESTLE UNIVERSE」などドメインの異なる様々なプロダクトでGoを採用しています。 なお、サイバーエージェントのGoにおけるNext Expertsである渋谷拓真 (@sivchari) が、当カンファレンスのオーガナイザーを務めます。",
       },
@@ -95,83 +108,75 @@ export const constants = {
     platinumGoldSponsors: [
       {
         name: "GMO Flatt Security株式会社",
-        imageSrc: NoImage,
+        imageSrc: GMOFSLogo,
         height: platinumGoldSponsorImageSize.height,
         width: platinumGoldSponsorImageSize.width,
         dialog: {
-          openId: "sponsor-dialog-3",
-          height: 120,
-          width: 520,
-          imageSrc: NoImage,
-          link: "https://www.cyberagent.co.jp/",
+          openId: "S101",
+          imageSrc: GMOFSLogo,
           description:
-            "メディア事業、広告事業、ゲーム事業と多様な事業を展開するサイバーエージェントでは、新しい未来のテレビ「ABEMA」や、事前に広告配信効果を予測する「効果予測AI」を活用して広告クリエイティブを制作する「極予測AI」、プロレス動画配信サービス「WRESTLE UNIVERSE」などドメインの異なる様々なプロダクトでGoを採用しています。 なお、サイバーエージェントのGoにおけるNext Expertsである渋谷拓真 (@sivchari) が、当カンファレンスのオーガナイザーを務めます。",
+            "エンジニアの背中を預かるソフトウェアプロダクトの開発組織とそこで働くエンジニアにとって最適なセキュリティサービスを提供し、「背中を預けられる」存在になることがGMO Flatt Securityの使命です。",
         },
       },
       {
         name: "株式会社エブリー",
-        imageSrc: NoImage,
+        imageSrc: EVERYLogo,
         height: platinumGoldSponsorImageSize.height,
         width: platinumGoldSponsorImageSize.width,
         dialog: {
-          openId: "sponsor-dialog-4",
-          height: 120,
-          width: 520,
-          imageSrc: NoImage,
-          link: "https://www.cyberagent.co.jp/",
+          openId: "S102",
+          imageSrc: EVERYLogo,
           description:
-            "メディア事業、広告事業、ゲーム事業と多様な事業を展開するサイバーエージェントでは、新しい未来のテレビ「ABEMA」や、事前に広告配信効果を予測する「効果予測AI」を活用して広告クリエイティブを制作する「極予測AI」、プロレス動画配信サービス「WRESTLE UNIVERSE」などドメインの異なる様々なプロダクトでGoを採用しています。 なお、サイバーエージェントのGoにおけるNext Expertsである渋谷拓真 (@sivchari) が、当カンファレンスのオーガナイザーを務めます。",
+            'エブリーは、日本が抱える「食」「子育て」「地方創生」の3つの大きな課題に向き合っており、「デリッシュキッチン」をはじめ「トモニテ」「TIMELINE」と3つの動画メディアプラットフォームを運営しています。現在はメディアやプロダクトに蓄積される膨大なデータとテクノロジーを活用し、"暮らし"と"企業"をアップデートしていくことを目指しており、中でもユーザー/メーカー/小売りの三者をつなぐプラットフォームである「リテールメディア」の構築は今後の成長戦略の柱と位置付けて取り組んでいます。​​',
         },
       },
     ],
     goldSponsors: [
       {
         name: "株式会社Resilire",
-        imageSrc: NoImage,
+        imageSrc: ResilireLogo,
         height: goldSponsorImageSize.height,
         width: goldSponsorImageSize.width,
         dialog: {
-          openId: "sponsor-dialog-5",
+          openId: "S201",
           height: 120,
           width: 520,
-          imageSrc: NoImage,
-          link: "https://www.cyberagent.co.jp/",
+          imageSrc: ResilireLogo,
           description:
-            "メディア事業、広告事業、ゲーム事業と多様な事業を展開するサイバーエージェントでは、新しい未来のテレビ「ABEMA」や、事前に広告配信効果を予測する「効果予測AI」を活用して広告クリエイティブを制作する「極予測AI」、プロレス動画配信サービス「WRESTLE UNIVERSE」などドメインの異なる様々なプロダクトでGoを採用しています。 なお、サイバーエージェントのGoにおけるNext Expertsである渋谷拓真 (@sivchari) が、当カンファレンスのオーガナイザーを務めます。",
+            "世界中のサプライチェーン情報をつなぎ、モノづくりを持続可能にする。",
         },
       },
       {
         name: "株式会社OPTiM",
-        imageSrc: NoImage,
+        imageSrc: OPTiMLogo,
         height: goldSponsorImageSize.height,
         width: goldSponsorImageSize.width,
         dialog: {
-          openId: "sponsor-dialog-6",
+          openId: "S202",
           height: 120,
           width: 520,
-          imageSrc: NoImage,
-          link: "https://www.cyberagent.co.jp/",
+          imageSrc: OPTiMLogo,
           description:
-            "メディア事業、広告事業、ゲーム事業と多様な事業を展開するサイバーエージェントでは、新しい未来のテレビ「ABEMA」や、事前に広告配信効果を予測する「効果予測AI」を活用して広告クリエイティブを制作する「極予測AI」、プロレス動画配信サービス「WRESTLE UNIVERSE」などドメインの異なる様々なプロダクトでGoを採用しています。 なお、サイバーエージェントのGoにおけるNext Expertsである渋谷拓真 (@sivchari) が、当カンファレンスのオーガナイザーを務めます。",
+            "AI/IoT/Robotics関連の技術を用いて、第一次産業のDXを推進する企業です。各サービスの多くのサーバーサイドやエッジで動作するサービスにGolangを利用しています。",
         },
       },
     ],
     silverSponsors: [
       {
         name: "株式会社LayerX",
-        imageSrc: NoImage,
+        imageSrc: LayerXLogo,
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
       },
       {
         name: "ubie株式会社",
-        imageSrc: NoImage,
+        imageSrc: UbieLogo,
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
       },
       {
         name: "ファインディ株式会社",
-        imageSrc: NoImage,
+        imageSrc: FindyLogo,
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
       },
@@ -183,7 +188,7 @@ export const constants = {
       },
       {
         name: "株式会社U-NEXT",
-        imageSrc: NoImage,
+        imageSrc: UNextLogo,
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
       },
@@ -195,13 +200,13 @@ export const constants = {
       },
       {
         name: "さくらインターネット株式会社",
-        imageSrc: NoImage,
+        imageSrc: SakuraLogo,
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
       },
       {
         name: "東急株式会社",
-        imageSrc: NoImage,
+        imageSrc: TokyuLogo,
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
       },
@@ -213,13 +218,13 @@ export const constants = {
       },
       {
         name: "株式会社ナレッジワーク",
-        imageSrc: NoImage,
+        imageSrc: KnoledgeWorkLogo,
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
       },
       {
         name: "株式会社SODA",
-        imageSrc: NoImage,
+        imageSrc: SODALogo,
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
       },
@@ -231,7 +236,7 @@ export const constants = {
       },
       {
         name: "株式会社Topotal",
-        imageSrc: NoImage,
+        imageSrc: TopotalLogo,
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
       },
@@ -243,13 +248,13 @@ export const constants = {
       },
       {
         name: "テックタッチ株式会社",
-        imageSrc: NoImage,
+        imageSrc: TechTouchLogo,
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
       },
       {
         name: "株式会社はてな",
-        imageSrc: NoImage,
+        imageSrc: HatenaLogo,
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
       },
@@ -261,7 +266,7 @@ export const constants = {
       },
       {
         name: "IssueHunt株式会社",
-        imageSrc: NoImage,
+        imageSrc: IssueHuntLogo,
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
       },
@@ -286,7 +291,7 @@ export const constants = {
     ],
     toolSponsor: {
       name: "株式会社LayerX",
-      imageSrc: NoImage,
+      imageSrc: LayerXLogo,
       height: toolSponsorImageSize.height,
       width: toolSponsorImageSize.width,
     },

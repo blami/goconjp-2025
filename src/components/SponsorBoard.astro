@@ -7,7 +7,7 @@ const currentLocale = Astro.currentLocale || "ja";
 ---
 
 <style>
-  .venue-sponsor {
+  .venue-sponsor .special-sponsor {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -21,6 +21,20 @@ const currentLocale = Astro.currentLocale || "ja";
 
   .venue-sponsor li {
     list-style: none;
+  }
+
+  .special-sponsor li {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+
+  .special-sponsor img {
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
 
   .platinum-gold-sponsor-list {
@@ -38,9 +52,14 @@ const currentLocale = Astro.currentLocale || "ja";
 
   .platinum-gold-sponsor-list li {
     flex: 1 1 calc(50% - 10px);
-    min-width: 150px;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 484px;
+    max-height: 242px;
   }
+
   .platinum-gold-sponsor-list li :is(img, astro-island) {
     height: auto;
     display: block;
@@ -49,6 +68,11 @@ const currentLocale = Astro.currentLocale || "ja";
   @media (max-width: 768px) {
     .platinum-gold-sponsor-list li {
       flex: 1 1 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 484px;
+      max-height: 242px;
     }
   }
 
@@ -67,8 +91,12 @@ const currentLocale = Astro.currentLocale || "ja";
 
   .gold-sponsor-list li {
     flex: 1 1 calc(50% - 10px);
-    min-width: 150px;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 484px;
+    max-height: 242px;
   }
 
   .gold-sponsor-list li :is(img, astro-island) {
@@ -96,20 +124,23 @@ const currentLocale = Astro.currentLocale || "ja";
     flex: 1 1 calc(33.333% - 13.333px);
     min-width: 150px;
     box-sizing: border-box;
-    height: 120px;
+    max-width: 290px;
+    max-height: 163px;
     padding: 10px;
   }
 
   .silver-sponsor-list li :is(img, astro-island) {
     height: auto;
-    display: block;
+
+    box-sizing: border-box;
+    max-width: 290px;
+    max-height: 163px;
   }
 
   .bronze-sponsor-list {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    list-style: none;
 
     display: flex;
     justify-content: center;
@@ -120,6 +151,7 @@ const currentLocale = Astro.currentLocale || "ja";
 
   .bronze-sponsor-list li {
     display: flex;
+    list-style: none;
     justify-content: center;
     align-items: center;
     flex: 1 1 calc(25% - 15px);
@@ -135,9 +167,20 @@ const currentLocale = Astro.currentLocale || "ja";
   }
 
   .gopher-sponsor-list {
+    list-style: none;
   }
 
   .tool-sponsor-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
   }
 
   @media (max-width: 768px) {
@@ -157,159 +200,205 @@ const currentLocale = Astro.currentLocale || "ja";
       flex: 1 1 100%;
     }
   }
+
+  .sponsor-section {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
 </style>
 
-<div>
-  <h3>{currentLocale === "ja" ? "会場スポンサー" : "Venue Sponsor"}</h3>
-  <ul class="venue-sponsor">
-    <li>
-      <Image
-        src={constants.jobBoard.venueSponsor.imageSrc}
-        alt={constants.jobBoard.venueSponsor.name}
-        width={constants.jobBoard.venueSponsor.width}
-        height={constants.jobBoard.venueSponsor.height}
-        loading="lazy"
-        priority
-        style="cursor:pointer"
-        onclick={`const dialog = document.getElementById('sponsor-dialog-${constants.jobBoard.venueSponsor.dialog.openId}'); if (dialog) dialog.showModal();`}
-      />
+<div class="sponsor-section">
+  <div>
+    <h2>{currentLocale === "ja" ? "会場スポンサー" : "Venue Sponsor"}</h2>
+    <ul class="venue-sponsor">
+      <li>
+        <Image
+          src={constants.jobBoard.venueSponsor.imageSrc}
+          alt={constants.jobBoard.venueSponsor.name}
+          width={constants.jobBoard.venueSponsor.width}
+          height={constants.jobBoard.venueSponsor.height}
+          loading="lazy"
+          priority
+          style="cursor:pointer"
+          onclick={`const dialog = document.getElementById('${constants.jobBoard.venueSponsor.dialog.openId}'); if (dialog) dialog.showModal();`}
+        />
 
-      <Dialog
-        openId={constants.jobBoard.venueSponsor.dialog.openId}
-        sponsorSectionTitle={currentLocale === "ja"
-          ? "会場スポンサー"
-          : "Venue Sponsor"}
-        sponsor={constants.jobBoard.venueSponsor}
-      />
-    </li>
-  </ul>
+        <Dialog
+          openId={constants.jobBoard.venueSponsor.dialog.openId}
+          sponsorSectionTitle={currentLocale === "ja"
+            ? "会場スポンサー"
+            : "Venue Sponsor"}
+          sponsor={constants.jobBoard.venueSponsor}
+        />
+      </li>
+    </ul>
+  </div>
 
-  <h3>Platinum "<span class="accent">Go</span> "ld</h3>
-  <ul class="platinum-gold-sponsor-list">
-    {
-      constants.jobBoard.platinumGoldSponsors.map((sponsor) => (
-        <li>
-          <Image
-            src={sponsor.imageSrc}
-            alt={sponsor.name}
-            width={sponsor.width}
-            height={sponsor.height}
-            loading="lazy"
-            priority
-            style="cursor:pointer"
-            onclick={`const dialog = document.getElementById('sponsor-dialog-${sponsor.dialog.openId}'); if (dialog) dialog.showModal();`}
-          />
+  <div>
+    <h2>
+      {currentLocale === "ja" ? "スペシャルスポンサー" : "Special Sponsor"}
+    </h2>
+    <ul class="special-sponsor">
+      <li>
+        <Image
+          src={constants.jobBoard.specialSponsor.imageSrc}
+          alt={constants.jobBoard.specialSponsor.name}
+          width={constants.jobBoard.specialSponsor.width}
+          height={constants.jobBoard.specialSponsor.height}
+          loading="lazy"
+          priority
+          style="cursor:pointer"
+          onclick={`const dialog = document.getElementById('${constants.jobBoard.specialSponsor.dialog.openId}'); if (dialog) dialog.showModal();`}
+        />
 
-          <Dialog
-            openId={sponsor.dialog.openId}
-            sponsorSectionTitle={
-              currentLocale === "ja"
-                ? "プラチナGoルド スポンサー"
-                : `Platinum "Go"ld Sponsor`
-            }
-            sponsor={sponsor}
-          />
-        </li>
-      ))
-    }
-  </ul>
+        <Dialog
+          openId={constants.jobBoard.specialSponsor.dialog.openId}
+          sponsorSectionTitle={currentLocale === "ja"
+            ? "スペシャルスポンサー"
+            : `Special Sponsor`}
+          sponsor={constants.jobBoard.specialSponsor}
+        />
+      </li>
+    </ul>
+  </div>
 
-  <h3>Gold</h3>
-  <ul class="gold-sponsor-list">
-    {
-      constants.jobBoard.goldSponsors.map((sponsor) => (
-        <li>
-          <Image
-            src={sponsor.imageSrc}
-            alt={sponsor.name}
-            width={sponsor.width}
-            height={sponsor.height}
-            loading="lazy"
-            priority
-            style="cursor:pointer"
-            onclick={`const dialog = document.getElementById('sponsor-dialog-${sponsor.dialog.openId}'); if (dialog) dialog.showModal();`}
-          />
-          <Dialog
-            openId={sponsor.dialog.openId}
-            sponsorSectionTitle={
-              currentLocale === "ja" ? "Goルドスポンサー" : `"Go"ld Sponsor`
-            }
-            sponsor={sponsor}
-          />
-        </li>
-      ))
-    }
-  </ul>
+  <div>
+    <h2>Platinum "<span class="accent">Go</span> "ld</h2>
+    <ul class="platinum-gold-sponsor-list">
+      {
+        constants.jobBoard.platinumGoldSponsors.map((sponsor) => (
+          <li>
+            <Image
+              src={sponsor.imageSrc}
+              alt={sponsor.name}
+              width={sponsor.width}
+              height={sponsor.height}
+              loading="lazy"
+              priority
+              style="cursor:pointer"
+              onclick={`const dialog = document.getElementById('${sponsor.dialog.openId}'); if (dialog) dialog.showModal();`}
+            />
 
-  <h3>Silver</h3>
-  <ul class="silver-sponsor-list">
-    {
-      constants.jobBoard.silverSponsors.map((sponsor) => (
-        <li>
-          <Image
-            src={sponsor.imageSrc}
-            alt={sponsor.name}
-            width={sponsor.width}
-            height={sponsor.height}
-            loading="lazy"
-            priority
-          />
-        </li>
-      ))
-    }
-  </ul>
+            <Dialog
+              openId={sponsor.dialog.openId}
+              sponsorSectionTitle={
+                currentLocale === "ja"
+                  ? "プラチナGoルド スポンサー"
+                  : `Platinum "Go"ld Sponsor`
+              }
+              sponsor={sponsor}
+            />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 
-  <h3>Bronze</h3>
-  <ul class="bronze-sponsor-list">
-    {
-      constants.jobBoard.bronzeSponsors.map((sponsor) => (
-        <li>
-          <Image
-            src={sponsor.imageSrc}
-            alt={sponsor.name}
-            width={sponsor.width}
-            height={sponsor.height}
-            loading="lazy"
-            priority
-          />
-        </li>
-      ))
-    }
-  </ul>
+  <div>
+    <h2>Gold</h2>
+    <ul class="gold-sponsor-list">
+      {
+        constants.jobBoard.goldSponsors.map((sponsor) => (
+          <li>
+            <Image
+              src={sponsor.imageSrc}
+              alt={sponsor.name}
+              width={sponsor.width}
+              height={sponsor.height}
+              loading="lazy"
+              priority
+              style="cursor:pointer"
+              onclick={`const dialog = document.getElementById('${sponsor.dialog.openId}'); if (dialog) dialog.showModal();`}
+            />
+            <Dialog
+              openId={sponsor.dialog.openId}
+              sponsorSectionTitle={
+                currentLocale === "ja" ? "Goルドスポンサー" : `"Go"ld Sponsor`
+              }
+              sponsor={sponsor}
+            />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 
-  <h3>Gopher</h3>
-  <ul class="gopher-sponsor-list">
-    {
-      constants.jobBoard.gopherSponsors.map((sponsor) => (
-        <li>
-          <Image
-            src={sponsor.imageSrc}
-            alt={sponsor.name}
-            width={sponsor.width}
-            height={sponsor.height}
-            loading="lazy"
-            priority
-          />
-        </li>
-      ))
-    }
-  </ul>
+  <div>
+    <h2>Silver</h2>
+    <ul class="silver-sponsor-list">
+      {
+        constants.jobBoard.silverSponsors.map((sponsor) => (
+          <li>
+            <Image
+              src={sponsor.imageSrc}
+              alt={sponsor.name}
+              width={sponsor.width}
+              height={sponsor.height}
+              loading="lazy"
+              priority
+            />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 
-  <h3>{currentLocale === "ja" ? "ツールスポンサー" : "Tool Sponsor"}</h3>
-  <ul class="tool-sponsor-list">
-    {
-      (
-        <li>
-          <Image
-            src={constants.jobBoard.toolSponsor.imageSrc}
-            alt={constants.jobBoard.toolSponsor.name}
-            width={constants.jobBoard.toolSponsor.width}
-            height={constants.jobBoard.toolSponsor.height}
-            loading="lazy"
-            priority
-          />
-        </li>
-      )
-    }
-  </ul>
+  <div>
+    <h2>Bronze</h2>
+    <ul class="bronze-sponsor-list">
+      {
+        constants.jobBoard.bronzeSponsors.map((sponsor) => (
+          <li>
+            <Image
+              src={sponsor.imageSrc}
+              alt={sponsor.name}
+              width={sponsor.width}
+              height={sponsor.height}
+              loading="lazy"
+              priority
+            />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+
+  <div>
+    <h2>Gopher</h2>
+    <ul class="gopher-sponsor-list">
+      {
+        constants.jobBoard.gopherSponsors.map((sponsor) => (
+          <li>
+            <Image
+              src={sponsor.imageSrc}
+              alt={sponsor.name}
+              width={sponsor.width}
+              height={sponsor.height}
+              loading="lazy"
+              priority
+            />
+          </li>
+        ))
+      }
+    </ul>
+
+    <h3>{currentLocale === "ja" ? "ツールスポンサー" : "Tool Sponsor"}</h3>
+    <ul class="tool-sponsor-list">
+      {
+        (
+          <li>
+            <Image
+              src={constants.jobBoard.toolSponsor.imageSrc}
+              alt={constants.jobBoard.toolSponsor.name}
+              width={constants.jobBoard.toolSponsor.width}
+              height={constants.jobBoard.toolSponsor.height}
+              loading="lazy"
+              priority
+            />
+          </li>
+        )
+      }
+    </ul>
+  </div>
 </div>
