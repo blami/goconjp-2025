@@ -1,0 +1,187 @@
+---
+import { Image } from "astro:assets";
+import { constants } from "../constants";
+import Chip from "./Chip.astro";
+
+const currentLocale = Astro.currentLocale || "ja";
+interface Props {
+  openId: string;
+  sponsorSectionTitle: string;
+  sponsor: {
+    name: string;
+    imageSrc: any;
+    height: number;
+    width: number;
+    dialog: {
+      link?: string;
+      description: string;
+    };
+  };
+}
+---
+
+<style>
+  .sponsor-dialog {
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 40px;
+
+    border-radius: 32px;
+    border: none;
+    min-height: 480px;
+  }
+
+  .sponsor-dialog-close {
+    padding: 8px 16px;
+    background-color: var(--surface-secondary-dark);
+    color: var(--text-on-fill);
+    border-radius: 50%;
+    font-weight: 700;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    cursor: pointer;
+  }
+
+  .sponsor-dialog-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+  }
+
+  .sponsor-dialog-content a {
+    color: var(--text-accent);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .sponsor-dialog-content h4 {
+    margin: 0;
+  }
+
+  .sponsor-dialog-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .sponsor-dialog-image {
+    width: 448px;
+    height: 242px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sponsor-dialog-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .sponsor-dialog-body {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 16px;
+    padding: 40px;
+    background-color: var(--surface-secondary);
+  }
+
+  .sponsor-chip {
+    background-color: var(--surface-secondary);
+  }
+
+  @media (max-width: 768px) {
+    .sponsor-dialog {
+      width: 100%;
+    }
+
+    .sponsor-dialog-content {
+      width: 100%;
+    }
+
+    .sponsor-dialog-header {
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    .sponsor-dialog-close {
+      right: 24px;
+      top: 24px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .sponsor-dialog {
+      width: 100%;
+    }
+
+    .sponsor-dialog-content {
+      width: 100%;
+    }
+
+    .sponsor-dialog-header {
+      width: 100%;
+      padding: 0 10px;
+    }
+
+    .sponsor-dialog-close {
+      right: 24px;
+      top: 24px;
+    }
+
+    .sponsor-dialog-body {
+      max-width: 100%;
+    }
+  }
+</style>
+
+<dialog id={`${Astro.props.openId}`} class="sponsor-dialog">
+  <div class="sponsor-dialog-content">
+    <div class="sponsor-dialog-header">
+      <Chip variant="surface-secondary" fontSize="16px"
+        >{Astro.props.sponsorSectionTitle}</Chip
+      >
+      <div
+        class="sponsor-dialog-close"
+        onclick={`document.getElementById('${Astro.props.openId}').close()`}
+      >
+        &times;
+      </div>
+      <div class="sponsor-dialog-image">
+        <Image
+          src={Astro.props.sponsor.imageSrc}
+          alt={Astro.props.sponsor.name}
+          width={Astro.props.sponsor.width}
+          height={Astro.props.sponsor.height}
+          loading="lazy"
+        />
+      </div>
+      <h4>{Astro.props.sponsor.name}</h4>
+      {
+        Astro.props.sponsor.dialog.link && (
+          <a
+            href={Astro.props.sponsor.dialog.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {Astro.props.sponsor.dialog.link}
+          </a>
+        )
+      }
+    </div>
+    {
+      Astro.props.sponsor.dialog.description !== "" && (
+        <div class="sponsor-dialog-body">
+          <span>{Astro.props.sponsor.dialog.description}</span>
+        </div>
+      )
+    }
+  </div>
+</dialog>
