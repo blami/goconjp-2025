@@ -1,4 +1,5 @@
 ---
+import NoImage from "../assets/sponsors/no-image.png";
 import { Image } from "astro:assets";
 import { constants } from "../constants";
 import Dialog from "./Dialog.astro";
@@ -209,6 +210,8 @@ const currentLocale = Astro.currentLocale || "ja";
 </style>
 
 <div class="sponsor-section">
+  <!-- 
+  CA さんの情報が揃い次第コメントアウトを外す
   <div>
     <h2>{currentLocale === "ja" ? "会場スポンサー" : "Venue Sponsor"}</h2>
     <ul class="venue-sponsor">
@@ -233,7 +236,7 @@ const currentLocale = Astro.currentLocale || "ja";
         />
       </li>
     </ul>
-  </div>
+  </div> -->
 
   <div>
     <h2>
@@ -328,22 +331,26 @@ const currentLocale = Astro.currentLocale || "ja";
     <h2>Silver</h2>
     <ul class="silver-sponsor-list">
       {
-        constants.jobBoard.silverSponsors.map((sponsor) => (
-          <li>
-            <Image
-              src={sponsor.imageSrc}
-              alt={sponsor.name}
-              width={sponsor.width}
-              height={sponsor.height}
-              loading="lazy"
-              priority
-            />
-          </li>
-        ))
+        constants.jobBoard.silverSponsors.map(
+          (sponsor) =>
+            sponsor.imageSrc !== NoImage && (
+              <li>
+                <Image
+                  src={sponsor.imageSrc}
+                  alt={sponsor.name}
+                  width={sponsor.width}
+                  height={sponsor.height}
+                  loading="lazy"
+                  priority
+                />
+              </li>
+            ),
+        )
       }
     </ul>
   </div>
-
+  <!-- 
+  08/31 の締め切り終了後に対応する
   <div>
     <h2>Bronze</h2>
     <ul class="bronze-sponsor-list">
@@ -381,24 +388,23 @@ const currentLocale = Astro.currentLocale || "ja";
           </li>
         ))
       }
-    </ul>
+    </ul> -->
 
-    <h3>{currentLocale === "ja" ? "ツールスポンサー" : "Tool Sponsor"}</h3>
-    <ul class="tool-sponsor-list">
-      {
-        (
-          <li>
-            <Image
-              src={constants.jobBoard.toolSponsor.imageSrc}
-              alt={constants.jobBoard.toolSponsor.name}
-              width={constants.jobBoard.toolSponsor.width}
-              height={constants.jobBoard.toolSponsor.height}
-              loading="lazy"
-              priority
-            />
-          </li>
-        )
-      }
-    </ul>
-  </div>
+  <h3>{currentLocale === "ja" ? "ツールスポンサー" : "Tool Sponsor"}</h3>
+  <ul class="tool-sponsor-list">
+    {
+      (
+        <li>
+          <Image
+            src={constants.jobBoard.toolSponsor.imageSrc}
+            alt={constants.jobBoard.toolSponsor.name}
+            width={constants.jobBoard.toolSponsor.width}
+            height={constants.jobBoard.toolSponsor.height}
+            loading="lazy"
+            priority
+          />
+        </li>
+      )
+    }
+  </ul>
 </div>
