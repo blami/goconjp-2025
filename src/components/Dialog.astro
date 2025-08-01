@@ -29,6 +29,7 @@ interface Props {
 
     border-radius: 32px;
     border: none;
+    min-height: 480px;
   }
 
   .sponsor-dialog-close {
@@ -175,8 +176,12 @@ interface Props {
         )
       }
     </div>
-    <div class="sponsor-dialog-body">
-      <span>{Astro.props.sponsor.dialog.description}</span>
-    </div>
+    {
+      Astro.props.sponsor.dialog.description !== "" && (
+        <div class="sponsor-dialog-body">
+          <span>{Astro.props.sponsor.dialog.description}</span>
+        </div>
+      )
+    }
   </div>
 </dialog>
