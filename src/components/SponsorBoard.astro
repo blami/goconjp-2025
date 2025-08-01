@@ -8,205 +8,107 @@ const currentLocale = Astro.currentLocale || "ja";
 ---
 
 <style>
-  .venue-sponsor .special-sponsor {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-inline-start: 0px;
-  }
-
-  .venue-sponsor li {
-    list-style: none;
-  }
-
-  .special-sponsor li {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-  }
-
-  .special-sponsor ul {
-    padding-inline-start: 0px;
-  }
-
-  .special-sponsor img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .platinum-gold-sponsor-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    list-style: none;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-  }
-
-  .platinum-gold-sponsor-list li {
-    flex: 1 1 calc(50% - 10px);
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 484px;
-    max-height: 242px;
-  }
-
-  .platinum-gold-sponsor-list li :is(img, astro-island) {
-    height: auto;
-    display: block;
-  }
-
-  @media (max-width: 768px) {
-    .platinum-gold-sponsor-list li {
-      flex: 1 1 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      max-width: 484px;
-      max-height: 242px;
-    }
-  }
-
-  .gold-sponsor-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    list-style: none;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-  }
-
-  .gold-sponsor-list li {
-    flex: 1 1 calc(50% - 10px);
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 484px;
-    max-height: 242px;
-  }
-
-  .gold-sponsor-list li :is(img, astro-island) {
-    height: auto;
-    display: block;
-  }
-
-  .silver-sponsor-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    list-style: none;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-  }
-
-  .silver-sponsor-list li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1 1 calc(33.333% - 13.333px);
-    min-width: 150px;
-    box-sizing: border-box;
-    max-width: 290px;
-    max-height: 163px;
-    padding: 10px;
-  }
-
-  .silver-sponsor-list li :is(img, astro-island) {
-    height: auto;
-
-    box-sizing: border-box;
-    max-width: 290px;
-    max-height: 163px;
-  }
-
-  .bronze-sponsor-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-  }
-
-  .bronze-sponsor-list li {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    align-items: center;
-    flex: 1 1 calc(25% - 15px);
-    min-width: 120px;
-    box-sizing: border-box;
-    height: 100px;
-    padding: 10px;
-  }
-
-  .bronze-sponsor-list li :is(img, astro-island) {
-    height: auto;
-    display: block;
-  }
-
-  .gopher-sponsor-list {
-    list-style: none;
-  }
-
-  .tool-sponsor-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    list-style: none;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-  }
-
-  @media (max-width: 1024px) {
-    .bronze-sponsor-list li,
-    .silver-sponsor-list li,
-    .gold-sponsor-list li,
-    .platinum-gold-sponsor-list li {
-      flex: 1 1 calc(50% - 10px);
-    }
-  }
-
-  @media (max-width: 720px) {
-    .bronze-sponsor-list li,
-    .silver-sponsor-list li,
-    .gold-sponsor-list li,
-    .platinum-gold-sponsor-list li {
-      flex: 1 1 100%;
-    }
-  }
-
   .sponsor-section {
     display: flex;
     flex-direction: column;
     gap: 80px;
+  }
+
+  .special-sponsor img,
+  .platinum-gold-sponsor-list img,
+  .gold-sponsor-list img,
+  .silver-sponsor-list img,
+  .bronze-sponsor-list img,
+  .tool-sponsor-list img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .special-sponsor li,
+  .platinum-gold-sponsor-list li,
+  .gold-sponsor-list li,
+  .silver-sponsor-list li,
+  .bronze-sponsor-list li,
+  .tool-sponsor-list li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background: none;
+    padding: 10px;
+  }
+
+  .special-sponsor li {
+    max-width: 400px;
+    max-height: 200px;
+    width: 100%;
+  }
+  .platinum-gold-sponsor-list li,
+  .gold-sponsor-list li {
+    max-width: 484px;
+    max-height: 242px;
+    width: 100%;
+  }
+  .silver-sponsor-list li {
+    max-width: 290px;
+    max-height: 163px;
+    min-width: 150px;
+    width: 100%;
+  }
+  .bronze-sponsor-list li {
+    max-width: 220px;
+    max-height: 100px;
+    min-width: 120px;
+    width: 100%;
+  }
+  .tool-sponsor-list li {
+    max-width: 320px;
+    max-height: 120px;
+    width: 100%;
+  }
+
+  .special-sponsor ul,
+  .platinum-gold-sponsor-list,
+  .gold-sponsor-list,
+  .silver-sponsor-list,
+  .bronze-sponsor-list,
+  .tool-sponsor-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .special-sponsor li,
+    .platinum-gold-sponsor-list li,
+    .gold-sponsor-list li,
+    .silver-sponsor-list li,
+    .bronze-sponsor-list li,
+    .tool-sponsor-list li {
+      max-width: 100%;
+    }
+  }
+  @media (max-width: 600px) {
+    .sponsor-section {
+      gap: 40px;
+    }
+    .special-sponsor li,
+    .platinum-gold-sponsor-list li,
+    .gold-sponsor-list li,
+    .silver-sponsor-list li,
+    .bronze-sponsor-list li,
+    .tool-sponsor-list li {
+      padding: 6px;
+    }
   }
 </style>
 

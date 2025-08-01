@@ -72,7 +72,9 @@ interface Props {
   }
 
   .sponsor-dialog-image {
-    width: 448px;
+    width: 100%;
+    max-width: 448px;
+    padding: 16px;
     height: 242px;
     display: flex;
     justify-content: center;
@@ -81,7 +83,9 @@ interface Props {
 
   .sponsor-dialog-image img {
     max-width: 100%;
+    object-fit: contain;
     height: auto;
+    width: auto;
     display: block;
   }
 
@@ -97,7 +101,7 @@ interface Props {
     background-color: var(--surface-secondary);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .sponsor-dialog {
       width: 100%;
     }
@@ -117,7 +121,7 @@ interface Props {
     }
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 600px) {
     .sponsor-dialog {
       width: 100%;
     }
