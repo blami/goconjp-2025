@@ -1,0 +1,22 @@
+名前	アイコン画像	所属組織	所属している Go コミュニティ	SNSリンク
+N9tE9	https://pbs.twimg.com/profile_images/1779707253647691776/R-Q33q_8_400x400.jpg	株式会社 SmartHR	GoConference	https://x.com/n9te9
+a2	https://avatars.githubusercontent.com/u/34266036?v=4	株式会社カミナシ	GoConference	https://x.com/A2hiro_tim
+もっちー	https://avatars.githubusercontent.com/u/43375000?v=4	株式会社ディー・エヌ・エー	GoConference	https://x.com/mochi_2225
+kei01234kei	https://avatars.githubusercontent.com/u/62370522	株式会社サイバーエージェント	GoConference, CA.go	https://x.com/kei01234kei
+terui	https://pbs.twimg.com/profile_images/1723901323933024256/JGP3vYNs_400x400.jpg	株式会社UPSIDER	Sendai.go, Go Conference	https://x.com/shomei_terry
+Daiki Kubo		株式会社タップル	GoConference, CA.go
+Masahiro Sakuraba	https://avatars.githubusercontent.com/u/31582849?v=4	株式会社カオナビ		https://x.com/masakurapa
+walkure	https://avatars.githubusercontent.com/u/1270667?v=4	Money Forward Kyoto	kyoto.go , Go Conference	https://github.com/walkure
+blami	https://files.mastodon.online/accounts/avatars/000/086/679/original/c17859300628b6b5.png	Bloomberg	Golang Tokyo Meetup	https://mastodon.online/@blami
+budougumi0617	https://pbs.twimg.com/profile_images/680299095727054848/JYTlnxMI_400x400.png	株式会社LayerX	GoConference, Gophers Japan	https://x.com/budougumi0617
+jackchuka	https://pbs.twimg.com/profile_images/1904938867897360385/TC7Zln68_400x400.jpg	テイラー株式会社	GoConference	https://x.com/jackchuka
+sago35	https://pbs.twimg.com/profile_images/1219630784/profile_400x400.png	tinygo.org	TinyGo Keeb, tinygo.org, Umeda.go	https://x.com/sago35tk
+senoue	https://pbs.twimg.com/profile_images/1951452891304345600/HWCkBlFE_400x400.jpg		Sendai.go, TinyGo Keeb	https://x.com/senoue
+haruyama480	https://pbs.twimg.com/profile_images/1933150342755299328/lob5ybHw_400x400.png	LINEヤフー株式会社	GoConference	https://x.com/haruyama480
+Suu	https://pbs.twimg.com/profile_images/1460523078593974273/oGIc5NZC_400x400.jpg		GoConference, Women Who Go Tokyo	https://x.com/Suu_mire0726
+Gunzi			GoConference	https://x.com/com_gunzi
+momi	https://pbs.twimg.com/profile_images/1705535430198988800/o6SfDCa9_400x400.jpg 	フリー株式会社	Go Conference, Kanazawa.go	https://x.com/irdx_m
+chihiro	https://pbs.twimg.com/profile_images/1766876951510384641/mYACvJiR_400x400.jpg		GoConference	https://x.com/chiroruxxxx
+fujiwo	https://pbs.twimg.com/profile_images/983327571478638592/fqPhtu35_400x400.jpg 	株式会社サイバーエージェント	GoConference, CA.go	https://x.com/ffjlabo
+あぼねこ	https://pbs.twimg.com/profile_images/1847971787231186944/OhuQorXd_400x400.jpg	株式会社ビットキー		https://x.com/avocadoneko
+慎之介	https://pbs.twimg.com/profile_images/1135150231874486272/RmXen0s7_400x400.png	株式会社IVRy	GoConference	https://x.com/mwudo

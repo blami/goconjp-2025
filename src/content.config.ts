@@ -15,7 +15,7 @@ const staffs = defineCollection({
           link: z.string().url().optional(),
         }),
       )
-      .optional(),
+      .default([]),
   }),
 });
 

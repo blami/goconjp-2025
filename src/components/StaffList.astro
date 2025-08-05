@@ -59,7 +59,7 @@ const staffs = await getCollection("staffs");
             {staff.data.communities && staff.data.communities.length > 0 && (
               <div class="communities">
                 {staff.data.communities.map((community, index) => (
-                  <span>
+                  <>
                     {community.link ? (
                       <a
                         href={community.link}
@@ -68,14 +68,15 @@ const staffs = await getCollection("staffs");
                         class="community-link"
                       >
                         {community.name}
+                        {index < staff.data.communities.length - 1 && ", "}
                       </a>
                     ) : (
-                      <span class="community-name">{community.name}</span>
+                      <span class="community-name">
+                        {community.name}
+                        {index < staff.data.communities.length - 1 && ", "}
+                      </span>
                     )}
-                    {index < staff.data.communities.length - 1 && (
-                      <span class="community-separator">, </span>
-                    )}
-                  </span>
+                  </>
                 ))}
               </div>
             )}
