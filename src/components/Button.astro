@@ -4,6 +4,7 @@ import DoubleArrow from "../assets/icon/double-arrow.svg";
 interface Props {
   variant?: "primary" | "secondary";
   size?: "small" | "large";
+  fullWidth?: boolean;
   disabled?: boolean;
   href?: string;
   target?: string;
@@ -12,6 +13,7 @@ interface Props {
 const {
   variant = "primary",
   size = "small",
+  fullWidth = false,
   disabled = false,
   href,
   target,
@@ -31,6 +33,10 @@ const {
     box-sizing: border-box;
     text-align: center;
     transition: background-color 0.3s ease;
+
+    &.full-width {
+      width: 100%;
+    }
   }
 
   .button--primary {
@@ -124,7 +130,7 @@ const {
 </style>
 
 <a
-  class={`button button--${variant} button--${size} ${disabled ? "button--disabled" : ""}`}
+  class={`button button--${variant} button--${size} ${disabled ? "button--disabled" : ""} ${fullWidth ? "full-width" : ""}`}
   href={disabled ? undefined : href}
   aria-disabled={disabled}
   role="button"
