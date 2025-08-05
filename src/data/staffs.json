@@ -4,21 +4,36 @@
     "name": "サンプルさん",
     "company": "テスト株式会社",
     "avatar": "masakurapa.png",
-    "links": {
-      "x": "https://x.com/masakurapa",
-      "github": "https://github.com/masakurapa"
-    }
+    "sns": "https://x.com/masakurapa",
+    "communities": [
+      {
+        "name": "Go Conference",
+        "link": "https://gocon.jp"
+      },
+      {
+        "name": "Local Go Meetup"
+      }
+    ]
   },
   {
     "id": "2",
     "name": "サンプル太郎",
-    "links": {
-      "website": "https://example.com"
-    }
+    "sns": "https://example.com",
+    "communities": [
+      {
+        "name": "Tech Community",
+        "link": "https://tech.example.com"
+      }
+    ]
   },
   {
     "id": "3",
     "name": "テスト花子",
-    "company": "テスト株式会社"
+    "company": "テスト株式会社",
+    "communities": [
+      {
+        "name": "Women in Tech"
+      }
+    ]
   }
 ]

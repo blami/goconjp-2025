@@ -7,12 +7,14 @@ const staffs = defineCollection({
     name: z.string(),
     company: z.string().optional(),
     avatar: z.string().optional(),
-    links: z
-      .object({
-        x: z.string().url().optional(),
-        github: z.string().url().optional(),
-        website: z.string().url().optional(),
-      })
+    sns: z.string().url().optional(),
+    communities: z
+      .array(
+        z.object({
+          name: z.string(),
+          link: z.string().url().optional(),
+        }),
+      )
       .optional(),
   }),
 });

@@ -4,6 +4,7 @@ import { concatWithBase } from "../utils/concatWithBase";
 import XLogo from "../assets/x-logo.svg";
 import GitHubLogo from "../assets/github-mark.svg";
 import LinkIcon from "../assets/icon/link.svg";
+import CompanyIcon from "../assets/icon/company.svg";
 
 const staffs = await getCollection("staffs");
 ---
@@ -13,63 +14,72 @@ const staffs = await getCollection("staffs");
     {
       staffs.map((staff) => (
         <div class="staff-card">
-          <div
-            class={`staff-avatar ${staff.data.avatar ? "staff-avatar--with-image" : "staff-avatar--placeholder"}`}
-          >
-            {staff.data.avatar && (
-              <img
-                src={
-                  new URL(
-                    concatWithBase(`staffs/${staff.data.avatar}`),
-                    Astro.url,
-                  ).href
-                }
-                alt={staff.data.name}
-              />
-            )}
-          </div>
+          <div class="staff-header">
+            <div
+              class={`staff-avatar ${staff.data.avatar ? "staff-avatar--with-image" : "staff-avatar--placeholder"}`}
+            >
+              {staff.data.avatar && (
+                <img
+                  src={
+                    new URL(
+                      concatWithBase(`staffs/${staff.data.avatar}`),
+                      Astro.url,
+                    ).href
+                  }
+                  alt={staff.data.name}
+                />
+              )}
+            </div>
 
-          <h3 class="staff-name">{staff.data.name}</h3>
-
-          <p class="staff-company">{staff.data.company || ""}</p>
-
-          {staff.data.links && (
-            <div class="social-links">
-              {staff.data.links.x && (
+            {staff.data.sns && (
+              <div class="social-links">
                 <a
-                  href={staff.data.links.x}
+                  href={staff.data.sns}
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="social-link social-link--x"
-                  aria-label="X (Twitter)"
+                  class="social-link"
+                  aria-label="SNS Link"
                 >
                   <XLogo />
                 </a>
-              )}
-              {staff.data.links.github && (
-                <a
-                  href={staff.data.links.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="social-link social-link--github"
-                  aria-label="GitHub"
-                >
-                  <GitHubLogo />
-                </a>
-              )}
-              {staff.data.links.website && (
-                <a
-                  href={staff.data.links.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="social-link social-link--website"
-                  aria-label="Website"
-                >
-                  <LinkIcon />
-                </a>
-              )}
-            </div>
-          )}
+              </div>
+            )}
+          </div>
+
+          <div class="staff-content">
+            <h3 class="staff-name">{staff.data.name}</h3>
+
+            {staff.data.company && (
+              <p class="staff-company">
+                <CompanyIcon />
+                {staff.data.company}
+              </p>
+            )}
+
+            {staff.data.communities && staff.data.communities.length > 0 && (
+              <div class="communities">
+                {staff.data.communities.map((community, index) => (
+                  <span>
+                    {community.link ? (
+                      <a
+                        href={community.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="community-link"
+                      >
+                        {community.name}
+                      </a>
+                    ) : (
+                      <span class="community-name">{community.name}</span>
+                    )}
+                    {index < staff.data.communities.length - 1 && (
+                      <span class="community-separator">, </span>
+                    )}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       ))
     }
@@ -127,25 +137,40 @@ const staffs = await getCollection("staffs");
   .staff-card {
     background: var(--primitive-light-blue);
     border-radius: 16px;
-    padding: 40px;
-    text-align: center;
+    padding: 24px;
     width: 360px;
-    height: 300px;
+    min-height: 200px;
     box-sizing: border-box;
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .staff-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
   }
 
   .staff-avatar {
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 0 auto 4px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 48px;
+    font-size: 32px;
     color: #666;
+    flex-shrink: 0;
+  }
+
+  .staff-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
   }
 
   .staff-avatar--with-image {
@@ -164,35 +189,42 @@ const staffs = await getCollection("staffs");
   }
 
   .staff-name {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     color: var(--text-primary);
-    margin: 0 0 4px;
-    line-height: 1.4;
+    margin: 0;
+    line-height: 1.2;
   }
 
   .staff-company {
     font-size: 14px;
+    font-weight: 700;
     color: var(--text-secondary);
-    margin: 0 0 4px;
+    margin: 0;
     line-height: 1.4;
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+  }
+
+  .staff-company svg {
+    width: 24px;
     height: 24px;
+    flex-shrink: 0;
   }
 
   .social-links {
     display: flex;
     gap: 12px;
-    justify-content: center;
     align-items: center;
-    margin-top: 0;
   }
 
   .social-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     text-decoration: none;
     border-radius: 4px;
     transition: opacity 0.2s ease;
@@ -203,8 +235,34 @@ const staffs = await getCollection("staffs");
   }
 
   .social-link svg {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     fill: var(--text-primary);
+  }
+
+  .communities {
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  .community-link {
+    font-size: 12px;
+    font-weight: 700;
+    color: #0085d1;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .community-name {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-secondary);
+  }
+
+  .community-separator {
+    color: var(--text-secondary);
   }
 </style>
