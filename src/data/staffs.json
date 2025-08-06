@@ -334,5 +334,23 @@
         "name": "Go Conference"
       }
     ]
+  },
+  {
+    "id": "22",
+    "name": "tenntenn",
+    "company": "newmo株式会社",
+    "avatar": "tenntenn.png",
+    "sns": {
+      "link": "https://x.com/tenntenn",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      },
+      {
+        "name": "Gophers Japan"
+      }
+    ]
   }
 ]
