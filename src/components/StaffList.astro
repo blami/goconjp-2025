@@ -252,18 +252,18 @@ const staffs = await getCollection("staffs");
   .community-link {
     font-size: 12px;
     font-weight: 700;
-    color: #0085d1;
-    text-decoration: none;
+    color: var(--text-accent);
+    text-decoration: underline;
 
     &:hover {
-      text-decoration: underline;
+      opacity: 0.8;
     }
   }
 
   .community-name {
     font-size: 12px;
     font-weight: 700;
-    color: var(--text-secondary);
+    color: var(--text-accent);
   }
 
   .community-separator {
