@@ -7,7 +7,12 @@ const staffs = defineCollection({
     name: z.string(),
     company: z.string().optional(),
     avatar: z.string().optional(),
-    sns: z.string().url().optional(),
+    sns: z
+      .object({
+        link: z.string().url(),
+        type: z.enum(["x", "github", "mastodon"]),
+      })
+      .optional(),
     communities: z
       .array(
         z.object({

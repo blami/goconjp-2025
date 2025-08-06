@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import { concatWithBase } from "../utils/concatWithBase";
 import XLogo from "../assets/x-logo.svg";
 import GitHubLogo from "../assets/github-mark.svg";
+import MastodonLogo from "../assets/mastodon-logo.svg";
 import LinkIcon from "../assets/icon/link.svg";
 import CompanyIcon from "../assets/icon/company.svg";
 
@@ -34,13 +35,15 @@ const staffs = await getCollection("staffs");
             {staff.data.sns && (
               <div class="social-links">
                 <a
-                  href={staff.data.sns}
+                  href={staff.data.sns.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   class="social-link"
-                  aria-label="SNS Link"
+                  aria-label={`${staff.data.sns.type} Link`}
                 >
-                  <XLogo />
+                  {staff.data.sns.type === "x" && <XLogo />}
+                  {staff.data.sns.type === "github" && <GitHubLogo />}
+                  {staff.data.sns.type === "mastodon" && <MastodonLogo />}
                 </a>
               </div>
             )}
