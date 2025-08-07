@@ -352,5 +352,80 @@
         "name": "Gophers Japan"
       }
     ]
+  },
+  {
+    "id": "23",
+    "name": "mikichin",
+    "company": "株式会社メルカリ",
+    "avatar": "chida_miki.jpg",
+    "sns": {
+      "link": "https://x.com/chida_miki",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      }
+    ]
+  },
+  {
+    "id": "24",
+    "name": "micchie",
+    "company": "株式会社メルカリ",
+    "avatar": "micchiebear.jpg",
+    "sns": {
+      "link": "https://x.com/micchiebear",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      },
+      {
+        "name": "Gophers Japan"
+      },
+      {
+        "name": "Women Who Go Tokyo"
+      },
+      {
+        "name": "TinyGo Keeb"
+      }
+    ]
+  },
+  {
+    "id": "25",
+    "name": "ymotongpoo",
+    "company": "アマゾンウェブサービスジャパン合同会社",
+    "avatar": "ymotongpoo.png",
+    "sns": {
+      "link": "https://x.com/ymotongpoo",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      },
+      {
+        "name": "Gophers Japan"
+      }
+    ]
+  },
+  {
+    "id": "26",
+    "name": "sivchari",
+    "company": "newmo株式会社",
+    "avatar": "sivchari.jpg",
+    "sns": {
+      "link": "https://x.com/sivchari",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      },
+      {
+        "name": "golang.tokyo"
+      }
+    ]
   }
 ]
