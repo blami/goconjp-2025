@@ -1,0 +1,431 @@
+[
+  {
+    "id": "1",
+    "name": "N9tE9",
+    "company": "株式会社 SmartHR",
+    "avatar": "n9te9.jpg",
+    "sns": {
+      "link": "https://x.com/n9te9",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "a2",
+    "company": "株式会社カミナシ",
+    "avatar": "A2hiro_tim.jpg",
+    "sns": {
+      "link": "https://x.com/A2hiro_tim",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "もっちー",
+    "company": "株式会社ディー・エヌ・エー",
+    "avatar": "mochi_2225.jpg",
+    "sns": {
+      "link": "https://x.com/mochi_2225",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "kei01234kei",
+    "company": "株式会社サイバーエージェント",
+    "avatar": "kei01234kei.jpg",
+    "sns": {
+      "link": "https://x.com/kei01234kei",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      },
+      {
+        "name": "CA.go"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "name": "terui",
+    "company": "株式会社UPSIDER",
+    "avatar": "shomei_terry.jpg",
+    "sns": {
+      "link": "https://x.com/shomei_terry",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Sendai.go"
+      },
+      {
+        "name": "Go Conference"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "name": "Daiki Kubo",
+    "company": "株式会社タップル",
+    "communities": [
+      {
+        "name": "Go Conference"
+      },
+      {
+        "name": "CA.go"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "name": "Masahiro Sakuraba",
+    "company": "株式会社カオナビ",
+    "avatar": "masakurapa.png",
+    "sns": {
+      "link": "https://x.com/masakurapa",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "name": "walkure",
+    "company": "Money Forward Kyoto",
+    "avatar": "walkure.jpg",
+    "sns": {
+      "link": "https://github.com/walkure",
+      "type": "github"
+    },
+    "communities": [
+      {
+        "name": "kyoto.go"
+      },
+      {
+        "name": "Go Conference"
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "name": "blami",
+    "company": "Bloomberg",
+    "avatar": "blami.png",
+    "sns": {
+      "link": "https://mastodon.online/@blami",
+      "type": "mastodon"
+    },
+    "communities": [
+      {
+        "name": "Golang Tokyo Meetup"
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "name": "budougumi0617",
+    "company": "株式会社LayerX",
+    "avatar": "budougumi0617.png",
+    "sns": {
+      "link": "https://x.com/budougumi0617",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      },
+      {
+        "name": "Gophers Japan"
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "name": "jackchuka",
+    "company": "テイラー株式会社",
+    "avatar": "jackchuka.jpg",
+    "sns": {
+      "link": "https://x.com/jackchuka",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "name": "sago35",
+    "company": "tinygo.org",
+    "avatar": "sago35tk.png",
+    "sns": {
+      "link": "https://x.com/sago35tk",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "TinyGo Keeb"
+      },
+      {
+        "name": "tinygo.org",
+        "link": "http://tinygo.org/"
+      },
+      {
+        "name": "Umeda.go"
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "name": "senoue",
+    "avatar": "senoue.jpg",
+    "sns": {
+      "link": "https://x.com/senoue",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Sendai.go"
+      },
+      {
+        "name": "TinyGo Keeb"
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "name": "haruyama480",
+    "company": "LINEヤフー株式会社",
+    "avatar": "haruyama480.png",
+    "sns": {
+      "link": "https://x.com/haruyama480",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "name": "Suu",
+    "avatar": "Suu_mire0726.jpg",
+    "sns": {
+      "link": "https://x.com/Suu_mire0726",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      },
+      {
+        "name": "Women Who Go Tokyo"
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "name": "Gunzi",
+    "sns": {
+      "link": "https://x.com/com_gunzi",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "name": "momi",
+    "company": "フリー株式会社",
+    "avatar": "irdx_m.jpg",
+    "sns": {
+      "link": "https://x.com/irdx_m",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      },
+      {
+        "name": "Kanazawa.go",
+        "link": "https://kanazawago.connpass.com/"
+      }
+    ]
+  },
+  {
+    "id": "18",
+    "name": "chihiro",
+    "avatar": "chiroruxxxx.jpg",
+    "sns": {
+      "link": "https://x.com/chiroruxxxx",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      }
+    ]
+  },
+  {
+    "id": "19",
+    "name": "fujiwo",
+    "company": "株式会社サイバーエージェント",
+    "avatar": "ffjlabo.jpg",
+    "sns": {
+      "link": "https://x.com/ffjlabo",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      },
+      {
+        "name": "CA.go"
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "name": "あぼねこ",
+    "company": "株式会社ビットキー",
+    "avatar": "avocadoneko.jpg",
+    "sns": {
+      "link": "https://x.com/avocadoneko",
+      "type": "x"
+    },
+    "communities": []
+  },
+  {
+    "id": "21",
+    "name": "慎之介",
+    "company": "株式会社IVRy",
+    "avatar": "mwudo.png",
+    "sns": {
+      "link": "https://x.com/mwudo",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      }
+    ]
+  },
+  {
+    "id": "22",
+    "name": "tenntenn",
+    "company": "newmo株式会社",
+    "avatar": "tenntenn.png",
+    "sns": {
+      "link": "https://x.com/tenntenn",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      },
+      {
+        "name": "Gophers Japan"
+      }
+    ]
+  },
+  {
+    "id": "23",
+    "name": "mikichin",
+    "company": "株式会社メルカリ",
+    "avatar": "chida_miki.jpg",
+    "sns": {
+      "link": "https://x.com/chida_miki",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      }
+    ]
+  },
+  {
+    "id": "24",
+    "name": "micchie",
+    "company": "株式会社メルカリ",
+    "avatar": "micchiebear.jpg",
+    "sns": {
+      "link": "https://x.com/micchiebear",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      },
+      {
+        "name": "Gophers Japan"
+      },
+      {
+        "name": "Women Who Go Tokyo"
+      },
+      {
+        "name": "TinyGo Keeb"
+      }
+    ]
+  },
+  {
+    "id": "25",
+    "name": "ymotongpoo",
+    "company": "アマゾンウェブサービスジャパン合同会社",
+    "avatar": "ymotongpoo.png",
+    "sns": {
+      "link": "https://x.com/ymotongpoo",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      },
+      {
+        "name": "Gophers Japan"
+      }
+    ]
+  },
+  {
+    "id": "26",
+    "name": "sivchari",
+    "company": "newmo株式会社",
+    "avatar": "sivchari.jpg",
+    "sns": {
+      "link": "https://x.com/sivchari",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      },
+      {
+        "name": "golang.tokyo"
+      }
+    ]
+  }
+]
