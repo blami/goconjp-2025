@@ -483,5 +483,40 @@
         "name": "Kizuku.go"
       }
     ]
+  },
+  {
+    "id": "30",
+    "name": "ysaito",
+    "avatar": "ysaito8015.png",
+    "sns": {
+      "link": "https://x.com/ysaito8015",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "TinyGo Keeb"
+      },
+      {
+        "name": "GoWorkshopConference"
+      }
+    ]
+  },
+  {
+    "id": "31",
+    "name": "uji",
+    "company": "NOT A HOTEL, Inc.",
+    "avatar": "uji_rb.jpg",
+    "sns": {
+      "link": "https://x.com/uji_rb",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Kyoto.go"
+      },
+      {
+        "name": "KOBE.go"
+      }
+    ]
   }
 ]
