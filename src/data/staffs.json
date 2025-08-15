@@ -253,6 +253,7 @@
   {
     "id": "16",
     "name": "Gunzi",
+    "avatar": "com_gunzi.jpg",
     "sns": {
       "link": "https://x.com/com_gunzi",
       "type": "x"
@@ -518,5 +519,16 @@
         "name": "KOBE.go"
       }
     ]
+  },
+  {
+    "id": "32",
+    "name": "karamaru",
+    "company": "株式会社サイバーエージェント",
+    "avatar": "karamaru_alpha.jpg",
+    "sns": {
+      "link": "https://x.com/karamaru_alpha",
+      "type": "x"
+    },
+    "communities": []
   }
 ]
