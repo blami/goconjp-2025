@@ -7,10 +7,10 @@ interface Props {
   alt: string;
   width: number;
   height: number;
-  description?: string;
+  link?: string;
 }
 
-const { src, alt, width, height, description } = Astro.props;
+const { src, alt, width, height, link } = Astro.props;
 ---
 
 <style>
@@ -65,10 +65,14 @@ const { src, alt, width, height, description } = Astro.props;
       />
     </div>
 
-    {description && <p>{description}</p>}
-
-    <div style="width: 100%;">
-      <Button variant="secondary" fullWidth>詳細を見る</Button>
-    </div>
+    {
+      link && (
+        <div style="width: 100%;">
+          <Button variant="secondary" fullWidth href={link} target="_blank">
+            詳細を見る
+          </Button>
+        </div>
+      )
+    }
   </div>
 </div>

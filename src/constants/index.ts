@@ -1,3 +1,4 @@
+// スポンサーボード
 import NoImage from "../assets/sponsors/no-image.png";
 import GoogleLogo from "../assets/sponsors/0_S001.png";
 import GMOFSLogo from "../assets/sponsors/1_S101.png";
@@ -16,6 +17,18 @@ import TopotalLogo from "../assets/sponsors/17_S310.png";
 import TechTouchLogo from "../assets/sponsors/19_S304.png";
 import HatenaLogo from "../assets/sponsors/20_S306.png";
 import IssueHuntLogo from "../assets/sponsors/22_S313.png";
+
+// ジョブボード
+import EVERYJobLogo from "../assets/sponsors/S102-jb.jpg";
+import ResilireJobLogo from "../assets/sponsors/S201-jb.png";
+import OPTiMJobLogo from "../assets/sponsors/S202-jb.png";
+import TechTouchJobLogo from "../assets/sponsors/S304-jb.jpg";
+import TokyuJobLogo from "../assets/sponsors/S305-jb.png";
+import SODALogoJobLogo from "../assets/sponsors/S307-jb.png";
+import HatenaJobLogo from "../assets/sponsors/S306-jb.jpg";
+import LayerXJobLogo from "../assets/sponsors/S309-jb.png";
+import UNextJobLogo from "../assets/sponsors/S312-jb.jpg";
+import UbieJobLogo from "../assets/sponsors/S314-jb.png";
 
 const venueSponsorImageSize = {
   height: 242,
@@ -92,7 +105,7 @@ export const constants = {
       },
       jobBoard: {
         imageSrc: NoImage,
-        description: undefined,
+        link: undefined,
       },
     },
     specialSponsor: {
@@ -107,7 +120,7 @@ export const constants = {
       },
       jobBoard: {
         imageSrc: NoImage,
-        description: undefined,
+        link: undefined,
       },
     },
     platinumGoldSponsors: [
@@ -123,9 +136,8 @@ export const constants = {
             "エンジニアの背中を預かるソフトウェアプロダクトの開発組織とそこで働くエンジニアにとって最適なセキュリティサービスを提供し、「背中を預けられる」存在になることがGMO Flatt Securityの使命です。",
         },
         jobBoard: {
-          imageSrc: GMOFSLogo,
-          description:
-            "エンジニアの背中を預かるソフトウェアプロダクトの開発組織とそこで働くエンジニアにとって最適なセキュリティサービスを提供し、「背中を預けられる」存在になることがGMO Flatt Securityの使命です。",
+          imageSrc: NoImage,
+          link: undefined,
         },
       },
       {
@@ -140,9 +152,8 @@ export const constants = {
             'エブリーは、日本が抱える「食」「子育て」「地方創生」の3つの大きな課題に向き合っており、「デリッシュキッチン」をはじめ「トモニテ」「TIMELINE」と3つの動画メディアプラットフォームを運営しています。現在はメディアやプロダクトに蓄積される膨大なデータとテクノロジーを活用し、"暮らし"と"企業"をアップデートしていくことを目指しており、中でもユーザー/メーカー/小売りの三者をつなぐプラットフォームである「リテールメディア」の構築は今後の成長戦略の柱と位置付けて取り組んでいます。​​',
         },
         jobBoard: {
-          imageSrc: EVERYLogo,
-          description:
-            'エブリーは、日本が抱える「食」「子育て」「地方創生」の3つの大きな課題に向き合っており、「デリッシュキッチン」をはじめ「トモニテ」「TIMELINE」と3つの動画メディアプラットフォームを運営しています。現在はメディアやプロダクトに蓄積される膨大なデータとテクノロジーを活用し、"暮らし"と"企業"をアップデートしていくことを目指しており、中でもユーザー/メーカー/小売りの三者をつなぐプラットフォームである「リテールメディア」の構築は今後の成長戦略の柱と位置付けて取り組んでいます。​​',
+          imageSrc: EVERYJobLogo,
+          link: "https://corp.every.tv/recruits/engineer",
         },
       },
     ],
@@ -159,8 +170,8 @@ export const constants = {
             "世界中のサプライチェーン情報をつなぎ、モノづくりを持続可能にする。",
         },
         jobBoard: {
-          imageSrc: ResilireLogo,
-          description: undefined,
+          imageSrc: ResilireJobLogo,
+          link: undefined,
         },
       },
       {
@@ -175,8 +186,8 @@ export const constants = {
             "AI/IoT/Robotics関連の技術を用いて、第一次産業のDXを推進する企業です。各サービスの多くのサーバーサイドやエッジで動作するサービスにGolangを利用しています。",
         },
         jobBoard: {
-          imageSrc: OPTiMLogo,
-          description: undefined,
+          imageSrc: OPTiMJobLogo,
+          link: "https://www.optim.co.jp/recruit/",
         },
       },
     ],
@@ -187,8 +198,8 @@ export const constants = {
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
         jobBoard: {
-          imageSrc: LayerXLogo,
-          description: undefined,
+          imageSrc: LayerXJobLogo,
+          link: "https://jobs.layerx.co.jp/",
         },
       },
       {
@@ -197,8 +208,8 @@ export const constants = {
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
         jobBoard: {
-          imageSrc: UbieLogo,
-          description: undefined,
+          imageSrc: UbieJobLogo,
+          link: "https://recruit.ubie.life/",
         },
       },
       {
@@ -207,8 +218,8 @@ export const constants = {
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
         jobBoard: {
-          imageSrc: FindyLogo,
-          description: undefined,
+          imageSrc: NoImage,
+          link: undefined,
         },
       },
       {
@@ -218,7 +229,7 @@ export const constants = {
         width: silverSponsorImageSize.width,
         jobBoard: {
           imageSrc: NoImage,
-          description: undefined,
+          link: undefined,
         },
       },
       {
@@ -227,8 +238,8 @@ export const constants = {
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
         jobBoard: {
-          imageSrc: UNextLogo,
-          description: undefined,
+          imageSrc: UNextJobLogo,
+          link: "https://hrmos.co/pages/unext/jobs",
         },
       },
       {
@@ -238,7 +249,7 @@ export const constants = {
         width: silverSponsorImageSize.width,
         jobBoard: {
           imageSrc: NoImage,
-          description: undefined,
+          link: undefined,
         },
       },
       {
@@ -248,7 +259,7 @@ export const constants = {
         width: silverSponsorImageSize.width,
         jobBoard: {
           imageSrc: SakuraLogo,
-          description: undefined,
+          link: "https://www.sakura.ad.jp/",
         },
       },
       {
@@ -257,8 +268,8 @@ export const constants = {
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
         jobBoard: {
-          imageSrc: TokyuLogo,
-          description: undefined,
+          imageSrc: TokyuJobLogo,
+          link: "https://10q89s.jp/",
         },
       },
       {
@@ -268,7 +279,7 @@ export const constants = {
         width: silverSponsorImageSize.width,
         jobBoard: {
           imageSrc: NoImage,
-          description: undefined,
+          link: undefined,
         },
       },
       {
@@ -277,8 +288,8 @@ export const constants = {
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
         jobBoard: {
-          imageSrc: KnoledgeWorkLogo,
-          description: undefined,
+          imageSrc: NoImage,
+          link: undefined,
         },
       },
       {
@@ -287,8 +298,8 @@ export const constants = {
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
         jobBoard: {
-          imageSrc: SODALogo,
-          description: undefined,
+          imageSrc: SODALogoJobLogo,
+          link: "https://soda-inc.jp/",
         },
       },
       {
@@ -298,7 +309,7 @@ export const constants = {
         width: silverSponsorImageSize.width,
         jobBoard: {
           imageSrc: NoImage,
-          description: undefined,
+          link: undefined,
         },
       },
       {
@@ -307,8 +318,8 @@ export const constants = {
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
         jobBoard: {
-          imageSrc: TopotalLogo,
-          description: undefined,
+          imageSrc: NoImage,
+          link: undefined,
         },
       },
       {
@@ -318,7 +329,7 @@ export const constants = {
         width: silverSponsorImageSize.width,
         jobBoard: {
           imageSrc: NoImage,
-          description: undefined,
+          link: undefined,
         },
       },
       {
@@ -327,8 +338,8 @@ export const constants = {
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
         jobBoard: {
-          imageSrc: TechTouchLogo,
-          description: undefined,
+          imageSrc: TechTouchJobLogo,
+          link: undefined,
         },
       },
       {
@@ -337,8 +348,8 @@ export const constants = {
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
         jobBoard: {
-          imageSrc: HatenaLogo,
-          description: undefined,
+          imageSrc: HatenaJobLogo,
+          link: "https://hatena.co.jp/recruit/engineer",
         },
       },
       {
@@ -348,7 +359,7 @@ export const constants = {
         width: silverSponsorImageSize.width,
         jobBoard: {
           imageSrc: NoImage,
-          description: undefined,
+          link: undefined,
         },
       },
       {
@@ -362,7 +373,7 @@ export const constants = {
         },
         jobBoard: {
           imageSrc: IssueHuntLogo,
-          description: undefined,
+          link: "https://issuehunt.co.jp/",
         },
       },
     ],
@@ -375,7 +386,7 @@ export const constants = {
         width: bronzeSponsorImageSize.width,
         jobBoard: {
           imageSrc: NoImage,
-          description: "",
+          link: undefined,
         },
       },
     ],
@@ -388,7 +399,7 @@ export const constants = {
         width: gopherSponsorImageSize.width,
         jobBoard: {
           imageSrc: NoImage,
-          description: undefined,
+          link: undefined,
         },
       },
     ],
@@ -408,6 +419,5 @@ export const AllSponsors = () => {
     ...constants.sponsors.platinumGoldSponsors,
     ...constants.sponsors.goldSponsors,
     ...constants.sponsors.silverSponsors,
-    ...constants.sponsors.bronzeSponsors,
   ];
 };
