@@ -70,6 +70,11 @@ const toolSponsorImageSize = {
   width: 290,
 };
 
+export const jobBoardImageSize = {
+  width: 1200,
+  height: 250,
+};
+
 /**
  * ページ全体で使用する定数
  */

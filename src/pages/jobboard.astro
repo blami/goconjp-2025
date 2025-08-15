@@ -1,7 +1,7 @@
 ---
 import JobBoardCard from "../components/JobBoardCard.astro";
 import Layout from "../layouts/Layout.astro";
-import { AllSponsors } from "../constants";
+import { AllSponsors, jobBoardImageSize } from "../constants";
 import NoImage from "../assets/sponsors/no-image.png";
 ---
 
@@ -10,6 +10,7 @@ import NoImage from "../assets/sponsors/no-image.png";
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 20px;
+    width: 100%;
     gap: 24px;
   }
 
@@ -36,8 +37,8 @@ import NoImage from "../assets/sponsors/no-image.png";
           <JobBoardCard
             src={sponsor.jobBoard.imageSrc}
             alt={sponsor.name}
-            width={sponsor.width}
-            height={sponsor.height}
+            width={jobBoardImageSize.width}
+            height={jobBoardImageSize.height}
             link={sponsor.jobBoard.link}
           />
         );
