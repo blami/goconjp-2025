@@ -1,0 +1,48 @@
+---
+import JobBoardCard from "../components/JobBoardCard.astro";
+import Layout from "../layouts/Layout.astro";
+import { AllSponsors, jobBoardImageSize } from "../constants";
+import NoImage from "../assets/sponsors/no-image.png";
+---
+
+<style>
+  .job-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    width: 100%;
+    gap: 24px;
+  }
+
+  @media (max-width: 900px) {
+    .job-board {
+      grid-template-columns: 1fr 1fr; /* 画面が900px以下なら2列 */
+    }
+  }
+  @media (max-width: 600px) {
+    .job-board {
+      grid-template-columns: 1fr; /* 600px以下なら1列 */
+    }
+  }
+</style>
+
+<Layout title="ジョブボード" titleEn="Job Board">
+  <div class="job-board">
+    {
+      AllSponsors().map((sponsor) => {
+        if (sponsor.jobBoard === null) return null;
+        if (sponsor.jobBoard.imageSrc === NoImage) return null;
+
+        return (
+          <JobBoardCard
+            src={sponsor.jobBoard.imageSrc}
+            alt={sponsor.name}
+            width={jobBoardImageSize.width}
+            height={jobBoardImageSize.height}
+            link={sponsor.jobBoard.link}
+          />
+        );
+      })
+    }
+  </div>
+</Layout>
