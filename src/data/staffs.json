@@ -530,5 +530,20 @@
       "type": "x"
     },
     "communities": []
+  },
+  {
+    "id": "33",
+    "name": "r.kataoka",
+    "company": "株式会社 SmartHR",
+    "avatar": "ryu11san.jpg",
+    "sns": {
+      "link": "https://x.com/ryu11san/",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      }
+    ]
   }
 ]
