@@ -6,6 +6,80 @@ import "../styles/sub-page.css";
 import "../styles/timetable.css";
 ---
 
+<script>
+  // DAY1のクリックイベント
+  document
+    .querySelector(".timetable-nav-item.day1 > a")
+    ?.addEventListener("click", (e) => {
+      // PCではクリックイベントを無効化
+      if (window.innerWidth > 860) return;
+
+      e.preventDefault();
+      // タイムテーブルの開催日ボタンの活性状況の切り替え
+      document
+        .querySelector(".timetable-nav-item.day1 > a")
+        ?.classList.add("active");
+      document
+        .querySelector(".timetable-nav-item.day2 > a")
+        ?.classList.remove("active");
+
+      // タイムテーブルの開催日コンテンツの活性状況の切り替え
+      document
+        .querySelector(".timetable-article.day1")
+        ?.classList.add("active");
+      document
+        .querySelector(".timetable-article.day2")
+        ?.classList.remove("active");
+    });
+
+  // DAY2のクリックイベント
+  document
+    .querySelector(".timetable-nav-item.day2 > a")
+    ?.addEventListener("click", (e) => {
+      // PCではクリックイベントを無効化
+      if (window.innerWidth > 860) return;
+
+      e.preventDefault();
+      // タイムテーブルの開催日ボタンの活性状況の切り替え
+      document
+        .querySelector(".timetable-nav-item.day1 > a")
+        ?.classList.remove("active");
+      document
+        .querySelector(".timetable-nav-item.day2 > a")
+        ?.classList.add("active");
+
+      // タイムテーブルの開催日コンテンツの活性状況の切り替え
+      document
+        .querySelector(".timetable-article.day1")
+        ?.classList.remove("active");
+      document
+        .querySelector(".timetable-article.day2")
+        ?.classList.add("active");
+    });
+
+  // 切り替えボタンの初期状態を設定
+  const resizeObserver = new ResizeObserver(() => {
+    // PCでは処理を無効化
+    if (window.innerWidth > 860) return;
+
+    // 開催日の切り替えボタンの活性状態を確認
+    const isDay1Active = document
+      .querySelector(".timetable-nav-item.day1 > a")
+      ?.classList.contains("active");
+    const isDay2Active = document
+      .querySelector(".timetable-nav-item.day2 > a")
+      ?.classList.contains("active");
+
+    // どちらも非アクティブな場合はDAY1をアクティブにする
+    if (!isDay1Active && !isDay2Active) {
+      document
+        .querySelector(".timetable-nav-item.day1 > a")
+        ?.classList.add("active");
+    }
+  });
+  resizeObserver.observe(document.body);
+</script>
+
 <style>
   .section-title .day-date {
     margin-left: 16px;
@@ -25,8 +99,22 @@ import "../styles/timetable.css";
     }
   }
 
+  .timetable-article {
+    @media screen and (max-width: 860px) {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+
   .timetable-article + .timetable-article {
     margin-top: 80px;
+
+    @media screen and (max-width: 860px) {
+      margin-top: 0;
+    }
   }
 
   .timetable-grid {
@@ -55,16 +143,16 @@ import "../styles/timetable.css";
 <Layout title="タイムテーブル" titleEn="Timetable">
   <nav class="timetable-nav">
     <ul>
-      <li>
+      <li class="timetable-nav-item day1 active">
         <Button href="#day1" size="small" variant="secondary">DAY1</Button>
       </li>
-      <li>
+      <li class="timetable-nav-item day2">
         <Button href="#day2" size="small" variant="secondary">DAY2</Button>
       </li>
     </ul>
   </nav>
 
-  <article class="timetable-article">
+  <article class="timetable-article day1 active">
     <h2 id="day1" class="section-title">
       DAY1<span class="day-date">9.27 SAT</span>
     </h2>
@@ -78,7 +166,7 @@ import "../styles/timetable.css";
     </div>
   </article>
 
-  <article class="timetable-article">
+  <article class="timetable-article day2">
     <h2 id="day2" class="section-title">
       DAY2<span class="day-date">9.28 SUN</span>
     </h2>

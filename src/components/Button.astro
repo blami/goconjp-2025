@@ -51,6 +51,14 @@ const {
       color: var(--surface-primary-dark);
     }
 
+    &.active {
+      &:hover {
+        background-color: var(--surface-primary);
+        border: 2px solid var(--surface-primary-dark);
+        color: var(--surface-primary-dark);
+      }
+    }
+
     & .arrow {
       fill: var(--surface-primary-dark);
     }
@@ -62,6 +70,12 @@ const {
     color: var(--text-on-fill);
 
     &:hover {
+      background-color: var(--surface-primary);
+      border: 2px solid var(--surface-secondary-dark);
+      color: var(--surface-secondary-dark);
+    }
+
+    &.active {
       background-color: var(--surface-primary);
       border: 2px solid var(--surface-secondary-dark);
       color: var(--surface-secondary-dark);
