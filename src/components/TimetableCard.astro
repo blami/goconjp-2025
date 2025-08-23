@@ -1,35 +1,28 @@
 ---
 import { Image } from "astro:assets";
 import { getRelativeLocaleUrl } from "astro:i18n";
-import sessions from "../data/sessions.json";
-import {
-  getFormattedTime,
-  getSessionSpeakerName,
-  getSessionSpeakerThumbnailSrc,
-  getSessionTime,
-} from "../utils/timetable";
+import timetable from "../data/timetable.json";
+import { getFormattedTime, getSessionSpeaker } from "../utils/timetable";
+import CommonTimetableCard from "./CommonTimetableCard.astro";
 
 interface Props {
   /**
-   * セッションのID
-   * @example 649102
+   * セッション情報
    */
-  id?: string;
-  /**
-   * セッションの識別子
-   * @example A1-SP
-   */
-  sessionLabel: string;
+  session?: (typeof timetable)[0]["timeSlots"][0]["rooms"][0]["session"];
 }
 
-const { id, sessionLabel } = Astro.props;
+const { session } = Astro.props;
 
 const currentLocale = Astro.currentLocale || "ja";
 
-// 現在のセッションを取得
-const session = sessions.sessions.find((session) => session.id === id);
-
+// セッション情報がない場合は何も表示しない
 if (!session) return null;
+
+// スピーカー情報
+const speaker = getSessionSpeaker(session.speakers.at(0)?.id);
+const profileImageUrl = speaker?.profilePicture;
+const speakerName = speaker?.fullName ?? "";
 ---
 
 <style>
@@ -120,38 +113,41 @@ if (!session) return null;
 </style>
 
 <section
-  class={`timetable-card ${session.roomId === sessions.rooms.at(0)?.id ? "room-a" : "room-b"}`}
+  class={`timetable-card ${session.roomId === 67044 ? "room-a" : "room-b"}`}
 >
   <div class="card-header">
     <p class="card-header-time">
       {getFormattedTime(session.startsAt)} - {getFormattedTime(session.endsAt)}
     </p>
-    <p
-      class={`card-header-session-id ${session.roomId === sessions.rooms.at(0)?.id ? "room-a" : "room-b"}`}
-    >
-      {sessionLabel}
-    </p>
   </div>
   <h3 class="card-title">
     <a
-      href={getRelativeLocaleUrl(currentLocale, `/timetable/${id}`)}
+      href={getRelativeLocaleUrl(currentLocale, `/timetable/${session.id}`)}
       class="card-title-link">{session.title}</a
     >
   </h3>
   <div class="card-footer">
-    <div class="speaker-info">
-      <Image
-        src={getSessionSpeakerThumbnailSrc(session.speakers.at(0))}
-        alt={getSessionSpeakerName(session.speakers.at(0))}
-        width={24}
-        height={24}
-        loading="lazy"
-        class="speaker-thumbnail"
-      />
-      <p class="speaker-name">
-        {getSessionSpeakerName(session.speakers.at(0))}
-      </p>
-    </div>
-    <p class="session-time">{getSessionTime(session.categoryItems)}</p>
+    {
+      profileImageUrl && (
+        <div class="speaker-info">
+          <Image
+            src={profileImageUrl}
+            alt={speakerName}
+            width={24}
+            height={24}
+            loading="lazy"
+            class="speaker-thumbnail"
+          />
+          <p class="speaker-name">{speakerName}</p>
+        </div>
+      )
+    }
+    <p class="session-time">
+      {
+        session.categories
+          .find((category) => category.id === 101938)
+          ?.categoryItems.at(0)?.name
+      }
+    </p>
   </div>
 </section>

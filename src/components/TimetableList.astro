@@ -2,15 +2,26 @@
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
-import sessions from "../data/sessions.json";
+import timetable from "../data/timetable.json";
 import "../styles/timetable.css";
 import TimetableCard from "./TimetableCard.astro";
+import CommonTimetableCard from "./CommonTimetableCard.astro";
+import { getFormattedTime } from "../utils/timetable";
 
 interface Props {
+  /**
+   * イベントの日付
+   * @example "2025-01-01"
+   */
+  eventDate: string;
+  /**
+   * タイムテーブルの時間帯
+   * @example 10
+   */
   hour: number;
 }
 
-const { hour } = Astro.props;
+const { hour, eventDate } = Astro.props;
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -18,71 +29,89 @@ dayjs.extend(timezone);
 /**
  * 指定した時間のセッションを分類する
  * @param hour 時間
- * @returns セッションの配列[roomA, roomB][]
+ * @returns セッションの配列[Room 1, Room 2-1, Room 2-2][]
  */
-const getClassifiedSessions = (hour: number) => {
-  // セッションを開始時間でソート
-  const sortedSessions = sessions.sessions.sort((a, b) => {
-    return new Date(a.startsAt).getTime() - new Date(b.startsAt).getTime();
-  });
+const getClassifiedSessions = (eventDate: string, hour: number) => {
+  // 指定した開催日のタイムテーブルを取得
+  const currentDateTimetable = timetable.find(
+    (event) =>
+      dayjs(event.date).tz("Asia/Tokyo").format("YYYY-MM-DD") === eventDate,
+  );
 
-  // 部屋ごとにセッションを抽出
-  const roomA = sortedSessions.filter((session) => {
-    return session.roomId === sessions.rooms.at(0)?.id;
-  });
-  const roomB = sortedSessions.filter((session) => {
-    return session.roomId === sessions.rooms.at(1)?.id;
-  });
+  // 指定した時間のセッションを取得
+  const currentHourTimetable = currentDateTimetable?.timeSlots.filter(
+    (slot) =>
+      dayjs(`${eventDate}T${slot.slotStart}`).tz("Asia/Tokyo").hour() === hour,
+  );
 
-  // 指定した開始時間のセッションを抽出
-  const currentHourSessionsA = roomA.filter((session) => {
-    return dayjs(session.startsAt).tz("Asia/Tokyo").hour() === hour;
-  });
-  const currentHourSessionsB = roomB.filter((session) => {
-    return dayjs(session.startsAt).tz("Asia/Tokyo").hour() === hour;
-  });
+  return (
+    currentHourTimetable?.map((slot) => {
+      // 部屋ごとにセッションを抽出
+      const room1 = slot.rooms.find((room) => room.id === 67044);
+      const room2_1 = slot.rooms.find((room) => room.id === 67045);
+      const room2_2 = slot.rooms.find((room) => room.id === 70103);
 
-  // 2列になるようにセッションを配列に格納
-  // MEMO: レイアウトが崩れないようにセッションがない場合はundefinedを格納
-  return [
-    ...Array(
-      Math.max(currentHourSessionsA.length, currentHourSessionsB.length),
-    ).keys(),
-  ].map((index) => {
-    // 部屋ごとのセッションの順番を取得
-    const a = currentHourSessionsA.at(index);
-    const aIdx = roomA.findIndex((s) => s.id === a?.id) + 1;
-    const b = currentHourSessionsB.at(index);
-    const bIdx = roomB.findIndex((s) => s.id === b?.id) + 1;
-
-    return [
-      a ? { ...a, sessionIdx: aIdx } : undefined,
-      b ? { ...b, sessionIdx: bIdx } : undefined,
-    ];
-  });
+      return [room1, room2_1, room2_2];
+    }) ?? []
+  );
 };
 
-const classifiedSessions = getClassifiedSessions(hour);
+const classifiedSessions = getClassifiedSessions(eventDate, hour);
+
+// セッションがない場合は何も表示しない
+if (classifiedSessions.length === 0) {
+  return null;
+}
 ---
 
 <div class="time-slot" style={`grid-row: span ${classifiedSessions.length};`}>
   <span>{hour.toString().padStart(2, "0")}:00</span>
 </div>
 {
-  classifiedSessions.map((session) => {
+  classifiedSessions.map((slot) => {
+    // 列ごと（部屋ごと）に取得
+    const room1 = slot.at(0)?.session;
+    const room2_1 = slot.at(1)?.session;
+    const room2_2 = slot.at(2)?.session;
+
     return (
       <>
+        {/* Room 1 */}
         <div class="session-cell">
-          <TimetableCard
-            id={session.at(0)?.id}
-            sessionLabel={`A${session.at(0)?.sessionIdx}-SP`}
-          />
+          {/* MEMO: isServiceSessionがtrueの場合は休憩かWorkshopなのでCommonTimetableCardを使用 */}
+          {room1?.isServiceSession ? (
+            <CommonTimetableCard
+              title={room1.title}
+              startAt={getFormattedTime(room1.startsAt)}
+              endAt={getFormattedTime(room1.endsAt)}
+            />
+          ) : (
+            <TimetableCard session={room1} />
+          )}
         </div>
+        {/* Room 2-1 */}
         <div class="session-cell">
-          <TimetableCard
-            id={session.at(1)?.id}
-            sessionLabel={`B${session.at(1)?.sessionIdx}-SP`}
-          />
+          {room2_1?.isServiceSession ? (
+            <CommonTimetableCard
+              title={room2_1.title}
+              startAt={getFormattedTime(room2_1.startsAt)}
+              endAt={getFormattedTime(room2_1.endsAt)}
+            />
+          ) : (
+            <TimetableCard session={room2_1} />
+          )}
+        </div>
+        {/* Room 2-2 */}
+        <div class="session-cell">
+          {room2_2?.isServiceSession ? (
+            <CommonTimetableCard
+              title={room2_2.title}
+              startAt={getFormattedTime(room2_2.startsAt)}
+              endAt={getFormattedTime(room2_2.endsAt)}
+            />
+          ) : (
+            <TimetableCard session={room2_2} />
+          )}
         </div>
       </>
     );

@@ -26,9 +26,13 @@ import "../styles/timetable.css";
     }
   }
 
+  .timetable-article + .timetable-article {
+    margin-top: 80px;
+  }
+
   .timetable-grid {
     display: grid;
-    grid-template-columns: auto 1fr 1fr;
+    grid-template-columns: auto 1fr 1fr 1fr;
     gap: 8px 16px;
     width: 100%;
   }
@@ -61,37 +65,49 @@ import "../styles/timetable.css";
     </ul>
   </nav>
 
-  <h2 id="day1" class="section-title">
-    DAY1<span class="day-date">9.27 SAT</span>
-  </h2>
-  <article>
+  <article class="timetable-article">
+    <h2 id="day1" class="section-title">
+      DAY1<span class="day-date">9.27 SAT</span>
+    </h2>
     <div class="timetable-grid">
       <!-- ヘッダー行 -->
       <div></div>
       <div class="room-title room-a">RoomA</div>
-      <div class="room-title room-b">RoomB</div>
-      <div class="time-slot" style={`grid-row: span 1;`}>
-        <span>09:00</span>
-      </div>
-      <div class="session-cell">
-        <CommonTimetableCard
-          title="オープニング"
-          startAt="09:00"
-          endAt="09:15"
-        />
-      </div>
-      <div class="session-cell">
-        <CommonTimetableCard
-          title="オープニング"
-          startAt="09:00"
-          endAt="09:15"
-        />
-      </div>
-      <TimetableList hour={10} />
-      <TimetableList hour={11} />
-      <TimetableList hour={13} />
-      <TimetableList hour={14} />
-      <TimetableList hour={15} />
+      <div class="room-title room-b">RoomB-1</div>
+      <div class="room-title room-b">RoomB-2</div>
+      <TimetableList eventDate="2025-09-27" hour={9} />
+      <TimetableList eventDate="2025-09-27" hour={10} />
+      <TimetableList eventDate="2025-09-27" hour={11} />
+      <TimetableList eventDate="2025-09-27" hour={13} />
+      <TimetableList eventDate="2025-09-27" hour={14} />
+      <TimetableList eventDate="2025-09-27" hour={15} />
+      <TimetableList eventDate="2025-09-27" hour={16} />
+      <TimetableList eventDate="2025-09-27" hour={17} />
+      <TimetableList eventDate="2025-09-27" hour={18} />
+      <TimetableList eventDate="2025-09-27" hour={19} />
+    </div>
+  </article>
+
+  <article class="timetable-article">
+    <h2 id="day2" class="section-title">
+      DAY2<span class="day-date">9.28 SUN</span>
+    </h2>
+    <div class="timetable-grid">
+      <!-- ヘッダー行 -->
+      <div></div>
+      <div class="room-title room-a">RoomA</div>
+      <div class="room-title room-b">RoomB-1</div>
+      <div class="room-title room-b">RoomB-2</div>
+      <TimetableList eventDate="2025-09-28" hour={9} />
+      <TimetableList eventDate="2025-09-28" hour={10} />
+      <TimetableList eventDate="2025-09-28" hour={11} />
+      <TimetableList eventDate="2025-09-28" hour={13} />
+      <TimetableList eventDate="2025-09-28" hour={14} />
+      <TimetableList eventDate="2025-09-28" hour={15} />
+      <TimetableList eventDate="2025-09-28" hour={16} />
+      <TimetableList eventDate="2025-09-28" hour={17} />
+      <TimetableList eventDate="2025-09-28" hour={18} />
+      <TimetableList eventDate="2025-09-28" hour={19} />
     </div>
   </article>
 </Layout>
