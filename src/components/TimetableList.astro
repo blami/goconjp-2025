@@ -1,4 +1,7 @@
 ---
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
 import sessions from "../data/sessions.json";
 import "../styles/timetable.css";
 import TimetableCard from "./TimetableCard.astro";
@@ -8,6 +11,9 @@ interface Props {
 }
 
 const { hour } = Astro.props;
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 /**
  * 指定した時間のセッションを分類する
@@ -30,10 +36,10 @@ const getClassifiedSessions = (hour: number) => {
 
   // 指定した開始時間のセッションを抽出
   const currentHourSessionsA = roomA.filter((session) => {
-    return new Date(session.startsAt).getHours() === hour;
+    return dayjs(session.startsAt).tz("Asia/Tokyo").hour() === hour;
   });
   const currentHourSessionsB = roomB.filter((session) => {
-    return new Date(session.startsAt).getHours() === hour;
+    return dayjs(session.startsAt).tz("Asia/Tokyo").hour() === hour;
   });
 
   // 2列になるようにセッションを配列に格納
