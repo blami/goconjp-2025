@@ -19,6 +19,38 @@ export const getCurrentDateTimetable = (eventDate: string) =>
   );
 
 /**
+ * 指定した時間帯内の各部屋のセッション情報を所得する
+ * @param hour 時間帯
+ * @returns 時間帯毎のセッション情報
+ */
+export const getClassifiedSessions = (eventDate: string, hour: number) => {
+  // 指定した開催日のタイムテーブルを取得
+  const currentDateTimetable = getCurrentDateTimetable(eventDate);
+
+  // 指定した時間のセッションを取得
+  const currentHourTimetable = currentDateTimetable?.timeSlots.filter(
+    (slot) =>
+      dayjs(`${eventDate}T${slot.slotStart}`).tz("Asia/Tokyo").hour() === hour,
+  );
+
+  return (
+    currentHourTimetable?.map((slot) => {
+      // 部屋ごとにセッションを抽出
+      const room1 = slot.rooms.find((room) => room.id === 67044);
+      const room2_1 = slot.rooms.find((room) => room.id === 67045);
+      const room2_2 = slot.rooms.find((room) => room.id === 70103);
+
+      return {
+        room1,
+        room2_1,
+        room2_2,
+        slotStart: slot.slotStart,
+      };
+    }) ?? []
+  );
+};
+
+/**
  * 日時を時間フォーマットに変換
  * @param time 日時
  * @returns フォーマットされた時間
