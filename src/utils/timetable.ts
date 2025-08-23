@@ -102,17 +102,22 @@ export const getTimeSlotSpanCount = (
   start: string | undefined,
   end: string | undefined,
 ) => {
+  if (start === undefined && end === undefined) return 0;
+
+  // 開始時間と終了時間を取得
+  const startTime = dayjs(start).tz("Asia/Tokyo");
+  const endTime = dayjs(end).tz("Asia/Tokyo");
+
   // 指定した開催日のタイムテーブルを取得
   const currentDateTimeSlots =
     getCurrentDateTimetable(eventDate)?.timeSlots ?? [];
 
   // セッションの開始時間と終了時間から時間帯のインデックスを取得
-  const startIdx = currentDateTimeSlots.findIndex(
-    (slot) =>
-      slot.slotStart === dayjs(start).tz("Asia/Tokyo").format("HH:mm:ss"),
+  const startIdx = currentDateTimeSlots.findIndex((slot) =>
+    dayjs(`${eventDate}T${slot.slotStart}`).tz("Asia/Tokyo").isSame(startTime),
   );
-  const endIdx = currentDateTimeSlots.findIndex(
-    (slot) => slot.slotStart === dayjs(end).tz("Asia/Tokyo").format("HH:mm:ss"),
+  const endIdx = currentDateTimeSlots.findIndex((slot) =>
+    dayjs(`${eventDate}T${slot.slotStart}`).tz("Asia/Tokyo").isSame(endTime),
   );
 
   // どちらも見つからない場合は0を返す
