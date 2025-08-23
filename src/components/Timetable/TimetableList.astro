@@ -82,6 +82,7 @@ if (classifiedSessions.length === 0) {
           const room1 = slot.room1?.session;
           const room2_1 = slot.room2_1?.session;
           const room2_2 = slot.room2_2?.session;
+          const room2_3 = slot.room2_3?.session;
 
           // 跨ぐ行数を計算
           const room2_1RowSpan = getTimeSlotSpanCount(
@@ -94,6 +95,11 @@ if (classifiedSessions.length === 0) {
             room2_2?.startsAt,
             room2_2?.endsAt,
           );
+          const room2_3RowSpan = getTimeSlotSpanCount(
+            eventDate,
+            room2_3?.startsAt,
+            room2_3?.endsAt,
+          );
 
           // 前のセッションが跨がっているかどうかを確認
           const room2_1Occupancy = isTimeSlotOccupied(
@@ -104,6 +110,11 @@ if (classifiedSessions.length === 0) {
           const room2_2Occupancy = isTimeSlotOccupied(
             eventDate,
             70103,
+            slot.slotStart,
+          );
+          const room2_3Occupancy = isTimeSlotOccupied(
+            eventDate,
+            70899,
             slot.slotStart,
           );
 
@@ -173,6 +184,32 @@ if (classifiedSessions.length === 0) {
                   ) : (
                     // 通常のセッションの場合
                     <TimetableCard session={room2_2} />
+                  )}
+                </div>
+              )}
+              {/* Room 2-3 */}
+              {/* MEMO: 前の時間帯のセッションが跨がる場合は描画しない */}
+              {!room2_3Occupancy && (
+                // MEMO: スマホ時はGrid表示ではなくなるので要素ごと表示させない
+                <div
+                  class={`session-cell room2-3 ${room2_3 ? "" : "empty"}`}
+                  style={
+                    // セッションが跨がる場合は行を跨ぐ
+                    room2_3RowSpan > 1
+                      ? `grid-row: span ${room2_3RowSpan};`
+                      : undefined
+                  }
+                >
+                  {room2_3?.isServiceSession ? (
+                    // 休憩やワークショップの場合
+                    <CommonTimetableCard
+                      title={room2_3.title}
+                      startAt={getFormattedTime(room2_3.startsAt)}
+                      endAt={getFormattedTime(room2_3.endsAt)}
+                    />
+                  ) : (
+                    // 通常のセッションの場合
+                    <TimetableCard session={room2_3} />
                   )}
                 </div>
               )}

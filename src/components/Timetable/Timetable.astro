@@ -52,6 +52,9 @@ import TimetableList from "./TimetableList.astro";
       .querySelector(".timetable-room-nav-item.room2-2 > a")
       ?.classList.remove("active");
     document
+      .querySelector(".timetable-room-nav-item.room2-3 > a")
+      ?.classList.remove("active");
+    document
       .querySelector(`.timetable-room-nav-item.${targetClassName} > a`)
       ?.classList.add("active");
 
@@ -64,6 +67,9 @@ import TimetableList from "./TimetableList.astro";
       ?.forEach((el) => el.classList.remove("active"));
     document
       .querySelectorAll(".session-cell.room2-2")
+      ?.forEach((el) => el.classList.remove("active"));
+    document
+      .querySelectorAll(".session-cell.room2-3")
       ?.forEach((el) => el.classList.remove("active"));
     document
       .querySelectorAll(`.session-cell.${targetClassName}`)
@@ -113,6 +119,17 @@ import TimetableList from "./TimetableList.astro";
       toggleRoomNav("room2-2");
     });
 
+  // Room 2-3のクリックイベント
+  document
+    .querySelector(".timetable-room-nav-item.room2-3 > a")
+    ?.addEventListener("click", (e) => {
+      // PCではクリックイベントを無効化
+      if (window.innerWidth > TRIGGER_WIDTH) return;
+
+      e.preventDefault();
+      toggleRoomNav("room2-3");
+    });
+
   // 切り替えボタンの初期状態を設定
   const resizeObserver = new ResizeObserver(() => {
     // PCでは開催日の活性状況を取り除く
@@ -152,9 +169,17 @@ import TimetableList from "./TimetableList.astro";
     const isRoom2_2Active = document
       .querySelector(".timetable-room-nav-item.room2-2 > a")
       ?.classList.contains("active");
+    const isRoom2_3Active = document
+      .querySelector(".timetable-room-nav-item.room2-3 > a")
+      ?.classList.contains("active");
 
     // どの会場も非アクティブな場合はRoom 1をアクティブにする
-    if (!isRoom1Active && !isRoom2_1Active && !isRoom2_2Active) {
+    if (
+      !isRoom1Active &&
+      !isRoom2_1Active &&
+      !isRoom2_2Active &&
+      !isRoom2_3Active
+    ) {
       document
         .querySelector(".timetable-room-nav-item.room1 > a")
         ?.classList.add("active");
@@ -237,7 +262,7 @@ import TimetableList from "./TimetableList.astro";
 
   .timetable-grid {
     display: grid;
-    grid-template-columns: auto 1fr 1fr 1fr;
+    grid-template-columns: auto 1fr 1fr 1fr 1fr;
     gap: 8px 16px;
     width: 100%;
     @media screen and (max-width: 860px) {
@@ -293,6 +318,9 @@ import TimetableList from "./TimetableList.astro";
     <li class="timetable-room-nav-item room2-2">
       <Button size="small" variant="primitive-cyan">Room 2-2</Button>
     </li>
+    <li class="timetable-room-nav-item room2-3">
+      <Button size="small" variant="primitive-cyan">Room 2-3</Button>
+    </li>
   </ul>
 </nav>
 
@@ -306,6 +334,7 @@ import TimetableList from "./TimetableList.astro";
     <div class="room-title room1 active">Room 1</div>
     <div class="room-title room2-1">Room 2-1</div>
     <div class="room-title room2-2">Room 2-2</div>
+    <div class="room-title room2-3">Room 2-3</div>
     <TimetableList eventDate="2025-09-27" />
   </div>
 </article>
@@ -320,6 +349,7 @@ import TimetableList from "./TimetableList.astro";
     <div class="room-title room1 active">Room 1</div>
     <div class="room-title room2-1">Room 2-1</div>
     <div class="room-title room2-2">Room 2-2</div>
+    <div class="room-title room2-3">Room 2-3</div>
     <TimetableList eventDate="2025-09-28" />
   </div>
 </article>

@@ -53,12 +53,14 @@ export const getClassifiedSessions = (eventDate: string) => {
         const room1 = slot.rooms.find((room) => room.id === 67044);
         const room2_1 = slot.rooms.find((room) => room.id === 67045);
         const room2_2 = slot.rooms.find((room) => room.id === 70103);
+        const room2_3 = slot.rooms.find((room) => room.id === 70899);
 
         return {
           slotStart: slot.slotStart,
           room1,
           room2_1,
           room2_2,
+          room2_3,
         };
       }) ?? [];
 
