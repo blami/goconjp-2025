@@ -12,11 +12,12 @@ dayjs.extend(timezone);
  * @param eventDate イベント開催日
  * @returns 指定した開催日のタイムテーブル
  */
-export const getCurrentDateTimetable = (eventDate: string) =>
-  timetable.find(
-    (event) =>
-      dayjs(event.date).tz("Asia/Tokyo").format("YYYY-MM-DD") === eventDate,
+export const getCurrentDateTimetable = (eventDate: string) => {
+  const date = dayjs.tz(eventDate, "Asia/Tokyo");
+  return timetable.find((event) =>
+    dayjs.tz(event.date, "Asia/Tokyo").isSame(date, "day"),
   );
+};
 
 /**
  * 時間帯毎の各部屋のセッション情報を所得する
@@ -31,7 +32,7 @@ export const getClassifiedSessions = (eventDate: string) => {
   const timeSlotHours = [
     ...new Set(
       currentDateTimetable?.timeSlots.map((slot) =>
-        dayjs(`${eventDate}T${slot.slotStart}`).tz("Asia/Tokyo").hour(),
+        dayjs.tz(`${eventDate}T${slot.slotStart}`, "Asia/Tokyo").hour(),
       ) ?? [],
     ),
   ];
@@ -41,7 +42,7 @@ export const getClassifiedSessions = (eventDate: string) => {
     // 現在の時間のセッションを取得
     const currentHourTimetable = currentDateTimetable?.timeSlots.filter(
       (slot) =>
-        dayjs(`${eventDate}T${slot.slotStart}`).tz("Asia/Tokyo").hour() ===
+        dayjs.tz(`${eventDate}T${slot.slotStart}`, "Asia/Tokyo").hour() ===
         hour,
     );
 
@@ -74,11 +75,7 @@ export const getClassifiedSessions = (eventDate: string) => {
  * @returns フォーマットされた時間
  */
 export const getFormattedTime = (time: string) => {
-  const date = new Date(time);
-  return new Intl.DateTimeFormat("ja-JP", {
-    hour: "2-digit",
-    minute: "2-digit",
-  }).format(date);
+  return dayjs.tz(time, "Asia/Tokyo").format("HH:mm");
 };
 
 /**
@@ -105,8 +102,8 @@ export const getTimeSlotSpanCount = (
   if (start === undefined && end === undefined) return 0;
 
   // 開始時間と終了時間を取得
-  const startTime = dayjs(start).tz("Asia/Tokyo");
-  const endTime = dayjs(end).tz("Asia/Tokyo");
+  const startTime = dayjs.tz(start, "Asia/Tokyo");
+  const endTime = dayjs.tz(end, "Asia/Tokyo");
 
   // 指定した開催日のタイムテーブルを取得
   const currentDateTimeSlots =
@@ -114,10 +111,10 @@ export const getTimeSlotSpanCount = (
 
   // セッションの開始時間と終了時間から時間帯のインデックスを取得
   const startIdx = currentDateTimeSlots.findIndex((slot) =>
-    dayjs(`${eventDate}T${slot.slotStart}`).tz("Asia/Tokyo").isSame(startTime),
+    dayjs.tz(`${eventDate}T${slot.slotStart}`, "Asia/Tokyo").isSame(startTime),
   );
   const endIdx = currentDateTimeSlots.findIndex((slot) =>
-    dayjs(`${eventDate}T${slot.slotStart}`).tz("Asia/Tokyo").isSame(endTime),
+    dayjs.tz(`${eventDate}T${slot.slotStart}`, "Asia/Tokyo").isSame(endTime),
   );
 
   // どちらも見つからない場合は0を返す
@@ -158,9 +155,9 @@ export const isTimeSlotOccupied = (
     slot.rooms.some(
       (r) =>
         r.id === roomId &&
-        dayjs(r.session.endsAt)
-          .tz("Asia/Tokyo")
-          .isAfter(dayjs(`${eventDate}T${timeSlot}`).tz("Asia/Tokyo")),
+        dayjs
+          .tz(r.session.endsAt, "Asia/Tokyo")
+          .isAfter(dayjs.tz(`${eventDate}T${timeSlot}`, "Asia/Tokyo")),
     ),
   );
 };
