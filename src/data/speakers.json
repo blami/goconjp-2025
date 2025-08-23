@@ -138,6 +138,31 @@
     "categories": []
   },
   {
+    "id": "4926b4e4-5468-4cf7-abdf-2b5b05eca1b7",
+    "firstName": "Kazuto",
+    "lastName": "Maeda",
+    "fullName": "Kazuto Maeda",
+    "bio": "2023/04 からGo言語を始めました。主にWebシステムのサーバサイドの開発を行っています。",
+    "tagLine": "Morisawa inc.",
+    "profilePicture": "https://sessionize.com/image/69db-400o400o1-Eq5vvYaFAjj4pFEvBw4Ub5.jpg",
+    "sessions": [
+      {
+        "id": 997075,
+        "name": "Goを使ってTDDを体験しよう！！"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/chiroruxxxx",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
     "id": "d8d975e3-efe8-4b14-9afa-1baed8a9c4dd",
     "firstName": "Keisuke",
     "lastName": "Hidaka",
@@ -181,6 +206,31 @@
       {
         "title": "X (Twitter)",
         "url": "https://x.com/kei01234kei",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "88468bff-1de7-454b-a688-df25c8c086ae",
+    "firstName": "Kengo",
+    "lastName": "Sato",
+    "fullName": "Kengo Sato",
+    "bio": "飲フラエンジニア兼TinyGo Keeb運営スタッフ兼TinyGo Keebook編集長",
+    "tagLine": "satoken",
+    "profilePicture": "https://sessionize.com/image/16a3-400o400o1-VffEmiubvwUj2GoaRcUUor.png",
+    "sessions": [
+      {
+        "id": 998166,
+        "name": "TinyGo + Gopherくん基板で遊ぼう"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://twitter.com/ken5owata",
         "linkType": "Twitter"
       }
     ],
@@ -271,6 +321,10 @@
     "tagLine": "tinygo.org",
     "profilePicture": "https://sessionize.com/image/751c-400o400o1-QBdgEXq79qHj5tWE2pVvo1.png",
     "sessions": [
+      {
+        "id": 998804,
+        "name": "TinyGo Keeb Workshop"
+      },
       {
         "id": 959047,
         "name": "TinyGo Keeb Tour から始まる OSS 初コントリビュートの物語"
@@ -495,6 +549,31 @@
     "categories": []
   },
   {
+    "id": "104bcaaa-4f8a-4a41-b026-87f0e6c91aab",
+    "firstName": "Shunsuke",
+    "lastName": "Wakamatsu",
+    "fullName": "Shunsuke Wakamatsu",
+    "bio": "株式会社ディー・エヌ・エー所属。普段はGoでWebバックエンドアプリケーションの開発を行う。また、OSSとしてツールやライブラリの開発を行う。",
+    "tagLine": "DeNA Co.,Ltd.",
+    "profilePicture": "https://sessionize.com/image/3765-400o400o1-UcbbeZtEhHPqHJTNhRyxdQ.jpg",
+    "sessions": [
+      {
+        "id": 1000109,
+        "name": "作って理解するGOCACHEPROG"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/mazrean22",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
     "id": "aceb7644-e5b5-42de-8757-dad5ec94734d",
     "firstName": "Takeru",
     "lastName": "Hayasaka",
@@ -666,6 +745,25 @@
         "linkType": "Twitter"
       }
     ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "f7a00995-59de-41e2-94bf-aa249046889e",
+    "firstName": "Yuki",
+    "lastName": "Ito",
+    "fullName": "Yuki Ito",
+    "bio": "newmo株式会社｜移動で地域をカラフルに",
+    "tagLine": "newmo 株式会社",
+    "profilePicture": "https://sessionize.com/image/b55c-400o400o1-sqVAEzoZrutSxmioFPTPdK.jpg",
+    "sessions": [
+      {
+        "id": 1013431,
+        "name": "†開発を加速させる黒魔術講座†"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
     "questionAnswers": [],
     "categories": []
   },

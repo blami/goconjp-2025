@@ -837,6 +837,63 @@
             "isConfirmed": false
           },
           {
+            "id": "1013431",
+            "title": "†開発を加速させる黒魔術講座†",
+            "description": "このワークショップは、日常的な開発ではなかなか触れる機会の少ない「†黒魔術†」的な Go のテクニックについて、実例を交えた解説と、例題をベースとした学習の機会を提供します。具体的には下記に挙げるような Go のテクニックをテーマにして、ワークショップの前半 30 - 40 分ほどで講師側から解説を行い、後半の 50 - 60 分ほどで参加者にそれぞれテーマを選んでいただき、テーマに沿った例題を実装していただきます。例題の実装では、各テーマを要素にしたスタンプラリーを提供し、参加者同士で実装を見せ合って相互にスタンプを押しあうことで埋めてもらい、参加者同士の交流を促進します。\r\n\r\n- `go build` の `-overlay` オプションの活用\r\n- `go build` の `-toolexec` オプションの活用\r\n- `unsafe` パッケージ\r\n- `reflect` パッケージ\r\n- 静的単一代入（SSA）形式を利用した静的解析\r\n- `go:linkname` ディレクティブ\r\n- アセンブリでの関数の実装\r\n- go testを使ったハック\r\n- GOEXPERIMENT で提供されている機能\r\n- (項目は検討中です…）",
+            "startsAt": "2025-09-27T14:50:00",
+            "endsAt": "2025-09-27T16:20:00",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "f7a00995-59de-41e2-94bf-aa249046889e",
+                "name": "Yuki Ito"
+              }
+            ],
+            "categories": [
+              {
+                "id": 101938,
+                "name": "Session Type",
+                "categoryItems": [
+                  {
+                    "id": 389623,
+                    "name": "workshop"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 101939,
+                "name": "Session Level",
+                "categoryItems": [
+                  {
+                    "id": 367244,
+                    "name": "intermediate"
+                  }
+                ],
+                "sort": 1
+              },
+              {
+                "id": 102474,
+                "name": "言語 / Language",
+                "categoryItems": [
+                  {
+                    "id": 369632,
+                    "name": "japanese"
+                  }
+                ],
+                "sort": 2
+              }
+            ],
+            "roomId": 67045,
+            "room": "Room 2-1",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": false
+          },
+          {
             "id": "c4cdce82-eb15-4936-9caf-e4a9c360fe2b",
             "title": "OST",
             "description": null,
@@ -880,6 +937,120 @@
         "name": "Room 2-2",
         "sessions": [
           {
+            "id": "998804",
+            "title": "TinyGo Keeb Workshop",
+            "description": "TinyGo Keeb Tour というイベントで使用している zero-kb02 というハードウェアを主催側で準備し、それに対してのプログラムを書く、という形でワークショップを開催します。\r\n環境立ち上げ後、順番に例を試していくパートを実施、最後に簡単なオリジナルアプリケーションを作ってもらい互いに発表することで交流することを予定しています。実際のハードウェアが存在することにより、ボタンが光った、とか、画面表示できた、とか、小さな体験を相互に確認でき、コミュニケーションのきっかけとすることができます。\r\nなお、会場および時間の兼ね合いもあり TinyGo Keeb Tour で実施しているはんだ付けは実施しません。完成版のハードウェアを用いてのワークショップとなります。\r\nワークショップの資料は以下にあります。\r\nhttps://github.com/tinygo-keeb/workshop\r\n\r\nワークショップから学べること\r\n* TinyGo で組込開発をする流れ",
+            "startsAt": "2025-09-27T13:10:00",
+            "endsAt": "2025-09-27T14:40:00",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "221beeb2-9d4f-41f8-9f86-c9818e137d72",
+                "name": "Masaaki Takasago"
+              }
+            ],
+            "categories": [
+              {
+                "id": 101938,
+                "name": "Session Type",
+                "categoryItems": [
+                  {
+                    "id": 389623,
+                    "name": "workshop"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 101939,
+                "name": "Session Level",
+                "categoryItems": [
+                  {
+                    "id": 367242,
+                    "name": "all"
+                  }
+                ],
+                "sort": 1
+              },
+              {
+                "id": 102474,
+                "name": "言語 / Language",
+                "categoryItems": [
+                  {
+                    "id": 369632,
+                    "name": "japanese"
+                  }
+                ],
+                "sort": 2
+              }
+            ],
+            "roomId": 70103,
+            "room": "Room 2-2",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": false
+          },
+          {
+            "id": "998166",
+            "title": "TinyGo + Gopherくん基板で遊ぼう",
+            "description": "Gopherくん基板 はGoのマスコットキャラクターのGopherを型取って私が製作しているオリジナル基板です。\r\n\r\nGopherくん基板はTinyGoをサポートしているRP2040-Zeroをマイコンとして使用しており、GPIO、タクトスイッチ、Groveコネクタ、フルカラーLED、ブザー、液晶画面なども付いていて電子工作の入門にピッタリです。\r\n\r\nTinyGoとこのGopherくん基板を利用して、電子工作や組み込みプログラムに入門するワークショップを行います。",
+            "startsAt": "2025-09-27T14:50:00",
+            "endsAt": "2025-09-27T16:20:00",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "88468bff-1de7-454b-a688-df25c8c086ae",
+                "name": "Kengo Sato"
+              }
+            ],
+            "categories": [
+              {
+                "id": 101938,
+                "name": "Session Type",
+                "categoryItems": [
+                  {
+                    "id": 389623,
+                    "name": "workshop"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 101939,
+                "name": "Session Level",
+                "categoryItems": [
+                  {
+                    "id": 367242,
+                    "name": "all"
+                  }
+                ],
+                "sort": 1
+              },
+              {
+                "id": 102474,
+                "name": "言語 / Language",
+                "categoryItems": [
+                  {
+                    "id": 369632,
+                    "name": "japanese"
+                  }
+                ],
+                "sort": 2
+              }
+            ],
+            "roomId": 70103,
+            "room": "Room 2-2",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": false
+          },
+          {
             "id": "83a81f1c-413f-44b0-8dfa-9eaa7c0061df",
             "title": "Go Quiz Workshop",
             "description": null,
@@ -922,6 +1093,120 @@
         "id": 70899,
         "name": "Room 2-3",
         "sessions": [
+          {
+            "id": "997075",
+            "title": "Goを使ってTDDを体験しよう！！",
+            "description": "このワークショップでは、TDD(Test-Driven Development)の体験会を行います。\r\n\r\nTDDについて、概要しか知らない方や実際にやったことがない方は多いのではないでしょうか。\r\n例えばTDDの最初のステップを「落ちるテストを書く」だと思っている方は多いのではないでしょうか。\r\nTDDについて理解し、実践をすることで、実体験をベースにTDDの是非を判断できることがゴールです。\r\nぜひ、TDD実践の最初の一歩を踏み出してみませんか？\r\n\r\n対象者：\r\n・TDDを知らない方\r\n・TDDを知っているがやったことがない方\r\n・ストレスなく開発する方法を探している方\r\n\r\nゴール：\r\n・TDDについて理解をし、より安心して普段の開発を行えるようにする\r\n・想像や妄想ではなく、実体験をもとにTDDの良し悪しを判断できるようになる\r\n\r\nワークショップの流れ：\r\n1. 自己紹介\r\n2. TDDについての説明\r\n3. TDD体験1\r\n  a. 簡単なお題に対して各自でTDDを実践してみる\r\n  b. 実践した感想や学びをシェアする\r\n4. TDD体験2\r\n  a. 少し難しいお題に対して各自でTDDを実践してみる\r\n  b. 実践した感想や学びをシェアする\r\n5. 全体ふりかえり\r\n\r\n参加条件・事前準備など：\r\n・Goの基本的な文法を理解していること（goroutineやiter.Seqなどの難しい知識は不要）\r\n・Goの基本的なテストの書き方を理解していること\r\n・Gitの基本的な操作ができること（コミットできればOKです）\r\n・コード・テストを実行する環境を用意すること\r\n・使用したいツールやライブラリがあれば、事前にダウンロードを済ませておくこと\r\n\r\n最小/最大実施可能人数：\r\n・最小：1人\r\n・最大：8人",
+            "startsAt": "2025-09-27T13:10:00",
+            "endsAt": "2025-09-27T14:40:00",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "4926b4e4-5468-4cf7-abdf-2b5b05eca1b7",
+                "name": "Kazuto Maeda"
+              }
+            ],
+            "categories": [
+              {
+                "id": 101938,
+                "name": "Session Type",
+                "categoryItems": [
+                  {
+                    "id": 389623,
+                    "name": "workshop"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 101939,
+                "name": "Session Level",
+                "categoryItems": [
+                  {
+                    "id": 367243,
+                    "name": "beginner"
+                  }
+                ],
+                "sort": 1
+              },
+              {
+                "id": 102474,
+                "name": "言語 / Language",
+                "categoryItems": [
+                  {
+                    "id": 369632,
+                    "name": "japanese"
+                  }
+                ],
+                "sort": 2
+              }
+            ],
+            "roomId": 70899,
+            "room": "Room 2-3",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": false
+          },
+          {
+            "id": "1000109",
+            "title": "作って理解するGOCACHEPROG",
+            "description": "Go 1.24でリリースされたGoコマンドの機能にGOCACHEPROGがあります。\r\nこの機能を利用することでGoのコンパイル時のキャッシュを自作プログラムでカスタマイズできるようになります。\r\nこの機能を利用することで、S3へキャッシュを直接保存し端末を跨いでキャッシュを共有することなどが可能になります。\r\n一方で、GOCACHEPROGバックエンドの実装は愚直な実装ではオーバーヘッドが大きく、場合によってはキャッシュが存在しない場合よりもコンパイルが多くなってしまうことすらあります。\r\n本ワークショップでは、実際にGOCACHEPROGバックエンド実装を行うことでGOCACHEPROGについて理解を深めます。そして、オーバーヘッドを減らすために必要な工夫を議論・理解することで、実用に耐えるGOCACHEPROGバックエンド実装を行うことができるようになります。",
+            "startsAt": "2025-09-27T14:50:00",
+            "endsAt": "2025-09-27T16:20:00",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "104bcaaa-4f8a-4a41-b026-87f0e6c91aab",
+                "name": "Shunsuke Wakamatsu"
+              }
+            ],
+            "categories": [
+              {
+                "id": 101938,
+                "name": "Session Type",
+                "categoryItems": [
+                  {
+                    "id": 389623,
+                    "name": "workshop"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 101939,
+                "name": "Session Level",
+                "categoryItems": [
+                  {
+                    "id": 367244,
+                    "name": "intermediate"
+                  }
+                ],
+                "sort": 1
+              },
+              {
+                "id": 102474,
+                "name": "言語 / Language",
+                "categoryItems": [
+                  {
+                    "id": 369632,
+                    "name": "japanese"
+                  }
+                ],
+                "sort": 2
+              }
+            ],
+            "roomId": 70899,
+            "room": "Room 2-3",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": false
+          },
           {
             "id": "6e2b4eea-56a7-40ca-b3b8-75618f4f4eeb",
             "title": "Go カードゲームで遊ぼう",
@@ -1296,6 +1581,130 @@
               "isConfirmed": false
             },
             "index": 1
+          },
+          {
+            "id": 70103,
+            "name": "Room 2-2",
+            "session": {
+              "id": "998804",
+              "title": "TinyGo Keeb Workshop",
+              "description": "TinyGo Keeb Tour というイベントで使用している zero-kb02 というハードウェアを主催側で準備し、それに対してのプログラムを書く、という形でワークショップを開催します。\r\n環境立ち上げ後、順番に例を試していくパートを実施、最後に簡単なオリジナルアプリケーションを作ってもらい互いに発表することで交流することを予定しています。実際のハードウェアが存在することにより、ボタンが光った、とか、画面表示できた、とか、小さな体験を相互に確認でき、コミュニケーションのきっかけとすることができます。\r\nなお、会場および時間の兼ね合いもあり TinyGo Keeb Tour で実施しているはんだ付けは実施しません。完成版のハードウェアを用いてのワークショップとなります。\r\nワークショップの資料は以下にあります。\r\nhttps://github.com/tinygo-keeb/workshop\r\n\r\nワークショップから学べること\r\n* TinyGo で組込開発をする流れ",
+              "startsAt": "2025-09-27T13:10:00",
+              "endsAt": "2025-09-27T14:40:00",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "221beeb2-9d4f-41f8-9f86-c9818e137d72",
+                  "name": "Masaaki Takasago"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 101938,
+                  "name": "Session Type",
+                  "categoryItems": [
+                    {
+                      "id": 389623,
+                      "name": "workshop"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 101939,
+                  "name": "Session Level",
+                  "categoryItems": [
+                    {
+                      "id": 367242,
+                      "name": "all"
+                    }
+                  ],
+                  "sort": 1
+                },
+                {
+                  "id": 102474,
+                  "name": "言語 / Language",
+                  "categoryItems": [
+                    {
+                      "id": 369632,
+                      "name": "japanese"
+                    }
+                  ],
+                  "sort": 2
+                }
+              ],
+              "roomId": 70103,
+              "room": "Room 2-2",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": false
+            },
+            "index": 2
+          },
+          {
+            "id": 70899,
+            "name": "Room 2-3",
+            "session": {
+              "id": "997075",
+              "title": "Goを使ってTDDを体験しよう！！",
+              "description": "このワークショップでは、TDD(Test-Driven Development)の体験会を行います。\r\n\r\nTDDについて、概要しか知らない方や実際にやったことがない方は多いのではないでしょうか。\r\n例えばTDDの最初のステップを「落ちるテストを書く」だと思っている方は多いのではないでしょうか。\r\nTDDについて理解し、実践をすることで、実体験をベースにTDDの是非を判断できることがゴールです。\r\nぜひ、TDD実践の最初の一歩を踏み出してみませんか？\r\n\r\n対象者：\r\n・TDDを知らない方\r\n・TDDを知っているがやったことがない方\r\n・ストレスなく開発する方法を探している方\r\n\r\nゴール：\r\n・TDDについて理解をし、より安心して普段の開発を行えるようにする\r\n・想像や妄想ではなく、実体験をもとにTDDの良し悪しを判断できるようになる\r\n\r\nワークショップの流れ：\r\n1. 自己紹介\r\n2. TDDについての説明\r\n3. TDD体験1\r\n  a. 簡単なお題に対して各自でTDDを実践してみる\r\n  b. 実践した感想や学びをシェアする\r\n4. TDD体験2\r\n  a. 少し難しいお題に対して各自でTDDを実践してみる\r\n  b. 実践した感想や学びをシェアする\r\n5. 全体ふりかえり\r\n\r\n参加条件・事前準備など：\r\n・Goの基本的な文法を理解していること（goroutineやiter.Seqなどの難しい知識は不要）\r\n・Goの基本的なテストの書き方を理解していること\r\n・Gitの基本的な操作ができること（コミットできればOKです）\r\n・コード・テストを実行する環境を用意すること\r\n・使用したいツールやライブラリがあれば、事前にダウンロードを済ませておくこと\r\n\r\n最小/最大実施可能人数：\r\n・最小：1人\r\n・最大：8人",
+              "startsAt": "2025-09-27T13:10:00",
+              "endsAt": "2025-09-27T14:40:00",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "4926b4e4-5468-4cf7-abdf-2b5b05eca1b7",
+                  "name": "Kazuto Maeda"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 101938,
+                  "name": "Session Type",
+                  "categoryItems": [
+                    {
+                      "id": 389623,
+                      "name": "workshop"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 101939,
+                  "name": "Session Level",
+                  "categoryItems": [
+                    {
+                      "id": 367243,
+                      "name": "beginner"
+                    }
+                  ],
+                  "sort": 1
+                },
+                {
+                  "id": 102474,
+                  "name": "言語 / Language",
+                  "categoryItems": [
+                    {
+                      "id": 369632,
+                      "name": "japanese"
+                    }
+                  ],
+                  "sort": 2
+                }
+              ],
+              "roomId": 70899,
+              "room": "Room 2-3",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": false
+            },
+            "index": 3
           }
         ]
       },
@@ -1609,6 +2018,192 @@
               "isConfirmed": true
             },
             "index": 0
+          },
+          {
+            "id": 67045,
+            "name": "Room 2-1",
+            "session": {
+              "id": "1013431",
+              "title": "†開発を加速させる黒魔術講座†",
+              "description": "このワークショップは、日常的な開発ではなかなか触れる機会の少ない「†黒魔術†」的な Go のテクニックについて、実例を交えた解説と、例題をベースとした学習の機会を提供します。具体的には下記に挙げるような Go のテクニックをテーマにして、ワークショップの前半 30 - 40 分ほどで講師側から解説を行い、後半の 50 - 60 分ほどで参加者にそれぞれテーマを選んでいただき、テーマに沿った例題を実装していただきます。例題の実装では、各テーマを要素にしたスタンプラリーを提供し、参加者同士で実装を見せ合って相互にスタンプを押しあうことで埋めてもらい、参加者同士の交流を促進します。\r\n\r\n- `go build` の `-overlay` オプションの活用\r\n- `go build` の `-toolexec` オプションの活用\r\n- `unsafe` パッケージ\r\n- `reflect` パッケージ\r\n- 静的単一代入（SSA）形式を利用した静的解析\r\n- `go:linkname` ディレクティブ\r\n- アセンブリでの関数の実装\r\n- go testを使ったハック\r\n- GOEXPERIMENT で提供されている機能\r\n- (項目は検討中です…）",
+              "startsAt": "2025-09-27T14:50:00",
+              "endsAt": "2025-09-27T16:20:00",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "f7a00995-59de-41e2-94bf-aa249046889e",
+                  "name": "Yuki Ito"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 101938,
+                  "name": "Session Type",
+                  "categoryItems": [
+                    {
+                      "id": 389623,
+                      "name": "workshop"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 101939,
+                  "name": "Session Level",
+                  "categoryItems": [
+                    {
+                      "id": 367244,
+                      "name": "intermediate"
+                    }
+                  ],
+                  "sort": 1
+                },
+                {
+                  "id": 102474,
+                  "name": "言語 / Language",
+                  "categoryItems": [
+                    {
+                      "id": 369632,
+                      "name": "japanese"
+                    }
+                  ],
+                  "sort": 2
+                }
+              ],
+              "roomId": 67045,
+              "room": "Room 2-1",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": false
+            },
+            "index": 1
+          },
+          {
+            "id": 70103,
+            "name": "Room 2-2",
+            "session": {
+              "id": "998166",
+              "title": "TinyGo + Gopherくん基板で遊ぼう",
+              "description": "Gopherくん基板 はGoのマスコットキャラクターのGopherを型取って私が製作しているオリジナル基板です。\r\n\r\nGopherくん基板はTinyGoをサポートしているRP2040-Zeroをマイコンとして使用しており、GPIO、タクトスイッチ、Groveコネクタ、フルカラーLED、ブザー、液晶画面なども付いていて電子工作の入門にピッタリです。\r\n\r\nTinyGoとこのGopherくん基板を利用して、電子工作や組み込みプログラムに入門するワークショップを行います。",
+              "startsAt": "2025-09-27T14:50:00",
+              "endsAt": "2025-09-27T16:20:00",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "88468bff-1de7-454b-a688-df25c8c086ae",
+                  "name": "Kengo Sato"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 101938,
+                  "name": "Session Type",
+                  "categoryItems": [
+                    {
+                      "id": 389623,
+                      "name": "workshop"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 101939,
+                  "name": "Session Level",
+                  "categoryItems": [
+                    {
+                      "id": 367242,
+                      "name": "all"
+                    }
+                  ],
+                  "sort": 1
+                },
+                {
+                  "id": 102474,
+                  "name": "言語 / Language",
+                  "categoryItems": [
+                    {
+                      "id": 369632,
+                      "name": "japanese"
+                    }
+                  ],
+                  "sort": 2
+                }
+              ],
+              "roomId": 70103,
+              "room": "Room 2-2",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": false
+            },
+            "index": 2
+          },
+          {
+            "id": 70899,
+            "name": "Room 2-3",
+            "session": {
+              "id": "1000109",
+              "title": "作って理解するGOCACHEPROG",
+              "description": "Go 1.24でリリースされたGoコマンドの機能にGOCACHEPROGがあります。\r\nこの機能を利用することでGoのコンパイル時のキャッシュを自作プログラムでカスタマイズできるようになります。\r\nこの機能を利用することで、S3へキャッシュを直接保存し端末を跨いでキャッシュを共有することなどが可能になります。\r\n一方で、GOCACHEPROGバックエンドの実装は愚直な実装ではオーバーヘッドが大きく、場合によってはキャッシュが存在しない場合よりもコンパイルが多くなってしまうことすらあります。\r\n本ワークショップでは、実際にGOCACHEPROGバックエンド実装を行うことでGOCACHEPROGについて理解を深めます。そして、オーバーヘッドを減らすために必要な工夫を議論・理解することで、実用に耐えるGOCACHEPROGバックエンド実装を行うことができるようになります。",
+              "startsAt": "2025-09-27T14:50:00",
+              "endsAt": "2025-09-27T16:20:00",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "104bcaaa-4f8a-4a41-b026-87f0e6c91aab",
+                  "name": "Shunsuke Wakamatsu"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 101938,
+                  "name": "Session Type",
+                  "categoryItems": [
+                    {
+                      "id": 389623,
+                      "name": "workshop"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 101939,
+                  "name": "Session Level",
+                  "categoryItems": [
+                    {
+                      "id": 367244,
+                      "name": "intermediate"
+                    }
+                  ],
+                  "sort": 1
+                },
+                {
+                  "id": 102474,
+                  "name": "言語 / Language",
+                  "categoryItems": [
+                    {
+                      "id": 369632,
+                      "name": "japanese"
+                    }
+                  ],
+                  "sort": 2
+                }
+              ],
+              "roomId": 70899,
+              "room": "Room 2-3",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": false
+            },
+            "index": 3
           }
         ]
       },
