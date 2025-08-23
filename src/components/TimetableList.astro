@@ -15,17 +15,12 @@ interface Props {
    * @example "2025-01-01"
    */
   eventDate: string;
-  /**
-   * タイムテーブルの時間帯
-   * @example 10
-   */
-  hour: number;
 }
 
-const { hour, eventDate } = Astro.props;
+const { eventDate } = Astro.props;
 
 // 指定した時間帯内の各部屋のセッション情報を所得する
-const classifiedSessions = getClassifiedSessions(eventDate, hour);
+const classifiedSessions = getClassifiedSessions(eventDate);
 
 // セッションがない場合は何も表示しない
 if (classifiedSessions.length === 0) {
@@ -33,106 +28,118 @@ if (classifiedSessions.length === 0) {
 }
 ---
 
-<div class="time-slot" style={`grid-row: span ${classifiedSessions.length};`}>
-  <span>{hour.toString().padStart(2, "0")}:00</span>
-</div>
 {
-  classifiedSessions.map((slot) => {
-    // 列ごと（部屋ごと）に取得
-    const room1 = slot.room1?.session;
-    const room2_1 = slot.room2_1?.session;
-    const room2_2 = slot.room2_2?.session;
-
-    // 跨ぐ行数を計算
-    const room2_1RowSpan = getTimeSlotSpanCount(
-      eventDate,
-      room2_1?.startsAt,
-      room2_1?.endsAt,
-    );
-    const room2_2RowSpan = getTimeSlotSpanCount(
-      eventDate,
-      room2_2?.startsAt,
-      room2_2?.endsAt,
-    );
-
-    // 前のセッションが跨がっているかどうかを確認
-    const room2_1Occupancy = isTimeSlotOccupied(
-      eventDate,
-      67045,
-      slot.slotStart,
-    );
-    const room2_2Occupancy = isTimeSlotOccupied(
-      eventDate,
-      70103,
-      slot.slotStart,
-    );
-
+  // 1時間毎にセッション情報を描画
+  classifiedSessions.map((timeSlotHour) => {
     return (
       <>
-        {/* Room 1 */}
-        <div class="session-cell">
-          {/* MEMO: isServiceSessionがtrueの場合は休憩かWorkshopなのでCommonTimetableCardを使用 */}
-          {room1?.isServiceSession ? (
-            <CommonTimetableCard
-              title={room1.title}
-              startAt={getFormattedTime(room1.startsAt)}
-              endAt={getFormattedTime(room1.endsAt)}
-            />
-          ) : (
-            <TimetableCard session={room1} />
-          )}
+        {/* 1時間毎の時間帯のタイトル */}
+        <div
+          class="time-slot"
+          style={`grid-row: span ${timeSlotHour.timeSlots.length};`}
+        >
+          <span>{timeSlotHour.hour.toString().padStart(2, "0")}:00</span>
         </div>
-        {/* Room 2-1 */}
-        {/* MEMO: 前の時間帯のセッションが跨がる場合は描画しない */}
-        {!room2_1Occupancy && (
-          <div
-            class="session-cell"
-            style={
-              // セッションが跨がる場合は行を跨ぐ
-              room2_1RowSpan > 1
-                ? `grid-row: span ${room2_1RowSpan};`
-                : undefined
-            }
-          >
-            {/* MEMO: isServiceSessionがtrueの場合は休憩かWorkshopなのでCommonTimetableCardを使用 */}
-            {room2_1?.isServiceSession ? (
-              // 休憩やワークショップの場合
-              <CommonTimetableCard
-                title={room2_1.title}
-                startAt={getFormattedTime(room2_1.startsAt)}
-                endAt={getFormattedTime(room2_1.endsAt)}
-              />
-            ) : (
-              // 通常のセッションの場合
-              <TimetableCard session={room2_1} />
-            )}
-          </div>
-        )}
-        {/* Room 2-2 */}
-        {/* MEMO: 前の時間帯のセッションが跨がる場合は描画しない */}
-        {!room2_2Occupancy && (
-          <div
-            class="session-cell"
-            style={
-              // セッションが跨がる場合は行を跨ぐ
-              room2_2RowSpan > 1
-                ? `grid-row: span ${room2_2RowSpan};`
-                : undefined
-            }
-          >
-            {room2_2?.isServiceSession ? (
-              // 休憩やワークショップの場合
-              <CommonTimetableCard
-                title={room2_2.title}
-                startAt={getFormattedTime(room2_2.startsAt)}
-                endAt={getFormattedTime(room2_2.endsAt)}
-              />
-            ) : (
-              // 通常のセッションの場合
-              <TimetableCard session={room2_2} />
-            )}
-          </div>
-        )}
+        {/* 各部屋のセッション情報を描画 */}
+        {timeSlotHour.timeSlots.map((slot) => {
+          // 列ごと（部屋ごと）に取得
+          const room1 = slot.room1?.session;
+          const room2_1 = slot.room2_1?.session;
+          const room2_2 = slot.room2_2?.session;
+
+          // 跨ぐ行数を計算
+          const room2_1RowSpan = getTimeSlotSpanCount(
+            eventDate,
+            room2_1?.startsAt,
+            room2_1?.endsAt,
+          );
+          const room2_2RowSpan = getTimeSlotSpanCount(
+            eventDate,
+            room2_2?.startsAt,
+            room2_2?.endsAt,
+          );
+
+          // 前のセッションが跨がっているかどうかを確認
+          const room2_1Occupancy = isTimeSlotOccupied(
+            eventDate,
+            67045,
+            slot.slotStart,
+          );
+          const room2_2Occupancy = isTimeSlotOccupied(
+            eventDate,
+            70103,
+            slot.slotStart,
+          );
+
+          return (
+            <>
+              {/* Room 1 */}
+              <div class="session-cell">
+                {/* MEMO: isServiceSessionがtrueの場合は休憩かWorkshopなのでCommonTimetableCardを使用 */}
+                {room1?.isServiceSession ? (
+                  <CommonTimetableCard
+                    title={room1.title}
+                    startAt={getFormattedTime(room1.startsAt)}
+                    endAt={getFormattedTime(room1.endsAt)}
+                  />
+                ) : (
+                  <TimetableCard session={room1} />
+                )}
+              </div>
+              {/* Room 2-1 */}
+              {/* MEMO: 前の時間帯のセッションが跨がる場合は描画しない */}
+              {!room2_1Occupancy && (
+                <div
+                  class="session-cell"
+                  style={
+                    // セッションが跨がる場合は行を跨ぐ
+                    room2_1RowSpan > 1
+                      ? `grid-row: span ${room2_1RowSpan};`
+                      : undefined
+                  }
+                >
+                  {/* MEMO: isServiceSessionがtrueの場合は休憩かWorkshopなのでCommonTimetableCardを使用 */}
+                  {room2_1?.isServiceSession ? (
+                    // 休憩やワークショップの場合
+                    <CommonTimetableCard
+                      title={room2_1.title}
+                      startAt={getFormattedTime(room2_1.startsAt)}
+                      endAt={getFormattedTime(room2_1.endsAt)}
+                    />
+                  ) : (
+                    // 通常のセッションの場合
+                    <TimetableCard session={room2_1} />
+                  )}
+                </div>
+              )}
+              {/* Room 2-2 */}
+              {/* MEMO: 前の時間帯のセッションが跨がる場合は描画しない */}
+              {!room2_2Occupancy && (
+                <div
+                  class="session-cell"
+                  style={
+                    // セッションが跨がる場合は行を跨ぐ
+                    room2_2RowSpan > 1
+                      ? `grid-row: span ${room2_2RowSpan};`
+                      : undefined
+                  }
+                >
+                  {room2_2?.isServiceSession ? (
+                    // 休憩やワークショップの場合
+                    <CommonTimetableCard
+                      title={room2_2.title}
+                      startAt={getFormattedTime(room2_2.startsAt)}
+                      endAt={getFormattedTime(room2_2.endsAt)}
+                    />
+                  ) : (
+                    // 通常のセッションの場合
+                    <TimetableCard session={room2_2} />
+                  )}
+                </div>
+              )}
+            </>
+          );
+        })}
       </>
     );
   })

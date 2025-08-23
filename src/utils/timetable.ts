@@ -19,35 +19,53 @@ export const getCurrentDateTimetable = (eventDate: string) =>
   );
 
 /**
- * 指定した時間帯内の各部屋のセッション情報を所得する
- * @param hour 時間帯
+ * 時間帯毎の各部屋のセッション情報を所得する
+ * @param eventDate イベント開催日
  * @returns 時間帯毎のセッション情報
  */
-export const getClassifiedSessions = (eventDate: string, hour: number) => {
+export const getClassifiedSessions = (eventDate: string) => {
   // 指定した開催日のタイムテーブルを取得
   const currentDateTimetable = getCurrentDateTimetable(eventDate);
 
-  // 指定した時間のセッションを取得
-  const currentHourTimetable = currentDateTimetable?.timeSlots.filter(
-    (slot) =>
-      dayjs(`${eventDate}T${slot.slotStart}`).tz("Asia/Tokyo").hour() === hour,
-  );
+  // 時間帯（時間）の一覧を取得
+  const timeSlotHours = [
+    ...new Set(
+      currentDateTimetable?.timeSlots.map((slot) =>
+        dayjs(`${eventDate}T${slot.slotStart}`).tz("Asia/Tokyo").hour(),
+      ) ?? [],
+    ),
+  ];
 
-  return (
-    currentHourTimetable?.map((slot) => {
-      // 部屋ごとにセッションを抽出
-      const room1 = slot.rooms.find((room) => room.id === 67044);
-      const room2_1 = slot.rooms.find((room) => room.id === 67045);
-      const room2_2 = slot.rooms.find((room) => room.id === 70103);
+  // 時間帯を1時間毎にまとめる
+  return timeSlotHours.map((hour) => {
+    // 現在の時間のセッションを取得
+    const currentHourTimetable = currentDateTimetable?.timeSlots.filter(
+      (slot) =>
+        dayjs(`${eventDate}T${slot.slotStart}`).tz("Asia/Tokyo").hour() ===
+        hour,
+    );
 
-      return {
-        room1,
-        room2_1,
-        room2_2,
-        slotStart: slot.slotStart,
-      };
-    }) ?? []
-  );
+    // 現在の時間のセッションを会場ごとに分類
+    const timeSlots =
+      currentHourTimetable?.map((slot) => {
+        // 部屋ごとにセッションを抽出
+        const room1 = slot.rooms.find((room) => room.id === 67044);
+        const room2_1 = slot.rooms.find((room) => room.id === 67045);
+        const room2_2 = slot.rooms.find((room) => room.id === 70103);
+
+        return {
+          slotStart: slot.slotStart,
+          room1,
+          room2_1,
+          room2_2,
+        };
+      }) ?? [];
+
+    return {
+      hour,
+      timeSlots,
+    };
+  });
 };
 
 /**
