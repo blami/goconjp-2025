@@ -820,7 +820,7 @@
         "sessions": [
           {
             "id": "1dbc5ae6-79c6-4415-ba78-4673b4bed6fc",
-            "title": "Workshop",
+            "title": "今日から始めるpprof",
             "description": null,
             "startsAt": "2025-09-27T13:10:00",
             "endsAt": "2025-09-27T14:40:00",
@@ -837,26 +837,8 @@
             "isConfirmed": false
           },
           {
-            "id": "e536191f-c5f8-4dcb-87e1-fe613c2a307f",
-            "title": "Workshop",
-            "description": null,
-            "startsAt": "2025-09-27T14:50:00",
-            "endsAt": "2025-09-27T16:20:00",
-            "isServiceSession": true,
-            "isPlenumSession": false,
-            "speakers": [],
-            "categories": [],
-            "roomId": 67045,
-            "room": "Room 2-1",
-            "liveUrl": null,
-            "recordingUrl": null,
-            "status": null,
-            "isInformed": false,
-            "isConfirmed": false
-          },
-          {
             "id": "c4cdce82-eb15-4936-9caf-e4a9c360fe2b",
-            "title": "Workshop",
+            "title": "OST",
             "description": null,
             "startsAt": "2025-09-27T16:30:00",
             "endsAt": "2025-09-27T18:00:00",
@@ -898,44 +880,8 @@
         "name": "Room 2-2",
         "sessions": [
           {
-            "id": "212c3c0a-7ee9-4af1-918f-68340313738f",
-            "title": "Workshop",
-            "description": null,
-            "startsAt": "2025-09-27T13:10:00",
-            "endsAt": "2025-09-27T14:40:00",
-            "isServiceSession": true,
-            "isPlenumSession": false,
-            "speakers": [],
-            "categories": [],
-            "roomId": 70103,
-            "room": "Room 2-2",
-            "liveUrl": null,
-            "recordingUrl": null,
-            "status": null,
-            "isInformed": false,
-            "isConfirmed": false
-          },
-          {
-            "id": "8f3cf1eb-b719-42b7-b894-44874fec67f3",
-            "title": "Workshop",
-            "description": null,
-            "startsAt": "2025-09-27T14:50:00",
-            "endsAt": "2025-09-27T16:20:00",
-            "isServiceSession": true,
-            "isPlenumSession": false,
-            "speakers": [],
-            "categories": [],
-            "roomId": 70103,
-            "room": "Room 2-2",
-            "liveUrl": null,
-            "recordingUrl": null,
-            "status": null,
-            "isInformed": false,
-            "isConfirmed": false
-          },
-          {
             "id": "83a81f1c-413f-44b0-8dfa-9eaa7c0061df",
-            "title": "Workshop",
+            "title": "Go Quiz Workshop",
             "description": null,
             "startsAt": "2025-09-27T16:30:00",
             "endsAt": "2025-09-27T18:00:00",
@@ -963,6 +909,49 @@
             "categories": [],
             "roomId": 70103,
             "room": "Room 2-2",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": null,
+            "isInformed": false,
+            "isConfirmed": false
+          }
+        ],
+        "hasOnlyPlenumSessions": false
+      },
+      {
+        "id": 70899,
+        "name": "Room 2-3",
+        "sessions": [
+          {
+            "id": "6e2b4eea-56a7-40ca-b3b8-75618f4f4eeb",
+            "title": "Go カードゲームで遊ぼう",
+            "description": null,
+            "startsAt": "2025-09-27T16:30:00",
+            "endsAt": "2025-09-27T18:00:00",
+            "isServiceSession": true,
+            "isPlenumSession": false,
+            "speakers": [],
+            "categories": [],
+            "roomId": 70899,
+            "room": "Room 2-3",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": null,
+            "isInformed": false,
+            "isConfirmed": false
+          },
+          {
+            "id": "606f9985-9b72-4078-9b5c-126c7d686475",
+            "title": "Workshop Closing",
+            "description": null,
+            "startsAt": "2025-09-27T18:00:00",
+            "endsAt": "2025-09-27T18:10:00",
+            "isServiceSession": true,
+            "isPlenumSession": false,
+            "speakers": [],
+            "categories": [],
+            "roomId": 70899,
+            "room": "Room 2-3",
             "liveUrl": null,
             "recordingUrl": null,
             "status": null,
@@ -1290,7 +1279,7 @@
             "name": "Room 2-1",
             "session": {
               "id": "1dbc5ae6-79c6-4415-ba78-4673b4bed6fc",
-              "title": "Workshop",
+              "title": "今日から始めるpprof",
               "description": null,
               "startsAt": "2025-09-27T13:10:00",
               "endsAt": "2025-09-27T14:40:00",
@@ -1307,29 +1296,6 @@
               "isConfirmed": false
             },
             "index": 1
-          },
-          {
-            "id": 70103,
-            "name": "Room 2-2",
-            "session": {
-              "id": "212c3c0a-7ee9-4af1-918f-68340313738f",
-              "title": "Workshop",
-              "description": null,
-              "startsAt": "2025-09-27T13:10:00",
-              "endsAt": "2025-09-27T14:40:00",
-              "isServiceSession": true,
-              "isPlenumSession": false,
-              "speakers": [],
-              "categories": [],
-              "roomId": 70103,
-              "room": "Room 2-2",
-              "liveUrl": null,
-              "recordingUrl": null,
-              "status": null,
-              "isInformed": false,
-              "isConfirmed": false
-            },
-            "index": 2
           }
         ]
       },
@@ -1643,52 +1609,6 @@
               "isConfirmed": true
             },
             "index": 0
-          },
-          {
-            "id": 67045,
-            "name": "Room 2-1",
-            "session": {
-              "id": "e536191f-c5f8-4dcb-87e1-fe613c2a307f",
-              "title": "Workshop",
-              "description": null,
-              "startsAt": "2025-09-27T14:50:00",
-              "endsAt": "2025-09-27T16:20:00",
-              "isServiceSession": true,
-              "isPlenumSession": false,
-              "speakers": [],
-              "categories": [],
-              "roomId": 67045,
-              "room": "Room 2-1",
-              "liveUrl": null,
-              "recordingUrl": null,
-              "status": null,
-              "isInformed": false,
-              "isConfirmed": false
-            },
-            "index": 1
-          },
-          {
-            "id": 70103,
-            "name": "Room 2-2",
-            "session": {
-              "id": "8f3cf1eb-b719-42b7-b894-44874fec67f3",
-              "title": "Workshop",
-              "description": null,
-              "startsAt": "2025-09-27T14:50:00",
-              "endsAt": "2025-09-27T16:20:00",
-              "isServiceSession": true,
-              "isPlenumSession": false,
-              "speakers": [],
-              "categories": [],
-              "roomId": 70103,
-              "room": "Room 2-2",
-              "liveUrl": null,
-              "recordingUrl": null,
-              "status": null,
-              "isInformed": false,
-              "isConfirmed": false
-            },
-            "index": 2
           }
         ]
       },
@@ -1885,7 +1805,7 @@
             "name": "Room 2-1",
             "session": {
               "id": "c4cdce82-eb15-4936-9caf-e4a9c360fe2b",
-              "title": "Workshop",
+              "title": "OST",
               "description": null,
               "startsAt": "2025-09-27T16:30:00",
               "endsAt": "2025-09-27T18:00:00",
@@ -1908,7 +1828,7 @@
             "name": "Room 2-2",
             "session": {
               "id": "83a81f1c-413f-44b0-8dfa-9eaa7c0061df",
-              "title": "Workshop",
+              "title": "Go Quiz Workshop",
               "description": null,
               "startsAt": "2025-09-27T16:30:00",
               "endsAt": "2025-09-27T18:00:00",
@@ -1925,6 +1845,29 @@
               "isConfirmed": false
             },
             "index": 2
+          },
+          {
+            "id": 70899,
+            "name": "Room 2-3",
+            "session": {
+              "id": "6e2b4eea-56a7-40ca-b3b8-75618f4f4eeb",
+              "title": "Go カードゲームで遊ぼう",
+              "description": null,
+              "startsAt": "2025-09-27T16:30:00",
+              "endsAt": "2025-09-27T18:00:00",
+              "isServiceSession": true,
+              "isPlenumSession": false,
+              "speakers": [],
+              "categories": [],
+              "roomId": 70899,
+              "room": "Room 2-3",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": null,
+              "isInformed": false,
+              "isConfirmed": false
+            },
+            "index": 3
           }
         ]
       },
@@ -2194,6 +2137,29 @@
               "isConfirmed": false
             },
             "index": 2
+          },
+          {
+            "id": 70899,
+            "name": "Room 2-3",
+            "session": {
+              "id": "606f9985-9b72-4078-9b5c-126c7d686475",
+              "title": "Workshop Closing",
+              "description": null,
+              "startsAt": "2025-09-27T18:00:00",
+              "endsAt": "2025-09-27T18:10:00",
+              "isServiceSession": true,
+              "isPlenumSession": false,
+              "speakers": [],
+              "categories": [],
+              "roomId": 70899,
+              "room": "Room 2-3",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": null,
+              "isInformed": false,
+              "isConfirmed": false
+            },
+            "index": 3
           }
         ]
       }
