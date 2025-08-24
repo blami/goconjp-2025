@@ -1,5 +1,6 @@
 // スポンサーボード
 import NoImage from "../assets/sponsors/no-image.png";
+import CyberAgentLogo from "../assets/sponsors/0_V001.png";
 import GoogleLogo from "../assets/sponsors/0_S001.png";
 import GMOFSLogo from "../assets/sponsors/1_S101.png";
 import EVERYLogo from "../assets/sponsors/2_S102.png";
@@ -8,14 +9,20 @@ import OPTiMLogo from "../assets/sponsors/4_S202.png";
 import LayerXLogo from "../assets/sponsors/5_S309.png";
 import UbieLogo from "../assets/sponsors/6_S314.jpg";
 import FindyLogo from "../assets/sponsors/7_S303.png";
+import GrooveXLogo from "../assets/sponsors/8_S302.png";
 import UNextLogo from "../assets/sponsors/9_S312.png";
+import CrossTechLogo from "../assets/sponsors/10_S318.png";
 import SakuraLogo from "../assets/sponsors/11_S311.png";
 import TokyuLogo from "../assets/sponsors/12_S305.png";
+import BloombergLogo from "../assets/sponsors/13_S315.png";
 import KnoledgeWorkLogo from "../assets/sponsors/14_S308.png";
 import SODALogo from "../assets/sponsors/15_S307.png";
+import GrowthVerseLogo from "../assets/sponsors/16_S301.png";
 import TopotalLogo from "../assets/sponsors/17_S310.png";
+import DatachainLogo from "../assets/sponsors/18_S317.png";
 import TechTouchLogo from "../assets/sponsors/19_S304.png";
 import HatenaLogo from "../assets/sponsors/20_S306.png";
+import KanmuLogo from "../assets/sponsors/21_S316.png";
 import IssueHuntLogo from "../assets/sponsors/22_S313.png";
 
 // ジョブボード
@@ -29,6 +36,9 @@ import HatenaJobLogo from "../assets/sponsors/S306-jb.jpg";
 import LayerXJobLogo from "../assets/sponsors/S309-jb.png";
 import UNextJobLogo from "../assets/sponsors/S312-jb.jpg";
 import UbieJobLogo from "../assets/sponsors/S314-jb.png";
+import BloombergJobLogo from "../assets/sponsors/S315-jb.png";
+import CrossTechJobLogo from "../assets/sponsors/S318-jb.png";
+import IssueHuntJobLogo from "../assets/sponsors/S313-jb.png";
 
 const venueSponsorImageSize = {
   height: 242,
@@ -36,8 +46,8 @@ const venueSponsorImageSize = {
 };
 
 const specialSponsorImageSize = {
-  height: 242,
-  width: 448,
+  height: 350,
+  width: 700,
 };
 
 const platinumGoldSponsorImageSize = {
@@ -98,15 +108,13 @@ export const constants = {
     venueSponsor: {
       // 会場スポンサー
       name: "株式会社サイバーエージェント",
-      imageSrc: NoImage,
+      imageSrc: CyberAgentLogo,
       height: venueSponsorImageSize.height,
       width: venueSponsorImageSize.width,
       dialog: {
         openId: "0_V001",
-        imageSrc: NoImage,
-        link: "https://www.cyberagent.co.jp/",
-        description:
-          "メディア事業、広告事業、ゲーム事業と多様な事業を展開するサイバーエージェントでは、新しい未来のテレビ「ABEMA」や、事前に広告配信効果を予測する「効果予測AI」を活用して広告クリエイティブを制作する「極予測AI」、プロレス動画配信サービス「WRESTLE UNIVERSE」などドメインの異なる様々なプロダクトでGoを採用しています。 なお、サイバーエージェントのGoにおけるNext Expertsである渋谷拓真 (@sivchari) が、当カンファレンスのオーガナイザーを務めます。",
+        imageSrc: CyberAgentLogo,
+        description: "",
       },
       jobBoard: {
         imageSrc: NoImage,
@@ -229,7 +237,7 @@ export const constants = {
       },
       {
         name: "GROOVE X 株式会社",
-        imageSrc: NoImage,
+        imageSrc: GrooveXLogo,
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
         jobBoard: {
@@ -249,12 +257,12 @@ export const constants = {
       },
       {
         name: "株式会社クロステック・マネジメント",
-        imageSrc: NoImage,
+        imageSrc: CrossTechLogo,
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: CrossTechJobLogo,
+          link: "https://xtm-recruit.wraptas.site/",
         },
       },
       {
@@ -279,12 +287,12 @@ export const constants = {
       },
       {
         name: "Bloomberg",
-        imageSrc: NoImage,
+        imageSrc: BloombergLogo,
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: BloombergJobLogo,
+          link: "https://www.bloomberg.co.jp/company/values/tech-at-bloomberg/",
         },
       },
       {
@@ -309,7 +317,7 @@ export const constants = {
       },
       {
         name: "株式会社GROWTH VERSE",
-        imageSrc: NoImage,
+        imageSrc: GrowthVerseLogo,
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
         jobBoard: {
@@ -329,7 +337,7 @@ export const constants = {
       },
       {
         name: "株式会社Datachain",
-        imageSrc: NoImage,
+        imageSrc: DatachainLogo,
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
         jobBoard: {
@@ -359,7 +367,7 @@ export const constants = {
       },
       {
         name: "株式会社カンム",
-        imageSrc: NoImage,
+        imageSrc: KanmuLogo,
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
         jobBoard: {
@@ -377,7 +385,7 @@ export const constants = {
           description: "Description for IssueHunt株式会社",
         },
         jobBoard: {
-          imageSrc: IssueHuntLogo,
+          imageSrc: IssueHuntJobLogo,
           link: "https://issuehunt.co.jp/",
         },
       },
