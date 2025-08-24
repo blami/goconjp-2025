@@ -14,6 +14,7 @@ const currentLocale = Astro.currentLocale || "ja";
     gap: 80px;
   }
 
+  .venue-sponsor img,
   .special-sponsor img,
   .platinum-gold-sponsor-list img,
   .gold-sponsor-list img,
@@ -27,6 +28,7 @@ const currentLocale = Astro.currentLocale || "ja";
     margin: 0 auto;
   }
 
+  .venue-sponsor li,
   .special-sponsor li,
   .platinum-gold-sponsor-list li,
   .gold-sponsor-list li,
@@ -42,11 +44,6 @@ const currentLocale = Astro.currentLocale || "ja";
     padding: 10px;
   }
 
-  .special-sponsor li {
-    max-width: 400px;
-    max-height: 200px;
-    width: 100%;
-  }
   .platinum-gold-sponsor-list li,
   .gold-sponsor-list li {
     max-width: 484px;
@@ -72,6 +69,7 @@ const currentLocale = Astro.currentLocale || "ja";
     width: 100%;
   }
 
+  .venue-sponsor,
   .special-sponsor ul,
   .platinum-gold-sponsor-list,
   .gold-sponsor-list,
@@ -89,6 +87,7 @@ const currentLocale = Astro.currentLocale || "ja";
   }
 
   @media (max-width: 1024px) {
+    .venue-sponsor li,
     .special-sponsor li,
     .platinum-gold-sponsor-list li,
     .gold-sponsor-list li,
@@ -102,6 +101,7 @@ const currentLocale = Astro.currentLocale || "ja";
     .sponsor-section {
       gap: 40px;
     }
+    .venue-sponsor li,
     .special-sponsor li,
     .platinum-gold-sponsor-list li,
     .gold-sponsor-list li,
@@ -114,33 +114,31 @@ const currentLocale = Astro.currentLocale || "ja";
 </style>
 
 <div class="sponsor-section">
-  <!--
-  CA さんの情報が揃い次第コメントアウトを外す
   <div>
     <h2>{currentLocale === "ja" ? "会場スポンサー" : "Venue Sponsor"}</h2>
     <ul class="venue-sponsor">
       <li>
         <Image
-          src={constants.jobBoard.venueSponsor.imageSrc}
-          alt={constants.jobBoard.venueSponsor.name}
-          width={constants.jobBoard.venueSponsor.width}
-          height={constants.jobBoard.venueSponsor.height}
+          src={constants.sponsors.venueSponsor.imageSrc}
+          alt={constants.sponsors.venueSponsor.name}
+          width={constants.sponsors.venueSponsor.width}
+          height={constants.sponsors.venueSponsor.height}
           loading="lazy"
           priority
           style="cursor:pointer"
-          onclick={`const dialog = document.getElementById('${constants.jobBoard.venueSponsor.dialog.openId}'); if (dialog) dialog.showModal();`}
+          onclick={`const dialog = document.getElementById('${constants.sponsors.venueSponsor.dialog.openId}'); if (dialog) dialog.showModal();`}
         />
 
         <Dialog
-          openId={constants.jobBoard.venueSponsor.dialog.openId}
+          openId={constants.sponsors.venueSponsor.dialog.openId}
           sponsorSectionTitle={currentLocale === "ja"
             ? "会場スポンサー"
             : "Venue Sponsor"}
-          sponsor={constants.jobBoard.venueSponsor}
+          sponsor={constants.sponsors.venueSponsor}
         />
       </li>
     </ul>
-  </div> -->
+  </div>
 
   <div class="special-sponsor">
     <h2>

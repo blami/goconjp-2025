@@ -1,5 +1,6 @@
 // スポンサーボード
 import NoImage from "../assets/sponsors/no-image.png";
+import CyberAgentLogo from "../assets/sponsors/0_V001.png";
 import GoogleLogo from "../assets/sponsors/0_S001.png";
 import GMOFSLogo from "../assets/sponsors/1_S101.png";
 import EVERYLogo from "../assets/sponsors/2_S102.png";
@@ -37,6 +38,7 @@ import UNextJobLogo from "../assets/sponsors/S312-jb.jpg";
 import UbieJobLogo from "../assets/sponsors/S314-jb.png";
 import BloombergJobLogo from "../assets/sponsors/S315-jb.png";
 import CrossTechJobLogo from "../assets/sponsors/S318-jb.png";
+import IssueHuntJobLogo from "../assets/sponsors/S313-jb.png";
 
 const venueSponsorImageSize = {
   height: 242,
@@ -44,8 +46,8 @@ const venueSponsorImageSize = {
 };
 
 const specialSponsorImageSize = {
-  height: 242,
-  width: 448,
+  height: 350,
+  width: 700,
 };
 
 const platinumGoldSponsorImageSize = {
@@ -106,15 +108,13 @@ export const constants = {
     venueSponsor: {
       // 会場スポンサー
       name: "株式会社サイバーエージェント",
-      imageSrc: NoImage,
+      imageSrc: CyberAgentLogo,
       height: venueSponsorImageSize.height,
       width: venueSponsorImageSize.width,
       dialog: {
         openId: "0_V001",
-        imageSrc: NoImage,
-        link: "https://www.cyberagent.co.jp/",
-        description:
-          "メディア事業、広告事業、ゲーム事業と多様な事業を展開するサイバーエージェントでは、新しい未来のテレビ「ABEMA」や、事前に広告配信効果を予測する「効果予測AI」を活用して広告クリエイティブを制作する「極予測AI」、プロレス動画配信サービス「WRESTLE UNIVERSE」などドメインの異なる様々なプロダクトでGoを採用しています。 なお、サイバーエージェントのGoにおけるNext Expertsである渋谷拓真 (@sivchari) が、当カンファレンスのオーガナイザーを務めます。",
+        imageSrc: CyberAgentLogo,
+        description: "",
       },
       jobBoard: {
         imageSrc: NoImage,
@@ -385,7 +385,7 @@ export const constants = {
           description: "Description for IssueHunt株式会社",
         },
         jobBoard: {
-          imageSrc: IssueHuntLogo,
+          imageSrc: IssueHuntJobLogo,
           link: "https://issuehunt.co.jp/",
         },
       },
