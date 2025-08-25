@@ -342,7 +342,7 @@ export const constants = {
         width: silverSponsorImageSize.width,
         jobBoard: {
           imageSrc: CrossTechJobLogo,
-          link: "https://xtm-recruit.wraptas.site/",
+          link: "https://xtm.wraptas.site/",
         },
       },
       {
