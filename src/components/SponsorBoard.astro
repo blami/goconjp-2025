@@ -126,32 +126,6 @@ const currentLocale = Astro.currentLocale || "ja";
 </style>
 
 <div class="sponsor-section">
-  <div>
-    <h2>{currentLocale === "ja" ? "会場スポンサー" : "Venue Sponsor"}</h2>
-    <ul class="venue-sponsor">
-      <li>
-        <Image
-          src={constants.sponsors.venueSponsor.imageSrc}
-          alt={constants.sponsors.venueSponsor.name}
-          width={constants.sponsors.venueSponsor.width}
-          height={constants.sponsors.venueSponsor.height}
-          loading="lazy"
-          priority
-          style="cursor:pointer"
-          onclick={`const dialog = document.getElementById('${constants.sponsors.venueSponsor.dialog.openId}'); if (dialog) dialog.showModal();`}
-        />
-
-        <Dialog
-          openId={constants.sponsors.venueSponsor.dialog.openId}
-          sponsorSectionTitle={currentLocale === "ja"
-            ? "会場スポンサー"
-            : "Venue Sponsor"}
-          sponsor={constants.sponsors.venueSponsor}
-        />
-      </li>
-    </ul>
-  </div>
-
   <div class="special-sponsor">
     <h2>
       {currentLocale === "ja" ? "スペシャルスポンサー" : "Special Sponsor"}
@@ -175,6 +149,32 @@ const currentLocale = Astro.currentLocale || "ja";
             ? "スペシャルスポンサー"
             : `Special Sponsor`}
           sponsor={constants.sponsors.specialSponsor}
+        />
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <h2>{currentLocale === "ja" ? "会場スポンサー" : "Venue Sponsor"}</h2>
+    <ul class="venue-sponsor">
+      <li>
+        <Image
+          src={constants.sponsors.venueSponsor.imageSrc}
+          alt={constants.sponsors.venueSponsor.name}
+          width={constants.sponsors.venueSponsor.width}
+          height={constants.sponsors.venueSponsor.height}
+          loading="lazy"
+          priority
+          style="cursor:pointer"
+          onclick={`const dialog = document.getElementById('${constants.sponsors.venueSponsor.dialog.openId}'); if (dialog) dialog.showModal();`}
+        />
+
+        <Dialog
+          openId={constants.sponsors.venueSponsor.dialog.openId}
+          sponsorSectionTitle={currentLocale === "ja"
+            ? "会場スポンサー"
+            : "Venue Sponsor"}
+          sponsor={constants.sponsors.venueSponsor}
         />
       </li>
     </ul>
