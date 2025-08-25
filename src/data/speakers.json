@@ -268,7 +268,7 @@
     "lastName": "Mochiduki",
     "fullName": "Koga Mochiduki",
     "bio": "普段はJavaを使用するシステムの設計開発をしています。好きな標準ライブラリはsync。",
-    "tagLine": "System engineer",
+    "tagLine": "System Engineer",
     "profilePicture": "https://sessionize.com/image/5925-400o400o1-Pdnu9Ru4gQ87zvnLZkPkHc.jpg",
     "sessions": [
       {
@@ -609,7 +609,7 @@
     "sessions": [
       {
         "id": 945921,
-        "name": "公式singleflightより約2倍高速なGenerics対応実装の設計"
+        "name": "公式singleflightを約2倍高速化したGenerics対応実装と最適化"
       }
     ],
     "isTopSpeaker": false,
@@ -630,7 +630,7 @@
     "fullName": "Vaibhav Gupta",
     "bio": "Working as a backend engineer with experience in Python, Golang, and distributed systems. I previously worked at  ANDPAD Inc Japan , and now builds scalable energy optimization platforms at Qenest Holdings Hanwha Japan.\r\nA returning GoConference speaker, I enjoys exploring Go’s internals from a beginner’s lens—this time focusing on how goroutines and the scheduler work behind go func().",
     "tagLine": "Backend Engineer | Golang Developer ",
-    "profilePicture": "https://sessionize.com/image/f7a7-400o400o1-wq1oA98cGxXHdTrHiAA5G4.jpg",
+    "profilePicture": "https://sessionize.com/image/6cc1-400o400o1-q5DxUBcXT8R8qCHeLpoNi.jpg",
     "sessions": [
       {
         "id": 948071,
@@ -691,7 +691,7 @@
     "links": [
       {
         "title": "X (Twitter)",
-        "url": "https://twitter.com/ymotongpoo",
+        "url": "https://x.com/ymotongpoo",
         "linkType": "Twitter"
       }
     ],
@@ -728,7 +728,7 @@
     "firstName": "Yuki",
     "lastName": "Hamagami",
     "fullName": "Yuki Hamagami",
-    "bio": "Software Engineer at DMM.com LLC",
+    "bio": "Backend Engineer",
     "tagLine": "DMM.com LLC",
     "profilePicture": "https://sessionize.com/image/c3da-400o400o1-TK4kaLDFdeGGNdHstHyPWR.png",
     "sessions": [
