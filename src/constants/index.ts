@@ -25,6 +25,51 @@ import HatenaLogo from "../assets/sponsors/20_S306.png";
 import KanmuLogo from "../assets/sponsors/21_S316.png";
 import IssueHuntLogo from "../assets/sponsors/22_S313.png";
 
+// Bronze Sponsors
+import S401Logo from "../assets/sponsors/S401.png";
+// import S402Logo from "../assets/sponsors/S402.png";
+import S403Logo from "../assets/sponsors/S403.png";
+import S404Logo from "../assets/sponsors/S404.png";
+import S406Logo from "../assets/sponsors/S406.png";
+import S407Logo from "../assets/sponsors/S407.png";
+import S409Logo from "../assets/sponsors/S409.png";
+import S410Logo from "../assets/sponsors/S410.png";
+import S415Logo from "../assets/sponsors/S415.png";
+import S417Logo from "../assets/sponsors/S417.png";
+import S418Logo from "../assets/sponsors/S418.png";
+import S419Logo from "../assets/sponsors/S419.png";
+import S420Logo from "../assets/sponsors/S420.png";
+import S421Logo from "../assets/sponsors/S421.png";
+import S422Logo from "../assets/sponsors/S422.png";
+import S423Logo from "../assets/sponsors/S423.png";
+import S425Logo from "../assets/sponsors/S425.png";
+import S427Logo from "../assets/sponsors/S427.png";
+import S428Logo from "../assets/sponsors/S428.png";
+import S429Logo from "../assets/sponsors/S429.png";
+import S431Logo from "../assets/sponsors/S431.png";
+import S432Logo from "../assets/sponsors/S432.png";
+import S433Logo from "../assets/sponsors/S433.png";
+import S434Logo from "../assets/sponsors/S434.png";
+import S435Logo from "../assets/sponsors/S435.png";
+import S436Logo from "../assets/sponsors/S436.png";
+import S437Logo from "../assets/sponsors/S437.png";
+import S438Logo from "../assets/sponsors/S438.png";
+import S440Logo from "../assets/sponsors/S440.png";
+// import S441Logo from "../assets/sponsors/S441.ai";
+import S442Logo from "../assets/sponsors/S442.png";
+import S443Logo from "../assets/sponsors/S443.png";
+import S444Logo from "../assets/sponsors/S444.png";
+import S445Logo from "../assets/sponsors/S445.png";
+import S446Logo from "../assets/sponsors/S446.png";
+import S448Logo from "../assets/sponsors/S448.png";
+import S449Logo from "../assets/sponsors/S449.png";
+import S450Logo from "../assets/sponsors/S450.png";
+import S451Logo from "../assets/sponsors/S451.png";
+import S452Logo from "../assets/sponsors/S452.png";
+import S453Logo from "../assets/sponsors/S453.png";
+import S454Logo from "../assets/sponsors/S454.png";
+import S456Logo from "../assets/sponsors/S456.png";
+
 // ジョブボード
 import EVERYJobLogo from "../assets/sponsors/S102-jb.jpg";
 import ResilireJobLogo from "../assets/sponsors/S201-jb.png";
@@ -392,9 +437,430 @@ export const constants = {
     ],
     bronzeSponsors: [
       {
-        number: 20,
-        name: "",
-        imageSrc: NoImage,
+        name: "ミイダス株式会社",
+        imageSrc: S401Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      // TODO: ロゴ画像が確認でき次第アンコメント
+      // {
+      //   name: "株式会社ジーニー",
+      //   imageSrc: S402Logo,
+      //   height: bronzeSponsorImageSize.height,
+      //   width: bronzeSponsorImageSize.width,
+      //   jobBoard: {
+      //     imageSrc: NoImage,
+      //     link: undefined,
+      //   },
+      // },
+      {
+        name: "株式会社カオナビ",
+        imageSrc: S403Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "REALITY株式会社",
+        imageSrc: S404Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "テイラー株式会社",
+        imageSrc: S406Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "株式会社UPSIDER",
+        imageSrc: S407Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "株式会社ヤプリ",
+        imageSrc: S409Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "株式会社GENDA",
+        imageSrc: S410Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "株式会社アンドパッド",
+        imageSrc: S415Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "合同会社ザウエル",
+        imageSrc: S417Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "株式会社カウシェ",
+        imageSrc: S418Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "株式会社HRBrain",
+        imageSrc: S419Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "株式会社hacomono",
+        imageSrc: S420Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "株式会社ドワンゴ",
+        imageSrc: S421Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "フリー株式会社",
+        imageSrc: S422Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "SHOWROOM株式会社",
+        imageSrc: S423Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "株式会社マネーフォワード",
+        imageSrc: S425Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "株式会社Gauidy",
+        imageSrc: S427Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "株式会社CARTA HOLDINGS",
+        imageSrc: S428Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "GO株式会社",
+        imageSrc: S429Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "株式会社カナリー",
+        imageSrc: S431Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "株式会社ミラティブ",
+        imageSrc: S432Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "株式会社Finatextホールディングス",
+        imageSrc: S433Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "株式会社ギフティ",
+        imageSrc: S434Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "LINEヤフー株式会社",
+        imageSrc: S435Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "セーフィー株式会社",
+        imageSrc: S436Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "STORES 株式会社",
+        imageSrc: S437Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "株式会社スタンバイ",
+        imageSrc: S438Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "株式会社Hacobu",
+        imageSrc: S440Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      // TODO: ロゴ画像が確認でき次第アンコメント
+      // {
+      //   name: "株式会社ディー・エヌ・エー / DeNA Co., Ltd.,",
+      //   imageSrc: S441Logo,
+      //   height: bronzeSponsorImageSize.height,
+      //   width: bronzeSponsorImageSize.width,
+      //   jobBoard: {
+      //     imageSrc: NoImage,
+      //     link: undefined,
+      //   },
+      // },
+      {
+        name: "弁護士ドットコム株式会社 / Bengo4.com,Inc.",
+        imageSrc: S442Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "株式会社Belong",
+        imageSrc: S443Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "株式会社BONX",
+        imageSrc: S444Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "株式会社メルカリ",
+        imageSrc: S445Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "株式会社TRUSTDOCK",
+        imageSrc: S446Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "e-dash株式会社",
+        imageSrc: S448Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "株式会社カミナシ",
+        imageSrc: S449Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "株式会社PKSHA Technology",
+        imageSrc: S450Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "BBSakura Networks株式会社",
+        imageSrc: S451Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "株式会社一休",
+        imageSrc: S452Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "株式会社MIXI",
+        imageSrc: S453Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "株式会社バニッシュ・スタンダード",
+        imageSrc: S454Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        name: "株式会社ビットキー",
+        imageSrc: S456Logo,
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
@@ -432,5 +898,6 @@ export const AllSponsors = () => {
     ...constants.sponsors.platinumGoldSponsors,
     ...constants.sponsors.goldSponsors,
     ...constants.sponsors.silverSponsors,
+    ...constants.sponsors.bronzeSponsors,
   ];
 };

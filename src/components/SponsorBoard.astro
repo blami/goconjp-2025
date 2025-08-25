@@ -62,6 +62,7 @@ const currentLocale = Astro.currentLocale || "ja";
     max-height: 100px;
     min-width: 120px;
     width: 100%;
+    margin: 0;
   }
   .tool-sponsor-list li {
     max-width: 320px;
@@ -74,7 +75,6 @@ const currentLocale = Astro.currentLocale || "ja";
   .platinum-gold-sponsor-list,
   .gold-sponsor-list,
   .silver-sponsor-list,
-  .bronze-sponsor-list,
   .tool-sponsor-list {
     display: flex;
     flex-wrap: wrap;
@@ -84,6 +84,18 @@ const currentLocale = Astro.currentLocale || "ja";
     list-style: none;
     text-align: center;
     padding: 0;
+  }
+
+  .bronze-sponsor-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
   }
 
   @media (max-width: 1024px) {
@@ -251,13 +263,12 @@ const currentLocale = Astro.currentLocale || "ja";
       }
     </ul>
   </div>
-  <!--
-  08/31 の締め切り終了後に対応する
+
   <div>
     <h2>Bronze</h2>
     <ul class="bronze-sponsor-list">
       {
-        constants.jobBoard.bronzeSponsors.map((sponsor) => (
+        constants.sponsors.bronzeSponsors.map((sponsor) => (
           <li>
             <Image
               src={sponsor.imageSrc}
@@ -273,6 +284,8 @@ const currentLocale = Astro.currentLocale || "ja";
     </ul>
   </div>
 
+  <!--
+  08/31 の締め切り終了後に対応する
   <div>
     <h2>Gopher</h2>
     <ul class="gopher-sponsor-list">
