@@ -85,6 +85,41 @@ import BloombergJobLogo from "../assets/sponsors/S315-jb.png";
 import CrossTechJobLogo from "../assets/sponsors/S318-jb.png";
 import IssueHuntJobLogo from "../assets/sponsors/S313-jb.png";
 
+// Bronze Sponsors Job Board
+import S401JobLogo from "../assets/sponsors/S401-jb.png";
+import S403JobLogo from "../assets/sponsors/S403-jb.png";
+import S404JobLogo from "../assets/sponsors/S404-jb.png";
+import S406JobLogo from "../assets/sponsors/S406-jb.png";
+import S407JobLogo from "../assets/sponsors/S407-jb.png";
+import S415JobLogo from "../assets/sponsors/S415-jb.png";
+import S418JobLogo from "../assets/sponsors/S418-jb.png";
+import S419JobLogo from "../assets/sponsors/S419-jb.png";
+import S420JobLogo from "../assets/sponsors/S420-jb.png";
+import S421JobLogo from "../assets/sponsors/S421-jb.png";
+import S422JobLogo from "../assets/sponsors/S422-jb.png";
+import S423JobLogo from "../assets/sponsors/S423-jb.png";
+import S425JobLogo from "../assets/sponsors/S425-jb.png";
+import S428JobLogo from "../assets/sponsors/S428-jb.png";
+import S429JobLogo from "../assets/sponsors/S429-jb.png";
+import S431JobLogo from "../assets/sponsors/S431-jb.png";
+import S433JobLogo from "../assets/sponsors/S433-jb.png";
+import S434JobLogo from "../assets/sponsors/S434-jb.jpg";
+import S435JobLogo from "../assets/sponsors/S435-jb.png";
+import S436JobLogo from "../assets/sponsors/S436-jb.png";
+import S437JobLogo from "../assets/sponsors/S437-jb.png";
+import S438JobLogo from "../assets/sponsors/S438-jb.png";
+import S442JobLogo from "../assets/sponsors/S442-jb.png";
+import S443JobLogo from "../assets/sponsors/S443-jb.png";
+import S444JobLogo from "../assets/sponsors/S444-jb.jpg";
+import S445JobLogo from "../assets/sponsors/S445-jb.png";
+import S449JobLogo from "../assets/sponsors/S449-jb.jpg";
+import S450JobLogo from "../assets/sponsors/S450-jb.png";
+import S451JobLogo from "../assets/sponsors/S451-jb.jpg";
+import S452JobLogo from "../assets/sponsors/S452-jb.png";
+import S453JobLogo from "../assets/sponsors/S453-jb.png";
+import S454JobLogo from "../assets/sponsors/S454-jb.png";
+import S456JobLogo from "../assets/sponsors/S456-jb.png";
+
 const venueSponsorImageSize = {
   height: 242,
   width: 448,
@@ -442,8 +477,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S401JobLogo,
+          link: "https://careers.miidas.co.jp/tech/",
         },
       },
       // TODO: ロゴ画像が確認でき次第アンコメント
@@ -463,8 +498,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S403JobLogo,
+          link: "https://corp.kaonavi.jp/recruit/recruitment/",
         },
       },
       {
@@ -473,8 +508,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S404JobLogo,
+          link: "https://hrmos.co/pages/1218800560317673472/jobs",
         },
       },
       {
@@ -483,8 +518,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S406JobLogo,
+          link: "https://careers.tailor.tech/",
         },
       },
       {
@@ -493,8 +528,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S407JobLogo,
+          link: "https://herp.careers/v1/upsider/requisition-groups/e4217dab-b306-4aeb-afa5-da601004021b",
         },
       },
       {
@@ -523,8 +558,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S415JobLogo,
+          link: "https://engineer.andpad.co.jp/",
         },
       },
       {
@@ -543,8 +578,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S418JobLogo,
+          link: "https://enjoy-working.kauche.com/",
         },
       },
       {
@@ -553,7 +588,7 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
+          imageSrc: S419JobLogo,
           link: undefined,
         },
       },
@@ -563,8 +598,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S420JobLogo,
+          link: "https://www.hacomono.co.jp/recruit/engineer/",
         },
       },
       {
@@ -573,8 +608,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S421JobLogo,
+          link: "https://www.wantedly.com/companies/dwango",
         },
       },
       {
@@ -583,8 +618,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S422JobLogo,
+          link: "https://jobs.freee.co.jp/engineers/",
         },
       },
       {
@@ -593,8 +628,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S423JobLogo,
+          link: "https://showroom.co.jp/recruit.html",
         },
       },
       {
@@ -603,7 +638,7 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
+          imageSrc: S425JobLogo,
           link: undefined,
         },
       },
@@ -623,8 +658,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S428JobLogo,
+          link: "https://hrmos.co/pages/cartaholdings/jobs/fl-e001?utm_source=gocon2025&utm_medium=Paid+Other&utm_campaign=gocon2025_sponsor",
         },
       },
       {
@@ -633,8 +668,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S429JobLogo,
+          link: "https://hrmos.co/pages/goinc/jobs/2000000",
         },
       },
       {
@@ -643,7 +678,7 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
+          imageSrc: S431JobLogo,
           link: undefined,
         },
       },
@@ -663,8 +698,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S433JobLogo,
+          link: "https://finatext.com/recruit",
         },
       },
       {
@@ -673,7 +708,7 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
+          imageSrc: S434JobLogo,
           link: undefined,
         },
       },
@@ -683,8 +718,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S435JobLogo,
+          link: "https://www.lycorp.co.jp/ja/recruit/career/job-categories/#j-0-1,j-0-3,j-0-7,j-0-9",
         },
       },
       {
@@ -693,7 +728,7 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
+          imageSrc: S436JobLogo,
           link: undefined,
         },
       },
@@ -703,8 +738,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S437JobLogo,
+          link: "https://note.st.inc/n/na36043782e9c",
         },
       },
       {
@@ -713,8 +748,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S438JobLogo,
+          link: "https://recruit.stanby.co.jp/",
         },
       },
       {
@@ -744,8 +779,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S442JobLogo,
+          link: "https://hrmos.co/pages/bengo4/jobs/00009103",
         },
       },
       {
@@ -754,7 +789,7 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
+          imageSrc: S443JobLogo,
           link: undefined,
         },
       },
@@ -764,8 +799,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S444JobLogo,
+          link: "https://forms.gle/KEhJM4a3mngcdzqs9",
         },
       },
       {
@@ -774,8 +809,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S445JobLogo,
+          link: "https://careers.mercari.com/jobs/engineering/engineering/",
         },
       },
       {
@@ -804,8 +839,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S449JobLogo,
+          link: "https://herp.careers/v1/kaminashi/requisition-groups/ae8150ab-e044-41d8-b034-ac2987cc29db",
         },
       },
       {
@@ -814,8 +849,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S450JobLogo,
+          link: "https://hrmos.co/pages/pkshatech/jobs?jobType=FULL&category=1672460987608211458",
         },
       },
       {
@@ -824,8 +859,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S451JobLogo,
+          link: "https://bbsakura.net/ja/recruit",
         },
       },
       {
@@ -834,8 +869,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S452JobLogo,
+          link: "https://www.ikyu.co.jp/recruit/engineer",
         },
       },
       {
@@ -844,8 +879,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S453JobLogo,
+          link: "https://mixigroup-recruit.mixi.co.jp/",
         },
       },
       {
@@ -854,7 +889,7 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
+          imageSrc: S454JobLogo,
           link: undefined,
         },
       },
@@ -864,8 +899,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S456JobLogo,
+          link: "https://bitkey.link/EMRRAH",
         },
       },
     ],
