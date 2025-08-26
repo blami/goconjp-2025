@@ -305,7 +305,7 @@
             "recordingUrl": null,
             "status": "Accepted",
             "isInformed": true,
-            "isConfirmed": false
+            "isConfirmed": true
           },
           {
             "id": "32b70489-25b2-47f9-8686-6bb46ae40524",
@@ -819,22 +819,61 @@
         "name": "Room 2-1",
         "sessions": [
           {
-            "id": "1dbc5ae6-79c6-4415-ba78-4673b4bed6fc",
+            "id": "1018925",
             "title": "今日から始めるpprof",
-            "description": null,
+            "description": "Goの素晴らしいところは豊富なツールセットが標準で付いていてインストール直後から使えるところにあります。本ワークショップではその中でもpprofというプロファイラーの使い方を初めて使う方にもわかりやすい形で解説します。\r\n\r\nワークショップは次のような内容をカバーすることを想定しています。\r\n1. プロファイラーとは\r\n2. pprofの基本機能の説明\r\n3. pprofをプログラムに組み込む\r\n4. pprofでプロファイルを取得する\r\n5. pprofでプロファイルを可視化する\r\n6. pprofの読み方を理解する\r\n7. pprofの結果に基づいて改善する\r\n8. 改善結果をpprofで確認する\r\n9. 実際の開発に活かせる継続的プロファイルの解説\r\n10. （オプション）継続的プロファイルを導入してみる（各種サービスのアカウントが必要）\r\n\r\n本セッションを終える頃にはテストやベンチマークだけでなく、Goでのプロファイルの使い方も理解し、根拠のある形でパフォーマンスチューニングを実施できる知識を得ることができるようになるでしょう。",
             "startsAt": "2025-09-27T13:10:00",
             "endsAt": "2025-09-27T14:40:00",
-            "isServiceSession": true,
+            "isServiceSession": false,
             "isPlenumSession": false,
-            "speakers": [],
-            "categories": [],
+            "speakers": [
+              {
+                "id": "398a776b-adf3-48b6-8510-7891a404302d",
+                "name": "Yoshi Yamaguchi"
+              }
+            ],
+            "categories": [
+              {
+                "id": 101938,
+                "name": "Session Type",
+                "categoryItems": [
+                  {
+                    "id": 389623,
+                    "name": "workshop"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 101939,
+                "name": "Session Level",
+                "categoryItems": [
+                  {
+                    "id": 367244,
+                    "name": "intermediate"
+                  }
+                ],
+                "sort": 1
+              },
+              {
+                "id": 102474,
+                "name": "言語 / Language",
+                "categoryItems": [
+                  {
+                    "id": 369632,
+                    "name": "japanese"
+                  }
+                ],
+                "sort": 2
+              }
+            ],
             "roomId": 67045,
             "room": "Room 2-1",
             "liveUrl": null,
             "recordingUrl": null,
-            "status": null,
-            "isInformed": false,
-            "isConfirmed": false
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
           },
           {
             "id": "1013431",
@@ -891,25 +930,64 @@
             "recordingUrl": null,
             "status": "Accepted",
             "isInformed": true,
-            "isConfirmed": false
+            "isConfirmed": true
           },
           {
-            "id": "c4cdce82-eb15-4936-9caf-e4a9c360fe2b",
-            "title": "OST",
-            "description": null,
+            "id": "1019249",
+            "title": "Go Conference OST",
+            "description": "Go Conference運営メンバーから、特別なワークショップ「Open Space Technology（OST）」を開催します。\r\nセッションのテーマも、アジェンダも、全て参加者自身が自由に決めることができます。\r\n最近ハマっているライブラリの話、テストコードの書き方、仕事でのちょっとしたGoの悩みなど、何でもOK。\r\n\r\nさあ、あなたもGo Conferenceを盛り上げる一員として、Goへの情熱を語り合いましょう！",
             "startsAt": "2025-09-27T16:30:00",
             "endsAt": "2025-09-27T18:00:00",
-            "isServiceSession": true,
+            "isServiceSession": false,
             "isPlenumSession": false,
-            "speakers": [],
-            "categories": [],
+            "speakers": [
+              {
+                "id": "23f61b5d-8318-4950-81c9-c62d924ea580",
+                "name": "小谷 築功"
+              }
+            ],
+            "categories": [
+              {
+                "id": 101938,
+                "name": "Session Type",
+                "categoryItems": [
+                  {
+                    "id": 389623,
+                    "name": "workshop"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 101939,
+                "name": "Session Level",
+                "categoryItems": [
+                  {
+                    "id": 367242,
+                    "name": "all"
+                  }
+                ],
+                "sort": 1
+              },
+              {
+                "id": 102474,
+                "name": "言語 / Language",
+                "categoryItems": [
+                  {
+                    "id": 369632,
+                    "name": "japanese"
+                  }
+                ],
+                "sort": 2
+              }
+            ],
             "roomId": 67045,
             "room": "Room 2-1",
             "liveUrl": null,
             "recordingUrl": null,
-            "status": null,
-            "isInformed": false,
-            "isConfirmed": false
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
           },
           {
             "id": "4c0c818c-233f-405d-8126-b1bb432ede4f",
@@ -991,7 +1069,7 @@
             "recordingUrl": null,
             "status": "Accepted",
             "isInformed": true,
-            "isConfirmed": false
+            "isConfirmed": true
           },
           {
             "id": "998166",
@@ -1048,7 +1126,7 @@
             "recordingUrl": null,
             "status": "Accepted",
             "isInformed": true,
-            "isConfirmed": false
+            "isConfirmed": true
           },
           {
             "id": "83a81f1c-413f-44b0-8dfa-9eaa7c0061df",
@@ -1096,7 +1174,7 @@
           {
             "id": "997075",
             "title": "Goを使ってTDDを体験しよう！！",
-            "description": "このワークショップでは、TDD(Test-Driven Development)の体験会を行います。\r\n\r\nTDDについて、概要しか知らない方や実際にやったことがない方は多いのではないでしょうか。\r\n例えばTDDの最初のステップを「落ちるテストを書く」だと思っている方は多いのではないでしょうか。\r\nTDDについて理解し、実践をすることで、実体験をベースにTDDの是非を判断できることがゴールです。\r\nぜひ、TDD実践の最初の一歩を踏み出してみませんか？\r\n\r\n対象者：\r\n・TDDを知らない方\r\n・TDDを知っているがやったことがない方\r\n・ストレスなく開発する方法を探している方\r\n\r\nゴール：\r\n・TDDについて理解をし、より安心して普段の開発を行えるようにする\r\n・想像や妄想ではなく、実体験をもとにTDDの良し悪しを判断できるようになる\r\n\r\nワークショップの流れ：\r\n1. 自己紹介\r\n2. TDDについての説明\r\n3. TDD体験1\r\n  a. 簡単なお題に対して各自でTDDを実践してみる\r\n  b. 実践した感想や学びをシェアする\r\n4. TDD体験2\r\n  a. 少し難しいお題に対して各自でTDDを実践してみる\r\n  b. 実践した感想や学びをシェアする\r\n5. 全体ふりかえり\r\n\r\n参加条件・事前準備など：\r\n・Goの基本的な文法を理解していること（goroutineやiter.Seqなどの難しい知識は不要）\r\n・Goの基本的なテストの書き方を理解していること\r\n・Gitの基本的な操作ができること（コミットできればOKです）\r\n・コード・テストを実行する環境を用意すること\r\n・使用したいツールやライブラリがあれば、事前にダウンロードを済ませておくこと\r\n\r\n最小/最大実施可能人数：\r\n・最小：1人\r\n・最大：8人",
+            "description": "このワークショップでは、TDD(Test-Driven Development)の体験会を行います。\r\n\r\nTDDについて、概要しか知らない方や実際にやったことがない方は多いのではないでしょうか。\r\n例えばTDDの最初のステップを「落ちるテストを書く」だと思っている方は多いのではないでしょうか。\r\nTDDについて理解し、実践をすることで、実体験をベースにTDDの是非を判断できることがゴールです。\r\nぜひ、TDD実践の最初の一歩を踏み出してみませんか？\r\n\r\n対象者：\r\n・TDDを知らない方\r\n・TDDを知っているがやったことがない方\r\n・ストレスなく開発する方法を探している方\r\n\r\nゴール：\r\n・TDDについて理解をし、より安心して普段の開発を行えるようにする\r\n・想像や妄想ではなく、実体験をもとにTDDの良し悪しを判断できるようになる\r\n\r\nワークショップの流れ：\r\n1. 自己紹介\r\n2. TDDについての説明\r\n3. TDD体験1\r\n  3-a. 簡単なお題に対してTDDを実践してみる\r\n  3-b. 実践した感想や学びをシェアする\r\n4. TDD体験2\r\n  4-a. 少し難しいお題に対してTDDを実践してみる\r\n  4-b. 実践した感想や学びをシェアする\r\n5. 全体ふりかえり\r\n\r\n参加条件・事前準備など：\r\n・Goの基本的な文法を理解していること（goroutineやiter.Seqなどの難しい知識は不要）\r\n・Goの基本的なテストの書き方を理解していること\r\n・Gitの基本的な操作ができること（コミットできればOKです）\r\n・コード・テストを実行する環境を用意すること\r\n・使用したいツールやライブラリがあれば、事前にダウンロードを済ませておくこと\r\n\r\n最小/最大実施可能人数：\r\n・最小：1人\r\n・最大：8人",
             "startsAt": "2025-09-27T13:10:00",
             "endsAt": "2025-09-27T14:40:00",
             "isServiceSession": false,
@@ -1148,7 +1226,7 @@
             "recordingUrl": null,
             "status": "Accepted",
             "isInformed": true,
-            "isConfirmed": false
+            "isConfirmed": true
           },
           {
             "id": "1000109",
@@ -1205,25 +1283,64 @@
             "recordingUrl": null,
             "status": "Accepted",
             "isInformed": true,
-            "isConfirmed": false
+            "isConfirmed": true
           },
           {
-            "id": "6e2b4eea-56a7-40ca-b3b8-75618f4f4eeb",
-            "title": "Go カードゲームで遊ぼう",
-            "description": null,
+            "id": "1019147",
+            "title": "Goのカードゲームで遊ぼう",
+            "description": "楽しいカードゲームを通じてGoプログラミング言語の基礎を学びます。\r\n参加者はプログラムを作成しつつ、Goの主要な機能や構文を理解することができます。",
             "startsAt": "2025-09-27T16:30:00",
             "endsAt": "2025-09-27T18:00:00",
-            "isServiceSession": true,
+            "isServiceSession": false,
             "isPlenumSession": false,
-            "speakers": [],
-            "categories": [],
+            "speakers": [
+              {
+                "id": "37ae8082-b7e9-4009-af07-3bad0627f74e",
+                "name": "Hiromasa Senoue"
+              }
+            ],
+            "categories": [
+              {
+                "id": 101938,
+                "name": "Session Type",
+                "categoryItems": [
+                  {
+                    "id": 389623,
+                    "name": "workshop"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 101939,
+                "name": "Session Level",
+                "categoryItems": [
+                  {
+                    "id": 367242,
+                    "name": "all"
+                  }
+                ],
+                "sort": 1
+              },
+              {
+                "id": 102474,
+                "name": "言語 / Language",
+                "categoryItems": [
+                  {
+                    "id": 369632,
+                    "name": "japanese"
+                  }
+                ],
+                "sort": 2
+              }
+            ],
             "roomId": 70899,
             "room": "Room 2-3",
             "liveUrl": null,
             "recordingUrl": null,
-            "status": null,
-            "isInformed": false,
-            "isConfirmed": false
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
           },
           {
             "id": "606f9985-9b72-4078-9b5c-126c7d686475",
@@ -1563,22 +1680,61 @@
             "id": 67045,
             "name": "Room 2-1",
             "session": {
-              "id": "1dbc5ae6-79c6-4415-ba78-4673b4bed6fc",
+              "id": "1018925",
               "title": "今日から始めるpprof",
-              "description": null,
+              "description": "Goの素晴らしいところは豊富なツールセットが標準で付いていてインストール直後から使えるところにあります。本ワークショップではその中でもpprofというプロファイラーの使い方を初めて使う方にもわかりやすい形で解説します。\r\n\r\nワークショップは次のような内容をカバーすることを想定しています。\r\n1. プロファイラーとは\r\n2. pprofの基本機能の説明\r\n3. pprofをプログラムに組み込む\r\n4. pprofでプロファイルを取得する\r\n5. pprofでプロファイルを可視化する\r\n6. pprofの読み方を理解する\r\n7. pprofの結果に基づいて改善する\r\n8. 改善結果をpprofで確認する\r\n9. 実際の開発に活かせる継続的プロファイルの解説\r\n10. （オプション）継続的プロファイルを導入してみる（各種サービスのアカウントが必要）\r\n\r\n本セッションを終える頃にはテストやベンチマークだけでなく、Goでのプロファイルの使い方も理解し、根拠のある形でパフォーマンスチューニングを実施できる知識を得ることができるようになるでしょう。",
               "startsAt": "2025-09-27T13:10:00",
               "endsAt": "2025-09-27T14:40:00",
-              "isServiceSession": true,
+              "isServiceSession": false,
               "isPlenumSession": false,
-              "speakers": [],
-              "categories": [],
+              "speakers": [
+                {
+                  "id": "398a776b-adf3-48b6-8510-7891a404302d",
+                  "name": "Yoshi Yamaguchi"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 101938,
+                  "name": "Session Type",
+                  "categoryItems": [
+                    {
+                      "id": 389623,
+                      "name": "workshop"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 101939,
+                  "name": "Session Level",
+                  "categoryItems": [
+                    {
+                      "id": 367244,
+                      "name": "intermediate"
+                    }
+                  ],
+                  "sort": 1
+                },
+                {
+                  "id": 102474,
+                  "name": "言語 / Language",
+                  "categoryItems": [
+                    {
+                      "id": 369632,
+                      "name": "japanese"
+                    }
+                  ],
+                  "sort": 2
+                }
+              ],
               "roomId": 67045,
               "room": "Room 2-1",
               "liveUrl": null,
               "recordingUrl": null,
-              "status": null,
-              "isInformed": false,
-              "isConfirmed": false
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
             },
             "index": 1
           },
@@ -1640,7 +1796,7 @@
               "recordingUrl": null,
               "status": "Accepted",
               "isInformed": true,
-              "isConfirmed": false
+              "isConfirmed": true
             },
             "index": 2
           },
@@ -1650,7 +1806,7 @@
             "session": {
               "id": "997075",
               "title": "Goを使ってTDDを体験しよう！！",
-              "description": "このワークショップでは、TDD(Test-Driven Development)の体験会を行います。\r\n\r\nTDDについて、概要しか知らない方や実際にやったことがない方は多いのではないでしょうか。\r\n例えばTDDの最初のステップを「落ちるテストを書く」だと思っている方は多いのではないでしょうか。\r\nTDDについて理解し、実践をすることで、実体験をベースにTDDの是非を判断できることがゴールです。\r\nぜひ、TDD実践の最初の一歩を踏み出してみませんか？\r\n\r\n対象者：\r\n・TDDを知らない方\r\n・TDDを知っているがやったことがない方\r\n・ストレスなく開発する方法を探している方\r\n\r\nゴール：\r\n・TDDについて理解をし、より安心して普段の開発を行えるようにする\r\n・想像や妄想ではなく、実体験をもとにTDDの良し悪しを判断できるようになる\r\n\r\nワークショップの流れ：\r\n1. 自己紹介\r\n2. TDDについての説明\r\n3. TDD体験1\r\n  a. 簡単なお題に対して各自でTDDを実践してみる\r\n  b. 実践した感想や学びをシェアする\r\n4. TDD体験2\r\n  a. 少し難しいお題に対して各自でTDDを実践してみる\r\n  b. 実践した感想や学びをシェアする\r\n5. 全体ふりかえり\r\n\r\n参加条件・事前準備など：\r\n・Goの基本的な文法を理解していること（goroutineやiter.Seqなどの難しい知識は不要）\r\n・Goの基本的なテストの書き方を理解していること\r\n・Gitの基本的な操作ができること（コミットできればOKです）\r\n・コード・テストを実行する環境を用意すること\r\n・使用したいツールやライブラリがあれば、事前にダウンロードを済ませておくこと\r\n\r\n最小/最大実施可能人数：\r\n・最小：1人\r\n・最大：8人",
+              "description": "このワークショップでは、TDD(Test-Driven Development)の体験会を行います。\r\n\r\nTDDについて、概要しか知らない方や実際にやったことがない方は多いのではないでしょうか。\r\n例えばTDDの最初のステップを「落ちるテストを書く」だと思っている方は多いのではないでしょうか。\r\nTDDについて理解し、実践をすることで、実体験をベースにTDDの是非を判断できることがゴールです。\r\nぜひ、TDD実践の最初の一歩を踏み出してみませんか？\r\n\r\n対象者：\r\n・TDDを知らない方\r\n・TDDを知っているがやったことがない方\r\n・ストレスなく開発する方法を探している方\r\n\r\nゴール：\r\n・TDDについて理解をし、より安心して普段の開発を行えるようにする\r\n・想像や妄想ではなく、実体験をもとにTDDの良し悪しを判断できるようになる\r\n\r\nワークショップの流れ：\r\n1. 自己紹介\r\n2. TDDについての説明\r\n3. TDD体験1\r\n  3-a. 簡単なお題に対してTDDを実践してみる\r\n  3-b. 実践した感想や学びをシェアする\r\n4. TDD体験2\r\n  4-a. 少し難しいお題に対してTDDを実践してみる\r\n  4-b. 実践した感想や学びをシェアする\r\n5. 全体ふりかえり\r\n\r\n参加条件・事前準備など：\r\n・Goの基本的な文法を理解していること（goroutineやiter.Seqなどの難しい知識は不要）\r\n・Goの基本的なテストの書き方を理解していること\r\n・Gitの基本的な操作ができること（コミットできればOKです）\r\n・コード・テストを実行する環境を用意すること\r\n・使用したいツールやライブラリがあれば、事前にダウンロードを済ませておくこと\r\n\r\n最小/最大実施可能人数：\r\n・最小：1人\r\n・最大：8人",
               "startsAt": "2025-09-27T13:10:00",
               "endsAt": "2025-09-27T14:40:00",
               "isServiceSession": false,
@@ -1702,7 +1858,7 @@
               "recordingUrl": null,
               "status": "Accepted",
               "isInformed": true,
-              "isConfirmed": false
+              "isConfirmed": true
             },
             "index": 3
           }
@@ -1769,7 +1925,7 @@
               "recordingUrl": null,
               "status": "Accepted",
               "isInformed": true,
-              "isConfirmed": false
+              "isConfirmed": true
             },
             "index": 0
           }
@@ -2077,7 +2233,7 @@
               "recordingUrl": null,
               "status": "Accepted",
               "isInformed": true,
-              "isConfirmed": false
+              "isConfirmed": true
             },
             "index": 1
           },
@@ -2139,7 +2295,7 @@
               "recordingUrl": null,
               "status": "Accepted",
               "isInformed": true,
-              "isConfirmed": false
+              "isConfirmed": true
             },
             "index": 2
           },
@@ -2201,7 +2357,7 @@
               "recordingUrl": null,
               "status": "Accepted",
               "isInformed": true,
-              "isConfirmed": false
+              "isConfirmed": true
             },
             "index": 3
           }
@@ -2399,22 +2555,61 @@
             "id": 67045,
             "name": "Room 2-1",
             "session": {
-              "id": "c4cdce82-eb15-4936-9caf-e4a9c360fe2b",
-              "title": "OST",
-              "description": null,
+              "id": "1019249",
+              "title": "Go Conference OST",
+              "description": "Go Conference運営メンバーから、特別なワークショップ「Open Space Technology（OST）」を開催します。\r\nセッションのテーマも、アジェンダも、全て参加者自身が自由に決めることができます。\r\n最近ハマっているライブラリの話、テストコードの書き方、仕事でのちょっとしたGoの悩みなど、何でもOK。\r\n\r\nさあ、あなたもGo Conferenceを盛り上げる一員として、Goへの情熱を語り合いましょう！",
               "startsAt": "2025-09-27T16:30:00",
               "endsAt": "2025-09-27T18:00:00",
-              "isServiceSession": true,
+              "isServiceSession": false,
               "isPlenumSession": false,
-              "speakers": [],
-              "categories": [],
+              "speakers": [
+                {
+                  "id": "23f61b5d-8318-4950-81c9-c62d924ea580",
+                  "name": "小谷 築功"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 101938,
+                  "name": "Session Type",
+                  "categoryItems": [
+                    {
+                      "id": 389623,
+                      "name": "workshop"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 101939,
+                  "name": "Session Level",
+                  "categoryItems": [
+                    {
+                      "id": 367242,
+                      "name": "all"
+                    }
+                  ],
+                  "sort": 1
+                },
+                {
+                  "id": 102474,
+                  "name": "言語 / Language",
+                  "categoryItems": [
+                    {
+                      "id": 369632,
+                      "name": "japanese"
+                    }
+                  ],
+                  "sort": 2
+                }
+              ],
               "roomId": 67045,
               "room": "Room 2-1",
               "liveUrl": null,
               "recordingUrl": null,
-              "status": null,
-              "isInformed": false,
-              "isConfirmed": false
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
             },
             "index": 1
           },
@@ -2445,22 +2640,61 @@
             "id": 70899,
             "name": "Room 2-3",
             "session": {
-              "id": "6e2b4eea-56a7-40ca-b3b8-75618f4f4eeb",
-              "title": "Go カードゲームで遊ぼう",
-              "description": null,
+              "id": "1019147",
+              "title": "Goのカードゲームで遊ぼう",
+              "description": "楽しいカードゲームを通じてGoプログラミング言語の基礎を学びます。\r\n参加者はプログラムを作成しつつ、Goの主要な機能や構文を理解することができます。",
               "startsAt": "2025-09-27T16:30:00",
               "endsAt": "2025-09-27T18:00:00",
-              "isServiceSession": true,
+              "isServiceSession": false,
               "isPlenumSession": false,
-              "speakers": [],
-              "categories": [],
+              "speakers": [
+                {
+                  "id": "37ae8082-b7e9-4009-af07-3bad0627f74e",
+                  "name": "Hiromasa Senoue"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 101938,
+                  "name": "Session Type",
+                  "categoryItems": [
+                    {
+                      "id": 389623,
+                      "name": "workshop"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 101939,
+                  "name": "Session Level",
+                  "categoryItems": [
+                    {
+                      "id": 367242,
+                      "name": "all"
+                    }
+                  ],
+                  "sort": 1
+                },
+                {
+                  "id": 102474,
+                  "name": "言語 / Language",
+                  "categoryItems": [
+                    {
+                      "id": 369632,
+                      "name": "japanese"
+                    }
+                  ],
+                  "sort": 2
+                }
+              ],
               "roomId": 70899,
               "room": "Room 2-3",
               "liveUrl": null,
               "recordingUrl": null,
-              "status": null,
-              "isInformed": false,
-              "isConfirmed": false
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
             },
             "index": 3
           }

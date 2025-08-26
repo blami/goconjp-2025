@@ -44,6 +44,25 @@
     "categories": []
   },
   {
+    "id": "37ae8082-b7e9-4009-af07-3bad0627f74e",
+    "firstName": "Hiromasa",
+    "lastName": "Senoue",
+    "fullName": "Hiromasa Senoue",
+    "bio": "Sendai.go organizer",
+    "tagLine": "Sendai.go",
+    "profilePicture": "https://sessionize.com/image/c7e3-400o400o1-4SMfKTrbYkpA1BD3PW4K9g.png",
+    "sessions": [
+      {
+        "id": 1019147,
+        "name": "Goのカードゲームで遊ぼう"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
     "id": "ed8f4fa1-fcde-46e3-81d3-d89b31fa12e6",
     "firstName": "Itsuki",
     "lastName": "Shirahige",
@@ -73,9 +92,9 @@
     "firstName": "Jyotsna",
     "lastName": "Gupta",
     "fullName": "Jyotsna Gupta",
-    "bio": "Jyotsna is an Open Source Enthusiast, previously worked as a Senior Software Engineer at Gojek, Bangalore. She has been a TechSpeaker at Mozilla and volunteers to Mozilla in her free time as an Add-on Content Reviewer & Recommended Extensions Community Board. She has served on the judging panel for the Firefox Quantum Extensions Challenge. She is also a Firefox Add-ons Mentor and has published a privacy-themed add-on PrivateX.  Also, she is the founder/organizer at Women Who Go Bangalore.\r\n\r\nFor her contributions to Mozilla, her name is also listed in about:credits and the credits page of every shipped Firefox browser. She energizes herself by playing Badminton, TT, Carrom, Chess, and Basketball. She prefers to spend most of the time in her room, else she feels to travel the world. If you don’t see her doing any of the above, then you’ll find probably find her sleeping and dreaming for hours, maybe days?",
-    "tagLine": "Ex-Senior Software Engineer at Gojek | Mozilla Tech Speaker",
-    "profilePicture": "https://sessionize.com/image/c630-400o400o1-8d-2eb2-415b-8aff-70b2c3556a4d.acdedae8-07ea-45d9-a50e-0fe57480f129.jpg",
+    "bio": "Jyotsna is an Open Source Enthusiast, currently working as a Staff Software Engineer at Visa. She has been a TechSpeaker at Mozilla and volunteers to Mozilla in her free time as an Add-on Content Reviewer & Recommended Extensions Community Board. She has served on the judging panel for the Firefox Quantum Extensions Challenge. She is also a Firefox Add-ons Mentor and has published a privacy-themed add-on PrivateX.  Also, she is the founder/organizer at Women Who Go Bangalore.\r\n\r\nFor her contributions to Mozilla, her name is also listed in about:credits and the credits page of every shipped Firefox browser. She energizes herself by playing Badminton, TT, Carrom, Chess, and Basketball. She prefers to spend most of the time in her room, else she feels to travel the world. If you don’t see her doing any of the above, then you’ll find probably find her sleeping and dreaming for hours, maybe days?",
+    "tagLine": "Staff Software Engineer at Visa ",
+    "profilePicture": "https://sessionize.com/image/4047-400o400o1-U9EX8TPC49hxPW17H2kMYg.png",
     "sessions": [
       {
         "id": 957799,
@@ -390,7 +409,7 @@
     "firstName": "Reo",
     "lastName": "Uehara",
     "fullName": "Reo Uehara",
-    "bio": "Goとサウナが好き",
+    "bio": "Goとコーヒーとサウナが好き",
     "tagLine": "株式会社Finatext",
     "profilePicture": "https://sessionize.com/image/239d-400o400o1-4a31fc01-c070-4e20-9703-ffcf634d6352.jpg",
     "sessions": [
@@ -683,6 +702,10 @@
     "profilePicture": "https://sessionize.com/image/d3eb-400o400o1-DSUTejxyYJ9x3wuuxcuKo2.jpg",
     "sessions": [
       {
+        "id": 1018925,
+        "name": "今日から始めるpprof"
+      },
+      {
         "id": 952323,
         "name": "Goのビルドシステムの変遷"
       }
@@ -783,6 +806,31 @@
     ],
     "isTopSpeaker": false,
     "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "23f61b5d-8318-4950-81c9-c62d924ea580",
+    "firstName": "小谷",
+    "lastName": "築功",
+    "fullName": "小谷 築功",
+    "bio": "Go Conference ワークショップ班",
+    "tagLine": "Go Conference organizer",
+    "profilePicture": "https://sessionize.com/image/f1b7-400o400o1-HJtf59MEvANf4oVAatUkqm.jpg",
+    "sessions": [
+      {
+        "id": 1019249,
+        "name": "Go Conference OST"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://twitter.com/Kizuku_tech",
+        "linkType": "Twitter"
+      }
+    ],
     "questionAnswers": [],
     "categories": []
   },
