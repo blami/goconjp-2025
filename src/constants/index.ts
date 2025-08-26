@@ -39,6 +39,7 @@ import UbieJobLogo from "../assets/sponsors/S314-jb.png";
 import BloombergJobLogo from "../assets/sponsors/S315-jb.png";
 import CrossTechJobLogo from "../assets/sponsors/S318-jb.png";
 import IssueHuntJobLogo from "../assets/sponsors/S313-jb.png";
+import GrooveXJobLogo from "../assets/sponsors/S302-jb.jpg";
 
 const venueSponsorImageSize = {
   height: 242,
@@ -241,8 +242,8 @@ export const constants = {
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: GrooveXJobLogo,
+          link: "https://recruit.jobcan.jp/groovex/list?category_id=70640",
         },
       },
       {
