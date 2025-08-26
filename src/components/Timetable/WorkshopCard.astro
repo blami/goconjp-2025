@@ -1,5 +1,5 @@
 ---
-import timetable from "../../data/timetable.json";
+import { getRelativeLocaleUrl } from "astro:i18n";
 import {
   getFormattedTime,
   type getClassifiedSessions,
@@ -15,6 +15,8 @@ interface Props {
 }
 
 const { rooms } = Astro.props;
+
+const currentLocale = Astro.currentLocale || "ja";
 ---
 
 <style>
@@ -90,7 +92,11 @@ const { rooms } = Astro.props;
 
   .card-title-link {
     color: var(--text-primary);
-    text-decoration: none;
+    transition: ease color 0.3s;
+
+    &:hover {
+      color: var(--text-accent);
+    }
   }
 </style>
 
@@ -111,7 +117,15 @@ const { rooms } = Astro.props;
             <p class="card-header-room">{room.name}</p>
           </div>
           <h4 id={`card-title-${room.session.id}`} class="card-title">
-            {room.session.title}
+            <a
+              href={getRelativeLocaleUrl(
+                currentLocale,
+                `/workshop/${room.session.id}`,
+              )}
+              class="card-title-link"
+            >
+              {room.session.title}
+            </a>
           </h4>
         </article>
       ))
