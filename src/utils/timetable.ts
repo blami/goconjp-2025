@@ -51,16 +51,18 @@ export const getClassifiedSessions = (eventDate: string) => {
       currentHourTimetable?.map((slot) => {
         // 部屋ごとにセッションを抽出
         const room1 = slot.rooms.find((room) => room.id === 67044);
-        const room2_1 = slot.rooms.find((room) => room.id === 67045);
-        const room2_2 = slot.rooms.find((room) => room.id === 70103);
-        const room2_3 = slot.rooms.find((room) => room.id === 70899);
+        const room2 = slot.rooms.find((room) => room.id === 67045);
+
+        // ワークショップセッションを抽出
+        const workshop = slot.rooms
+          .filter((room) => [67045, 70103, 70899].includes(room.id))
+          .filter((room) => room && isWorkshopSession(room.session.categories));
 
         return {
           slotStart: slot.slotStart,
           room1,
-          room2_1,
-          room2_2,
-          room2_3,
+          room2,
+          workshop,
         };
       }) ?? [];
 
@@ -162,4 +164,21 @@ export const isTimeSlotOccupied = (
           .isAfter(dayjs.tz(`${eventDate}T${timeSlot}`, "Asia/Tokyo")),
     ),
   );
+};
+
+/**
+ * ワークショップセッションかどうかを判定
+ * @param categories セッションのカテゴリ
+ * @returns ワークショップセッションの場合はtrue
+ */
+export const isWorkshopSession = (
+  categories:
+    | (typeof timetable)[0]["timeSlots"][0]["rooms"][0]["session"]["categories"]
+    | undefined,
+) => {
+  // セッションタイプカテゴリを取得
+  const sessionType = categories?.find((category) => category.id === 101938);
+
+  // セッションタイプがworkshopかどうかを判定
+  return sessionType?.categoryItems.some((item) => item.id === 389623) ?? false;
 };

@@ -77,13 +77,18 @@ const speakerName = speaker?.fullName ?? "";
 
   .card-title-link {
     color: var(--text-primary);
-    text-decoration: none;
+    transition: ease color 0.3s;
+
+    &:hover {
+      color: var(--text-accent);
+    }
   }
 
   .card-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 8px;
   }
 
   .speaker-info {
@@ -111,15 +116,16 @@ const speakerName = speaker?.fullName ?? "";
   }
 </style>
 
-<section
+<article
   class={`timetable-card ${session.roomId === 67044 ? "room-a" : "room-b"}`}
+  aria-labelledby={`card-title-${session.id}`}
 >
   <div class="card-header">
     <p class="card-header-time">
       {getFormattedTime(session.startsAt)} - {getFormattedTime(session.endsAt)}
     </p>
   </div>
-  <h3 class="card-title">
+  <h3 id={`card-title-${session.id}`} class="card-title">
     <a
       href={getRelativeLocaleUrl(currentLocale, `/timetable/${session.id}`)}
       class="card-title-link">{session.title}</a
@@ -149,4 +155,4 @@ const speakerName = speaker?.fullName ?? "";
       }
     </p>
   </div>
-</section>
+</article>

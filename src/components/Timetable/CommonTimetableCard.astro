@@ -1,6 +1,11 @@
 ---
 interface Props {
   /**
+   * セッションのID
+   * @example "session-1"
+   */
+  id: string;
+  /**
    * セッションのタイトル
    * @example 休憩
    */
@@ -17,7 +22,7 @@ interface Props {
   endAt: string;
 }
 
-const { title, startAt, endAt } = Astro.props;
+const { id, title, startAt, endAt } = Astro.props;
 ---
 
 <style>
@@ -55,13 +60,13 @@ const { title, startAt, endAt } = Astro.props;
   }
 </style>
 
-<section class={`timetable-card`}>
+<article class={`timetable-card`} aria-labelledby={`card-title-${id}`}>
   <div class="card-header">
     <p class="card-header-time">
       {startAt} - {endAt}
     </p>
   </div>
-  <h3 class="card-title">
+  <h3 id={`card-title-${id}`} class="card-title">
     {title}
   </h3>
-</section>
+</article>
