@@ -40,14 +40,18 @@ jobs:
       - name: Set branch name
         id: set_branch
         run: |
-          echo "branch=update-session-$(date +'%H%M%S')" >> $GITHUB_OUTPUT
+          echo "branch=update-session-$(TZ='Asia/Tokyo' date +'%Y%m%d%H%M')" >> $GITHUB_OUTPUT
+
+      - name: Set current date
+        id: set_date
+        run: echo "pr_title_date=$(TZ='Asia/Tokyo' date +'%Y/%m/%d')" >> $GITHUB_OUTPUT
 
       - name: Create Pull Request
         if: steps.git_diff.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v7
         with:
           branch: ${{ steps.set_branch.outputs.branch }}
-          title: "【$(date +'%Y/%m/%d')】セッション情報更新"
+          title: "【${{ steps.set_date.outputs.pr_title_date }}】セッション情報更新"
           commit-message: "Update sessionize data"
           body: "Sessionize APIから最新データを取得し、sessions/speakers/timetable.jsonを更新しました。"
           add-paths: |
