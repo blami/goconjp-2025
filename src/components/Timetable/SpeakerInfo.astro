@@ -1,7 +1,7 @@
 ---
-import speakers from "../data/speakers.json";
+import speakers from "../../data/speakers.json";
 import { Image } from "astro:assets";
-import XLogo from "../assets/x-logo.svg";
+import XLogo from "../../assets/x-logo.svg";
 
 interface Props {
   /**
@@ -12,7 +12,7 @@ interface Props {
 
 const { speakerId } = Astro.props;
 
-const speaker = speakers.find((s) => s.id === speakerId);
+const speaker = speakers.find(({ id }) => id === speakerId);
 
 if (!speaker) {
   return null;

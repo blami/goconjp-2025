@@ -1,0 +1,117 @@
+---
+import sessions from "../../data/sessions.json";
+import "../../styles/sub-page.css";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import Back from "../../assets/icon/back.svg";
+import Room from "../../assets/icon/room.svg";
+import { getFormattedTime } from "../../utils/timetable";
+import SpeakerInfo from "./SpeakerInfo.astro";
+
+type Session = (typeof sessions)[number]["sessions"][number];
+
+interface Props {
+  title: Session["title"];
+  room: Session["room"];
+  startsAt: Session["startsAt"];
+  endsAt: Session["endsAt"];
+  description: Session["description"];
+  speakers: Session["speakers"];
+}
+
+const { title, room, startsAt, endsAt, description, speakers } = Astro.props;
+
+const currentLocale = Astro.currentLocale || "ja";
+---
+
+<style>
+  .session-header {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .back-link {
+    margin: 0;
+
+    & a {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--text-primary);
+      transition: ease opacity 0.3s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .session-header .section-title {
+    margin: 0;
+  }
+
+  .session-room {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    padding: 4px 24px;
+    background-color: var(--primitive-light-cyan);
+    border-radius: 16px;
+    font-weight: 700;
+    line-height: 1.75;
+
+    @media screen and (max-width: 860px) {
+      font-size: 14px;
+    }
+  }
+
+  .description {
+    white-space: pre-wrap;
+    line-height: 1.75;
+  }
+
+  .session-footer {
+    margin-top: 40px;
+  }
+
+  .speakers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+</style>
+
+<article>
+  <header class="session-header">
+    <p class="back-link">
+      <a href={getRelativeLocaleUrl(currentLocale, `/timetable`)}>
+        <Back />タイムテーブルに戻る
+      </a>
+    </p>
+    <h2 class="section-title">{title}</h2>
+    <p class="session-room">
+      <Room />
+      <span>
+        {room}
+      </span>
+      <span>
+        {getFormattedTime(startsAt)} -{" "}
+        {getFormattedTime(endsAt)}
+      </span>
+    </p>
+  </header>
+  <div class="contents">
+    <div class="description">
+      {description}
+    </div>
+  </div>
+  <footer class="session-footer">
+    <div class="speakers-list">
+      {speakers.map(({ id }) => <SpeakerInfo speakerId={id} />)}
+    </div>
+  </footer>
+</article>

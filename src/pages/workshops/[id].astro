@@ -1,0 +1,43 @@
+---
+import type { GetStaticPaths } from "astro";
+import sessions from "../../data/sessions.json";
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/sub-page.css";
+import TimeTableDetail from "../../components/Timetable/TimetableDetail.astro";
+
+export const getStaticPaths = (() => {
+  // MEMO: SSGされるページ数を減らすため、ワークショップのセッションのみを抽出
+  const workshopSession =
+    sessions.at(0)?.sessions.filter((session) =>
+      session.categories.some((category) =>
+        // Session Typeが"Workshop" (389623) のものを抽出
+        category.categoryItems.some((item) => item.id === 389623),
+      ),
+    ) ?? [];
+
+  return workshopSession.map((session) => ({
+    params: { id: session.id },
+  }));
+}) satisfies GetStaticPaths;
+
+const { id } = Astro.params;
+
+// 現在のIDに対応するセッションを取得
+const session = sessions.at(0)?.sessions.find((s) => s.id === id);
+
+// 現在のIDに対応するセッションが存在しない場合は404ページを表示
+if (!session) {
+  return null;
+}
+---
+
+<Layout title="ワークショップ" titleEn="Workshop" metaTitle={session.title}>
+  <TimeTableDetail
+    title={session.title}
+    room={session.room}
+    startsAt={session.startsAt}
+    endsAt={session.endsAt}
+    description={session.description}
+    speakers={session.speakers}
+  />
+</Layout>
