@@ -16,9 +16,11 @@ interface Props {
   title?: string;
   /** ページタイトル（英語部分） */
   titleEn?: string;
+  /** metaタグのtitleやog:titleなどを直接指定するためのプロパティ */
+  metaTitle?: string;
 }
 
-const { title, titleEn } = Astro.props;
+const { title, titleEn, metaTitle } = Astro.props;
 
 const currentLocale = Astro.currentLocale || "ja";
 
@@ -26,10 +28,19 @@ const currentLocale = Astro.currentLocale || "ja";
 const currentLocaleTitle = currentLocale === "ja" ? title : titleEn;
 
 // ページタイトルの指定があれば固定のページ名と合わせて表示する
-const pageTitle =
-  !!currentLocaleTitle && currentLocaleTitle.length > 0
-    ? `${currentLocaleTitle} | ${constants.pageTitle}`
-    : constants.pageTitle;
+const pageTitle = (() => {
+  // metaTitleが指定されている場合は優先的に使用
+  if (metaTitle && metaTitle.length > 0) {
+    return `${metaTitle} | ${constants.pageTitle}`;
+  }
+
+  // 現在のロケールに応じたタイトルがあれば使用
+  if (!!currentLocaleTitle && currentLocaleTitle.length > 0) {
+    return `${currentLocaleTitle} | ${constants.pageTitle}`;
+  }
+
+  return constants.pageTitle;
+})();
 ---
 
 <style>
