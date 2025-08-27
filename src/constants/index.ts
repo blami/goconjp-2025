@@ -72,7 +72,7 @@ import S456Logo from "../assets/sponsors/S456.png";
 
 // ジョブボード
 import EVERYJobLogo from "../assets/sponsors/S102-jb.jpg";
-import ResilireJobLogo from "../assets/sponsors/S201-jb.png";
+import ResilireJobLogo from "../assets/sponsors/S201-jb.jpg";
 import OPTiMJobLogo from "../assets/sponsors/S202-jb.png";
 import TechTouchJobLogo from "../assets/sponsors/S304-jb.jpg";
 import TokyuJobLogo from "../assets/sponsors/S305-jb.png";
@@ -84,6 +84,7 @@ import UbieJobLogo from "../assets/sponsors/S314-jb.png";
 import BloombergJobLogo from "../assets/sponsors/S315-jb.png";
 import CrossTechJobLogo from "../assets/sponsors/S318-jb.png";
 import IssueHuntJobLogo from "../assets/sponsors/S313-jb.png";
+import GrooveXJobLogo from "../assets/sponsors/S302-jb.jpg";
 
 // Bronze Sponsors Job Board
 import S401JobLogo from "../assets/sponsors/S401-jb.png";
@@ -264,7 +265,7 @@ export const constants = {
         },
         jobBoard: {
           imageSrc: ResilireJobLogo,
-          link: undefined,
+          link: "https://careers.resilire.jp/",
         },
       },
       {
@@ -321,8 +322,8 @@ export const constants = {
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: GrooveXJobLogo,
+          link: "https://recruit.jobcan.jp/groovex/list?category_id=70640",
         },
       },
       {

@@ -1,0 +1,137 @@
+---
+import type { GetStaticPaths } from "astro";
+import sessions from "../../../data/sessions.json";
+import Layout from "../../../layouts/Layout.astro";
+import "../../../styles/sub-page.css";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import Back from "../../../assets/icon/back.svg";
+import Room from "../../../assets/icon/room.svg";
+import { getFormattedTime } from "../../../utils/timetable";
+import SpeakerInfo from "../../../components/SpeakerInfo.astro";
+
+export const getStaticPaths = (() => {
+  // MEMO: SSGされるページ数を減らすため、ワークショップのセッションのみを抽出
+  const workshopSession =
+    sessions.at(0)?.sessions.filter((session) =>
+      session.categories.some((category) =>
+        // Session Typeが"Workshop" (389623) のものを抽出
+        category.categoryItems.some((item) => item.id === 389623),
+      ),
+    ) ?? [];
+
+  return workshopSession.map((session) => ({
+    params: { id: session.id },
+  }));
+}) satisfies GetStaticPaths;
+
+const { id } = Astro.params;
+
+const currentLocale = Astro.currentLocale || "ja";
+
+// 現在のIDに対応するセッションを取得
+const session = sessions.at(0)?.sessions.find((s) => s.id === id);
+
+// 現在のIDに対応するセッションが存在しない場合は表示しない
+if (!session) {
+  return null;
+}
+---
+
+<style>
+  .session-header {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .back-link {
+    margin: 0;
+
+    & a {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--text-primary);
+      transition: ease opacity 0.3s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .session-header .section-title {
+    margin: 0;
+  }
+
+  .session-room {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    padding: 4px 24px;
+    background-color: var(--primitive-light-cyan);
+    border-radius: 16px;
+    font-weight: 700;
+    line-height: 1.75;
+
+    @media screen and (max-width: 860px) {
+      font-size: 14px;
+    }
+  }
+
+  .description {
+    white-space: pre-wrap;
+    line-height: 1.75;
+  }
+
+  .session-footer {
+    margin-top: 40px;
+  }
+
+  .speakers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+</style>
+
+<Layout title="ワークショップ" titleEn="Workshop" metaTitle={session.title}>
+  <article>
+    <header class="session-header">
+      <p class="back-link">
+        <a href={getRelativeLocaleUrl(currentLocale, `/timetable`)}>
+          <Back />Back to Timetable
+        </a>
+      </p>
+      <h2 class="section-title">{session.title}</h2>
+      <p class="session-room">
+        <Room />
+        <span>
+          {session.room}
+        </span>
+        <span>
+          {getFormattedTime(session.startsAt)} -{" "}
+          {getFormattedTime(session.endsAt)}
+        </span>
+      </p>
+    </header>
+    <div class="contents">
+      <div class="description">
+        {session.description}
+      </div>
+    </div>
+    <footer class="session-footer">
+      <div class="speakers-list">
+        {
+          session.speakers.map((speaker) => (
+            <SpeakerInfo speakerId={speaker.id} />
+          ))
+        }
+      </div>
+    </footer>
+  </article>
+</Layout>
