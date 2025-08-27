@@ -10,6 +10,7 @@ interface Props {
   speakerId: string;
 }
 
+// 指定されたIDを元に登壇者情報を取得
 const { speakerId } = Astro.props;
 
 const speaker = speakers.find((s) => s.id === speakerId);
