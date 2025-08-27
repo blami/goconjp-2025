@@ -44,6 +44,31 @@
     "categories": []
   },
   {
+    "id": "8d6dd0bb-35f1-4e7b-81fc-e6899fe327e7",
+    "firstName": "Eitaro",
+    "lastName": "Yokoyama",
+    "fullName": "Eitaro Yokoyama",
+    "bio": "ディップ株式会社 新卒1年目 バックエンド兼インフラ",
+    "tagLine": "ディップ株式会社",
+    "profilePicture": "https://sessionize.com/image/3ead-400o400o1-4sMArA9N7dzLt8JonitRHY.jpg",
+    "sessions": [
+      {
+        "id": 958986,
+        "name": "Go 1.24の新機能:tool directivesでツールの環境構築の効率性・再現性を高める"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/komugi8448",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
     "id": "37ae8082-b7e9-4009-af07-3bad0627f74e",
     "firstName": "Hiromasa",
     "lastName": "Senoue",
@@ -850,31 +875,6 @@
     ],
     "isTopSpeaker": false,
     "links": [],
-    "questionAnswers": [],
-    "categories": []
-  },
-  {
-    "id": "8d6dd0bb-35f1-4e7b-81fc-e6899fe327e7",
-    "firstName": "瑛太郎",
-    "lastName": "横山",
-    "fullName": "瑛太郎 横山",
-    "bio": "ディップ株式会社 新卒1年目 バックエンド兼インフラ",
-    "tagLine": "ディップ株式会社",
-    "profilePicture": "https://sessionize.com/image/3ead-400o400o1-4sMArA9N7dzLt8JonitRHY.jpg",
-    "sessions": [
-      {
-        "id": 958986,
-        "name": "Go 1.24の新機能:tool directivesでツールの環境構築の効率性・再現性を高める"
-      }
-    ],
-    "isTopSpeaker": false,
-    "links": [
-      {
-        "title": "X (Twitter)",
-        "url": "https://x.com/komugi8448",
-        "linkType": "Twitter"
-      }
-    ],
     "questionAnswers": [],
     "categories": []
   },
