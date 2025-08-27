@@ -185,7 +185,7 @@ export const constants = {
         },
         jobBoard: {
           imageSrc: ResilireJobLogo,
-          link: undefined,
+          link: "https://careers.resilire.jp/",
         },
       },
       {
