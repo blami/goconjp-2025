@@ -50,7 +50,7 @@ import S431Logo from "../assets/sponsors/S431.png";
 import S432Logo from "../assets/sponsors/S432.png";
 import S433Logo from "../assets/sponsors/S433.png";
 import S434Logo from "../assets/sponsors/S434.png";
-import S435Logo from "../assets/sponsors/S435.png";
+import S435Logo from "../assets/sponsors/S435.jpg";
 import S436Logo from "../assets/sponsors/S436.png";
 import S437Logo from "../assets/sponsors/S437.png";
 import S438Logo from "../assets/sponsors/S438.png";
