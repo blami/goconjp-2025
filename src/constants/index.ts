@@ -353,7 +353,7 @@ export const constants = {
         width: silverSponsorImageSize.width,
         jobBoard: {
           imageSrc: TechTouchJobLogo,
-          link: undefined,
+          link: "https://techtouch.jp/recruit/",
         },
       },
       {
