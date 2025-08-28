@@ -10,6 +10,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
 
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          package_json_file: "package.json"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: "package.json"
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install
+
       - name: Fetch session data
         run: |
           curl -sSL "$SESSIONIZE_SESSION_API" > src/data/sessions.json
@@ -27,6 +41,10 @@ jobs:
           curl -sSL "$SESSIONIZE_TIMETABLE_API" > src/data/timetable.json
         env:
           SESSIONIZE_TIMETABLE_API: ${{ secrets.SESSIONIZE_TIMETABLE_API }}
+
+      - name: Format JSON files
+        run: |
+          pnpm exec prettier --write src/data/*.json
 
       - name: Check for changes
         id: git_diff

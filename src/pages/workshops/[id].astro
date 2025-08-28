@@ -25,7 +25,7 @@ const { id } = Astro.params;
 // 現在のIDに対応するセッションを取得
 const session = sessions.at(0)?.sessions.find((s) => s.id === id);
 
-// 現在のIDに対応するセッションが存在しない場合は404ページを表示
+// 現在のIDに対応するセッションが存在しない場合は表示しない
 if (!session) {
   return null;
 }

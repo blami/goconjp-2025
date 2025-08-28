@@ -27,7 +27,7 @@ import IssueHuntLogo from "../assets/sponsors/22_S313.png";
 
 // ジョブボード
 import EVERYJobLogo from "../assets/sponsors/S102-jb.jpg";
-import ResilireJobLogo from "../assets/sponsors/S201-jb.png";
+import ResilireJobLogo from "../assets/sponsors/S201-jb.jpg";
 import OPTiMJobLogo from "../assets/sponsors/S202-jb.png";
 import TechTouchJobLogo from "../assets/sponsors/S304-jb.jpg";
 import TokyuJobLogo from "../assets/sponsors/S305-jb.png";
@@ -185,7 +185,7 @@ export const constants = {
         },
         jobBoard: {
           imageSrc: ResilireJobLogo,
-          link: undefined,
+          link: "https://careers.resilire.jp/",
         },
       },
       {
@@ -263,7 +263,7 @@ export const constants = {
         width: silverSponsorImageSize.width,
         jobBoard: {
           imageSrc: CrossTechJobLogo,
-          link: "https://xtm-recruit.wraptas.site/",
+          link: "https://xtm.wraptas.site/",
         },
       },
       {
@@ -353,7 +353,7 @@ export const constants = {
         width: silverSponsorImageSize.width,
         jobBoard: {
           imageSrc: TechTouchJobLogo,
-          link: undefined,
+          link: "https://techtouch.jp/recruit/",
         },
       },
       {
