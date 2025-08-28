@@ -27,7 +27,7 @@ import IssueHuntLogo from "../assets/sponsors/22_S313.png";
 
 // Bronze Sponsors
 import S401Logo from "../assets/sponsors/S401.png";
-// import S402Logo from "../assets/sponsors/S402.png";
+import S402Logo from "../assets/sponsors/S402.jpg";
 import S403Logo from "../assets/sponsors/S403.png";
 import S404Logo from "../assets/sponsors/S404.png";
 import S406Logo from "../assets/sponsors/S406.png";
@@ -55,7 +55,7 @@ import S436Logo from "../assets/sponsors/S436.png";
 import S437Logo from "../assets/sponsors/S437.png";
 import S438Logo from "../assets/sponsors/S438.png";
 import S440Logo from "../assets/sponsors/S440.png";
-// import S441Logo from "../assets/sponsors/S441.ai";
+import S441Logo from "../assets/sponsors/S441.png";
 import S442Logo from "../assets/sponsors/S442.png";
 import S443Logo from "../assets/sponsors/S443.png";
 import S444Logo from "../assets/sponsors/S444.png";
@@ -69,6 +69,7 @@ import S452Logo from "../assets/sponsors/S452.png";
 import S453Logo from "../assets/sponsors/S453.png";
 import S454Logo from "../assets/sponsors/S454.png";
 import S456Logo from "../assets/sponsors/S456.png";
+import S462Logo from "../assets/sponsors/S462.png";
 
 // ジョブボード
 import EVERYJobLogo from "../assets/sponsors/S102-jb.jpg";
@@ -482,17 +483,16 @@ export const constants = {
           link: "https://careers.miidas.co.jp/tech/",
         },
       },
-      // TODO: ロゴ画像が確認でき次第アンコメント
-      // {
-      //   name: "株式会社ジーニー",
-      //   imageSrc: S402Logo,
-      //   height: bronzeSponsorImageSize.height,
-      //   width: bronzeSponsorImageSize.width,
-      //   jobBoard: {
-      //     imageSrc: NoImage,
-      //     link: undefined,
-      //   },
-      // },
+      {
+        name: "株式会社ジーニー",
+        imageSrc: S402Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
       {
         name: "株式会社カオナビ",
         imageSrc: S403Logo,
@@ -763,17 +763,16 @@ export const constants = {
           link: undefined,
         },
       },
-      // TODO: ロゴ画像が確認でき次第アンコメント
-      // {
-      //   name: "株式会社ディー・エヌ・エー / DeNA Co., Ltd.,",
-      //   imageSrc: S441Logo,
-      //   height: bronzeSponsorImageSize.height,
-      //   width: bronzeSponsorImageSize.width,
-      //   jobBoard: {
-      //     imageSrc: NoImage,
-      //     link: undefined,
-      //   },
-      // },
+      {
+        name: "株式会社ディー・エヌ・エー / DeNA Co., Ltd.,",
+        imageSrc: S441Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
       {
         name: "弁護士ドットコム株式会社 / Bengo4.com,Inc.",
         imageSrc: S442Logo,
@@ -902,6 +901,16 @@ export const constants = {
         jobBoard: {
           imageSrc: S456JobLogo,
           link: "https://bitkey.link/EMRRAH",
+        },
+      },
+      {
+        name: "株式会社Kyash",
+        imageSrc: S462Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
         },
       },
     ],
