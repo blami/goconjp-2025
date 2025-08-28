@@ -79,6 +79,12 @@
       width: 160px;
     }
   }
+
+  & td span {
+    display: inline-block;
+    width: 80px;
+    text-align: left;
+  }
 }
 
 .sponsorship {

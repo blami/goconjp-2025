@@ -1,13 +1,9 @@
 ---
-import { getRelativeLocaleUrl } from "astro:i18n";
-import Button from "../../components/Button.astro";
 import Chip from "../../components/Chip.astro";
 import MainVisual from "../../components/MainVisual.astro";
 import FluidLayout from "../../layouts/FluidLayout.astro";
 import "../../styles/top-page.css";
 import SponsorBoard from "../../components/SponsorBoard.astro";
-
-const currentLocale = Astro.currentLocale || "ja";
 ---
 
 <style>
@@ -47,7 +43,10 @@ const currentLocale = Astro.currentLocale || "ja";
         </tr>
         <tr>
           <th><Chip class="chip" variant="secondary">Fee</Chip></th>
-          <td>To be determined</td>
+          <td>
+            <span>General:</span>5,000 yen (tax included)<br />
+            <span>Student:</span>1,000 yen (tax included)
+          </td>
         </tr>
       </tbody>
     </table>
