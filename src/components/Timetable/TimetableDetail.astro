@@ -89,7 +89,8 @@ const currentLocale = Astro.currentLocale || "ja";
   <header class="session-header">
     <p class="back-link">
       <a href={getRelativeLocaleUrl(currentLocale, `/timetable`)}>
-        <Back />タイムテーブルに戻る
+        <Back />
+        {currentLocale === "ja" ? "タイムテーブルに戻る" : "Back to Timetable"}
       </a>
     </p>
     <h2 class="section-title">{title}</h2>
