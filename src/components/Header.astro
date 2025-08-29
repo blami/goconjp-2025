@@ -243,7 +243,7 @@ const currentLocale = Astro.currentLocale || "ja";
         </a>
       </li>
       <li>
-        <a href={getRelativeLocaleUrl(currentLocale, "staffs")}> Staffs </a>
+        <a href={getRelativeLocaleUrl(currentLocale, "staffs")}> Staff </a>
       </li>
     </ul>
     <a
@@ -255,7 +255,10 @@ const currentLocale = Astro.currentLocale || "ja";
       <span>Sponsor FAQ</span>
       <OpenInNewIcon class="external-icon" />
     </a>
-    <Button href="https://ti.to/gophers-japan/go-conference-2025" target="_blank">
+    <Button
+      href="https://ti.to/gophers-japan/go-conference-2025"
+      target="_blank"
+    >
       {currentLocale === "ja" ? "イベントに申し込む" : "Apply for the evnet"}
     </Button>
     <ul class="language-switcher">
