@@ -34,6 +34,7 @@ import S406Logo from "../assets/sponsors/S406.png";
 import S407Logo from "../assets/sponsors/S407.png";
 import S409Logo from "../assets/sponsors/S409.png";
 import S410Logo from "../assets/sponsors/S410.png";
+import S414Logo from "../assets/sponsors/S414.png";
 import S415Logo from "../assets/sponsors/S415.png";
 import S417Logo from "../assets/sponsors/S417.png";
 import S418Logo from "../assets/sponsors/S418.png";
@@ -93,6 +94,7 @@ import S403JobLogo from "../assets/sponsors/S403-jb.png";
 import S404JobLogo from "../assets/sponsors/S404-jb.png";
 import S406JobLogo from "../assets/sponsors/S406-jb.png";
 import S407JobLogo from "../assets/sponsors/S407-jb.png";
+import S414JobLogo from "../assets/sponsors/S414-jb.png";
 import S415JobLogo from "../assets/sponsors/S415-jb.png";
 import S418JobLogo from "../assets/sponsors/S418-jb.png";
 import S419JobLogo from "../assets/sponsors/S419-jb.png";
@@ -551,6 +553,16 @@ export const constants = {
         jobBoard: {
           imageSrc: NoImage,
           link: undefined,
+        },
+      },
+      {
+        name: "フラー株式会社",
+        imageSrc: S414Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: S414JobLogo,
+          link: "https://recruit.fuller-inc.com/",
         },
       },
       {
