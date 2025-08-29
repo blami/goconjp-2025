@@ -332,6 +332,31 @@
     "categories": []
   },
   {
+    "id": "23f61b5d-8318-4950-81c9-c62d924ea580",
+    "firstName": "Kotani",
+    "lastName": "Kizuku",
+    "fullName": "Kotani Kizuku",
+    "bio": "Go Conference ワークショップ班",
+    "tagLine": "Go Conference organizer",
+    "profilePicture": "https://sessionize.com/image/f1b7-400o400o1-HJtf59MEvANf4oVAatUkqm.jpg",
+    "sessions": [
+      {
+        "id": 1019249,
+        "name": "Go Conference OST"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://twitter.com/Kizuku_tech",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
     "id": "84837a15-d9bf-4e0e-8e3e-f2c63777aa2a",
     "firstName": "Masaaki",
     "lastName": "Goshima",
@@ -618,6 +643,25 @@
     "categories": []
   },
   {
+    "id": "dd19a405-bd09-44d1-a261-03cdcea1d545",
+    "firstName": "Taichi",
+    "lastName": "Maeda",
+    "fullName": "Taichi Maeda",
+    "bio": "Imperial College London",
+    "tagLine": "Imperial College London",
+    "profilePicture": "https://sessionize.com/image/7dab-400o400o1-YEvG47JatHPAMfPGA8B2ua.png",
+    "sessions": [
+      {
+        "id": 958432,
+        "name": "カリカリなMutexを作る / \"Crispifying\" Go's Mutex"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
     "id": "aceb7644-e5b5-42de-8757-dad5ec94734d",
     "firstName": "Takeru",
     "lastName": "Hayasaka",
@@ -820,57 +864,13 @@
     "firstName": "Yuuki",
     "lastName": "Magawa",
     "fullName": "Yuuki Magawa",
-    "bio": "I'm developing 'SNKRDUNK' a marketplace app for sneakers and TCG used by over 6 million people monthly!",
-    "tagLine": "Software Engineer",
-    "profilePicture": "https://sessionize.com/image/ce1f-400o400o1-TrwagpT9ETdJwRg4kfsMYS.png",
+    "bio": "生まれも育ちも住まいも大阪。普段はGoでバックエンド領域を中心に開発している。株式会社SODAでは月間600万人以上が利用する「SNKRDUNK（スニダン）」の機能開発に従事し、現在はリアーキテクチャを推進するチームに所属している。",
+    "tagLine": "Software Engineer at SODA inc.",
+    "profilePicture": "https://sessionize.com/image/02b7-400o400o1-HPZsmcTNP6hpB4n7F7F3gm.png",
     "sessions": [
       {
         "id": 959089,
         "name": "uniqueパッケージの内部実装を支えるweak pointerの話"
-      }
-    ],
-    "isTopSpeaker": false,
-    "links": [],
-    "questionAnswers": [],
-    "categories": []
-  },
-  {
-    "id": "23f61b5d-8318-4950-81c9-c62d924ea580",
-    "firstName": "小谷",
-    "lastName": "築功",
-    "fullName": "小谷 築功",
-    "bio": "Go Conference ワークショップ班",
-    "tagLine": "Go Conference organizer",
-    "profilePicture": "https://sessionize.com/image/f1b7-400o400o1-HJtf59MEvANf4oVAatUkqm.jpg",
-    "sessions": [
-      {
-        "id": 1019249,
-        "name": "Go Conference OST"
-      }
-    ],
-    "isTopSpeaker": false,
-    "links": [
-      {
-        "title": "X (Twitter)",
-        "url": "https://twitter.com/Kizuku_tech",
-        "linkType": "Twitter"
-      }
-    ],
-    "questionAnswers": [],
-    "categories": []
-  },
-  {
-    "id": "dd19a405-bd09-44d1-a261-03cdcea1d545",
-    "firstName": "泰智",
-    "lastName": "前田",
-    "fullName": "泰智 前田",
-    "bio": "インペリアルカレッジロンドン",
-    "tagLine": "インペリアルカレッジロンドン",
-    "profilePicture": "https://sessionize.com/image/7dab-400o400o1-YEvG47JatHPAMfPGA8B2ua.png",
-    "sessions": [
-      {
-        "id": 958432,
-        "name": "カリカリなMutexを作る"
       }
     ],
     "isTopSpeaker": false,
