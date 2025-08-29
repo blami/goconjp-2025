@@ -52,17 +52,25 @@ export const getClassifiedSessions = (eventDate: string) => {
         // 部屋ごとにセッションを抽出
         const room1 = slot.rooms.find((room) => room.id === 67044);
         const room2 = slot.rooms.find((room) => room.id === 67045);
+        const room3 = slot.rooms.find((room) =>
+          [70103, 70899].includes(room.id),
+        );
 
         // ワークショップセッションを抽出
-        const workshop = slot.rooms
-          .filter((room) => [67045, 70103, 70899].includes(room.id))
+        const workshopRoom2 = slot.rooms
+          .filter((room) => room.id === 67045)
+          .filter((room) => room && isWorkshopSession(room.session.categories));
+        const workshopRoom3 = slot.rooms
+          .filter((room) => [70103, 70899].includes(room.id))
           .filter((room) => room && isWorkshopSession(room.session.categories));
 
         return {
           slotStart: slot.slotStart,
           room1,
           room2,
-          workshop,
+          room3,
+          workshopRoom2,
+          workshopRoom3,
         };
       }) ?? [];
 

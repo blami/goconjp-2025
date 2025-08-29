@@ -82,7 +82,9 @@ if (classifiedSessions.length === 0) {
           // 列ごと（部屋ごと）に取得
           const room1 = slot.room1?.session;
           const room2 = slot.room2?.session;
-          const workshop = slot.workshop;
+          const room3 = slot.room3?.session;
+          const workshop2 = slot.workshopRoom2;
+          const workshop3 = slot.workshopRoom3;
 
           // 跨ぐ行数を計算
           const room2RowSpan = getTimeSlotSpanCount(
@@ -90,11 +92,21 @@ if (classifiedSessions.length === 0) {
             room2?.startsAt,
             room2?.endsAt,
           );
+          const room3RowSpan = getTimeSlotSpanCount(
+            eventDate,
+            room3?.startsAt,
+            room3?.endsAt,
+          );
 
           // 前のセッションが跨がっているかどうかを確認
           const room2Occupancy = isTimeSlotOccupied(
             eventDate,
             67045,
+            slot.slotStart,
+          );
+          const room3Occupancy = isTimeSlotOccupied(
+            eventDate,
+            70103,
             slot.slotStart,
           );
 
@@ -128,9 +140,9 @@ if (classifiedSessions.length === 0) {
                       : undefined
                   }
                 >
-                  {workshop.length > 0 ? (
+                  {workshop2.length > 0 ? (
                     // ワークショップセッションの場合
-                    <WorkshopCard rooms={workshop} />
+                    <WorkshopCard rooms={workshop2} />
                   ) : room2?.isServiceSession ? (
                     // 休憩の場合
                     <CommonTimetableCard
@@ -142,6 +154,36 @@ if (classifiedSessions.length === 0) {
                   ) : (
                     // 通常のセッションの場合
                     <TimetableCard session={room2} />
+                  )}
+                </div>
+              )}
+              {/* Room 3 */}
+              {/* MEMO: Room 3があるのは1日目のみ */}
+              {eventDate === "2025-09-27" && !room3Occupancy && (
+                // MEMO: スマホ時はGrid表示ではなくなるので要素ごと表示させない
+                <div
+                  class={`session-cell room3 ${room3 ? "" : "empty"}`}
+                  style={
+                    // セッションが跨がる場合は行を跨ぐ
+                    room3RowSpan > 1
+                      ? `grid-row: span ${room3RowSpan};`
+                      : undefined
+                  }
+                >
+                  {workshop3.length > 0 ? (
+                    // ワークショップセッションの場合
+                    <WorkshopCard rooms={workshop3} />
+                  ) : room3?.isServiceSession ? (
+                    // 休憩の場合
+                    <CommonTimetableCard
+                      id={room3.id}
+                      title={room3.title}
+                      startAt={getFormattedTime(room3.startsAt)}
+                      endAt={getFormattedTime(room3.endsAt)}
+                    />
+                  ) : (
+                    // 通常のセッションの場合
+                    <TimetableCard session={room3} />
                   )}
                 </div>
               )}
