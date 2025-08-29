@@ -200,13 +200,14 @@ const currentLocale = Astro.currentLocale || "ja";
     <div class="cta-button">
       <div class="cta-button-inner">
         <Button
-          href={getRelativeLocaleUrl(currentLocale, "sponsorship")}
+          href="https://ti.to/gophers-japan/go-conference-2025"
+          target="_blank"
           size="large"
         >
           {
             currentLocale === "ja"
-              ? "スポンサーに申し込む"
-              : "Apply for Sponsorship"
+              ? "イベントに申し込む"
+              : "Apply for the event"
           }
         </Button>
       </div>
