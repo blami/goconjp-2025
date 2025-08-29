@@ -401,22 +401,61 @@
             "isConfirmed": false
           },
           {
-            "id": "31c5cc8d-123a-4883-8e95-5f8a0a2820ce",
-            "title": "パネルディスカッション",
-            "description": null,
+            "id": "1021904",
+            "title": "Gopherたちのパネルディスカッション",
+            "description": "本セッションはGo Conference2025の運営が主催するパネルディスカッションです。\r\n多様な「〇〇×Go」のコミュティを運営し、Goコミュニティを引っ張っているパネラー4名が登壇します。\r\n\r\n- パネラー兼ファシリテーター\r\n tenntenn\r\n- パネラー\r\n micchie\r\n momi\r\n logica",
             "startsAt": "2025-09-27T14:00:00",
             "endsAt": "2025-09-27T14:40:00",
-            "isServiceSession": true,
+            "isServiceSession": false,
             "isPlenumSession": false,
-            "speakers": [],
-            "categories": [],
+            "speakers": [
+              {
+                "id": "335f95ea-cb9d-4f25-b991-bd17603d4566",
+                "name": "Go Conference Event team"
+              }
+            ],
+            "categories": [
+              {
+                "id": 101938,
+                "name": "Session Type",
+                "categoryItems": [
+                  {
+                    "id": 394638,
+                    "name": "Panel Discussion"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 101939,
+                "name": "Session Level",
+                "categoryItems": [
+                  {
+                    "id": 367242,
+                    "name": "all"
+                  }
+                ],
+                "sort": 1
+              },
+              {
+                "id": 102474,
+                "name": "言語 / Language",
+                "categoryItems": [
+                  {
+                    "id": 369632,
+                    "name": "japanese"
+                  }
+                ],
+                "sort": 2
+              }
+            ],
             "roomId": 67044,
             "room": "Room 1",
             "liveUrl": null,
             "recordingUrl": null,
-            "status": null,
-            "isInformed": false,
-            "isConfirmed": false
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
           },
           {
             "id": "765a5f3d-f6ed-494c-bd8a-54f15c58b8b8",
@@ -1129,22 +1168,61 @@
             "isConfirmed": true
           },
           {
-            "id": "83a81f1c-413f-44b0-8dfa-9eaa7c0061df",
+            "id": "1021593",
             "title": "Go Quiz Workshop",
-            "description": null,
+            "description": "公式ドキュメントや言語仕様を読み込むことで、面白くて学べるGo Quizをつくるワークショップです。\r\n\r\nまずは講師からQuizづくりのコツを学びます。短時間で答えられて、シンプルでかつやりがいがあり、回答から楽しく学べる問題の作り方を説明します。\r\n\r\n次にClaude CodeやChatGPT、DeepWikiなどの力を使い、公式ドキュメントや言語仕様、ソートコードからQuizで使えるネタを見つけます。\r\n\r\n参加者は回答者に学んで欲しい知識をクイズに込めて作問してもらいます。作った問題は参加者同士で回答しあったり、Xにポストすることで色んな方に回答してもらえます。\r\n\r\nシンプルな問題にすれば、回答者は日本語話者に限りません。Gophers Slackなどで共有することで国外のGopherにも回答してもらえるでしょう。\r\n\r\n参加後に問題の解説をブログに書くことで、参加者自身のアウトプットにつなげることもできます。",
             "startsAt": "2025-09-27T16:30:00",
             "endsAt": "2025-09-27T18:00:00",
-            "isServiceSession": true,
+            "isServiceSession": false,
             "isPlenumSession": false,
-            "speakers": [],
-            "categories": [],
+            "speakers": [
+              {
+                "id": "899d1bf7-e2c2-4333-b9f1-c07788bca0c7",
+                "name": "Takuya Ueda"
+              }
+            ],
+            "categories": [
+              {
+                "id": 101938,
+                "name": "Session Type",
+                "categoryItems": [
+                  {
+                    "id": 389623,
+                    "name": "workshop"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 101939,
+                "name": "Session Level",
+                "categoryItems": [
+                  {
+                    "id": 367242,
+                    "name": "all"
+                  }
+                ],
+                "sort": 1
+              },
+              {
+                "id": 102474,
+                "name": "言語 / Language",
+                "categoryItems": [
+                  {
+                    "id": 369632,
+                    "name": "japanese"
+                  }
+                ],
+                "sort": 2
+              }
+            ],
             "roomId": 70103,
             "room": "Room 3-1",
             "liveUrl": null,
             "recordingUrl": null,
-            "status": null,
-            "isInformed": false,
-            "isConfirmed": false
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
           },
           {
             "id": "0ba3209c-f717-481f-85e3-89fd3c7567f9",
@@ -2061,22 +2139,61 @@
             "id": 67044,
             "name": "Room 1",
             "session": {
-              "id": "31c5cc8d-123a-4883-8e95-5f8a0a2820ce",
-              "title": "パネルディスカッション",
-              "description": null,
+              "id": "1021904",
+              "title": "Gopherたちのパネルディスカッション",
+              "description": "本セッションはGo Conference2025の運営が主催するパネルディスカッションです。\r\n多様な「〇〇×Go」のコミュティを運営し、Goコミュニティを引っ張っているパネラー4名が登壇します。\r\n\r\n- パネラー兼ファシリテーター\r\n tenntenn\r\n- パネラー\r\n micchie\r\n momi\r\n logica",
               "startsAt": "2025-09-27T14:00:00",
               "endsAt": "2025-09-27T14:40:00",
-              "isServiceSession": true,
+              "isServiceSession": false,
               "isPlenumSession": false,
-              "speakers": [],
-              "categories": [],
+              "speakers": [
+                {
+                  "id": "335f95ea-cb9d-4f25-b991-bd17603d4566",
+                  "name": "Go Conference Event team"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 101938,
+                  "name": "Session Type",
+                  "categoryItems": [
+                    {
+                      "id": 394638,
+                      "name": "Panel Discussion"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 101939,
+                  "name": "Session Level",
+                  "categoryItems": [
+                    {
+                      "id": 367242,
+                      "name": "all"
+                    }
+                  ],
+                  "sort": 1
+                },
+                {
+                  "id": 102474,
+                  "name": "言語 / Language",
+                  "categoryItems": [
+                    {
+                      "id": 369632,
+                      "name": "japanese"
+                    }
+                  ],
+                  "sort": 2
+                }
+              ],
               "roomId": 67044,
               "room": "Room 1",
               "liveUrl": null,
               "recordingUrl": null,
-              "status": null,
-              "isInformed": false,
-              "isConfirmed": false
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
             },
             "index": 0
           }
@@ -2617,22 +2734,61 @@
             "id": 70103,
             "name": "Room 3-1",
             "session": {
-              "id": "83a81f1c-413f-44b0-8dfa-9eaa7c0061df",
+              "id": "1021593",
               "title": "Go Quiz Workshop",
-              "description": null,
+              "description": "公式ドキュメントや言語仕様を読み込むことで、面白くて学べるGo Quizをつくるワークショップです。\r\n\r\nまずは講師からQuizづくりのコツを学びます。短時間で答えられて、シンプルでかつやりがいがあり、回答から楽しく学べる問題の作り方を説明します。\r\n\r\n次にClaude CodeやChatGPT、DeepWikiなどの力を使い、公式ドキュメントや言語仕様、ソートコードからQuizで使えるネタを見つけます。\r\n\r\n参加者は回答者に学んで欲しい知識をクイズに込めて作問してもらいます。作った問題は参加者同士で回答しあったり、Xにポストすることで色んな方に回答してもらえます。\r\n\r\nシンプルな問題にすれば、回答者は日本語話者に限りません。Gophers Slackなどで共有することで国外のGopherにも回答してもらえるでしょう。\r\n\r\n参加後に問題の解説をブログに書くことで、参加者自身のアウトプットにつなげることもできます。",
               "startsAt": "2025-09-27T16:30:00",
               "endsAt": "2025-09-27T18:00:00",
-              "isServiceSession": true,
+              "isServiceSession": false,
               "isPlenumSession": false,
-              "speakers": [],
-              "categories": [],
+              "speakers": [
+                {
+                  "id": "899d1bf7-e2c2-4333-b9f1-c07788bca0c7",
+                  "name": "Takuya Ueda"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 101938,
+                  "name": "Session Type",
+                  "categoryItems": [
+                    {
+                      "id": 389623,
+                      "name": "workshop"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 101939,
+                  "name": "Session Level",
+                  "categoryItems": [
+                    {
+                      "id": 367242,
+                      "name": "all"
+                    }
+                  ],
+                  "sort": 1
+                },
+                {
+                  "id": 102474,
+                  "name": "言語 / Language",
+                  "categoryItems": [
+                    {
+                      "id": 369632,
+                      "name": "japanese"
+                    }
+                  ],
+                  "sort": 2
+                }
+              ],
               "roomId": 70103,
               "room": "Room 3-1",
               "liveUrl": null,
               "recordingUrl": null,
-              "status": null,
-              "isInformed": false,
-              "isConfirmed": false
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
             },
             "index": 2
           },
@@ -3096,21 +3252,60 @@
             "isConfirmed": false
           },
           {
-            "id": "d261148b-ceec-418e-825e-ddabb051b653",
-            "title": "platinum sponser",
-            "description": null,
+            "id": "1022070",
+            "title": "Goに育てられ開発者向けセキュリティ事業を立ち上げた僕が今向き合う、AI × セキュリティの最前線",
+            "description": "メルカリ社でインターンするなど、自分は「Goに育てられたエンジニア」として学生起業に至り、今は開発組織のセキュリティを支える事業に注力しています。本セッションでは、自身の開発バックグラウンドと世界トップクラスの実力を持つセキュリティエンジニア達の能力を活かしてGMO Flatt Securityが現代の開発組織が抱える課題にどうアプローチしているか、AI × セキュリティの最前線も交え解説します。加えて、OSSやスタートアップの無料セキュリティ支援という形で現在実施しているコミュニティ還元に込めた思いもお話しします。",
             "startsAt": "2025-09-28T11:10:00",
             "endsAt": "2025-09-28T11:30:00",
-            "isServiceSession": true,
-            "isPlenumSession": true,
-            "speakers": [],
-            "categories": [],
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "0bb030df-6018-46e2-b08e-6e6dca113329",
+                "name": "康貴 井手"
+              }
+            ],
+            "categories": [
+              {
+                "id": 101938,
+                "name": "Session Type",
+                "categoryItems": [
+                  {
+                    "id": 367239,
+                    "name": "Short Session(20min)"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 101939,
+                "name": "Session Level",
+                "categoryItems": [
+                  {
+                    "id": 367242,
+                    "name": "all"
+                  }
+                ],
+                "sort": 1
+              },
+              {
+                "id": 102474,
+                "name": "言語 / Language",
+                "categoryItems": [
+                  {
+                    "id": 369632,
+                    "name": "japanese"
+                  }
+                ],
+                "sort": 2
+              }
+            ],
             "roomId": 67044,
             "room": "Room 1",
             "liveUrl": null,
             "recordingUrl": null,
-            "status": null,
-            "isInformed": false,
+            "status": "Accepted",
+            "isInformed": true,
             "isConfirmed": false
           },
           {
@@ -3432,21 +3627,60 @@
             "isConfirmed": false
           },
           {
-            "id": "c5d04efa-0e2c-48a7-9fb5-76a17e77fa8a",
-            "title": "Gold Sponsor",
+            "id": "1022065",
+            "title": "メガエンプラSaaSを支えるシリーズAスタートアップのGoアーキテクチャ",
             "description": null,
             "startsAt": "2025-09-28T15:00:00",
             "endsAt": "2025-09-28T15:20:00",
-            "isServiceSession": true,
+            "isServiceSession": false,
             "isPlenumSession": false,
-            "speakers": [],
-            "categories": [],
+            "speakers": [
+              {
+                "id": "e45f49f2-02b6-4a1b-a81b-1b8009852989",
+                "name": "輝彦 彌冨"
+              }
+            ],
+            "categories": [
+              {
+                "id": 101938,
+                "name": "Session Type",
+                "categoryItems": [
+                  {
+                    "id": 367239,
+                    "name": "Short Session(20min)"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 101939,
+                "name": "Session Level",
+                "categoryItems": [
+                  {
+                    "id": 367242,
+                    "name": "all"
+                  }
+                ],
+                "sort": 1
+              },
+              {
+                "id": 102474,
+                "name": "言語 / Language",
+                "categoryItems": [
+                  {
+                    "id": 369632,
+                    "name": "japanese"
+                  }
+                ],
+                "sort": 2
+              }
+            ],
             "roomId": 67044,
             "room": "Room 1",
             "liveUrl": null,
             "recordingUrl": null,
-            "status": null,
-            "isInformed": false,
+            "status": "Accepted",
+            "isInformed": true,
             "isConfirmed": false
           },
           {
@@ -3804,22 +4038,61 @@
             "isConfirmed": false
           },
           {
-            "id": "b86b05b6-816b-4142-8c15-42ce5827d062",
-            "title": "Venue Sponsor",
-            "description": null,
+            "id": "1022036",
+            "title": "goplsの拡張によるマイクロサービス間の実装ジャンプ改善",
+            "description": "WINTICKETでは、モノレポ環境下でgRPCを用いたマイクロサービスの開発を行っています。機能開発時には、複数のマイクロサービスの実装を修正することがありますが、あるサービスから呼び出したRPCの実装を定義ジャンプで確認しようとしても、実際には自動生成されたinterface定義に飛んでしまい、目的の実装に直接ジャンプできないという課題がありました。そのため、毎回手動で実装を探しに行く必要があり、開発体験が良くありませんでした。 そこで、Go言語のLanguage Serverであるgoplsを拡張し、RPCのinterfaceではなく実装へジャンプできる新しい定義ジャンプ機能を実装しました。これにより開発体験が大きく向上しました。 このセッションでは、具体的なgoplsの拡張方法と、実際にWINTICKETで行っているVS Code拡張機能を活用した運用方法についてお話しします。",
             "startsAt": "2025-09-28T18:30:00",
             "endsAt": "2025-09-28T18:50:00",
-            "isServiceSession": true,
-            "isPlenumSession": true,
-            "speakers": [],
-            "categories": [],
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "b2faf973-7fc5-46b3-97ca-3b4cffaf7c95",
+                "name": "正大朗 山﨑"
+              }
+            ],
+            "categories": [
+              {
+                "id": 101938,
+                "name": "Session Type",
+                "categoryItems": [
+                  {
+                    "id": 367239,
+                    "name": "Short Session(20min)"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 101939,
+                "name": "Session Level",
+                "categoryItems": [
+                  {
+                    "id": 367242,
+                    "name": "all"
+                  }
+                ],
+                "sort": 1
+              },
+              {
+                "id": 102474,
+                "name": "言語 / Language",
+                "categoryItems": [
+                  {
+                    "id": 369632,
+                    "name": "japanese"
+                  }
+                ],
+                "sort": 2
+              }
+            ],
             "roomId": 67044,
             "room": "Room 1",
             "liveUrl": null,
             "recordingUrl": null,
-            "status": null,
-            "isInformed": false,
-            "isConfirmed": false
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
           },
           {
             "id": "959089",
@@ -4740,21 +5013,60 @@
             "id": 67044,
             "name": "Room 1",
             "session": {
-              "id": "d261148b-ceec-418e-825e-ddabb051b653",
-              "title": "platinum sponser",
-              "description": null,
+              "id": "1022070",
+              "title": "Goに育てられ開発者向けセキュリティ事業を立ち上げた僕が今向き合う、AI × セキュリティの最前線",
+              "description": "メルカリ社でインターンするなど、自分は「Goに育てられたエンジニア」として学生起業に至り、今は開発組織のセキュリティを支える事業に注力しています。本セッションでは、自身の開発バックグラウンドと世界トップクラスの実力を持つセキュリティエンジニア達の能力を活かしてGMO Flatt Securityが現代の開発組織が抱える課題にどうアプローチしているか、AI × セキュリティの最前線も交え解説します。加えて、OSSやスタートアップの無料セキュリティ支援という形で現在実施しているコミュニティ還元に込めた思いもお話しします。",
               "startsAt": "2025-09-28T11:10:00",
               "endsAt": "2025-09-28T11:30:00",
-              "isServiceSession": true,
-              "isPlenumSession": true,
-              "speakers": [],
-              "categories": [],
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "0bb030df-6018-46e2-b08e-6e6dca113329",
+                  "name": "康貴 井手"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 101938,
+                  "name": "Session Type",
+                  "categoryItems": [
+                    {
+                      "id": 367239,
+                      "name": "Short Session(20min)"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 101939,
+                  "name": "Session Level",
+                  "categoryItems": [
+                    {
+                      "id": 367242,
+                      "name": "all"
+                    }
+                  ],
+                  "sort": 1
+                },
+                {
+                  "id": 102474,
+                  "name": "言語 / Language",
+                  "categoryItems": [
+                    {
+                      "id": 369632,
+                      "name": "japanese"
+                    }
+                  ],
+                  "sort": 2
+                }
+              ],
               "roomId": 67044,
               "room": "Room 1",
               "liveUrl": null,
               "recordingUrl": null,
-              "status": null,
-              "isInformed": false,
+              "status": "Accepted",
+              "isInformed": true,
               "isConfirmed": false
             },
             "index": 0
@@ -5300,21 +5612,60 @@
             "id": 67044,
             "name": "Room 1",
             "session": {
-              "id": "c5d04efa-0e2c-48a7-9fb5-76a17e77fa8a",
-              "title": "Gold Sponsor",
+              "id": "1022065",
+              "title": "メガエンプラSaaSを支えるシリーズAスタートアップのGoアーキテクチャ",
               "description": null,
               "startsAt": "2025-09-28T15:00:00",
               "endsAt": "2025-09-28T15:20:00",
-              "isServiceSession": true,
+              "isServiceSession": false,
               "isPlenumSession": false,
-              "speakers": [],
-              "categories": [],
+              "speakers": [
+                {
+                  "id": "e45f49f2-02b6-4a1b-a81b-1b8009852989",
+                  "name": "輝彦 彌冨"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 101938,
+                  "name": "Session Type",
+                  "categoryItems": [
+                    {
+                      "id": 367239,
+                      "name": "Short Session(20min)"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 101939,
+                  "name": "Session Level",
+                  "categoryItems": [
+                    {
+                      "id": 367242,
+                      "name": "all"
+                    }
+                  ],
+                  "sort": 1
+                },
+                {
+                  "id": 102474,
+                  "name": "言語 / Language",
+                  "categoryItems": [
+                    {
+                      "id": 369632,
+                      "name": "japanese"
+                    }
+                  ],
+                  "sort": 2
+                }
+              ],
               "roomId": 67044,
               "room": "Room 1",
               "liveUrl": null,
               "recordingUrl": null,
-              "status": null,
-              "isInformed": false,
+              "status": "Accepted",
+              "isInformed": true,
               "isConfirmed": false
             },
             "index": 0
@@ -6001,22 +6352,61 @@
             "id": 67044,
             "name": "Room 1",
             "session": {
-              "id": "b86b05b6-816b-4142-8c15-42ce5827d062",
-              "title": "Venue Sponsor",
-              "description": null,
+              "id": "1022036",
+              "title": "goplsの拡張によるマイクロサービス間の実装ジャンプ改善",
+              "description": "WINTICKETでは、モノレポ環境下でgRPCを用いたマイクロサービスの開発を行っています。機能開発時には、複数のマイクロサービスの実装を修正することがありますが、あるサービスから呼び出したRPCの実装を定義ジャンプで確認しようとしても、実際には自動生成されたinterface定義に飛んでしまい、目的の実装に直接ジャンプできないという課題がありました。そのため、毎回手動で実装を探しに行く必要があり、開発体験が良くありませんでした。 そこで、Go言語のLanguage Serverであるgoplsを拡張し、RPCのinterfaceではなく実装へジャンプできる新しい定義ジャンプ機能を実装しました。これにより開発体験が大きく向上しました。 このセッションでは、具体的なgoplsの拡張方法と、実際にWINTICKETで行っているVS Code拡張機能を活用した運用方法についてお話しします。",
               "startsAt": "2025-09-28T18:30:00",
               "endsAt": "2025-09-28T18:50:00",
-              "isServiceSession": true,
-              "isPlenumSession": true,
-              "speakers": [],
-              "categories": [],
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "b2faf973-7fc5-46b3-97ca-3b4cffaf7c95",
+                  "name": "正大朗 山﨑"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 101938,
+                  "name": "Session Type",
+                  "categoryItems": [
+                    {
+                      "id": 367239,
+                      "name": "Short Session(20min)"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 101939,
+                  "name": "Session Level",
+                  "categoryItems": [
+                    {
+                      "id": 367242,
+                      "name": "all"
+                    }
+                  ],
+                  "sort": 1
+                },
+                {
+                  "id": 102474,
+                  "name": "言語 / Language",
+                  "categoryItems": [
+                    {
+                      "id": 369632,
+                      "name": "japanese"
+                    }
+                  ],
+                  "sort": 2
+                }
+              ],
               "roomId": 67044,
               "room": "Room 1",
               "liveUrl": null,
               "recordingUrl": null,
-              "status": null,
-              "isInformed": false,
-              "isConfirmed": false
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
             },
             "index": 0
           }

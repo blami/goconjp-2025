@@ -69,6 +69,25 @@
     "categories": []
   },
   {
+    "id": "335f95ea-cb9d-4f25-b991-bd17603d4566",
+    "firstName": "Go Conference",
+    "lastName": "Event team",
+    "fullName": "Go Conference Event team",
+    "bio": "None",
+    "tagLine": "Go Conference Event team",
+    "profilePicture": "https://sessionize.com/image/d33e-400o400o1-hGYUjUMV2zh467iyQuL48R.jpg",
+    "sessions": [
+      {
+        "id": 1021904,
+        "name": "Gopherたちのパネルディスカッション"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
     "id": "37ae8082-b7e9-4009-af07-3bad0627f74e",
     "firstName": "Hiromasa",
     "lastName": "Senoue",
@@ -687,6 +706,31 @@
     "categories": []
   },
   {
+    "id": "899d1bf7-e2c2-4333-b9f1-c07788bca0c7",
+    "firstName": "Takuya",
+    "lastName": "Ueda",
+    "fullName": "Takuya Ueda",
+    "bio": "Takuya Ueda is one of organizer of Go Conference in Japan. He is Google Developer Expert (Go). He works for the growth of the Go community in Japan. He also loves the Go Gopher and drawing Gopher illustrations.",
+    "tagLine": "newmo, Inc. / Google Developers Expert (Go) / Gophers Japan",
+    "profilePicture": "https://sessionize.com/image/a3e1-400o400o1-55dc647a-d774-42bc-9974-d0262cc0af92.jpg",
+    "sessions": [
+      {
+        "id": 1021593,
+        "name": "Go Quiz Workshop"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://twitter.com/tenntenn",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
     "id": "fc2a76e4-1744-42f6-b6e0-182c48847422",
     "firstName": "Tatsuya",
     "lastName": "Kaneko",
@@ -879,6 +923,44 @@
     "categories": []
   },
   {
+    "id": "0bb030df-6018-46e2-b08e-6e6dca113329",
+    "firstName": "康貴",
+    "lastName": "井手",
+    "fullName": "康貴 井手",
+    "bio": null,
+    "tagLine": null,
+    "profilePicture": null,
+    "sessions": [
+      {
+        "id": 1022070,
+        "name": "Goに育てられ開発者向けセキュリティ事業を立ち上げた僕が今向き合う、AI × セキュリティの最前線"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "b2faf973-7fc5-46b3-97ca-3b4cffaf7c95",
+    "firstName": "正大朗",
+    "lastName": "山﨑",
+    "fullName": "正大朗 山﨑",
+    "bio": null,
+    "tagLine": null,
+    "profilePicture": null,
+    "sessions": [
+      {
+        "id": 1022036,
+        "name": "goplsの拡張によるマイクロサービス間の実装ジャンプ改善"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
     "id": "356bd74e-ffb6-4ddc-83ff-006ba9973f27",
     "firstName": "白石",
     "lastName": "耕一 (zchee)",
@@ -900,6 +982,25 @@
         "linkType": "Twitter"
       }
     ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "e45f49f2-02b6-4a1b-a81b-1b8009852989",
+    "firstName": "輝彦",
+    "lastName": "彌冨",
+    "fullName": "輝彦 彌冨",
+    "bio": null,
+    "tagLine": null,
+    "profilePicture": null,
+    "sessions": [
+      {
+        "id": 1022065,
+        "name": "メガエンプラSaaSを支えるシリーズAスタートアップのGoアーキテクチャ"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
     "questionAnswers": [],
     "categories": []
   }

@@ -4,7 +4,16 @@
     "groupName": "All",
     "sessions": [
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "959061",
         "title": "Go1.24で進化したmap型について理解する",
         "description": "Go言語にはmap型が用意されており、Webサーバやデータベースなど多くの場面で利用されています。\r\nたとえば、ByteDance社の事例ではGoで構築されたサービスにおいてmapの処理がCPU使用率の約4%を占めることが報告されています。\r\nGo 1.24からmap型はSwiss Tablesをベースとした新しい方式に変更されました。\r\nこの変更によりマイクロベンチマークでは最大60%の高速化が確認されています。\r\nしかし、一部のケースではパフォーマンスが低下する課題もあります。\r\n本セッションでは新しいmap型の実装や特徴について解説します。\r\n本セッションを通じて聴講者がGo 1.24以降のmap型の振る舞いや設計意図を理解できるようになることを目指します。",
@@ -62,7 +71,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "939638",
         "title": "サプライチェーン攻撃に学ぶmoduleの仕組みとセキュリティ対策",
         "description": "2025年2月、Go言語エコシステムで3年間検出されなかった巧妙なサプライチェーン攻撃が発覚しました。github.com/boltdb-go/boltという悪意のあるパッケージが、正規のBoltDB（github.com/boltdb/bolt）をタイポスクワットし、Go Module Proxyのキャッシュメカニズムを悪用していた事件です。\r\n 攻撃者はGo Module Proxyの「一度キャッシュされたモジュールは(原則)永続的に利用可能」という特性を悪用し、GitHubのタグを書き換えて痕跡を隠蔽しながら、プロキシ経由では悪意のあるバージョンを配布し続けました。\r\n\r\n この事件について調べていくと、Go Moduleの内部動作について多くの発見がありました。go.sum ファイルの役割、Module Proxyとチェックサムデータベースの関係、そしてgo mod verifyやgovulncheckといったツール等です。\r\n\r\nこれを機に実際にこれらのツールを使用して依存関係の検証を行い、セキュリティ対策として、普段の業務で積極的に使うようになりました。\r\n\r\n そこで、この経験を通して、Go Moduleの仕組みを正しく理解し、適切なセキュリティ対策を実装するための実践的な知識をお伝えしたいと思っています。\r\n\r\n 具体的にはこのセッションで以下の項目についてお話しします。\r\n \r\n 1. Go Moduleシステムの内部動作とサプライチェーン攻撃の手法\r\n   - 悪意のあるBoltDBパッケージの具体的な実装\r\n   - go.mod、go.sum、Module Proxyの役割と相互関係\r\n   - 攻撃者がどのようにキャッシュメカニズムを悪用したか\r\n   \r\n \r\n 2. Go Moduleのセキュリティメカニズム\r\n    - チェックサムデータベースによる整合性検証\r\n    - 最小バージョン選択（MVS）の仕組みとセキュリティへの影響\r\n    - Module Proxyの動作におけるセキュリティリスク\r\n \r\n \r\n 3. 実践的なセキュリティ対策とツールの使い方\r\n   - go mod verify、govulncheckの効果的な使用方法\r\n   - 今回のような事件の影響を防ぐ実践的なCI\r\n \r\n \r\n \r\n このセッションは、Go Moduleの仕組みをより深く理解したい方や、Goのセキュリティ対策を強化したい開発者の方に対して特にお話ししたい内容です。",
@@ -120,7 +138,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "958892",
         "title": "Goの字句解析を覗いてみる",
         "description": "Goで日々開発を行う中で、言語仕様書まで目を通す機会はそれほど多くないかと思います。\r\ngoplsなどによって多くの構文的な支援が行われており、字句解析のような低レイヤーの仕組みは、意識せずとも問題なく開発が進められることがほとんどです。\r\n\r\nしかし、「普段何気なく使っているGoが、どのような仕様に基づいて動いているのかをもっと深く知りたい」と思い、改めてGoの仕様書（The Go Programming Language Specification）を読み始めました。\r\n\r\n本セッションでは、Goの仕様理解の第一歩として、字句解析に関する以下のような内容をご紹介します。\r\n\r\n・識別子・数値・文字列リテラルなどの主要ルール\r\n・言語仕様である「最長一致」がどのように実装されているか\r\n・go/scanner パッケージの実装から見られる工夫\r\n\r\n仕様レベルからGoを捉えることで、普段の開発では見えにくい設計意図や動作の背景が見えてきます。\r\n本LTが、Goという言語への理解をより深めるきっかけとなれば幸いです。",
@@ -178,7 +205,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "1018925",
         "title": "今日から始めるpprof",
         "description": "Goの素晴らしいところは豊富なツールセットが標準で付いていてインストール直後から使えるところにあります。本ワークショップではその中でもpprofというプロファイラーの使い方を初めて使う方にもわかりやすい形で解説します。\r\n\r\nワークショップは次のような内容をカバーすることを想定しています。\r\n1. プロファイラーとは\r\n2. pprofの基本機能の説明\r\n3. pprofをプログラムに組み込む\r\n4. pprofでプロファイルを取得する\r\n5. pprofでプロファイルを可視化する\r\n6. pprofの読み方を理解する\r\n7. pprofの結果に基づいて改善する\r\n8. 改善結果をpprofで確認する\r\n9. 実際の開発に活かせる継続的プロファイルの解説\r\n10. （オプション）継続的プロファイルを導入してみる（各種サービスのアカウントが必要）\r\n\r\n本セッションを終える頃にはテストやベンチマークだけでなく、Goでのプロファイルの使い方も理解し、根拠のある形でパフォーマンスチューニングを実施できる知識を得ることができるようになるでしょう。",
@@ -236,7 +272,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "998804",
         "title": "TinyGo Keeb Workshop",
         "description": "TinyGo Keeb Tour というイベントで使用している zero-kb02 というハードウェアを主催側で準備し、それに対してのプログラムを書く、という形でワークショップを開催します。\r\n環境立ち上げ後、順番に例を試していくパートを実施、最後に簡単なオリジナルアプリケーションを作ってもらい互いに発表することで交流することを予定しています。実際のハードウェアが存在することにより、ボタンが光った、とか、画面表示できた、とか、小さな体験を相互に確認でき、コミュニケーションのきっかけとすることができます。\r\nなお、会場および時間の兼ね合いもあり TinyGo Keeb Tour で実施しているはんだ付けは実施しません。完成版のハードウェアを用いてのワークショップとなります。\r\nワークショップの資料は以下にあります。\r\nhttps://github.com/tinygo-keeb/workshop\r\n\r\nワークショップから学べること\r\n* TinyGo で組込開発をする流れ",
@@ -294,7 +339,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "997075",
         "title": "Goを使ってTDDを体験しよう！！",
         "description": "このワークショップでは、TDD(Test-Driven Development)の体験会を行います。\r\n\r\nTDDについて、概要しか知らない方や実際にやったことがない方は多いのではないでしょうか。\r\n例えばTDDの最初のステップを「落ちるテストを書く」だと思っている方は多いのではないでしょうか。\r\nTDDについて理解し、実践をすることで、実体験をベースにTDDの是非を判断できることがゴールです。\r\nぜひ、TDD実践の最初の一歩を踏み出してみませんか？\r\n\r\n対象者：\r\n・TDDを知らない方\r\n・TDDを知っているがやったことがない方\r\n・ストレスなく開発する方法を探している方\r\n\r\nゴール：\r\n・TDDについて理解をし、より安心して普段の開発を行えるようにする\r\n・想像や妄想ではなく、実体験をもとにTDDの良し悪しを判断できるようになる\r\n\r\nワークショップの流れ：\r\n1. 自己紹介\r\n2. TDDについての説明\r\n3. TDD体験1\r\n  3-a. 簡単なお題に対してTDDを実践してみる\r\n  3-b. 実践した感想や学びをシェアする\r\n4. TDD体験2\r\n  4-a. 少し難しいお題に対してTDDを実践してみる\r\n  4-b. 実践した感想や学びをシェアする\r\n5. 全体ふりかえり\r\n\r\n参加条件・事前準備など：\r\n・Goの基本的な文法を理解していること（goroutineやiter.Seqなどの難しい知識は不要）\r\n・Goの基本的なテストの書き方を理解していること\r\n・Gitの基本的な操作ができること（コミットできればOKです）\r\n・コード・テストを実行する環境を用意すること\r\n・使用したいツールやライブラリがあれば、事前にダウンロードを済ませておくこと\r\n\r\n最小/最大実施可能人数：\r\n・最小：1人\r\n・最大：8人",
@@ -352,7 +406,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "957443",
         "title": "Goで実現するgraceful shutdown: 実運用での課題と解決策",
         "description": "#### 目的\r\nGo アプリケーションにおける、HTTP サーバ、バックグラウンド処理を安全に終了させたい開発者に向けて、graceful shutdown の実践的な Tips を共有します。\r\n\r\n#### 詳細\r\nこのセッションでは、以下の項目に絞って説明します\r\n\r\n1. **graceful shutdown の基本概念**\r\n   - `os.Signal`を使ったシグナルハンドリングの仕組み\r\n   - `context`パッケージを活用したタイムアウト管理\r\n\r\n2. **HTTP サーバーでの graceful shutdown**\r\n   - `net/http`の`Shutdown`メソッドで実現している安全なシャットダウン方法をおさらい\r\n      - リクエスト処理中の接続を安全に切断する方法\r\n\r\n3. **goroutine の管理とリソース解放**\r\n   - `sync.WaitGroup`を使った並行処理の安全な終了\r\n   - シャットダウン時のリソース解放の注意点\r\n\r\n4. **実運用での応用例**\r\n   - **課題:** \r\n     - メール送信プロセスなど、バックグラウンドで実行されるタスクが残っているにも関わらず、サーバがシャットダウンしてしまう問題があった。\r\n     - シャットダウン時に新規プロセスの受け入れを適切に停止しつつ、既存プロセスの完了を待つ仕組みが必要になった。\r\n   - **解決策:** \r\n     - 先人の導入例を参考に、安全にプロセスを終了させるための具体的な実装方法を紹介します。\r\n\r\n#### Appendix\r\n- [graceful shutdown可能な非同期リトライするGoライブラリをOSSとして作った話](https://qiita.com/behiron/items/b224a68e8c3d8b9de89d)\r\n- [Go MachineryでGraceful shutdownできてないバグを直した話](https://tech.layerx.co.jp/entry/2022/12/13/201832)",
@@ -410,7 +473,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "957911",
         "title": "Deep Dive Into testing/synctest",
         "description": "テスト中に time.Sleep を使って数秒待った経験やそれによりテストが不安定になったり悩まされたことはありませんか？\r\n例えば、「数秒後にキャッシュが期限切れになるか確認したい」といったテストでは、sleep を使うことでCIの実行時間が増えたり、flaky（不安定）になったりする原因になります。\r\n\r\nGo 1.24 で実験的に導入された testing/synctest パッケージは、こうした並行処理＋時間依存のテストを高速かつ安定して書けるようにするものです。また、Go 1.25のリリースノートでは testing/synctest パッケージは standard library として提供される予定で今後開発者間でも頻繁に使われるであろうものです。\r\n\r\nこのセッションでは、以下を中心に紹介・解説します：\r\n1: synctest.Run による「バブル（Bubble）」とは何か？\r\n2: 合成時間（synthetic time）の進み方と time.Sleep との連携\r\n3: synctest.Run と synctest.Wait の使いどころ\r\n4: durably blocked とは？\r\n5: synctestの制約\r\nまた、具体例を通して、goroutineの同期と合成時間の制御周りを深掘りします。\r\nそして、CI等で発生しやすい flaky テストの再現例と、synctest によってどれほど安定化するかのベンチマーク結果もご紹介したいと思います。",
@@ -468,7 +540,83 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
+        "id": "1021904",
+        "title": "Gopherたちのパネルディスカッション",
+        "description": "本セッションはGo Conference2025の運営が主催するパネルディスカッションです。\r\n多様な「〇〇×Go」のコミュティを運営し、Goコミュニティを引っ張っているパネラー4名が登壇します。\r\n\r\n- パネラー兼ファシリテーター\r\n tenntenn\r\n- パネラー\r\n micchie\r\n momi\r\n logica",
+        "startsAt": "2025-09-27T14:00:00",
+        "endsAt": "2025-09-27T14:40:00",
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "335f95ea-cb9d-4f25-b991-bd17603d4566",
+            "name": "Go Conference Event team"
+          }
+        ],
+        "categories": [
+          {
+            "id": 101938,
+            "name": "Session Type",
+            "categoryItems": [
+              {
+                "id": 394638,
+                "name": "Panel Discussion"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 101939,
+            "name": "Session Level",
+            "categoryItems": [
+              {
+                "id": 367242,
+                "name": "all"
+              }
+            ],
+            "sort": 1
+          },
+          {
+            "id": 102474,
+            "name": "言語 / Language",
+            "categoryItems": [
+              {
+                "id": 369632,
+                "name": "japanese"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": 67044,
+        "room": "Room 1",
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "958036",
         "title": "encoding/json/v2で何が変わる? - v1からv2への変化を徹底比較",
         "description": "# 概要\r\nGo 1.25で導入されるjson/v2について、従来のencoding/jsonから「何が変わって、何が変わらないのか」を具体的なコード例で比較解説します。API、パフォーマンス、動作の違いを明確にし、開発者が実際に遭遇する変化点を整理してお伝えします。\r\n\r\n# 詳細\r\n## 背景\r\nWebAPIをはじめ昨今の開発でJSONは避けては通れません。Goでの開発においても、encoding/jsonを使ったことがある方は多いと思います。\r\nしかし、encoding/jsonを使っていて「なんでnil sliceがnullになるんだろう？」「omitemptyの動作が直感的じゃない」「大容量のJSONを処理するとパフォーマンスが気になる」といった経験はありませんか？\r\nGo 1.25で実験的に導入されるencoding/json/v2は、これらの長年の課題に正面から取り組んだ大幅なアップデートです。しかし「v2って何が変わるの？既存のコードは大丈夫？」という不安もあるのではないでしょうか？\r\n## トーク内容\r\nこのトークでは、json/v2で「変わるもの」「変わらないもの」「新しく追加されるもの」を3つの軸で整理し、実際のコード例を交えながら互換性について解説します。\r\n\r\n# トークから得られるもの\r\n* json/v2の変更点を体系的に理解できる\r\n* 既存のGoアプリケーションへの影響度を把握できる\r\n* 新機能を活用したJSON処理の改善方法が分かる\r\n* 移行する場合の今後の参考になる\r\n\r\n# 対象者\r\n既存のGoアプリケーションでJSONを使用している開発者\r\nGo 1.25の新機能に興味がある開発者",
@@ -526,7 +674,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "1013431",
         "title": "†開発を加速させる黒魔術講座†",
         "description": "このワークショップは、日常的な開発ではなかなか触れる機会の少ない「†黒魔術†」的な Go のテクニックについて、実例を交えた解説と、例題をベースとした学習の機会を提供します。具体的には下記に挙げるような Go のテクニックをテーマにして、ワークショップの前半 30 - 40 分ほどで講師側から解説を行い、後半の 50 - 60 分ほどで参加者にそれぞれテーマを選んでいただき、テーマに沿った例題を実装していただきます。例題の実装では、各テーマを要素にしたスタンプラリーを提供し、参加者同士で実装を見せ合って相互にスタンプを押しあうことで埋めてもらい、参加者同士の交流を促進します。\r\n\r\n- `go build` の `-overlay` オプションの活用\r\n- `go build` の `-toolexec` オプションの活用\r\n- `unsafe` パッケージ\r\n- `reflect` パッケージ\r\n- 静的単一代入（SSA）形式を利用した静的解析\r\n- `go:linkname` ディレクティブ\r\n- アセンブリでの関数の実装\r\n- go testを使ったハック\r\n- GOEXPERIMENT で提供されている機能\r\n- (項目は検討中です…）",
@@ -584,7 +741,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "998166",
         "title": "TinyGo + Gopherくん基板で遊ぼう",
         "description": "Gopherくん基板 はGoのマスコットキャラクターのGopherを型取って私が製作しているオリジナル基板です。\r\n\r\nGopherくん基板はTinyGoをサポートしているRP2040-Zeroをマイコンとして使用しており、GPIO、タクトスイッチ、Groveコネクタ、フルカラーLED、ブザー、液晶画面なども付いていて電子工作の入門にピッタリです。\r\n\r\nTinyGoとこのGopherくん基板を利用して、電子工作や組み込みプログラムに入門するワークショップを行います。",
@@ -642,7 +808,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "1000109",
         "title": "作って理解するGOCACHEPROG",
         "description": "Go 1.24でリリースされたGoコマンドの機能にGOCACHEPROGがあります。\r\nこの機能を利用することでGoのコンパイル時のキャッシュを自作プログラムでカスタマイズできるようになります。\r\nこの機能を利用することで、S3へキャッシュを直接保存し端末を跨いでキャッシュを共有することなどが可能になります。\r\n一方で、GOCACHEPROGバックエンドの実装は愚直な実装ではオーバーヘッドが大きく、場合によってはキャッシュが存在しない場合よりもコンパイルが多くなってしまうことすらあります。\r\n本ワークショップでは、実際にGOCACHEPROGバックエンド実装を行うことでGOCACHEPROGについて理解を深めます。そして、オーバーヘッドを減らすために必要な工夫を議論・理解することで、実用に耐えるGOCACHEPROGバックエンド実装を行うことができるようになります。",
@@ -700,7 +875,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "958532",
         "title": "Go で WebAssembly を利用した実用的なプラグインシステムの構築方法",
         "description": "Go ではプラグイン開発をする際、build option の -buildmode=plugin による方法や Hashicorp 社が開発した [go-plugin](https://github.com/hashicorp/go-plugin) などを利用した開発が主流でしたが、\r\nここ数年で WebAssembly ( WASI Preview 1 ) を利用したプラグインシステムの構築に注目が集まっています。\r\n最近のアップデートでも、Go 1.24 から wasmexport directive がサポートされ、Go で WASI を利用するための情報もよく見られるようになってきました。\r\n\r\nしかし、実際に現在の Go が提供している WebAssembly の仕組みで実用的なプラグインシステムを構築しようとすると、いくつも超えなければいけない壁が存在し、\r\nGo がサポートしている機能を知っているだけの状態ではうまくいかない点が多々あることに気づきます。\r\n\r\n本トークでは、独自に構築した複数のプラグインシステムを実用した際に得られた知見や、本番環境のアプリケーションで1年以上稼働させた際に得た気づきを基に、Go で WebAssembly を利用した至高のプラグインシステムを構築するために必要な知識を体系的に説明します。\r\nまた、WebAssembly を作成するために使用するプラグイン側の言語は、Go言語を利用することを前提として解説します。\r\n\r\n本トークを聞くことで、AIやインターネットからは得られない実用的なプラグインシステムを構築するために必要な設計・実装の知識を学習し、自身のアプリケーション開発に明日から活用してもらうことを目的とします。\r\n",
@@ -758,7 +942,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "951608",
         "title": "GoのinterfaceとGenericsの内部構造と進化",
         "description": "Go 1.18でGenericsが導入され、型の抽象化がより安全かつ柔軟に書けるようになりました。このセッションでは、runtimeパッケージ（特に iface.go や runtime2.go に登場する eface 構造体）と、Generics関連のパッケージ（cmd/compile/internal/ssa や types2 など）を読み解きながら、Goにおけるany（interface{}）型、通常のinterface、Genericsの内部構造の違いや実装方針について解説します。\r\nこのセッションのきっかけは、実務において汎用的な関数の引数にany型を取る実装がたびたび見られたことでした。any型は複数の型を扱える便利な仕組みですが、その内部は型と値の情報を持つデータ構造であり、ランタイムでの実行速度や挙動に影響を及ぼす場面もあります。たとえば、any型を引数に取るユーティリティ関数では、引数を直接nilと比較することができず、やや直感的ではない挙動になります。\r\n実務ではGenericsを使うことでこれらの課題を回避できますが、Generics自体も進化を続けており、Go 1.20以降では型推論や制約処理、エスケープ解析、モノモーフィック化の最適化など多くの改善が行われています。Go 1.25ではコア型の仕組みが削除されるなど、設計上の選択も大きな変化を迎えています。\r\n本セッションでは、実装の背景や議論にも触れながら、業務での意思決定にも役立つような「Goの型の内部構造の理解」を深めることを目指します。",
@@ -816,7 +1009,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "1019249",
         "title": "Go Conference OST",
         "description": "Go Conference運営メンバーから、特別なワークショップ「Open Space Technology（OST）」を開催します。\r\nセッションのテーマも、アジェンダも、全て参加者自身が自由に決めることができます。\r\n最近ハマっているライブラリの話、テストコードの書き方、仕事でのちょっとしたGoの悩みなど、何でもOK。\r\n\r\nさあ、あなたもGo Conferenceを盛り上げる一員として、Goへの情熱を語り合いましょう！",
@@ -874,7 +1076,83 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
+        "id": "1021593",
+        "title": "Go Quiz Workshop",
+        "description": "公式ドキュメントや言語仕様を読み込むことで、面白くて学べるGo Quizをつくるワークショップです。\r\n\r\nまずは講師からQuizづくりのコツを学びます。短時間で答えられて、シンプルでかつやりがいがあり、回答から楽しく学べる問題の作り方を説明します。\r\n\r\n次にClaude CodeやChatGPT、DeepWikiなどの力を使い、公式ドキュメントや言語仕様、ソートコードからQuizで使えるネタを見つけます。\r\n\r\n参加者は回答者に学んで欲しい知識をクイズに込めて作問してもらいます。作った問題は参加者同士で回答しあったり、Xにポストすることで色んな方に回答してもらえます。\r\n\r\nシンプルな問題にすれば、回答者は日本語話者に限りません。Gophers Slackなどで共有することで国外のGopherにも回答してもらえるでしょう。\r\n\r\n参加後に問題の解説をブログに書くことで、参加者自身のアウトプットにつなげることもできます。",
+        "startsAt": "2025-09-27T16:30:00",
+        "endsAt": "2025-09-27T18:00:00",
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "899d1bf7-e2c2-4333-b9f1-c07788bca0c7",
+            "name": "Takuya Ueda"
+          }
+        ],
+        "categories": [
+          {
+            "id": 101938,
+            "name": "Session Type",
+            "categoryItems": [
+              {
+                "id": 389623,
+                "name": "workshop"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 101939,
+            "name": "Session Level",
+            "categoryItems": [
+              {
+                "id": 367242,
+                "name": "all"
+              }
+            ],
+            "sort": 1
+          },
+          {
+            "id": 102474,
+            "name": "言語 / Language",
+            "categoryItems": [
+              {
+                "id": 369632,
+                "name": "japanese"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": 70103,
+        "room": "Room 3-1",
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "1019147",
         "title": "Goのカードゲームで遊ぼう",
         "description": "楽しいカードゲームを通じてGoプログラミング言語の基礎を学びます。\r\n参加者はプログラムを作成しつつ、Goの主要な機能や構文を理解することができます。",
@@ -932,7 +1210,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "956553",
         "title": "全てGoで作るP2P対戦ゲーム入門",
         "description": "WebAssembly と WebRTC を駆使し、フロントエンドから通信・レーティングまで “まるごと Go” で実装した 1 対 1 対戦ゲームがあります。\r\n一般にゲーム開発では複数言語が混在しがちですが、今回は Ebitengine x Pion/WebRTC を核に Go だけで完結させました。\r\nしかし「全部 Go」で作る手順や設計上の勘所は、まだ体系的に共有されていません。\r\nサーバ負荷ゼロの完全 P2P 構成を実現するまでの道のりを 20分で解説します。\r\n\r\nまず、ゲームを支える 5 つの要素解説し、役割と接続フローの全体像を提示します。\r\n- Ebitengine: wasm ビルドでブラウザゲームを実現\r\n- WebSocket サーバ: 軽量マッチングとシグナリング入口\r\n- Ayame (go-ayame): シグナリング・プロトコルを簡潔に実装\r\n- Pion/WebRTC: DataChannelによるゲーム操作データのP2P通信を実現\r\n- レーティングサーバ: httpサーバでスコア管理を自動化\r\n\r\n続いて、Go の哲学 「共有メモリによる通信ではなく、通信による共有を」 を体現する実装パターンについて\r\ngoroutine と channel で描画ロジックと通信ロジックを分離し、保守性と並行性能を両立させたコード片を具体例とともに解説します。\r\n\r\n最後に、ライブデモでブラウザを 2 枚立ち上げ、サーバレスで動く対戦をその場で確認していただきます。\r\n「WebRTC や WASM は初めて」という方でも、セッション終了時には “Go だけでリアルタイムゲームを作れる” イメージを鮮明に持ち帰れるはずです。\r\n\r\n\r\n活用しているOSS\r\n- Ebitengine: https://github.com/hajimehoshi/ebiten\r\n- Pion WebRTC: https://github.com/pion/webrtc\r\n- WebRTC Signaling Server Ayame: https://github.com/OpenAyame/ayame\r\n\r\n自作ゲーム関連: \r\n- ブラウザゲーム: https://github.com/ponyo877/ebiten-hit-and-blow\r\n- マッチングサーバ: https://github.com/ponyo877/easy-matchmaking\r\n- レーティングサーバ: https://github.com/ponyo877/easy-rating",
@@ -990,7 +1277,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "959053",
         "title": "analysis パッケージの仕組みの上でMulti linter with configを実現する",
         "description": "Goに標準で組み込まれている静的解析ツール `go vet` は、コードの品質と整合性維持に非常に役立ちます。しかし、より高度な要件を満たすには、複数のリンターを統合的に管理し、かつユーザーが設定ファイルで挙動を調整できる仕組みが求められます。\r\n\r\n本セッションでは、Goの `analysis` パッケージが提供する機能を最大限に活用し、「設定ファイルを伴う」マルチリンターを実現する方法について解説します。\r\n\r\n具体的には、https://github.com/k1LoW/gostyle の実装を例に深掘りしていきます。\r\nk1LoW/gostyleでは、設定ファイルを読み込み、その内容を各 `analysis.Analyzer` の解析ロジックに反映させることで、柔軟なリンティングを実現しています。\r\n\r\n設定ファイルの値をどのように各 `analysis.Analyzer` に渡すか、その設計パターンと実装の詳細について解説します。\r\n\r\n本セッションが、Goの静的解析ツールをある程度理解した上でより実践的で汎用性の高いカスタムリンターの作成を検討しているGo開発者にとって有益な情報となれば幸いです。\r\n",
@@ -1048,7 +1344,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "958977",
         "title": "Go1.25新機能 testing/synctest で高速＆確実な並列テストを実現する方法",
         "description": "## 概要\r\n\r\nGo1.25で標準パッケージになった testing/synctest パッケージを中心に、Test と Wait の２つの API の動作仕様を詳解します。実コードと GoDoc を交え、時間短縮・flaky対策の実用的なテスト手法を初学者から中級者に向けて丁寧に紹介します。また実際に弊社のテストコードに組み込んだ結果も合わせて共有できればと思います。\r\n\r\n## 発表内容の詳細\r\n\r\n1. 背景と課題提起\r\n    - 並列テストの“遅さ”や“flakiness”という実務課題\r\n2. API紹介\r\n    - `testing/synctest.Test`\r\n    - `testing/synctest.Wait`\r\n3. 実験コード解説\r\n    - 実験 1: TTLを持つキャッシュのテスト\r\n    - 実験 2: goroutineによるexpire実装の検証\r\n4. 動作検証とGoDoc読解\r\n    - GoDocベースで仕様確認＋内部動作の理解\r\n6. flakyテストへの対処\r\n    - `Test`を使った安定化手法とその根拠\r\n7. Goクイズ・参加型検証\r\n    - ミニクイズ形式で仕様の理解を補強\r\n8. 実務適用と今後の展望\r\n    - 弊社での活用事例\r\n　- `synctest` の今後への期待\r\n9. APIの内部実装\r\n    - synthetic timeの実装やgoroutine制御の仕組み\r\n\r\n## 補足事項\r\n\r\n- https://zenn.dev/canary_techblog/articles/ec8a96b4541685 をベースにした発表になります\r\n- 上記の記事執筆時はGo1.24で実験的に導入された時だったので、Go1.25で標準パッケージに入るまでのアップデート（e.g. RunがTestに置き換わった理由など）も併せてお話しする想定です\r\n- 弊社での活用事例のセクションでは、exponential backoffでリトライするようなAPIのテストなどより実践的に使える内容についてもお話しできればと思っています\r\n- またsynthetic timeの実装やgoroutine制御の仕組みについても余裕があればお話ししたいと思います",
@@ -1106,7 +1411,83 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": "true",
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
+        "id": "1022070",
+        "title": "Goに育てられ開発者向けセキュリティ事業を立ち上げた僕が今向き合う、AI × セキュリティの最前線",
+        "description": "メルカリ社でインターンするなど、自分は「Goに育てられたエンジニア」として学生起業に至り、今は開発組織のセキュリティを支える事業に注力しています。本セッションでは、自身の開発バックグラウンドと世界トップクラスの実力を持つセキュリティエンジニア達の能力を活かしてGMO Flatt Securityが現代の開発組織が抱える課題にどうアプローチしているか、AI × セキュリティの最前線も交え解説します。加えて、OSSやスタートアップの無料セキュリティ支援という形で現在実施しているコミュニティ還元に込めた思いもお話しします。",
+        "startsAt": "2025-09-28T11:10:00",
+        "endsAt": "2025-09-28T11:30:00",
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "0bb030df-6018-46e2-b08e-6e6dca113329",
+            "name": "康貴 井手"
+          }
+        ],
+        "categories": [
+          {
+            "id": 101938,
+            "name": "Session Type",
+            "categoryItems": [
+              {
+                "id": 367239,
+                "name": "Short Session(20min)"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 101939,
+            "name": "Session Level",
+            "categoryItems": [
+              {
+                "id": 367242,
+                "name": "all"
+              }
+            ],
+            "sort": 1
+          },
+          {
+            "id": 102474,
+            "name": "言語 / Language",
+            "categoryItems": [
+              {
+                "id": 369632,
+                "name": "japanese"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": 67044,
+        "room": "Room 1",
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "958952",
         "title": "Goで体感するMultipath TCP ― Go 1.24 時代の MPTCP Listener を理解する",
         "description": "本セッションでは、GoでMPTCPを利用するための方法と、MPTCPの基本的なアーキテクチャを解説し詳しく掘り下げます。\r\n2025年現在、mptcp.ioの測定によるとMPTCPの実世界の利用規模はMPTCP v1で57万以上のIPが確認されています。代表的な例ではAppleやモバイルネットワークなど様々な所で利活用が進んでいます。\r\nGoにおいてはv1.21(2023年)にGo標準のnetパッケージに導入されました。そして、Go v1.24(2025年)でTCPのListen時にデフォルトでMPTCPが有効化されるようになりました。クラウドネイティブ関連のサーバー&インフラソフトウェアで多く利用されるGoで有効化されたことで今後もより活用が進むことが考えられます。このことから、「Goを利用する開発者が今こそ学ぶべき技術である」と応募者である私は確信しています。\r\nセッションを通じて、Go で書いた小さなサンプルとカーネル／ロードバランサ設定の注意点を紹介し、聴講後には自身の環境で MPTCP を動かすための最初の一歩を踏み出せる知識と手順を持ち帰れるようにすることを目指します。\r\n\r\n想定している話の流れは以下の通りです  \r\n- 3m: 自己紹介および、セッションの概要説明  \r\n- 7m: MPTCPプロトコルの概説\r\n- 5m: Goでの実装例\r\n- 5m: 運用ノウハウやLinuxの観点からのチューニングポイント\r\n\r\n想定してる聴講者は以下の通りです\r\n- Go でネットワーク／バックエンドを開発するエンジニア\r\n- SRE、プラットフォーム担当者\r\n- マルチホーム・モバイル特性を活かしたいアプリ開発者\r\n",
@@ -1164,7 +1545,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "959035",
         "title": "私達はmodernize packageに夢を見るか feat. go/analysis, go/ast",
         "description": "皆さん、Goのversionは定期的に上げているが、最新の記法を全面的にコードベースに取り入れるまではやれていない！という経験はありますか？少なくとも私はその一人でした。\r\n\r\nそんな時、goplsに搭載されているmodernize packageは有用です。既存のコードベースで扱っているGoのversionに応じて、最新の記法が適用可能な箇所を検出し、一括修正も可能です。\r\n\r\nしかし、以上の機能は強力な反面、実装者目線では破壊的変更が意図せず混じらないか、心配な面もあります。\r\n\r\nそこで本セッションでは、\r\n\r\n・modernize packageで実現できることの説明\r\n・modernize packageの内部実装を紹介しつつ深掘り\r\n・安全に導入するためのチェックポイント\r\n\r\nについて説明する予定です。\r\n\r\n本セッションがmodernize packageの内部挙動への理解を深め、安心して利用できる助けになれば幸いです。\r\n\r\n[前提知識]\r\n\r\n「modernize packageの内部実装を紹介しつつ深掘り」のパートに関しては、go/analysis, go/ast に触れた経験があれば理解が深まりますが、必須ではありません。",
@@ -1222,7 +1612,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "945921",
         "title": "公式singleflightを約2倍高速化したGenerics対応実装と最適化",
         "description": "Goのgolang.org/x/sync/singleflightは、同一キーに対する重複処理をまとめる実績ある仕組みです。一方で、型はinterface{}前提、panic/Goexit伝搬や共有フラグ、同期的なクリーンアップなど安全性のための処理があり、オーバーヘッドが気になる場面もあります。\r\n本セッションでは、まず公式実装の構造（callのロック粒度、panic回復、共有フラグ、削除フロー）を短く整理し、次にGenericsで型安全性を確保しつつ、deleteを非同期化して返却を先行させる実装（非同期クリーンアップ＋ロック最適化）を紹介します。\r\n参加者はsingleflightの内部理解に加えて、Goにおけるロックの置き方・クリティカルセクション短縮・待ち時間最小化の具体的テクニックを持ち帰れます。",
@@ -1280,7 +1679,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "958919",
         "title": "Go1.24時代のユニットテスト品質向上",
         "description": "本セッションでは、ユニットテストの品質向上のため、Go 1.24 で導入された (*testing.T).Context() とモック生成ライブラリ uber-go/mock を組み合わせたユニットテストの設計手法を解説します。\r\n\r\n## 対象者\r\n\r\n- Go での基本的なユニットテスト経験がある方\r\n- ユニットテストの品質向上を目指している方\r\n- 外部依存のあるコードのテスト設計に悩んでいる方\r\n- チームのテスト文化を改善したい方\r\n\r\n## 参加者が得られるもの\r\n\r\n- ユニットテスト品質を向上させる方法\r\n- (*testing.T).Context() と uber-go/mock を組み合わせた実践的なパターン\r\n- 外部依存のあるコードの効果的なテスト戦略\r\n- 保守性が高く、高速で信頼性のあるユニットテストの構築方法\r\n\r\n## セッション内容\r\n\r\n### ユニットテストの課題と解決アプローチ\r\n\r\n- ユニットテストでよくある問題\r\n- t.Context() によるゴルーチンリークの解決\r\n- gomock による外部依存分離の重要性\r\n\r\n### Context()によるテスト基盤の改善\r\n\r\n- HTTP API ハンドラーでの具体的な活用例\r\n- goroutine を使うテストでの適切なリソース管理\r\n\r\n### gomock による外部依存の分離\r\n\r\n- 外部 API 呼び出しを含むサービス層のテスト設計\r\n- モック生成から実装までの実践的な流れ\r\n\r\n### 品質向上のための実践指針\r\n\r\n- 既存コードベースでの段階的な導入戦略\r\n- チーム開発での工夫\r\n",
@@ -1338,7 +1746,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "958432",
         "title": "カリカリなMutexを作る / \"Crispifying\" Go's Mutex",
         "description": "(English follows Japanese)\r\n\r\nGo言語といえば並列処理、並列処理といえばMutexですよね。今回はそんなGo言語のMutexについてです。\r\n\r\n案外簡単なのでは？と思いきや、実際にコードを読んでみると複雑な実装になっていて、いかに「カリカリ」に最適化されているかがわかります。\r\n\r\nもはや職人芸とも言えるGo言語のMutex。とても真似できないと思われるかもしれませんが、決してそんなことはありません。今回は、簡単なスピンロックの実装からスターベーションモードの実装まで、皆さんと一緒に「オレオレMutex」をカリカリにしていこうと思います。\r\n\r\n実際に標準ライブラリ内にオレオレMutexを実装して、テストを通し、またおまけとしてSPINというツールで安全性 (＋活性性？) のモデル検査を行います。もしかしたらバグがあるかもしれませんが、そこはご愛嬌ということで... ぜひお楽しみに！\r\n\r\n---\r\n\r\nWhen you think of Go, you think of concurrency. And when you think of concurrency, you think of mutex. So today, let's talk about Go's mutex.\r\n\r\nAt first glance, it might seem straightforward, depending on who you ask. But once you dive into the source code, you quickly realise it's far more intricate than expected - packed with finely tuned optimisations.\r\n\r\nYou might be tempted to think, \"There's no way I could ever pull this off myself\". But actually, that’s not the case at all! Starting from a simple spinlock, we'll work step by step towards a mutex that even handles starvation mode, gradually building our own \"DIY mutex\" until it's nice and\"crispy\".\r\n\r\nWe’ll implement it right into the standard library, run it through the test suite, and, as a bonus, try out SPIN to check its safety property (and maybe even its liveness). Of course, there might be a few bugs here and there... but that’s all part of the fun. So let’s dive in and enjoy!",
@@ -1396,7 +1813,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "952323",
         "title": "Goのビルドシステムの変遷",
         "description": "Goの特徴として、プロジェクト規模に対するビルドの速度が速いというものがあります。このビルドシステムへのこだわりはGo自体の設計にも深く根ざしていて、言語開発のそもそものモチベーションの1つが快適なビルドシステムの構築でした。そしてGoは2009年のオープンソース化以降、たゆまなくビルドシステムの改善を続け、今日に至るまで多くの変遷を辿ってきました。\r\n\r\n本セッションでは公開から15年経った現在までのGo歩みを、ビルドシステムの変遷に焦点を当てながら辿っていきます。ここに至るまでにはサードパーティ製のツールや他言語のツールの影響も大きいため、これらについても必要に応じて触れていきます。また、これまでの歴史や現場を踏まえた上での、Goのビルドシステムの今後についても、プロポーザルをもとに解説します。\r\n\r\n関連する内容として、Go製のプログラム自体のビルドだけでなく、そのアーティファクトをコンテナ化する際のビルドプロセスに関しても解説します。\r\n\r\nセッションの大まかなセクションは次のような割り振りで進めていきます。各ツールや仕様ごとにどのような課題を解決しようとしたのか、解説しながらGoの歩みをビルドシステムの側面から振り返れるセッションとなります。\r\n\r\n1. makefile\r\n2. goinstall\r\n3. go build\r\n3.1 pkg.in\r\n3.2 vendoring\r\n3.3 gb\r\n3.4 godep\r\n4. go mod\r\n4.1 バージョニング\r\n5. module mirror & index (GOPROXY)\r\n6. go workspace\r\n7. go mod tools\r\n\r\nまた関連するビルドツールとして、koやgazelle（bazel）など、時間があれば紹介したいと考えています",
@@ -1454,7 +1880,83 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": "true",
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
+        "id": "1022065",
+        "title": "メガエンプラSaaSを支えるシリーズAスタートアップのGoアーキテクチャ",
+        "description": null,
+        "startsAt": "2025-09-28T15:00:00",
+        "endsAt": "2025-09-28T15:20:00",
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "e45f49f2-02b6-4a1b-a81b-1b8009852989",
+            "name": "輝彦 彌冨"
+          }
+        ],
+        "categories": [
+          {
+            "id": 101938,
+            "name": "Session Type",
+            "categoryItems": [
+              {
+                "id": 367239,
+                "name": "Short Session(20min)"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 101939,
+            "name": "Session Level",
+            "categoryItems": [
+              {
+                "id": 367242,
+                "name": "all"
+              }
+            ],
+            "sort": 1
+          },
+          {
+            "id": 102474,
+            "name": "言語 / Language",
+            "categoryItems": [
+              {
+                "id": 369632,
+                "name": "japanese"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": 67044,
+        "room": "Room 1",
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "959021",
         "title": "panicと向き合うGo開発 - nilawayで探る見逃されるnil参照とその対策",
         "description": "Goにおけるpanicは、ポインタがnilの状態でその先の値にアクセスしようとした際に発生するランタイムエラーです。発生条件はシンプルですが、どれだけ注意していても実行時に発生する可能性があります。これは大規模システムでも例外ではなく、時にはサービス停止といった深刻な障害を引き起こすこともあります。\r\n\r\n実行前に潜在的なpanicとなる箇所を検出したいところですが、構文レベルの静的解析ではpanicを捉えられるケースは限られています。例えばGo公式ツールチェインに含まれるnilnessは、典型的で単純なnil参照パターン（例：if x == nil { print(*x) }）は検出できます。しかし、関数やパッケージをまたいでnilが渡され、最終的にどこかで参照されてしまうような、実際の開発で気づきにくいケースは検出できません。\r\nこうした限界を補うために登場したのが、静的解析ツールuber-go/nilaway(以下、nilaway) です。nilawayは、コード中のnilの発生と伝播を「nil の可能性フロー」としてモデル化し、2-SAT（充足可能性問題）と呼ばれるアルゴリズムを使って、より複雑なpanicのリスクを検出します。\r\n\r\n本セッションでは、Go の開発現場でよくある panic を題材に、nilawayがその原因をどのように捉え、検出できるのかを、数式を使わず具体的なコード例を通じて解説します。panicが発生しうるメカニズムとその検出方法を理解することで、参加者の皆さんがGoのnilに対する言語仕様や、安全性を支える設計思想への理解を一段深めることを目指します。",
@@ -1512,7 +2014,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "959006",
         "title": "Swiss Table の実装に Deep Dive !",
         "description": "Go 1.24では、mapの内部実装がSwiss Tableベースに変更されました。本セッションでは、この新しい実装を実際のソースコードとともに詳細に議論していきます。\r\n\r\nSwiss Tableはグループ単位でのSIMD並列処理を活用したアプローチです。ハッシュ値をH1（上位57ビット）とH2（下位7ビット）に分割し、H2を使って8つのスロットを並列でマッチングする仕組みを、実際のコードを見ながら議論します。特にctrlGroup.matchH2メソッドでの興味深いビット操作テクニックには目を見張るものがあります。\r\nhttps://github.com/golang/go/blob/53af292aed21c3f6ea75d16e5b25f660b2c028fb/src/internal/runtime/maps/group.go#L157-L172\r\n\r\nGo特有の要件がどのように実装に反映されているかについても議論していきます。8要素以下の小さなmapでは、テーブル構造を使わずに単一グループで直接管理するSmall Map最適化、\r\nhttps://github.com/golang/go/blob/53af292aed21c3f6ea75d16e5b25f660b2c028fb/src/internal/runtime/maps/map.go#L267-L283\r\n\r\nマップが実際に使用されるまで領域確保を遅延する設計、XORによるトグルを使った並行アクセス検出など、\r\nhttps://github.com/golang/go/blob/53af292aed21c3f6ea75d16e5b25f660b2c028fb/src/internal/runtime/maps/map.go#L489-L491\r\n\r\n実用的な最適化が随所に見られます。また、Go言語仕様の「イテレーション中でもmap変更を許可する」というセマンティクスに対応するため、古いテーブルへの参照を保持し続ける複雑な実装についても詳しく解説します。\r\n\r\nさらに、Extendible Hashingによる段階的成長戦略を取り上げます。map全体を一度に再構築するのではなく、個別のテーブルを分割して成長させることで、大きなmapでのパフォーマンス劣化を防ぐ設計です。globalDepthとlocalDepthを使ったディレクトリ管理の仕組みや、テーブル分割時の複雑な処理を、実際のinstallTableSplitメソッドを追いながら理解していきます。\r\nhttps://github.com/golang/go/blob/53af292aed21c3f6ea75d16e5b25f660b2c028fb/src/internal/runtime/maps/map.go#L359-L391\r\n\r\n本セッションを通じてSwiss Tableへの理解と、それがどのように実装されているかを知る機会を提供できたらと思います。",
@@ -1570,7 +2081,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "958641",
         "title": "なぜGoのジェネリクスはこの形なのか？ - Featherweight Goが明かす設計の核心",
         "description": "Go 1.18でジェネリクスが導入されました。本セッションでは、その仕様、特に「なぜ型制約にinterfaceを使うのか」「なぜコンパイルにモノモーフィゼーションという手法が選ばれたのか」という設計上の選択について、その背景を解説します。\r\nこの設計の背景には、Goジェネリクス設計の根幹をなす理論的支柱、Featherweight Goという論文があります。この論文は、Goの父であるRob Pike氏や、Haskellなどで知られる型理論の権威Philip Wadler氏らが参加し、Goのジェネリクスに「理論的な正しさ」を与えるために行われました。この論文で示された理論的な裏付けが、初期案であったcontractsから現在のinterfaceベースの仕様へと繋がりました。\r\nこのセッションでは、Featherweight Go論文を基に、Goのジェネリクスの仕組みを深掘りし、以下の点をお話しします。\r\n\r\n- interfaceが型制約として採用された経緯（contracts案との比較）\r\n- モノモーフィゼーションの仕組みと、それがもたらす性能上のメリット\r\n- 現在の仕様では実現できない「共変レシーバ」と、それが解決する「式問題」の解説\r\n\r\nこのセッションを聞くことで、Goのジェネリクスがなぜ現在の仕様になったのかを深く理解し、そのトレードオフを意識した上で、より自信を持ってコードを書けるようになります。",
@@ -1628,7 +2148,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "948071",
         "title": "After go func(): Goroutines Through a Beginner’s Eye",
         "description": "Have you ever wondered how Goroutines actually run behind the scenes? Why your concurrent Go code works… or sometimes doesn’t?\r\n\r\n- Background\r\n When I first started writing concurrent programs in Go, I was amazed by how simple it was to launch a Goroutine—just one keyword!  But soon I found myself asking:\r\n“What really happens after I write go func()?”\r\n\r\nThis talk is a beginner-friendly dive into how Go schedules Goroutines using its lightweight runtime scheduler. We’ll explore how Goroutines are mapped onto OS threads, what M:N scheduling really means, how Go handles preemption, and why your code may behave differently than expected under load.\r\n\r\nAs someone who transitioned from traditional programming models to Go’s concurrency model, I’ll share my personal learning journey—including moments of confusion and clarity—and how understanding Go’s scheduler helped me write better, more efficient code.\r\n\r\nThis session is especially helpful for those who have used Goroutines without really knowing what’s under the hood—and want to take that first step toward understanding concurrency the Go way.\r\n\r\n- Expected Effect on Audience\r\nAttendees especially beginners will leave with:\r\n    •\tA clear mental model of how Go schedules Goroutines\r\n    •\tAn understanding of key concepts like G, M, P, and work-stealing\r\n    •\tTips for writing more predictable and efficient concurrent Go code\r\n    •\tCuriosity to explore Go’s runtime deeper with tools like GODEBUG and scheduler traces\r\n\r\nThis talk will definitely bridges the gap between “I can write Goroutines” and “I understand how they run.”",
@@ -1686,7 +2215,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "958992",
         "title": "Green Tea Garbage Collector の今：Go言語のコアチームによる試行錯誤の過程と共にメモリ管理最適化の実装を読み解く",
         "description": "Green Tea Garbage Collector は、現在のメモリ管理（GC）の方法を変えることでCPU効率を高める革新的な技術です。本セッションでは、下記3つの観点から、Go言語の未来を左右する Green Tea Garbage Collector のアルゴリズムと実装内容について迫ります。\r\n\r\n- Goチームが、なぜ現在の Tri-color Parallel Marking アルゴリズムから脱却するために、言語仕様の中核となるGCレイヤーを開発しているか（現在）\r\n- Go チームがどのような試行錯誤を元にこの画期的な技術に辿り着いたか（過去）\r\n- Green Tea Garbage Collector は今後、SIMD AVX512などの具体的なアプローチをどのように取り入れようとしているか（未来）\r\n\r\n本セッションを通じて、参加者の方は Green Tea Garbage Collector のコアアイディアと内部実装を深く理解し、GCの設計が与える影響についての洞察を得ることができます。また、実際のGoチームの検証を分析したこのセッションは、Goのランタイム実装に興味がある方にとって貴重な学びの機会となります。",
@@ -1744,7 +2282,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "957799",
         "title": "Decoding the Black Box: Understanding the Go Compiler",
         "description": "Abstract:\r\nDive into the core of Go development as we unravel the mysteries of the Go compiler. This talk aims to demystify the intricacies of the compiler, offering insights into its inner workings, optimization strategies, and the impact on your code. From the compilation pipeline to performance tuning\r\n\r\nDescription:\r\n## Decoding the Black Box: Understanding the Go Compiler\r\n\r\nEmbark on an illuminating journey into the heart of Go development with \"Decoding the Black Box: Understanding the Go Compiler.\" Uncover the secrets behind the magic of Go's compilation process, demystifying the compiler's inner workings, and revealing optimization strategies that can supercharge your code.\r\n\r\n### What You'll Learn:\r\n\r\n- **Navigate the Compilation Pipeline**: \r\n  - Gain insights into the intricate steps that turn your Go code into efficient machine-executable binaries.\r\n\r\n- **Optimization Unleashed**: \r\n  - Explore advanced optimization techniques employed by the Go compiler and learn how to harness them for peak performance.\r\n\r\n- **Impact on Your Code**: \r\n  - Understand how compiler decisions impact your code's execution and explore strategies to write code that plays well with the compiler's optimizations.\r\n\r\n- **Real-world Examples and Practical Insights**: \r\n  - Illustrate concepts with real-world examples, providing actionable insights that you can immediately apply to your projects.\r\n\r\nUnlock the full potential of your Go code by gaining a comprehensive understanding of the Go compiler. Whether you're a seasoned Go developer or just starting your journey, this talk promises to demystify the compiler, empowering you to write more efficient, performant, and optimized code. Don't miss this opportunity to decode the black box and elevate your Go development skills!",
@@ -1802,7 +2349,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "958503",
         "title": "コード生成なしでモック処理を実現！ovechkin-dm/mockioで学ぶメタプログラミング",
         "description": "本セッションでは、コード生成を必要とせずランタイムでモック処理を実現するovechkin-dm/mockio[1]というライブラリを取り上げ、Go言語におけるメタプログラミングの手法について解説します。\r\n\r\nモックライブラリは単体テストにおける強力なツールです。\r\n依存モジュールの振る舞いを一時的に置き換え、対象ロジックのテストを容易にします。\r\nuber-go/mock[2]やmatryer/moq[3]といった既存のGoモックライブラリの多くは、事前のコード生成を前提とした設計になっています。\r\n一方、本セッションで取り扱うmockioは、code1に示す通り、コード生成を一切必要とせずに型安全なモック処理を実現する革新的な手法を採用しています。\r\n\r\nmockioの根幹を支えるのがovechkin-dm/go-dyno[4]です。\r\ngo-dynoは、インターフェース型を渡すとそれを満たす構造体を動的に生成するDynamic関数を提供します。\r\nさらに、生成された構造体のメソッド呼び出し時に任意の処理を発火させるプロキシ関数（code2のCalculatorHandler参照）を渡すことが可能で、これがモック処理の肝になります。\r\n\r\n本セッションでは、go-dynoがどのようにしてインターフェースの型情報から、それを満たす構造体を動的に生成しているのか、メソッドの中身を自由に定義することができるのかを深く掘り下げます。\r\nコード生成なしで型安全なメタプログラミングを実現するテクニックについて、generics, reflect, unsafe, assemblyを活用した内部実装を詳細に解き明かします。\r\n\r\nまた、mockioのモックライブラリとしての価値にも言及します。\r\nコード生成を行わないモックアプローチの機能的な・パフォーマンス的なメリットと課題について、既存モックライブラリと比較・評価します。\r\n\r\nGoのランタイムの理解を深めたい方やモックライブラリ開発に興味がある方にとって、このセッションが有益な情報となれば幸いです。\r\n\r\n\r\ncode1: mockioを活用した単体テスト\r\n\r\n```\r\n// main.go\r\npackage main\r\n\r\ntype Calculator interface {\r\n\tAdd(a, b int) int\r\n}\r\n\r\nfunc Sum(calculator Calculator, nums ...int) int {\r\n\tvar result int\r\n\tfor _, num := range nums {\r\n\t\tresult = calculator.Add(result, num)\r\n\t}\r\n\treturn result\r\n}\r\n\r\n\r\n// main_test.go\r\npackage main\r\n\r\nimport (\r\n\t\"testing\"\r\n\t\"github.com/stretchr/testify/assert\"\r\n\t\"github.com/ovechkin-dm/mockio/v2/mock\"\r\n)\r\n\r\nfunc Test_Sum(t *testing.T) {\r\n\tctrl := mock.NewMockController(t)\r\n\r\n\t// NOTE: コード生成を行わずにモックを実現\r\n\tmockCalculator := mock.Mock[Calculator](ctrl)\r\n\tmock.When(mockCalculator.Add(0, 1)).ThenReturn(1)\r\n\tmock.When(mockCalculator.Add(1, 2)).ThenReturn(3)\r\n\r\n\tresult := Sum(mockCalculator, 1, 2)\r\n\tassert.Equal(t, 3, result)\r\n\r\n\tmock.Verify(mockCalculator, mock.Times(1)).Add(0, 1)\r\n\tmock.Verify(mockCalculator, mock.Times(1)).Add(1, 2)\r\n}\r\n```\r\n\r\ncode2: go-dynoによるメタプログラミング\r\n```\r\npackage main\r\n\r\nimport (\r\n\t\"fmt\"\r\n\t\"reflect\"\r\n\r\n\t\"github.com/ovechkin-dm/go-dyno/pkg/dyno\"\r\n)\r\n\r\ntype Calculator interface {\r\n\tAdd(a, b int) int\r\n\tSub(a, b int) int\r\n}\r\n\r\n// NOTE: ランタイムで生成される構造体が持つメソッドの振る舞いをプロキシとして定義\r\nfunc CalculatorHandler(m reflect.Method, values []reflect.Value) []reflect.Value {\r\n\tfmt.Println(\"Method called:\", m.Name)\r\n\tswitch m.Name {\r\n\tcase \"Add\":\r\n\t\treturn []reflect.Value{reflect.ValueOf(int(values[0].Int() + values[1].Int()))}\r\n\tcase \"Sub\":\r\n\t\treturn []reflect.Value{reflect.ValueOf(int(values[0].Int() - values[1].Int()))}\r\n\t}\r\n\treturn nil\r\n}\r\n\r\nfunc main() {\r\n\t// NOTE: Calculator型を満たす構造体をランタイムで生成\r\n\tdynamicCalculator, _ := dyno.Dynamic[Calculator](CalculatorHandler)\r\n\r\n\taddResult := dynamicCalculator.Add(2, 1) // Output: Method called: Add\r\n\tfmt.Println(addResult) // Output: 3\r\n\r\n\tsubResult := dynamicCalculator.Sub(2, 1) // Output: Method called: Sub\r\n\tfmt.Println(subResult) // Output: 1\r\n}\r\n````\r\n\r\n[1]: https://github.com/ovechkin-dm/mockio\r\n[2]: https://github.com/uber-go/mock\r\n[3]: https://github.com/matryer/moq\r\n[4]: https://github.com/ovechkin-dm/go-dyno",
@@ -1860,7 +2416,83 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": "true",
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
+        "id": "1022036",
+        "title": "goplsの拡張によるマイクロサービス間の実装ジャンプ改善",
+        "description": "WINTICKETでは、モノレポ環境下でgRPCを用いたマイクロサービスの開発を行っています。機能開発時には、複数のマイクロサービスの実装を修正することがありますが、あるサービスから呼び出したRPCの実装を定義ジャンプで確認しようとしても、実際には自動生成されたinterface定義に飛んでしまい、目的の実装に直接ジャンプできないという課題がありました。そのため、毎回手動で実装を探しに行く必要があり、開発体験が良くありませんでした。 そこで、Go言語のLanguage Serverであるgoplsを拡張し、RPCのinterfaceではなく実装へジャンプできる新しい定義ジャンプ機能を実装しました。これにより開発体験が大きく向上しました。 このセッションでは、具体的なgoplsの拡張方法と、実際にWINTICKETで行っているVS Code拡張機能を活用した運用方法についてお話しします。",
+        "startsAt": "2025-09-28T18:30:00",
+        "endsAt": "2025-09-28T18:50:00",
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "b2faf973-7fc5-46b3-97ca-3b4cffaf7c95",
+            "name": "正大朗 山﨑"
+          }
+        ],
+        "categories": [
+          {
+            "id": 101938,
+            "name": "Session Type",
+            "categoryItems": [
+              {
+                "id": 367239,
+                "name": "Short Session(20min)"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 101939,
+            "name": "Session Level",
+            "categoryItems": [
+              {
+                "id": 367242,
+                "name": "all"
+              }
+            ],
+            "sort": 1
+          },
+          {
+            "id": 102474,
+            "name": "言語 / Language",
+            "categoryItems": [
+              {
+                "id": 369632,
+                "name": "japanese"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": 67044,
+        "room": "Room 1",
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "959089",
         "title": "uniqueパッケージの内部実装を支えるweak pointerの話",
         "description": "Go1.24で追加されたweak pointer(弱参照)は、ガベージコレクタ(GC)と連携して、これまでよりも柔軟なリソース管理を可能にする仕組みです。本LTでは、uniqueパッケージの内部実装を題材に、weak pointerの基本や強いポインタとの違い、そしてなぜGoにこの仕組みが導入されたのかを見ていきます。\r\n\r\nuniqueパッケージは「値が等しければ同じポインタで表現する」という一意化を実現するために、内部でweak pointerを活用しています。これにより、使われなくなった値が自動的にGCで回収されるなど、Goらしいシンプルさと効率性が両立されています。\r\n\r\nuniqueパッケージの中でweak pointerがどのように使われているのか、実際のコード例を交えながら紹介します。",
@@ -1918,7 +2550,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "958986",
         "title": "Go 1.24の新機能:tool directivesでツールの環境構築の効率性・再現性を高める",
         "description": "Go 1.24では、新たに「Tool Directive」の機能が導入され、go.modを活用して開発ツールを効率的に管理できるようになりました。この機能により、プロジェクトで使用するツール（例: stringer や特定のリントツール、フォーマッタなど）を明示的に依存関係として記録し、プロジェクトごとに一貫したツール環境を構築することが可能です。\r\n\r\nこれまで、Goプロジェクトの開発ツール管理には以下のような問題点が存在していました。\r\n\r\n- ビルド制約を利用した方法の煩雑さ\r\n    \r\n    ツールを管理するために、**`tool.go`** ファイルを作成してブランクインポートするプラクティスが一般的でしたが、これには手動での管理が必要であり、煩雑さとミスのリスクが伴いました。\r\n    \r\n- バージョンの管理が不統一\r\n    \r\n    プロジェクト内で使用するツールのバージョンが明確に指定されないため、異なる環境間でツールバージョンが異なる問題が発生しやすく、開発環境の再現性が低下していました。\r\n    \r\n- ツールの実行やアップグレードが非効率\r\n    \r\n    ツールの実行やバージョンアップが手動で行われることが多く、プロジェクトやチーム全体で統一的に行うことが難しい状況でした。\r\n    \r\nTool Directiveは、こうした問題を解消するために設計されています。\r\n\r\nこのセッションでは、以下の内容を話します。\r\n\r\n- Tool Directive登場以前のツールの管理方法(ビルド制約を利用した方法)\r\n- meta-patternの利用によりツールを一括管理・アップグレードする方法\r\n- 実行ファイルがGo build cacheにキャッシュされるようになったことによる繰り返し実行が高速化されている点と関連Issueの紹介。\r\n\r\n本セッションを通じて、参加者の皆さんがGo 1.24で導入されたTool Directiveの概要を理解し、すぐに実践できる状態になることを目指します。この機能を活用することで、Goプロジェクトのツール管理がさらにシンプルで強力になることを覚えていただけたらと思います。",
@@ -1976,7 +2617,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "958590",
         "title": "それでも私は Contextに値を詰めたい",
         "description": "Goの context.Context は主にキャンセルやタイムアウトの伝播のために使われる仕組みですが、Value にメタデータをもたせる機能も備えているのは周知のとおりです。\r\nGoでは一連の処理完了後に Context のValueに含まれる情報を用いて実行結果ログ、リクエストログを出力する実装パターンがあります。\r\nが、設計パターンや利用ライブラリによっては上手く Context に値を含められないシーンも存在します。\r\n\r\nこの発表では、現場でよく詰まる次のような場面でどのように Context に値を含められるかをメリット・デメリットと合わせて紹介し明日のPRに活かせるTipsをまとめます。\r\n\r\n- Context 非対応なAPIシグネチャをもつライブラリを利用しているとき\r\n- コアロジックの中から Context に値を渡して呼び出し元に値を返したいとき\r\n\r\n\r\n# 聞くと得られること\r\n- Context Valueの設計をチームで議論する際の判断軸\r\n- 非対応ライブラリでもリクエストID等を持ち回す実装ヒント\r\n",
@@ -2034,7 +2684,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "959054",
         "title": "math/rand/v2への移行と実践",
         "description": "Go 1.22で導入された`math/rand/v2`は`math/rand`の根深い課題を解決する待望の機能でした。また、`encoding/json/v2`や`sync/v2`をはじめとした他の標準パッケージでもv2を追加する動きが出てきています。\r\n本セッションでは、旧来の`math/rand`が抱えていた性能やAPIをはじめとした問題点を振り返り、`rand.Seed()`の非推奨化、新たな乱数生成アルゴリズム、性能改善など、v2でどう解決されたのかを実際のコード例などを踏まえて説明します。",
@@ -2092,7 +2751,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "958624",
         "title": "Flaky Testへの現実解をGoのプロポーザルから考える",
         "description": "Flaky Test（不安定なテスト）は開発チームの生産性を著しく低下させる問題です。Go本体にFlaky Test検出機能を追加する提案（https://github.com/golang/go/issues/62244）が議論されています。\r\n\r\n本LTでは、このプロポーザルの詳細を5分で解説します：\r\n\r\n1. 提案の背景 - なぜGoコアチームがFlaky Test検出を標準機能として検討しているのか\r\n2. 技術的アプローチ - どのようにFlaky Testを検出しようとしているのか\r\n3. 期待される効果 - この機能が実装されたらどう変わるか\r\n4. 議論されている課題と今後の展望\r\n\r\nGoの標準ツールチェーンにFlaky Test対策が組み込まれることで、より信頼性の高いテストの構築が可能になります。プロポーザルの現状と将来の可能性について深掘りします。",
@@ -2150,7 +2818,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "939749",
         "title": "defer f()とdefer fの挙動を誤解していた話",
         "description": "Goのdeferを正しく理解するには、「関数を登録している」のか「関数を実行した結果を登録している」のかを見極める必要があります。\r\nなぜなら、defer f()とdefer fでは評価のタイミングが異なり、意図しない挙動やバグの原因になりかねないからです。\r\n\r\n私自身、「deferは関数の終了時に実行されるもの」と理解していたものの、あるコードでその説明が通用しない場面に直面しました。\r\n本LTではその体験をもとに、deferの挙動を楽しく学べる内容をお届けします。\r\n\r\nさらに、deferを応用したちょっとしたTipsも紹介予定です。\r\n本LTがdeferの理解を深める機会となれば幸いです。",
@@ -2208,7 +2885,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "959047",
         "title": "TinyGo Keeb Tour から始まる OSS 初コントリビュートの物語",
         "description": "TinyGo Keeb Tour は、はんだ付けとコーディング (TinyGo) を通じて自作キーボードを作るイベントです。このイベントをきっかけに、複数の「OSS 初コントリビュート」が生まれました。\r\n\r\n参加者の一人は、イベントで使われた小さなゲームエンジン「koebiten」に初めての PR を。別の参加者は TinyGo 本体の embedded 向けコードに、そして運営メンバーの一人は TinyGo の CLI 部分に。それぞれ、自分の興味や得意を活かして貢献してくれました。\r\n\r\nこの LT では、「どうやって最初の OSS 貢献にたどり着けたのか？」という視点で、コミュニティの工夫やサポートの仕組みを紹介します。OSS への貢献に憧れはあるけれど、最初の一歩を踏み出せていない方に、背中を押すような話ができればと思っています。",
@@ -2266,7 +2952,16 @@
         "isConfirmed": true
       },
       {
-        "questionAnswers": [],
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": null,
+            "sort": 45,
+            "answerExtra": null
+          }
+        ],
         "id": "959057",
         "title": "Pure Goで体験するWasmの未来",
         "description": "Goではv1.21でWASI 0.1がサポートされ，v1.24でWASI 0.1の機能がフルサポートされました．\r\n\r\nWASIというと2024年にWASI 0.2の仕様がリリースされ，その後OCIイメージフォーマットの一つとしてWASIを配布するための仕様が公開されたりとWasmにおいて今最も熱い話題の1つです．\r\n\r\nGoでWASI 0.2はまだサポートされてないから，もしくはTinyGoを使わないとWASI 0.2を使うことはできないからとWasmの熱い話題のキャッチアップを諦めてませんか?\r\n\r\nPure GoであってもコンパイルしたWASI 0.1をWASI 0.2に変換することができれば，WASI 0.2で訪れる未来を体験することができます．\r\nこのLTでは，Goを使ってWASI 0.1でどんなことができるのか，GoからWASI 0.2を使えるようになるとどんな未来が訪れるのかをTinyGoではなくPure Goを通して紹介します．",
