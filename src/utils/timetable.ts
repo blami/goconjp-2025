@@ -1,4 +1,5 @@
 import timetable from "../data/timetable.json";
+import sessions from "../data/sessions.json";
 import speakers from "../data/speakers.json";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
@@ -52,17 +53,25 @@ export const getClassifiedSessions = (eventDate: string) => {
         // 部屋ごとにセッションを抽出
         const room1 = slot.rooms.find((room) => room.id === 67044);
         const room2 = slot.rooms.find((room) => room.id === 67045);
+        const room3 = slot.rooms.find((room) =>
+          [70103, 70899].includes(room.id),
+        );
 
         // ワークショップセッションを抽出
-        const workshop = slot.rooms
-          .filter((room) => [67045, 70103, 70899].includes(room.id))
+        const workshopRoom2 = slot.rooms
+          .filter((room) => room.id === 67045)
+          .filter((room) => room && isWorkshopSession(room.session.categories));
+        const workshopRoom3 = slot.rooms
+          .filter((room) => [70103, 70899].includes(room.id))
           .filter((room) => room && isWorkshopSession(room.session.categories));
 
         return {
           slotStart: slot.slotStart,
           room1,
           room2,
-          workshop,
+          room3,
+          workshopRoom2,
+          workshopRoom3,
         };
       }) ?? [];
 
@@ -181,4 +190,21 @@ export const isWorkshopSession = (
 
   // セッションタイプがworkshopかどうかを判定
   return sessionType?.categoryItems.some((item) => item.id === 389623) ?? false;
+};
+
+/**
+ * スポンサーセッションかどうかを判定
+ * @param questionAnswers 種別
+ * @returns スポンサーセッションの場合はtrue
+ */
+export const isSponsoredSession = (
+  questionAnswers:
+    | (typeof sessions)[0]["sessions"][0]["questionAnswers"]
+    | undefined,
+) => {
+  // スポンサーセッションのフィールドを取得
+  const sponsoredSession = questionAnswers?.find((qa) => qa.id === 109751);
+
+  // answerが"true"の場合はスポンサーセッションと判定
+  return sponsoredSession?.answer === "true" || false;
 };

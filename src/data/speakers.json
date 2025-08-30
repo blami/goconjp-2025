@@ -69,6 +69,25 @@
     "categories": []
   },
   {
+    "id": "335f95ea-cb9d-4f25-b991-bd17603d4566",
+    "firstName": "Go Conference",
+    "lastName": "Event team",
+    "fullName": "Go Conference Event team",
+    "bio": "None",
+    "tagLine": "Go Conference Event team",
+    "profilePicture": "https://sessionize.com/image/d33e-400o400o1-hGYUjUMV2zh467iyQuL48R.jpg",
+    "sessions": [
+      {
+        "id": 1021904,
+        "name": "Gopherたちのパネルディスカッション"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
     "id": "37ae8082-b7e9-4009-af07-3bad0627f74e",
     "firstName": "Hiromasa",
     "lastName": "Senoue",
@@ -325,6 +344,31 @@
       {
         "title": "X (Twitter)",
         "url": "https://x.com/M4338_nami",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "23f61b5d-8318-4950-81c9-c62d924ea580",
+    "firstName": "Kotani",
+    "lastName": "Kizuku",
+    "fullName": "Kotani Kizuku",
+    "bio": "Go Conference ワークショップ班",
+    "tagLine": "Go Conference organizer",
+    "profilePicture": "https://sessionize.com/image/f1b7-400o400o1-HJtf59MEvANf4oVAatUkqm.jpg",
+    "sessions": [
+      {
+        "id": 1019249,
+        "name": "Go Conference OST"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://twitter.com/Kizuku_tech",
         "linkType": "Twitter"
       }
     ],
@@ -618,6 +662,25 @@
     "categories": []
   },
   {
+    "id": "dd19a405-bd09-44d1-a261-03cdcea1d545",
+    "firstName": "Taichi",
+    "lastName": "Maeda",
+    "fullName": "Taichi Maeda",
+    "bio": "Imperial College London",
+    "tagLine": "Imperial College London",
+    "profilePicture": "https://sessionize.com/image/7dab-400o400o1-YEvG47JatHPAMfPGA8B2ua.png",
+    "sessions": [
+      {
+        "id": 958432,
+        "name": "カリカリなMutexを作る / \"Crispifying\" Go's Mutex"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
     "id": "aceb7644-e5b5-42de-8757-dad5ec94734d",
     "firstName": "Takeru",
     "lastName": "Hayasaka",
@@ -636,6 +699,31 @@
       {
         "title": "X (Twitter)",
         "url": "https://twitter.com/takemioIO",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "899d1bf7-e2c2-4333-b9f1-c07788bca0c7",
+    "firstName": "Takuya",
+    "lastName": "Ueda",
+    "fullName": "Takuya Ueda",
+    "bio": "Takuya Ueda is one of organizer of Go Conference in Japan. He is Google Developer Expert (Go). He works for the growth of the Go community in Japan. He also loves the Go Gopher and drawing Gopher illustrations.",
+    "tagLine": "newmo, Inc. / Google Developers Expert (Go) / Gophers Japan",
+    "profilePicture": "https://sessionize.com/image/a3e1-400o400o1-55dc647a-d774-42bc-9974-d0262cc0af92.jpg",
+    "sessions": [
+      {
+        "id": 1021593,
+        "name": "Go Quiz Workshop"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://twitter.com/tenntenn",
         "linkType": "Twitter"
       }
     ],
@@ -820,9 +908,9 @@
     "firstName": "Yuuki",
     "lastName": "Magawa",
     "fullName": "Yuuki Magawa",
-    "bio": "I'm developing 'SNKRDUNK' a marketplace app for sneakers and TCG used by over 6 million people monthly!",
-    "tagLine": "Software Engineer",
-    "profilePicture": "https://sessionize.com/image/ce1f-400o400o1-TrwagpT9ETdJwRg4kfsMYS.png",
+    "bio": "生まれも育ちも住まいも大阪。普段はGoでバックエンド領域を中心に開発している。株式会社SODAでは月間600万人以上が利用する「SNKRDUNK（スニダン）」の機能開発に従事し、現在はリアーキテクチャを推進するチームに所属している。",
+    "tagLine": "Software Engineer at SODA inc.",
+    "profilePicture": "https://sessionize.com/image/02b7-400o400o1-HPZsmcTNP6hpB4n7F7F3gm.png",
     "sessions": [
       {
         "id": 959089,
@@ -835,42 +923,36 @@
     "categories": []
   },
   {
-    "id": "23f61b5d-8318-4950-81c9-c62d924ea580",
-    "firstName": "小谷",
-    "lastName": "築功",
-    "fullName": "小谷 築功",
-    "bio": "Go Conference ワークショップ班",
-    "tagLine": "Go Conference organizer",
-    "profilePicture": "https://sessionize.com/image/f1b7-400o400o1-HJtf59MEvANf4oVAatUkqm.jpg",
+    "id": "0bb030df-6018-46e2-b08e-6e6dca113329",
+    "firstName": "康貴",
+    "lastName": "井手",
+    "fullName": "康貴 井手",
+    "bio": null,
+    "tagLine": null,
+    "profilePicture": null,
     "sessions": [
       {
-        "id": 1019249,
-        "name": "Go Conference OST"
+        "id": 1022070,
+        "name": "Goに育てられ開発者向けセキュリティ事業を立ち上げた僕が今向き合う、AI × セキュリティの最前線"
       }
     ],
     "isTopSpeaker": false,
-    "links": [
-      {
-        "title": "X (Twitter)",
-        "url": "https://twitter.com/Kizuku_tech",
-        "linkType": "Twitter"
-      }
-    ],
+    "links": [],
     "questionAnswers": [],
     "categories": []
   },
   {
-    "id": "dd19a405-bd09-44d1-a261-03cdcea1d545",
-    "firstName": "泰智",
-    "lastName": "前田",
-    "fullName": "泰智 前田",
-    "bio": "インペリアルカレッジロンドン",
-    "tagLine": "インペリアルカレッジロンドン",
-    "profilePicture": "https://sessionize.com/image/7dab-400o400o1-YEvG47JatHPAMfPGA8B2ua.png",
+    "id": "b2faf973-7fc5-46b3-97ca-3b4cffaf7c95",
+    "firstName": "正大朗",
+    "lastName": "山﨑",
+    "fullName": "正大朗 山﨑",
+    "bio": null,
+    "tagLine": null,
+    "profilePicture": null,
     "sessions": [
       {
-        "id": 958432,
-        "name": "カリカリなMutexを作る"
+        "id": 1022036,
+        "name": "goplsの拡張によるマイクロサービス間の実装ジャンプ改善"
       }
     ],
     "isTopSpeaker": false,
@@ -900,6 +982,25 @@
         "linkType": "Twitter"
       }
     ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "e45f49f2-02b6-4a1b-a81b-1b8009852989",
+    "firstName": "輝彦",
+    "lastName": "彌冨",
+    "fullName": "輝彦 彌冨",
+    "bio": null,
+    "tagLine": null,
+    "profilePicture": null,
+    "sessions": [
+      {
+        "id": 1022065,
+        "name": "メガエンプラSaaSを支えるシリーズAスタートアップのGoアーキテクチャ"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
     "questionAnswers": [],
     "categories": []
   }

@@ -121,7 +121,7 @@
           {
             "id": "939638",
             "title": "サプライチェーン攻撃に学ぶmoduleの仕組みとセキュリティ対策",
-            "description": "2025年2月、Go言語エコシステムで3年間検出されなかった巧妙なサプライチェーン攻撃が発覚しました。github.com/boltdb-go/boltという悪意のあるパッケージが、正規のBoltDB（github.com/boltdb/bolt）をタイポスクワットし、Go Module Proxyのキャッシュメカニズムを悪用していた事件です。\r\n 攻撃者はGo Module Proxyの「一度キャッシュされたモジュールは永続的に利用可能」という特性を悪用し、GitHubのタグを書き換えて痕跡を隠蔽しながら、プロキシ経由では悪意のあるバージョンを配布し続けました。\r\n\r\n この事件について調べていくと、Go Moduleの内部動作について多くの発見がありました。go.sum ファイルの役割、Module Proxyとチェックサムデータベースの関係、そしてgo mod verifyやgovulncheckといったツール等です。\r\n\r\nこれを機に実際にこれらのツールを使用して依存関係の検証を行い、セキュリティ対策として、普段の業務で積極的に使うようになりました。\r\n\r\n そこで、この経験を通して、Go Moduleの仕組みを正しく理解し、適切なセキュリティ対策を実装するための実践的な知識をお伝えしたいと思っています。\r\n\r\n 具体的にはこのセッションで以下の項目についてお話しします。\r\n \r\n 1. Go Moduleシステムの内部動作とサプライチェーン攻撃の手法\r\n   - 悪意のあるBoltDBパッケージの具体的な実装\r\n   - go.mod、go.sum、Module Proxyの役割と相互関係\r\n   - 攻撃者がどのようにキャッシュメカニズムを悪用したか\r\n   \r\n \r\n 2. Go Moduleのセキュリティメカニズム\r\n    - チェックサムデータベースによる整合性検証\r\n    - 最小バージョン選択（MVS）の仕組みと安全性\r\n    - Module Proxyの動作におけるセキュリティリスク\r\n \r\n \r\n 3. 実践的なセキュリティ対策とツールの使い方\r\n   - go mod verify、govulncheckの効果的な使用方法\r\n   - 今回のような事件の影響を防ぐ実践的なCI\r\n \r\n \r\n \r\n このセッションは、Go Moduleの仕組みをより深く理解したい方や、Goのセキュリティ対策を強化したい開発者の方に対して特にお話ししたい内容です。",
+            "description": "2025年2月、Go言語エコシステムで3年間検出されなかった巧妙なサプライチェーン攻撃が発覚しました。github.com/boltdb-go/boltという悪意のあるパッケージが、正規のBoltDB（github.com/boltdb/bolt）をタイポスクワットし、Go Module Proxyのキャッシュメカニズムを悪用していた事件です。\r\n 攻撃者はGo Module Proxyの「一度キャッシュされたモジュールは(原則)永続的に利用可能」という特性を悪用し、GitHubのタグを書き換えて痕跡を隠蔽しながら、プロキシ経由では悪意のあるバージョンを配布し続けました。\r\n\r\n この事件について調べていくと、Go Moduleの内部動作について多くの発見がありました。go.sum ファイルの役割、Module Proxyとチェックサムデータベースの関係、そしてgo mod verifyやgovulncheckといったツール等です。\r\n\r\nこれを機に実際にこれらのツールを使用して依存関係の検証を行い、セキュリティ対策として、普段の業務で積極的に使うようになりました。\r\n\r\n そこで、この経験を通して、Go Moduleの仕組みを正しく理解し、適切なセキュリティ対策を実装するための実践的な知識をお伝えしたいと思っています。\r\n\r\n 具体的にはこのセッションで以下の項目についてお話しします。\r\n \r\n 1. Go Moduleシステムの内部動作とサプライチェーン攻撃の手法\r\n   - 悪意のあるBoltDBパッケージの具体的な実装\r\n   - go.mod、go.sum、Module Proxyの役割と相互関係\r\n   - 攻撃者がどのようにキャッシュメカニズムを悪用したか\r\n   \r\n \r\n 2. Go Moduleのセキュリティメカニズム\r\n    - チェックサムデータベースによる整合性検証\r\n    - 最小バージョン選択（MVS）の仕組みとセキュリティへの影響\r\n    - Module Proxyの動作におけるセキュリティリスク\r\n \r\n \r\n 3. 実践的なセキュリティ対策とツールの使い方\r\n   - go mod verify、govulncheckの効果的な使用方法\r\n   - 今回のような事件の影響を防ぐ実践的なCI\r\n \r\n \r\n \r\n このセッションは、Go Moduleの仕組みをより深く理解したい方や、Goのセキュリティ対策を強化したい開発者の方に対して特にお話ししたい内容です。",
             "startsAt": "2025-09-27T11:10:00",
             "endsAt": "2025-09-27T11:30:00",
             "isServiceSession": false,
@@ -401,22 +401,61 @@
             "isConfirmed": false
           },
           {
-            "id": "31c5cc8d-123a-4883-8e95-5f8a0a2820ce",
-            "title": "パネルディスカッション",
-            "description": null,
+            "id": "1021904",
+            "title": "Gopherたちのパネルディスカッション",
+            "description": "本セッションはGo Conference2025の運営が主催するパネルディスカッションです。\r\n多様な「〇〇×Go」のコミュティを運営し、Goコミュニティを引っ張っているパネラー4名が登壇します。\r\n\r\n- パネラー兼ファシリテーター\r\n tenntenn\r\n- パネラー\r\n micchie\r\n momi\r\n logica",
             "startsAt": "2025-09-27T14:00:00",
             "endsAt": "2025-09-27T14:40:00",
-            "isServiceSession": true,
+            "isServiceSession": false,
             "isPlenumSession": false,
-            "speakers": [],
-            "categories": [],
+            "speakers": [
+              {
+                "id": "335f95ea-cb9d-4f25-b991-bd17603d4566",
+                "name": "Go Conference Event team"
+              }
+            ],
+            "categories": [
+              {
+                "id": 101938,
+                "name": "Session Type",
+                "categoryItems": [
+                  {
+                    "id": 394638,
+                    "name": "Panel Discussion"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 101939,
+                "name": "Session Level",
+                "categoryItems": [
+                  {
+                    "id": 367242,
+                    "name": "all"
+                  }
+                ],
+                "sort": 1
+              },
+              {
+                "id": 102474,
+                "name": "言語 / Language",
+                "categoryItems": [
+                  {
+                    "id": 369632,
+                    "name": "japanese"
+                  }
+                ],
+                "sort": 2
+              }
+            ],
             "roomId": 67044,
             "room": "Room 1",
             "liveUrl": null,
             "recordingUrl": null,
-            "status": null,
-            "isInformed": false,
-            "isConfirmed": false
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
           },
           {
             "id": "765a5f3d-f6ed-494c-bd8a-54f15c58b8b8",
@@ -816,7 +855,7 @@
       },
       {
         "id": 67045,
-        "name": "Room 2-1",
+        "name": "Room 2",
         "sessions": [
           {
             "id": "1018925",
@@ -868,7 +907,7 @@
               }
             ],
             "roomId": 67045,
-            "room": "Room 2-1",
+            "room": "Room 2",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -925,7 +964,7 @@
               }
             ],
             "roomId": 67045,
-            "room": "Room 2-1",
+            "room": "Room 2",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -943,7 +982,7 @@
             "speakers": [
               {
                 "id": "23f61b5d-8318-4950-81c9-c62d924ea580",
-                "name": "小谷 築功"
+                "name": "Kotani Kizuku"
               }
             ],
             "categories": [
@@ -982,7 +1021,7 @@
               }
             ],
             "roomId": 67045,
-            "room": "Room 2-1",
+            "room": "Room 2",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -1000,7 +1039,7 @@
             "speakers": [],
             "categories": [],
             "roomId": 67045,
-            "room": "Room 2-1",
+            "room": "Room 2",
             "liveUrl": null,
             "recordingUrl": null,
             "status": null,
@@ -1012,7 +1051,7 @@
       },
       {
         "id": 70103,
-        "name": "Room 2-2",
+        "name": "Room 3-1",
         "sessions": [
           {
             "id": "998804",
@@ -1064,7 +1103,7 @@
               }
             ],
             "roomId": 70103,
-            "room": "Room 2-2",
+            "room": "Room 3-1",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -1121,7 +1160,7 @@
               }
             ],
             "roomId": 70103,
-            "room": "Room 2-2",
+            "room": "Room 3-1",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -1129,22 +1168,61 @@
             "isConfirmed": true
           },
           {
-            "id": "83a81f1c-413f-44b0-8dfa-9eaa7c0061df",
+            "id": "1021593",
             "title": "Go Quiz Workshop",
-            "description": null,
+            "description": "公式ドキュメントや言語仕様を読み込むことで、面白くて学べるGo Quizをつくるワークショップです。\r\n\r\nまずは講師からQuizづくりのコツを学びます。短時間で答えられて、シンプルでかつやりがいがあり、回答から楽しく学べる問題の作り方を説明します。\r\n\r\n次にClaude CodeやChatGPT、DeepWikiなどの力を使い、公式ドキュメントや言語仕様、ソートコードからQuizで使えるネタを見つけます。\r\n\r\n参加者は回答者に学んで欲しい知識をクイズに込めて作問してもらいます。作った問題は参加者同士で回答しあったり、Xにポストすることで色んな方に回答してもらえます。\r\n\r\nシンプルな問題にすれば、回答者は日本語話者に限りません。Gophers Slackなどで共有することで国外のGopherにも回答してもらえるでしょう。\r\n\r\n参加後に問題の解説をブログに書くことで、参加者自身のアウトプットにつなげることもできます。",
             "startsAt": "2025-09-27T16:30:00",
             "endsAt": "2025-09-27T18:00:00",
-            "isServiceSession": true,
+            "isServiceSession": false,
             "isPlenumSession": false,
-            "speakers": [],
-            "categories": [],
+            "speakers": [
+              {
+                "id": "899d1bf7-e2c2-4333-b9f1-c07788bca0c7",
+                "name": "Takuya Ueda"
+              }
+            ],
+            "categories": [
+              {
+                "id": 101938,
+                "name": "Session Type",
+                "categoryItems": [
+                  {
+                    "id": 389623,
+                    "name": "workshop"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 101939,
+                "name": "Session Level",
+                "categoryItems": [
+                  {
+                    "id": 367242,
+                    "name": "all"
+                  }
+                ],
+                "sort": 1
+              },
+              {
+                "id": 102474,
+                "name": "言語 / Language",
+                "categoryItems": [
+                  {
+                    "id": 369632,
+                    "name": "japanese"
+                  }
+                ],
+                "sort": 2
+              }
+            ],
             "roomId": 70103,
-            "room": "Room 2-2",
+            "room": "Room 3-1",
             "liveUrl": null,
             "recordingUrl": null,
-            "status": null,
-            "isInformed": false,
-            "isConfirmed": false
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
           },
           {
             "id": "0ba3209c-f717-481f-85e3-89fd3c7567f9",
@@ -1157,7 +1235,7 @@
             "speakers": [],
             "categories": [],
             "roomId": 70103,
-            "room": "Room 2-2",
+            "room": "Room 3-1",
             "liveUrl": null,
             "recordingUrl": null,
             "status": null,
@@ -1169,7 +1247,7 @@
       },
       {
         "id": 70899,
-        "name": "Room 2-3",
+        "name": "Room 3-2",
         "sessions": [
           {
             "id": "997075",
@@ -1221,7 +1299,7 @@
               }
             ],
             "roomId": 70899,
-            "room": "Room 2-3",
+            "room": "Room 3-2",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -1278,7 +1356,7 @@
               }
             ],
             "roomId": 70899,
-            "room": "Room 2-3",
+            "room": "Room 3-2",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -1335,7 +1413,7 @@
               }
             ],
             "roomId": 70899,
-            "room": "Room 2-3",
+            "room": "Room 3-2",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -1353,7 +1431,7 @@
             "speakers": [],
             "categories": [],
             "roomId": 70899,
-            "room": "Room 2-3",
+            "room": "Room 3-2",
             "liveUrl": null,
             "recordingUrl": null,
             "status": null,
@@ -1525,7 +1603,7 @@
             "session": {
               "id": "939638",
               "title": "サプライチェーン攻撃に学ぶmoduleの仕組みとセキュリティ対策",
-              "description": "2025年2月、Go言語エコシステムで3年間検出されなかった巧妙なサプライチェーン攻撃が発覚しました。github.com/boltdb-go/boltという悪意のあるパッケージが、正規のBoltDB（github.com/boltdb/bolt）をタイポスクワットし、Go Module Proxyのキャッシュメカニズムを悪用していた事件です。\r\n 攻撃者はGo Module Proxyの「一度キャッシュされたモジュールは永続的に利用可能」という特性を悪用し、GitHubのタグを書き換えて痕跡を隠蔽しながら、プロキシ経由では悪意のあるバージョンを配布し続けました。\r\n\r\n この事件について調べていくと、Go Moduleの内部動作について多くの発見がありました。go.sum ファイルの役割、Module Proxyとチェックサムデータベースの関係、そしてgo mod verifyやgovulncheckといったツール等です。\r\n\r\nこれを機に実際にこれらのツールを使用して依存関係の検証を行い、セキュリティ対策として、普段の業務で積極的に使うようになりました。\r\n\r\n そこで、この経験を通して、Go Moduleの仕組みを正しく理解し、適切なセキュリティ対策を実装するための実践的な知識をお伝えしたいと思っています。\r\n\r\n 具体的にはこのセッションで以下の項目についてお話しします。\r\n \r\n 1. Go Moduleシステムの内部動作とサプライチェーン攻撃の手法\r\n   - 悪意のあるBoltDBパッケージの具体的な実装\r\n   - go.mod、go.sum、Module Proxyの役割と相互関係\r\n   - 攻撃者がどのようにキャッシュメカニズムを悪用したか\r\n   \r\n \r\n 2. Go Moduleのセキュリティメカニズム\r\n    - チェックサムデータベースによる整合性検証\r\n    - 最小バージョン選択（MVS）の仕組みと安全性\r\n    - Module Proxyの動作におけるセキュリティリスク\r\n \r\n \r\n 3. 実践的なセキュリティ対策とツールの使い方\r\n   - go mod verify、govulncheckの効果的な使用方法\r\n   - 今回のような事件の影響を防ぐ実践的なCI\r\n \r\n \r\n \r\n このセッションは、Go Moduleの仕組みをより深く理解したい方や、Goのセキュリティ対策を強化したい開発者の方に対して特にお話ししたい内容です。",
+              "description": "2025年2月、Go言語エコシステムで3年間検出されなかった巧妙なサプライチェーン攻撃が発覚しました。github.com/boltdb-go/boltという悪意のあるパッケージが、正規のBoltDB（github.com/boltdb/bolt）をタイポスクワットし、Go Module Proxyのキャッシュメカニズムを悪用していた事件です。\r\n 攻撃者はGo Module Proxyの「一度キャッシュされたモジュールは(原則)永続的に利用可能」という特性を悪用し、GitHubのタグを書き換えて痕跡を隠蔽しながら、プロキシ経由では悪意のあるバージョンを配布し続けました。\r\n\r\n この事件について調べていくと、Go Moduleの内部動作について多くの発見がありました。go.sum ファイルの役割、Module Proxyとチェックサムデータベースの関係、そしてgo mod verifyやgovulncheckといったツール等です。\r\n\r\nこれを機に実際にこれらのツールを使用して依存関係の検証を行い、セキュリティ対策として、普段の業務で積極的に使うようになりました。\r\n\r\n そこで、この経験を通して、Go Moduleの仕組みを正しく理解し、適切なセキュリティ対策を実装するための実践的な知識をお伝えしたいと思っています。\r\n\r\n 具体的にはこのセッションで以下の項目についてお話しします。\r\n \r\n 1. Go Moduleシステムの内部動作とサプライチェーン攻撃の手法\r\n   - 悪意のあるBoltDBパッケージの具体的な実装\r\n   - go.mod、go.sum、Module Proxyの役割と相互関係\r\n   - 攻撃者がどのようにキャッシュメカニズムを悪用したか\r\n   \r\n \r\n 2. Go Moduleのセキュリティメカニズム\r\n    - チェックサムデータベースによる整合性検証\r\n    - 最小バージョン選択（MVS）の仕組みとセキュリティへの影響\r\n    - Module Proxyの動作におけるセキュリティリスク\r\n \r\n \r\n 3. 実践的なセキュリティ対策とツールの使い方\r\n   - go mod verify、govulncheckの効果的な使用方法\r\n   - 今回のような事件の影響を防ぐ実践的なCI\r\n \r\n \r\n \r\n このセッションは、Go Moduleの仕組みをより深く理解したい方や、Goのセキュリティ対策を強化したい開発者の方に対して特にお話ししたい内容です。",
               "startsAt": "2025-09-27T11:10:00",
               "endsAt": "2025-09-27T11:30:00",
               "isServiceSession": false,
@@ -1678,7 +1756,7 @@
           },
           {
             "id": 67045,
-            "name": "Room 2-1",
+            "name": "Room 2",
             "session": {
               "id": "1018925",
               "title": "今日から始めるpprof",
@@ -1729,7 +1807,7 @@
                 }
               ],
               "roomId": 67045,
-              "room": "Room 2-1",
+              "room": "Room 2",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -1740,7 +1818,7 @@
           },
           {
             "id": 70103,
-            "name": "Room 2-2",
+            "name": "Room 3-1",
             "session": {
               "id": "998804",
               "title": "TinyGo Keeb Workshop",
@@ -1791,7 +1869,7 @@
                 }
               ],
               "roomId": 70103,
-              "room": "Room 2-2",
+              "room": "Room 3-1",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -1802,7 +1880,7 @@
           },
           {
             "id": 70899,
-            "name": "Room 2-3",
+            "name": "Room 3-2",
             "session": {
               "id": "997075",
               "title": "Goを使ってTDDを体験しよう！！",
@@ -1853,7 +1931,7 @@
                 }
               ],
               "roomId": 70899,
-              "room": "Room 2-3",
+              "room": "Room 3-2",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -2061,22 +2139,61 @@
             "id": 67044,
             "name": "Room 1",
             "session": {
-              "id": "31c5cc8d-123a-4883-8e95-5f8a0a2820ce",
-              "title": "パネルディスカッション",
-              "description": null,
+              "id": "1021904",
+              "title": "Gopherたちのパネルディスカッション",
+              "description": "本セッションはGo Conference2025の運営が主催するパネルディスカッションです。\r\n多様な「〇〇×Go」のコミュティを運営し、Goコミュニティを引っ張っているパネラー4名が登壇します。\r\n\r\n- パネラー兼ファシリテーター\r\n tenntenn\r\n- パネラー\r\n micchie\r\n momi\r\n logica",
               "startsAt": "2025-09-27T14:00:00",
               "endsAt": "2025-09-27T14:40:00",
-              "isServiceSession": true,
+              "isServiceSession": false,
               "isPlenumSession": false,
-              "speakers": [],
-              "categories": [],
+              "speakers": [
+                {
+                  "id": "335f95ea-cb9d-4f25-b991-bd17603d4566",
+                  "name": "Go Conference Event team"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 101938,
+                  "name": "Session Type",
+                  "categoryItems": [
+                    {
+                      "id": 394638,
+                      "name": "Panel Discussion"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 101939,
+                  "name": "Session Level",
+                  "categoryItems": [
+                    {
+                      "id": 367242,
+                      "name": "all"
+                    }
+                  ],
+                  "sort": 1
+                },
+                {
+                  "id": 102474,
+                  "name": "言語 / Language",
+                  "categoryItems": [
+                    {
+                      "id": 369632,
+                      "name": "japanese"
+                    }
+                  ],
+                  "sort": 2
+                }
+              ],
               "roomId": 67044,
               "room": "Room 1",
               "liveUrl": null,
               "recordingUrl": null,
-              "status": null,
-              "isInformed": false,
-              "isConfirmed": false
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
             },
             "index": 0
           }
@@ -2177,7 +2294,7 @@
           },
           {
             "id": 67045,
-            "name": "Room 2-1",
+            "name": "Room 2",
             "session": {
               "id": "1013431",
               "title": "†開発を加速させる黒魔術講座†",
@@ -2228,7 +2345,7 @@
                 }
               ],
               "roomId": 67045,
-              "room": "Room 2-1",
+              "room": "Room 2",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -2239,7 +2356,7 @@
           },
           {
             "id": 70103,
-            "name": "Room 2-2",
+            "name": "Room 3-1",
             "session": {
               "id": "998166",
               "title": "TinyGo + Gopherくん基板で遊ぼう",
@@ -2290,7 +2407,7 @@
                 }
               ],
               "roomId": 70103,
-              "room": "Room 2-2",
+              "room": "Room 3-1",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -2301,7 +2418,7 @@
           },
           {
             "id": 70899,
-            "name": "Room 2-3",
+            "name": "Room 3-2",
             "session": {
               "id": "1000109",
               "title": "作って理解するGOCACHEPROG",
@@ -2352,7 +2469,7 @@
                 }
               ],
               "roomId": 70899,
-              "room": "Room 2-3",
+              "room": "Room 3-2",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -2553,7 +2670,7 @@
           },
           {
             "id": 67045,
-            "name": "Room 2-1",
+            "name": "Room 2",
             "session": {
               "id": "1019249",
               "title": "Go Conference OST",
@@ -2565,7 +2682,7 @@
               "speakers": [
                 {
                   "id": "23f61b5d-8318-4950-81c9-c62d924ea580",
-                  "name": "小谷 築功"
+                  "name": "Kotani Kizuku"
                 }
               ],
               "categories": [
@@ -2604,7 +2721,7 @@
                 }
               ],
               "roomId": 67045,
-              "room": "Room 2-1",
+              "room": "Room 2",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -2615,30 +2732,69 @@
           },
           {
             "id": 70103,
-            "name": "Room 2-2",
+            "name": "Room 3-1",
             "session": {
-              "id": "83a81f1c-413f-44b0-8dfa-9eaa7c0061df",
+              "id": "1021593",
               "title": "Go Quiz Workshop",
-              "description": null,
+              "description": "公式ドキュメントや言語仕様を読み込むことで、面白くて学べるGo Quizをつくるワークショップです。\r\n\r\nまずは講師からQuizづくりのコツを学びます。短時間で答えられて、シンプルでかつやりがいがあり、回答から楽しく学べる問題の作り方を説明します。\r\n\r\n次にClaude CodeやChatGPT、DeepWikiなどの力を使い、公式ドキュメントや言語仕様、ソートコードからQuizで使えるネタを見つけます。\r\n\r\n参加者は回答者に学んで欲しい知識をクイズに込めて作問してもらいます。作った問題は参加者同士で回答しあったり、Xにポストすることで色んな方に回答してもらえます。\r\n\r\nシンプルな問題にすれば、回答者は日本語話者に限りません。Gophers Slackなどで共有することで国外のGopherにも回答してもらえるでしょう。\r\n\r\n参加後に問題の解説をブログに書くことで、参加者自身のアウトプットにつなげることもできます。",
               "startsAt": "2025-09-27T16:30:00",
               "endsAt": "2025-09-27T18:00:00",
-              "isServiceSession": true,
+              "isServiceSession": false,
               "isPlenumSession": false,
-              "speakers": [],
-              "categories": [],
+              "speakers": [
+                {
+                  "id": "899d1bf7-e2c2-4333-b9f1-c07788bca0c7",
+                  "name": "Takuya Ueda"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 101938,
+                  "name": "Session Type",
+                  "categoryItems": [
+                    {
+                      "id": 389623,
+                      "name": "workshop"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 101939,
+                  "name": "Session Level",
+                  "categoryItems": [
+                    {
+                      "id": 367242,
+                      "name": "all"
+                    }
+                  ],
+                  "sort": 1
+                },
+                {
+                  "id": 102474,
+                  "name": "言語 / Language",
+                  "categoryItems": [
+                    {
+                      "id": 369632,
+                      "name": "japanese"
+                    }
+                  ],
+                  "sort": 2
+                }
+              ],
               "roomId": 70103,
-              "room": "Room 2-2",
+              "room": "Room 3-1",
               "liveUrl": null,
               "recordingUrl": null,
-              "status": null,
-              "isInformed": false,
-              "isConfirmed": false
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
             },
             "index": 2
           },
           {
             "id": 70899,
-            "name": "Room 2-3",
+            "name": "Room 3-2",
             "session": {
               "id": "1019147",
               "title": "Goのカードゲームで遊ぼう",
@@ -2689,7 +2845,7 @@
                 }
               ],
               "roomId": 70899,
-              "room": "Room 2-3",
+              "room": "Room 3-2",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -2923,7 +3079,7 @@
         "rooms": [
           {
             "id": 67045,
-            "name": "Room 2-1",
+            "name": "Room 2",
             "session": {
               "id": "4c0c818c-233f-405d-8126-b1bb432ede4f",
               "title": "Workshop Closing",
@@ -2935,7 +3091,7 @@
               "speakers": [],
               "categories": [],
               "roomId": 67045,
-              "room": "Room 2-1",
+              "room": "Room 2",
               "liveUrl": null,
               "recordingUrl": null,
               "status": null,
@@ -2946,7 +3102,7 @@
           },
           {
             "id": 70103,
-            "name": "Room 2-2",
+            "name": "Room 3-1",
             "session": {
               "id": "0ba3209c-f717-481f-85e3-89fd3c7567f9",
               "title": "Workshop Closing",
@@ -2958,7 +3114,7 @@
               "speakers": [],
               "categories": [],
               "roomId": 70103,
-              "room": "Room 2-2",
+              "room": "Room 3-1",
               "liveUrl": null,
               "recordingUrl": null,
               "status": null,
@@ -2969,7 +3125,7 @@
           },
           {
             "id": 70899,
-            "name": "Room 2-3",
+            "name": "Room 3-2",
             "session": {
               "id": "606f9985-9b72-4078-9b5c-126c7d686475",
               "title": "Workshop Closing",
@@ -2981,7 +3137,7 @@
               "speakers": [],
               "categories": [],
               "roomId": 70899,
-              "room": "Room 2-3",
+              "room": "Room 3-2",
               "liveUrl": null,
               "recordingUrl": null,
               "status": null,
@@ -3023,7 +3179,7 @@
           {
             "id": "958977",
             "title": "Go1.25新機能 testing/synctest で高速＆確実な並列テストを実現する方法",
-            "description": "## 概要\r\n\r\nGo1.24から実験的に導入され、Go1.25で標準パッケージになる予定の testing/synctest パッケージを中心に、Test と Wait の２つの API の動作仕様を詳解します。実コードと GoDoc を交え、時間短縮・flaky対策の実用的なテスト手法を初学者から中級者に向けて丁寧に紹介します。また実際に弊社のテストコードに組み込んだ結果も合わせて共有できればと思います。\r\n\r\n## 発表内容の詳細\r\n\r\n1. 背景と課題提起\r\n    - 並列テストの“遅さ”や“flakiness”という実務課題\r\n2. API紹介\r\n    - `testing/synctest.Test`: synthetic time 実装の仕組み\r\n    - `testing/synctest.Wait`: goroutine制御と整合性\r\n3. 実験コード解説\r\n    - 実験 1: TTLを持つキャッシュのテスト\r\n    - 実験 2: goroutineによるexpire実装の検証\r\n4. 動作検証とGoDoc読解\r\n    - GoDocベースで仕様確認＋内部動作の理解\r\n5. flakyテストへの対処\r\n    - `Test`を使った安定化手法とその根拠\r\n6. Goクイズ・参加型検証\r\n    - ミニクイズ形式で仕様の理解を補強\r\n7. 実務適用と今後の展望\r\n    - 弊社での活用事例\r\n　- `synctest` の今後への期待\r\n\r\n## 補足事項\r\n\r\n- https://zenn.dev/canary_techblog/articles/ec8a96b4541685 をベースにした発表になります\r\n- 上記の記事執筆時はGo1.24で実験的に導入された時だったので、Go1.25で標準パッケージに入るまでのアップデート（e.g. RunがTestに置き換わった理由など）も併せてお話しする想定です\r\n- 弊社での活用事例のセクションでは、exponential backoffでリトライするようなAPIのテストなどより実践的に使える内容についてもお話しできればと思っています",
+            "description": "## 概要\r\n\r\nGo1.25で標準パッケージになった testing/synctest パッケージを中心に、Test と Wait の２つの API の動作仕様を詳解します。実コードと GoDoc を交え、時間短縮・flaky対策の実用的なテスト手法を初学者から中級者に向けて丁寧に紹介します。また実際に弊社のテストコードに組み込んだ結果も合わせて共有できればと思います。\r\n\r\n## 発表内容の詳細\r\n\r\n1. 背景と課題提起\r\n    - 並列テストの“遅さ”や“flakiness”という実務課題\r\n2. API紹介\r\n    - `testing/synctest.Test`\r\n    - `testing/synctest.Wait`\r\n3. 実験コード解説\r\n    - 実験 1: TTLを持つキャッシュのテスト\r\n    - 実験 2: goroutineによるexpire実装の検証\r\n4. 動作検証とGoDoc読解\r\n    - GoDocベースで仕様確認＋内部動作の理解\r\n6. flakyテストへの対処\r\n    - `Test`を使った安定化手法とその根拠\r\n7. Goクイズ・参加型検証\r\n    - ミニクイズ形式で仕様の理解を補強\r\n8. 実務適用と今後の展望\r\n    - 弊社での活用事例\r\n　- `synctest` の今後への期待\r\n9. APIの内部実装\r\n    - synthetic timeの実装やgoroutine制御の仕組み\r\n\r\n## 補足事項\r\n\r\n- https://zenn.dev/canary_techblog/articles/ec8a96b4541685 をベースにした発表になります\r\n- 上記の記事執筆時はGo1.24で実験的に導入された時だったので、Go1.25で標準パッケージに入るまでのアップデート（e.g. RunがTestに置き換わった理由など）も併せてお話しする想定です\r\n- 弊社での活用事例のセクションでは、exponential backoffでリトライするようなAPIのテストなどより実践的に使える内容についてもお話しできればと思っています\r\n- またsynthetic timeの実装やgoroutine制御の仕組みについても余裕があればお話ししたいと思います",
             "startsAt": "2025-09-28T10:20:00",
             "endsAt": "2025-09-28T11:00:00",
             "isServiceSession": false,
@@ -3096,21 +3252,60 @@
             "isConfirmed": false
           },
           {
-            "id": "d261148b-ceec-418e-825e-ddabb051b653",
-            "title": "platinum sponser",
-            "description": null,
+            "id": "1022070",
+            "title": "Goに育てられ開発者向けセキュリティ事業を立ち上げた僕が今向き合う、AI × セキュリティの最前線",
+            "description": "メルカリ社でインターンするなど、自分は「Goに育てられたエンジニア」として学生起業に至り、今は開発組織のセキュリティを支える事業に注力しています。本セッションでは、自身の開発バックグラウンドと世界トップクラスの実力を持つセキュリティエンジニア達の能力を活かしてGMO Flatt Securityが現代の開発組織が抱える課題にどうアプローチしているか、AI × セキュリティの最前線も交え解説します。加えて、OSSやスタートアップの無料セキュリティ支援という形で現在実施しているコミュニティ還元に込めた思いもお話しします。",
             "startsAt": "2025-09-28T11:10:00",
             "endsAt": "2025-09-28T11:30:00",
-            "isServiceSession": true,
-            "isPlenumSession": true,
-            "speakers": [],
-            "categories": [],
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "0bb030df-6018-46e2-b08e-6e6dca113329",
+                "name": "康貴 井手"
+              }
+            ],
+            "categories": [
+              {
+                "id": 101938,
+                "name": "Session Type",
+                "categoryItems": [
+                  {
+                    "id": 367239,
+                    "name": "Short Session(20min)"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 101939,
+                "name": "Session Level",
+                "categoryItems": [
+                  {
+                    "id": 367242,
+                    "name": "all"
+                  }
+                ],
+                "sort": 1
+              },
+              {
+                "id": 102474,
+                "name": "言語 / Language",
+                "categoryItems": [
+                  {
+                    "id": 369632,
+                    "name": "japanese"
+                  }
+                ],
+                "sort": 2
+              }
+            ],
             "roomId": 67044,
             "room": "Room 1",
             "liveUrl": null,
             "recordingUrl": null,
-            "status": null,
-            "isInformed": false,
+            "status": "Accepted",
+            "isInformed": true,
             "isConfirmed": false
           },
           {
@@ -3358,8 +3553,8 @@
           },
           {
             "id": "958432",
-            "title": "カリカリなMutexを作る",
-            "description": null,
+            "title": "カリカリなMutexを作る / \"Crispifying\" Go's Mutex",
+            "description": "(English follows Japanese)\r\n\r\nGo言語といえば並列処理、並列処理といえばMutexですよね。今回はそんなGo言語のMutexについてです。\r\n\r\n案外簡単なのでは？と思いきや、実際にコードを読んでみると複雑な実装になっていて、いかに「カリカリ」に最適化されているかがわかります。\r\n\r\nもはや職人芸とも言えるGo言語のMutex。とても真似できないと思われるかもしれませんが、決してそんなことはありません。今回は、簡単なスピンロックの実装からスターベーションモードの実装まで、皆さんと一緒に「オレオレMutex」をカリカリにしていこうと思います。\r\n\r\n実際に標準ライブラリ内にオレオレMutexを実装して、テストを通し、またおまけとしてSPINというツールで安全性 (＋活性性？) のモデル検査を行います。もしかしたらバグがあるかもしれませんが、そこはご愛嬌ということで... ぜひお楽しみに！\r\n\r\n---\r\n\r\nWhen you think of Go, you think of concurrency. And when you think of concurrency, you think of mutex. So today, let's talk about Go's mutex.\r\n\r\nAt first glance, it might seem straightforward, depending on who you ask. But once you dive into the source code, you quickly realise it's far more intricate than expected - packed with finely tuned optimisations.\r\n\r\nYou might be tempted to think, \"There's no way I could ever pull this off myself\". But actually, that’s not the case at all! Starting from a simple spinlock, we'll work step by step towards a mutex that even handles starvation mode, gradually building our own \"DIY mutex\" until it's nice and\"crispy\".\r\n\r\nWe’ll implement it right into the standard library, run it through the test suite, and, as a bonus, try out SPIN to check its safety property (and maybe even its liveness). Of course, there might be a few bugs here and there... but that’s all part of the fun. So let’s dive in and enjoy!",
             "startsAt": "2025-09-28T14:30:00",
             "endsAt": "2025-09-28T14:50:00",
             "isServiceSession": false,
@@ -3367,7 +3562,7 @@
             "speakers": [
               {
                 "id": "dd19a405-bd09-44d1-a261-03cdcea1d545",
-                "name": "泰智 前田"
+                "name": "Taichi Maeda"
               }
             ],
             "categories": [
@@ -3432,21 +3627,60 @@
             "isConfirmed": false
           },
           {
-            "id": "c5d04efa-0e2c-48a7-9fb5-76a17e77fa8a",
-            "title": "Gold Sponsor",
+            "id": "1022065",
+            "title": "メガエンプラSaaSを支えるシリーズAスタートアップのGoアーキテクチャ",
             "description": null,
             "startsAt": "2025-09-28T15:00:00",
             "endsAt": "2025-09-28T15:20:00",
-            "isServiceSession": true,
+            "isServiceSession": false,
             "isPlenumSession": false,
-            "speakers": [],
-            "categories": [],
+            "speakers": [
+              {
+                "id": "e45f49f2-02b6-4a1b-a81b-1b8009852989",
+                "name": "輝彦 彌冨"
+              }
+            ],
+            "categories": [
+              {
+                "id": 101938,
+                "name": "Session Type",
+                "categoryItems": [
+                  {
+                    "id": 367239,
+                    "name": "Short Session(20min)"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 101939,
+                "name": "Session Level",
+                "categoryItems": [
+                  {
+                    "id": 367242,
+                    "name": "all"
+                  }
+                ],
+                "sort": 1
+              },
+              {
+                "id": 102474,
+                "name": "言語 / Language",
+                "categoryItems": [
+                  {
+                    "id": 369632,
+                    "name": "japanese"
+                  }
+                ],
+                "sort": 2
+              }
+            ],
             "roomId": 67044,
             "room": "Room 1",
             "liveUrl": null,
             "recordingUrl": null,
-            "status": null,
-            "isInformed": false,
+            "status": "Accepted",
+            "isInformed": true,
             "isConfirmed": false
           },
           {
@@ -3804,27 +4038,66 @@
             "isConfirmed": false
           },
           {
-            "id": "b86b05b6-816b-4142-8c15-42ce5827d062",
-            "title": "Venue Sponsor",
-            "description": null,
+            "id": "1022036",
+            "title": "goplsの拡張によるマイクロサービス間の実装ジャンプ改善",
+            "description": "WINTICKETでは、モノレポ環境下でgRPCを用いたマイクロサービスの開発を行っています。機能開発時には、複数のマイクロサービスの実装を修正することがありますが、あるサービスから呼び出したRPCの実装を定義ジャンプで確認しようとしても、実際には自動生成されたinterface定義に飛んでしまい、目的の実装に直接ジャンプできないという課題がありました。そのため、毎回手動で実装を探しに行く必要があり、開発体験が良くありませんでした。 そこで、Go言語のLanguage Serverであるgoplsを拡張し、RPCのinterfaceではなく実装へジャンプできる新しい定義ジャンプ機能を実装しました。これにより開発体験が大きく向上しました。 このセッションでは、具体的なgoplsの拡張方法と、実際にWINTICKETで行っているVS Code拡張機能を活用した運用方法についてお話しします。",
             "startsAt": "2025-09-28T18:30:00",
             "endsAt": "2025-09-28T18:50:00",
-            "isServiceSession": true,
-            "isPlenumSession": true,
-            "speakers": [],
-            "categories": [],
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "b2faf973-7fc5-46b3-97ca-3b4cffaf7c95",
+                "name": "正大朗 山﨑"
+              }
+            ],
+            "categories": [
+              {
+                "id": 101938,
+                "name": "Session Type",
+                "categoryItems": [
+                  {
+                    "id": 367239,
+                    "name": "Short Session(20min)"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 101939,
+                "name": "Session Level",
+                "categoryItems": [
+                  {
+                    "id": 367242,
+                    "name": "all"
+                  }
+                ],
+                "sort": 1
+              },
+              {
+                "id": 102474,
+                "name": "言語 / Language",
+                "categoryItems": [
+                  {
+                    "id": 369632,
+                    "name": "japanese"
+                  }
+                ],
+                "sort": 2
+              }
+            ],
             "roomId": 67044,
             "room": "Room 1",
             "liveUrl": null,
             "recordingUrl": null,
-            "status": null,
-            "isInformed": false,
-            "isConfirmed": false
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
           },
           {
             "id": "959089",
             "title": "uniqueパッケージの内部実装を支えるweak pointerの話",
-            "description": "Go1.24で追加されたweak pointer（弱参照）は、ガーベジコレクタ（GC）と連携して、これまでよりも柔軟なリソース管理を可能にする仕組みです。本LTでは、uniqueパッケージの内部実装を題材に、weak pointerの基本や強いポインタとの違い、そしてなぜGoにこの仕組みが導入されたのかを見ていきます。\r\n\r\nuniqueパッケージは「値が等しければ同じポインタで表現する」という一意化を実現するために、内部でweak pointerを活用しています。これにより、使われなくなった値が自動的にGCで回収されるなど、Goらしいシンプルさと効率性が両立されています。\r\n\r\nuniqueパッケージの中でweak pointerがどのように使われているのか、実際のコード例を交えながら紹介します。",
+            "description": "Go1.24で追加されたweak pointer(弱参照)は、ガベージコレクタ(GC)と連携して、これまでよりも柔軟なリソース管理を可能にする仕組みです。本LTでは、uniqueパッケージの内部実装を題材に、weak pointerの基本や強いポインタとの違い、そしてなぜGoにこの仕組みが導入されたのかを見ていきます。\r\n\r\nuniqueパッケージは「値が等しければ同じポインタで表現する」という一意化を実現するために、内部でweak pointerを活用しています。これにより、使われなくなった値が自動的にGCで回収されるなど、Goらしいシンプルさと効率性が両立されています。\r\n\r\nuniqueパッケージの中でweak pointerがどのように使われているのか、実際のコード例を交えながら紹介します。",
             "startsAt": "2025-09-28T18:50:00",
             "endsAt": "2025-09-28T18:55:00",
             "isServiceSession": false,
@@ -4300,7 +4573,7 @@
       },
       {
         "id": 67045,
-        "name": "Room 2-1",
+        "name": "Room 2",
         "sessions": [
           {
             "id": "958919",
@@ -4352,7 +4625,7 @@
               }
             ],
             "roomId": 67045,
-            "room": "Room 2-1",
+            "room": "Room 2",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -4409,7 +4682,7 @@
               }
             ],
             "roomId": 67045,
-            "room": "Room 2-1",
+            "room": "Room 2",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -4427,7 +4700,7 @@
             "speakers": [],
             "categories": [],
             "roomId": 67045,
-            "room": "Room 2-1",
+            "room": "Room 2",
             "liveUrl": null,
             "recordingUrl": null,
             "status": null,
@@ -4437,7 +4710,7 @@
           {
             "id": "959006",
             "title": "Swiss Table の実装に Deep Dive !",
-            "description": "Go 1.24では、mapの内部実装がSwiss Tableベースに変更されました。本セッションでは、この新しい実装を実際のソースコードとともに詳細に議論していきます。\r\n\r\nSwiss Tableは従来のオープンアドレス法ハッシュテーブルとは異なり、Swiss Tableはグループ単位でのSIMD並列処理を活用したアプローチです。ハッシュ値をH1（上位57ビット）とH2（下位7ビット）に分割し、H2を使って8つのスロットを並列でマッチングする仕組みを、実際のコードを見ながら議論します。特にctrlGroup.matchH2メソッドでの興味深いビット操作テクニックには目を見張るものがあります。\r\nhttps://github.com/golang/go/blob/53af292aed21c3f6ea75d16e5b25f660b2c028fb/src/internal/runtime/maps/group.go#L157-L172\r\n\r\nGo特有の要件がどのように実装に反映されているかについても議論していきます。8要素以下の小さなmapでは、テーブル構造を使わずに単一グループで直接管理するSmall Map最適化、\r\nhttps://github.com/golang/go/blob/53af292aed21c3f6ea75d16e5b25f660b2c028fb/src/internal/runtime/maps/map.go#L267-L283\r\n\r\nマップが実際に使用されるまで領域確保を遅延する設計、XORによるトグルを使った並行アクセス検出など、\r\nhttps://github.com/golang/go/blob/53af292aed21c3f6ea75d16e5b25f660b2c028fb/src/internal/runtime/maps/map.go#L489-L491\r\n\r\n実用的な最適化が随所に見られます。また、Go言語仕様の「イテレーション中でもmap変更を許可する」というセマンティクスに対応するため、古いテーブルへの参照を保持し続ける複雑な実装についても詳しく解説します。\r\n\r\nさらに、Extendible Hashingによる段階的成長戦略を取り上げます。map全体を一度に再構築するのではなく、個別のテーブルを分割して成長させることで、大きなmapでのパフォーマンス劣化を防ぐ設計です。globalDepthとlocalDepthを使ったディレクトリ管理の仕組みや、テーブル分割時の複雑な処理を、実際のinstallTableSplitメソッドを追いながら理解していきます。\r\nhttps://github.com/golang/go/blob/53af292aed21c3f6ea75d16e5b25f660b2c028fb/src/internal/runtime/maps/map.go#L359-L391\r\n\r\n本セッションを通じてSwiss Tableへの理解と、それがどのように実装されているかを知る機会を提供できたらと思います。",
+            "description": "Go 1.24では、mapの内部実装がSwiss Tableベースに変更されました。本セッションでは、この新しい実装を実際のソースコードとともに詳細に議論していきます。\r\n\r\nSwiss Tableはグループ単位でのSIMD並列処理を活用したアプローチです。ハッシュ値をH1（上位57ビット）とH2（下位7ビット）に分割し、H2を使って8つのスロットを並列でマッチングする仕組みを、実際のコードを見ながら議論します。特にctrlGroup.matchH2メソッドでの興味深いビット操作テクニックには目を見張るものがあります。\r\nhttps://github.com/golang/go/blob/53af292aed21c3f6ea75d16e5b25f660b2c028fb/src/internal/runtime/maps/group.go#L157-L172\r\n\r\nGo特有の要件がどのように実装に反映されているかについても議論していきます。8要素以下の小さなmapでは、テーブル構造を使わずに単一グループで直接管理するSmall Map最適化、\r\nhttps://github.com/golang/go/blob/53af292aed21c3f6ea75d16e5b25f660b2c028fb/src/internal/runtime/maps/map.go#L267-L283\r\n\r\nマップが実際に使用されるまで領域確保を遅延する設計、XORによるトグルを使った並行アクセス検出など、\r\nhttps://github.com/golang/go/blob/53af292aed21c3f6ea75d16e5b25f660b2c028fb/src/internal/runtime/maps/map.go#L489-L491\r\n\r\n実用的な最適化が随所に見られます。また、Go言語仕様の「イテレーション中でもmap変更を許可する」というセマンティクスに対応するため、古いテーブルへの参照を保持し続ける複雑な実装についても詳しく解説します。\r\n\r\nさらに、Extendible Hashingによる段階的成長戦略を取り上げます。map全体を一度に再構築するのではなく、個別のテーブルを分割して成長させることで、大きなmapでのパフォーマンス劣化を防ぐ設計です。globalDepthとlocalDepthを使ったディレクトリ管理の仕組みや、テーブル分割時の複雑な処理を、実際のinstallTableSplitメソッドを追いながら理解していきます。\r\nhttps://github.com/golang/go/blob/53af292aed21c3f6ea75d16e5b25f660b2c028fb/src/internal/runtime/maps/map.go#L359-L391\r\n\r\n本セッションを通じてSwiss Tableへの理解と、それがどのように実装されているかを知る機会を提供できたらと思います。",
             "startsAt": "2025-09-28T15:30:00",
             "endsAt": "2025-09-28T15:50:00",
             "isServiceSession": false,
@@ -4484,7 +4757,7 @@
               }
             ],
             "roomId": 67045,
-            "room": "Room 2-1",
+            "room": "Room 2",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -4541,7 +4814,7 @@
               }
             ],
             "roomId": 67045,
-            "room": "Room 2-1",
+            "room": "Room 2",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -4598,7 +4871,7 @@
               }
             ],
             "roomId": 67045,
-            "room": "Room 2-1",
+            "room": "Room 2",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -4647,7 +4920,7 @@
             "session": {
               "id": "958977",
               "title": "Go1.25新機能 testing/synctest で高速＆確実な並列テストを実現する方法",
-              "description": "## 概要\r\n\r\nGo1.24から実験的に導入され、Go1.25で標準パッケージになる予定の testing/synctest パッケージを中心に、Test と Wait の２つの API の動作仕様を詳解します。実コードと GoDoc を交え、時間短縮・flaky対策の実用的なテスト手法を初学者から中級者に向けて丁寧に紹介します。また実際に弊社のテストコードに組み込んだ結果も合わせて共有できればと思います。\r\n\r\n## 発表内容の詳細\r\n\r\n1. 背景と課題提起\r\n    - 並列テストの“遅さ”や“flakiness”という実務課題\r\n2. API紹介\r\n    - `testing/synctest.Test`: synthetic time 実装の仕組み\r\n    - `testing/synctest.Wait`: goroutine制御と整合性\r\n3. 実験コード解説\r\n    - 実験 1: TTLを持つキャッシュのテスト\r\n    - 実験 2: goroutineによるexpire実装の検証\r\n4. 動作検証とGoDoc読解\r\n    - GoDocベースで仕様確認＋内部動作の理解\r\n5. flakyテストへの対処\r\n    - `Test`を使った安定化手法とその根拠\r\n6. Goクイズ・参加型検証\r\n    - ミニクイズ形式で仕様の理解を補強\r\n7. 実務適用と今後の展望\r\n    - 弊社での活用事例\r\n　- `synctest` の今後への期待\r\n\r\n## 補足事項\r\n\r\n- https://zenn.dev/canary_techblog/articles/ec8a96b4541685 をベースにした発表になります\r\n- 上記の記事執筆時はGo1.24で実験的に導入された時だったので、Go1.25で標準パッケージに入るまでのアップデート（e.g. RunがTestに置き換わった理由など）も併せてお話しする想定です\r\n- 弊社での活用事例のセクションでは、exponential backoffでリトライするようなAPIのテストなどより実践的に使える内容についてもお話しできればと思っています",
+              "description": "## 概要\r\n\r\nGo1.25で標準パッケージになった testing/synctest パッケージを中心に、Test と Wait の２つの API の動作仕様を詳解します。実コードと GoDoc を交え、時間短縮・flaky対策の実用的なテスト手法を初学者から中級者に向けて丁寧に紹介します。また実際に弊社のテストコードに組み込んだ結果も合わせて共有できればと思います。\r\n\r\n## 発表内容の詳細\r\n\r\n1. 背景と課題提起\r\n    - 並列テストの“遅さ”や“flakiness”という実務課題\r\n2. API紹介\r\n    - `testing/synctest.Test`\r\n    - `testing/synctest.Wait`\r\n3. 実験コード解説\r\n    - 実験 1: TTLを持つキャッシュのテスト\r\n    - 実験 2: goroutineによるexpire実装の検証\r\n4. 動作検証とGoDoc読解\r\n    - GoDocベースで仕様確認＋内部動作の理解\r\n6. flakyテストへの対処\r\n    - `Test`を使った安定化手法とその根拠\r\n7. Goクイズ・参加型検証\r\n    - ミニクイズ形式で仕様の理解を補強\r\n8. 実務適用と今後の展望\r\n    - 弊社での活用事例\r\n　- `synctest` の今後への期待\r\n9. APIの内部実装\r\n    - synthetic timeの実装やgoroutine制御の仕組み\r\n\r\n## 補足事項\r\n\r\n- https://zenn.dev/canary_techblog/articles/ec8a96b4541685 をベースにした発表になります\r\n- 上記の記事執筆時はGo1.24で実験的に導入された時だったので、Go1.25で標準パッケージに入るまでのアップデート（e.g. RunがTestに置き換わった理由など）も併せてお話しする想定です\r\n- 弊社での活用事例のセクションでは、exponential backoffでリトライするようなAPIのテストなどより実践的に使える内容についてもお話しできればと思っています\r\n- またsynthetic timeの実装やgoroutine制御の仕組みについても余裕があればお話ししたいと思います",
               "startsAt": "2025-09-28T10:20:00",
               "endsAt": "2025-09-28T11:00:00",
               "isServiceSession": false,
@@ -4740,21 +5013,60 @@
             "id": 67044,
             "name": "Room 1",
             "session": {
-              "id": "d261148b-ceec-418e-825e-ddabb051b653",
-              "title": "platinum sponser",
-              "description": null,
+              "id": "1022070",
+              "title": "Goに育てられ開発者向けセキュリティ事業を立ち上げた僕が今向き合う、AI × セキュリティの最前線",
+              "description": "メルカリ社でインターンするなど、自分は「Goに育てられたエンジニア」として学生起業に至り、今は開発組織のセキュリティを支える事業に注力しています。本セッションでは、自身の開発バックグラウンドと世界トップクラスの実力を持つセキュリティエンジニア達の能力を活かしてGMO Flatt Securityが現代の開発組織が抱える課題にどうアプローチしているか、AI × セキュリティの最前線も交え解説します。加えて、OSSやスタートアップの無料セキュリティ支援という形で現在実施しているコミュニティ還元に込めた思いもお話しします。",
               "startsAt": "2025-09-28T11:10:00",
               "endsAt": "2025-09-28T11:30:00",
-              "isServiceSession": true,
-              "isPlenumSession": true,
-              "speakers": [],
-              "categories": [],
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "0bb030df-6018-46e2-b08e-6e6dca113329",
+                  "name": "康貴 井手"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 101938,
+                  "name": "Session Type",
+                  "categoryItems": [
+                    {
+                      "id": 367239,
+                      "name": "Short Session(20min)"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 101939,
+                  "name": "Session Level",
+                  "categoryItems": [
+                    {
+                      "id": 367242,
+                      "name": "all"
+                    }
+                  ],
+                  "sort": 1
+                },
+                {
+                  "id": 102474,
+                  "name": "言語 / Language",
+                  "categoryItems": [
+                    {
+                      "id": 369632,
+                      "name": "japanese"
+                    }
+                  ],
+                  "sort": 2
+                }
+              ],
               "roomId": 67044,
               "room": "Room 1",
               "liveUrl": null,
               "recordingUrl": null,
-              "status": null,
-              "isInformed": false,
+              "status": "Accepted",
+              "isInformed": true,
               "isConfirmed": false
             },
             "index": 0
@@ -5046,7 +5358,7 @@
           },
           {
             "id": 67045,
-            "name": "Room 2-1",
+            "name": "Room 2",
             "session": {
               "id": "958919",
               "title": "Go1.24時代のユニットテスト品質向上",
@@ -5097,7 +5409,7 @@
                 }
               ],
               "roomId": 67045,
-              "room": "Room 2-1",
+              "room": "Room 2",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -5144,8 +5456,8 @@
             "name": "Room 1",
             "session": {
               "id": "958432",
-              "title": "カリカリなMutexを作る",
-              "description": null,
+              "title": "カリカリなMutexを作る / \"Crispifying\" Go's Mutex",
+              "description": "(English follows Japanese)\r\n\r\nGo言語といえば並列処理、並列処理といえばMutexですよね。今回はそんなGo言語のMutexについてです。\r\n\r\n案外簡単なのでは？と思いきや、実際にコードを読んでみると複雑な実装になっていて、いかに「カリカリ」に最適化されているかがわかります。\r\n\r\nもはや職人芸とも言えるGo言語のMutex。とても真似できないと思われるかもしれませんが、決してそんなことはありません。今回は、簡単なスピンロックの実装からスターベーションモードの実装まで、皆さんと一緒に「オレオレMutex」をカリカリにしていこうと思います。\r\n\r\n実際に標準ライブラリ内にオレオレMutexを実装して、テストを通し、またおまけとしてSPINというツールで安全性 (＋活性性？) のモデル検査を行います。もしかしたらバグがあるかもしれませんが、そこはご愛嬌ということで... ぜひお楽しみに！\r\n\r\n---\r\n\r\nWhen you think of Go, you think of concurrency. And when you think of concurrency, you think of mutex. So today, let's talk about Go's mutex.\r\n\r\nAt first glance, it might seem straightforward, depending on who you ask. But once you dive into the source code, you quickly realise it's far more intricate than expected - packed with finely tuned optimisations.\r\n\r\nYou might be tempted to think, \"There's no way I could ever pull this off myself\". But actually, that’s not the case at all! Starting from a simple spinlock, we'll work step by step towards a mutex that even handles starvation mode, gradually building our own \"DIY mutex\" until it's nice and\"crispy\".\r\n\r\nWe’ll implement it right into the standard library, run it through the test suite, and, as a bonus, try out SPIN to check its safety property (and maybe even its liveness). Of course, there might be a few bugs here and there... but that’s all part of the fun. So let’s dive in and enjoy!",
               "startsAt": "2025-09-28T14:30:00",
               "endsAt": "2025-09-28T14:50:00",
               "isServiceSession": false,
@@ -5153,7 +5465,7 @@
               "speakers": [
                 {
                   "id": "dd19a405-bd09-44d1-a261-03cdcea1d545",
-                  "name": "泰智 前田"
+                  "name": "Taichi Maeda"
                 }
               ],
               "categories": [
@@ -5203,7 +5515,7 @@
           },
           {
             "id": 67045,
-            "name": "Room 2-1",
+            "name": "Room 2",
             "session": {
               "id": "952323",
               "title": "Goのビルドシステムの変遷",
@@ -5254,7 +5566,7 @@
                 }
               ],
               "roomId": 67045,
-              "room": "Room 2-1",
+              "room": "Room 2",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -5300,28 +5612,67 @@
             "id": 67044,
             "name": "Room 1",
             "session": {
-              "id": "c5d04efa-0e2c-48a7-9fb5-76a17e77fa8a",
-              "title": "Gold Sponsor",
+              "id": "1022065",
+              "title": "メガエンプラSaaSを支えるシリーズAスタートアップのGoアーキテクチャ",
               "description": null,
               "startsAt": "2025-09-28T15:00:00",
               "endsAt": "2025-09-28T15:20:00",
-              "isServiceSession": true,
+              "isServiceSession": false,
               "isPlenumSession": false,
-              "speakers": [],
-              "categories": [],
+              "speakers": [
+                {
+                  "id": "e45f49f2-02b6-4a1b-a81b-1b8009852989",
+                  "name": "輝彦 彌冨"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 101938,
+                  "name": "Session Type",
+                  "categoryItems": [
+                    {
+                      "id": 367239,
+                      "name": "Short Session(20min)"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 101939,
+                  "name": "Session Level",
+                  "categoryItems": [
+                    {
+                      "id": 367242,
+                      "name": "all"
+                    }
+                  ],
+                  "sort": 1
+                },
+                {
+                  "id": 102474,
+                  "name": "言語 / Language",
+                  "categoryItems": [
+                    {
+                      "id": 369632,
+                      "name": "japanese"
+                    }
+                  ],
+                  "sort": 2
+                }
+              ],
               "roomId": 67044,
               "room": "Room 1",
               "liveUrl": null,
               "recordingUrl": null,
-              "status": null,
-              "isInformed": false,
+              "status": "Accepted",
+              "isInformed": true,
               "isConfirmed": false
             },
             "index": 0
           },
           {
             "id": 67045,
-            "name": "Room 2-1",
+            "name": "Room 2",
             "session": {
               "id": "5c6f5abe-5738-4cce-8087-dc1410187056",
               "title": "Gold Sponsor",
@@ -5333,7 +5684,7 @@
               "speakers": [],
               "categories": [],
               "roomId": 67045,
-              "room": "Room 2-1",
+              "room": "Room 2",
               "liveUrl": null,
               "recordingUrl": null,
               "status": null,
@@ -5439,11 +5790,11 @@
           },
           {
             "id": 67045,
-            "name": "Room 2-1",
+            "name": "Room 2",
             "session": {
               "id": "959006",
               "title": "Swiss Table の実装に Deep Dive !",
-              "description": "Go 1.24では、mapの内部実装がSwiss Tableベースに変更されました。本セッションでは、この新しい実装を実際のソースコードとともに詳細に議論していきます。\r\n\r\nSwiss Tableは従来のオープンアドレス法ハッシュテーブルとは異なり、Swiss Tableはグループ単位でのSIMD並列処理を活用したアプローチです。ハッシュ値をH1（上位57ビット）とH2（下位7ビット）に分割し、H2を使って8つのスロットを並列でマッチングする仕組みを、実際のコードを見ながら議論します。特にctrlGroup.matchH2メソッドでの興味深いビット操作テクニックには目を見張るものがあります。\r\nhttps://github.com/golang/go/blob/53af292aed21c3f6ea75d16e5b25f660b2c028fb/src/internal/runtime/maps/group.go#L157-L172\r\n\r\nGo特有の要件がどのように実装に反映されているかについても議論していきます。8要素以下の小さなmapでは、テーブル構造を使わずに単一グループで直接管理するSmall Map最適化、\r\nhttps://github.com/golang/go/blob/53af292aed21c3f6ea75d16e5b25f660b2c028fb/src/internal/runtime/maps/map.go#L267-L283\r\n\r\nマップが実際に使用されるまで領域確保を遅延する設計、XORによるトグルを使った並行アクセス検出など、\r\nhttps://github.com/golang/go/blob/53af292aed21c3f6ea75d16e5b25f660b2c028fb/src/internal/runtime/maps/map.go#L489-L491\r\n\r\n実用的な最適化が随所に見られます。また、Go言語仕様の「イテレーション中でもmap変更を許可する」というセマンティクスに対応するため、古いテーブルへの参照を保持し続ける複雑な実装についても詳しく解説します。\r\n\r\nさらに、Extendible Hashingによる段階的成長戦略を取り上げます。map全体を一度に再構築するのではなく、個別のテーブルを分割して成長させることで、大きなmapでのパフォーマンス劣化を防ぐ設計です。globalDepthとlocalDepthを使ったディレクトリ管理の仕組みや、テーブル分割時の複雑な処理を、実際のinstallTableSplitメソッドを追いながら理解していきます。\r\nhttps://github.com/golang/go/blob/53af292aed21c3f6ea75d16e5b25f660b2c028fb/src/internal/runtime/maps/map.go#L359-L391\r\n\r\n本セッションを通じてSwiss Tableへの理解と、それがどのように実装されているかを知る機会を提供できたらと思います。",
+              "description": "Go 1.24では、mapの内部実装がSwiss Tableベースに変更されました。本セッションでは、この新しい実装を実際のソースコードとともに詳細に議論していきます。\r\n\r\nSwiss Tableはグループ単位でのSIMD並列処理を活用したアプローチです。ハッシュ値をH1（上位57ビット）とH2（下位7ビット）に分割し、H2を使って8つのスロットを並列でマッチングする仕組みを、実際のコードを見ながら議論します。特にctrlGroup.matchH2メソッドでの興味深いビット操作テクニックには目を見張るものがあります。\r\nhttps://github.com/golang/go/blob/53af292aed21c3f6ea75d16e5b25f660b2c028fb/src/internal/runtime/maps/group.go#L157-L172\r\n\r\nGo特有の要件がどのように実装に反映されているかについても議論していきます。8要素以下の小さなmapでは、テーブル構造を使わずに単一グループで直接管理するSmall Map最適化、\r\nhttps://github.com/golang/go/blob/53af292aed21c3f6ea75d16e5b25f660b2c028fb/src/internal/runtime/maps/map.go#L267-L283\r\n\r\nマップが実際に使用されるまで領域確保を遅延する設計、XORによるトグルを使った並行アクセス検出など、\r\nhttps://github.com/golang/go/blob/53af292aed21c3f6ea75d16e5b25f660b2c028fb/src/internal/runtime/maps/map.go#L489-L491\r\n\r\n実用的な最適化が随所に見られます。また、Go言語仕様の「イテレーション中でもmap変更を許可する」というセマンティクスに対応するため、古いテーブルへの参照を保持し続ける複雑な実装についても詳しく解説します。\r\n\r\nさらに、Extendible Hashingによる段階的成長戦略を取り上げます。map全体を一度に再構築するのではなく、個別のテーブルを分割して成長させることで、大きなmapでのパフォーマンス劣化を防ぐ設計です。globalDepthとlocalDepthを使ったディレクトリ管理の仕組みや、テーブル分割時の複雑な処理を、実際のinstallTableSplitメソッドを追いながら理解していきます。\r\nhttps://github.com/golang/go/blob/53af292aed21c3f6ea75d16e5b25f660b2c028fb/src/internal/runtime/maps/map.go#L359-L391\r\n\r\n本セッションを通じてSwiss Tableへの理解と、それがどのように実装されているかを知る機会を提供できたらと思います。",
               "startsAt": "2025-09-28T15:30:00",
               "endsAt": "2025-09-28T15:50:00",
               "isServiceSession": false,
@@ -5490,7 +5841,7 @@
                 }
               ],
               "roomId": 67045,
-              "room": "Room 2-1",
+              "room": "Room 2",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -5596,7 +5947,7 @@
           },
           {
             "id": 67045,
-            "name": "Room 2-1",
+            "name": "Room 2",
             "session": {
               "id": "948071",
               "title": "After go func(): Goroutines Through a Beginner’s Eye",
@@ -5647,7 +5998,7 @@
                 }
               ],
               "roomId": 67045,
-              "room": "Room 2-1",
+              "room": "Room 2",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -5753,7 +6104,7 @@
           },
           {
             "id": 67045,
-            "name": "Room 2-1",
+            "name": "Room 2",
             "session": {
               "id": "957799",
               "title": "Decoding the Black Box: Understanding the Go Compiler",
@@ -5804,7 +6155,7 @@
                 }
               ],
               "roomId": 67045,
-              "room": "Room 2-1",
+              "room": "Room 2",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -6001,22 +6352,61 @@
             "id": 67044,
             "name": "Room 1",
             "session": {
-              "id": "b86b05b6-816b-4142-8c15-42ce5827d062",
-              "title": "Venue Sponsor",
-              "description": null,
+              "id": "1022036",
+              "title": "goplsの拡張によるマイクロサービス間の実装ジャンプ改善",
+              "description": "WINTICKETでは、モノレポ環境下でgRPCを用いたマイクロサービスの開発を行っています。機能開発時には、複数のマイクロサービスの実装を修正することがありますが、あるサービスから呼び出したRPCの実装を定義ジャンプで確認しようとしても、実際には自動生成されたinterface定義に飛んでしまい、目的の実装に直接ジャンプできないという課題がありました。そのため、毎回手動で実装を探しに行く必要があり、開発体験が良くありませんでした。 そこで、Go言語のLanguage Serverであるgoplsを拡張し、RPCのinterfaceではなく実装へジャンプできる新しい定義ジャンプ機能を実装しました。これにより開発体験が大きく向上しました。 このセッションでは、具体的なgoplsの拡張方法と、実際にWINTICKETで行っているVS Code拡張機能を活用した運用方法についてお話しします。",
               "startsAt": "2025-09-28T18:30:00",
               "endsAt": "2025-09-28T18:50:00",
-              "isServiceSession": true,
-              "isPlenumSession": true,
-              "speakers": [],
-              "categories": [],
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "b2faf973-7fc5-46b3-97ca-3b4cffaf7c95",
+                  "name": "正大朗 山﨑"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 101938,
+                  "name": "Session Type",
+                  "categoryItems": [
+                    {
+                      "id": 367239,
+                      "name": "Short Session(20min)"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 101939,
+                  "name": "Session Level",
+                  "categoryItems": [
+                    {
+                      "id": 367242,
+                      "name": "all"
+                    }
+                  ],
+                  "sort": 1
+                },
+                {
+                  "id": 102474,
+                  "name": "言語 / Language",
+                  "categoryItems": [
+                    {
+                      "id": 369632,
+                      "name": "japanese"
+                    }
+                  ],
+                  "sort": 2
+                }
+              ],
               "roomId": 67044,
               "room": "Room 1",
               "liveUrl": null,
               "recordingUrl": null,
-              "status": null,
-              "isInformed": false,
-              "isConfirmed": false
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
             },
             "index": 0
           }
@@ -6031,7 +6421,7 @@
             "session": {
               "id": "959089",
               "title": "uniqueパッケージの内部実装を支えるweak pointerの話",
-              "description": "Go1.24で追加されたweak pointer（弱参照）は、ガーベジコレクタ（GC）と連携して、これまでよりも柔軟なリソース管理を可能にする仕組みです。本LTでは、uniqueパッケージの内部実装を題材に、weak pointerの基本や強いポインタとの違い、そしてなぜGoにこの仕組みが導入されたのかを見ていきます。\r\n\r\nuniqueパッケージは「値が等しければ同じポインタで表現する」という一意化を実現するために、内部でweak pointerを活用しています。これにより、使われなくなった値が自動的にGCで回収されるなど、Goらしいシンプルさと効率性が両立されています。\r\n\r\nuniqueパッケージの中でweak pointerがどのように使われているのか、実際のコード例を交えながら紹介します。",
+              "description": "Go1.24で追加されたweak pointer(弱参照)は、ガベージコレクタ(GC)と連携して、これまでよりも柔軟なリソース管理を可能にする仕組みです。本LTでは、uniqueパッケージの内部実装を題材に、weak pointerの基本や強いポインタとの違い、そしてなぜGoにこの仕組みが導入されたのかを見ていきます。\r\n\r\nuniqueパッケージは「値が等しければ同じポインタで表現する」という一意化を実現するために、内部でweak pointerを活用しています。これにより、使われなくなった値が自動的にGCで回収されるなど、Goらしいシンプルさと効率性が両立されています。\r\n\r\nuniqueパッケージの中でweak pointerがどのように使われているのか、実際のコード例を交えながら紹介します。",
               "startsAt": "2025-09-28T18:50:00",
               "endsAt": "2025-09-28T18:55:00",
               "isServiceSession": false,

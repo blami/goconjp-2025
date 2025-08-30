@@ -97,14 +97,18 @@ if (!speaker) {
 <article class="speaker">
   <header class="speaker-header">
     <div class="speaker-info">
-      <Image
-        src={speaker.profilePicture}
-        alt={speaker.fullName}
-        width={24}
-        height={24}
-        loading="lazy"
-        class="speaker-thumbnail"
-      />
+      {
+        speaker.profilePicture && (
+          <Image
+            src={speaker.profilePicture}
+            alt={speaker.fullName}
+            width={24}
+            height={24}
+            loading="lazy"
+            class="speaker-thumbnail"
+          />
+        )
+      }
       <p class="speaker-name">{speaker.fullName}</p>
       <div class="speaker-socials">
         {
