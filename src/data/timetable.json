@@ -129,7 +129,7 @@
             "speakers": [
               {
                 "id": "66f326bd-0b7d-441a-a749-b7f829032016",
-                "name": "Naoki Kuroda"
+                "name": "kuro"
               }
             ],
             "categories": [
@@ -486,7 +486,7 @@
             "speakers": [
               {
                 "id": "fe172802-a8f8-4ff5-ba0c-99a9d6a4b14e",
-                "name": "Shunsuke Nagano"
+                "name": "glassmonkey"
               }
             ],
             "categories": [
@@ -561,7 +561,7 @@
             "speakers": [
               {
                 "id": "84837a15-d9bf-4e0e-8e3e-f2c63777aa2a",
-                "name": "Masaaki Goshima"
+                "name": "goccy"
               }
             ],
             "categories": [
@@ -636,7 +636,7 @@
             "speakers": [
               {
                 "id": "89770bbf-216e-496f-b94b-4e63229ad8af",
-                "name": "Ryoko Tominaga"
+                "name": "Turbofish"
               }
             ],
             "categories": [
@@ -711,7 +711,7 @@
             "speakers": [
               {
                 "id": "d8d975e3-efe8-4b14-9afa-1baed8a9c4dd",
-                "name": "Keisuke Hidaka"
+                "name": "ponyo877"
               }
             ],
             "categories": [
@@ -868,7 +868,7 @@
             "speakers": [
               {
                 "id": "398a776b-adf3-48b6-8510-7891a404302d",
-                "name": "Yoshi Yamaguchi"
+                "name": "ymotongpoo"
               }
             ],
             "categories": [
@@ -982,7 +982,7 @@
             "speakers": [
               {
                 "id": "23f61b5d-8318-4950-81c9-c62d924ea580",
-                "name": "Kotani Kizuku"
+                "name": "Go Conference Workshop Team"
               }
             ],
             "categories": [
@@ -1064,7 +1064,7 @@
             "speakers": [
               {
                 "id": "221beeb2-9d4f-41f8-9f86-c9818e137d72",
-                "name": "Masaaki Takasago"
+                "name": "sago35"
               }
             ],
             "categories": [
@@ -1121,7 +1121,7 @@
             "speakers": [
               {
                 "id": "88468bff-1de7-454b-a688-df25c8c086ae",
-                "name": "Kengo Sato"
+                "name": "satoken"
               }
             ],
             "categories": [
@@ -1178,7 +1178,7 @@
             "speakers": [
               {
                 "id": "899d1bf7-e2c2-4333-b9f1-c07788bca0c7",
-                "name": "Takuya Ueda"
+                "name": "tenntenn"
               }
             ],
             "categories": [
@@ -1260,7 +1260,7 @@
             "speakers": [
               {
                 "id": "4926b4e4-5468-4cf7-abdf-2b5b05eca1b7",
-                "name": "Kazuto Maeda"
+                "name": "Chihiro"
               }
             ],
             "categories": [
@@ -1317,7 +1317,7 @@
             "speakers": [
               {
                 "id": "104bcaaa-4f8a-4a41-b026-87f0e6c91aab",
-                "name": "Shunsuke Wakamatsu"
+                "name": "mazrean"
               }
             ],
             "categories": [
@@ -1374,7 +1374,7 @@
             "speakers": [
               {
                 "id": "37ae8082-b7e9-4009-af07-3bad0627f74e",
-                "name": "Hiromasa Senoue"
+                "name": "Senoue"
               }
             ],
             "categories": [
@@ -1611,7 +1611,7 @@
               "speakers": [
                 {
                   "id": "66f326bd-0b7d-441a-a749-b7f829032016",
-                  "name": "Naoki Kuroda"
+                  "name": "kuro"
                 }
               ],
               "categories": [
@@ -1768,7 +1768,7 @@
               "speakers": [
                 {
                   "id": "398a776b-adf3-48b6-8510-7891a404302d",
-                  "name": "Yoshi Yamaguchi"
+                  "name": "ymotongpoo"
                 }
               ],
               "categories": [
@@ -1830,7 +1830,7 @@
               "speakers": [
                 {
                   "id": "221beeb2-9d4f-41f8-9f86-c9818e137d72",
-                  "name": "Masaaki Takasago"
+                  "name": "sago35"
                 }
               ],
               "categories": [
@@ -1892,7 +1892,7 @@
               "speakers": [
                 {
                   "id": "4926b4e4-5468-4cf7-abdf-2b5b05eca1b7",
-                  "name": "Kazuto Maeda"
+                  "name": "Chihiro"
                 }
               ],
               "categories": [
@@ -2244,7 +2244,7 @@
               "speakers": [
                 {
                   "id": "fe172802-a8f8-4ff5-ba0c-99a9d6a4b14e",
-                  "name": "Shunsuke Nagano"
+                  "name": "glassmonkey"
                 }
               ],
               "categories": [
@@ -2368,7 +2368,7 @@
               "speakers": [
                 {
                   "id": "88468bff-1de7-454b-a688-df25c8c086ae",
-                  "name": "Kengo Sato"
+                  "name": "satoken"
                 }
               ],
               "categories": [
@@ -2430,7 +2430,7 @@
               "speakers": [
                 {
                   "id": "104bcaaa-4f8a-4a41-b026-87f0e6c91aab",
-                  "name": "Shunsuke Wakamatsu"
+                  "name": "mazrean"
                 }
               ],
               "categories": [
@@ -2525,7 +2525,7 @@
               "speakers": [
                 {
                   "id": "84837a15-d9bf-4e0e-8e3e-f2c63777aa2a",
-                  "name": "Masaaki Goshima"
+                  "name": "goccy"
                 }
               ],
               "categories": [
@@ -2620,7 +2620,7 @@
               "speakers": [
                 {
                   "id": "89770bbf-216e-496f-b94b-4e63229ad8af",
-                  "name": "Ryoko Tominaga"
+                  "name": "Turbofish"
                 }
               ],
               "categories": [
@@ -2682,7 +2682,7 @@
               "speakers": [
                 {
                   "id": "23f61b5d-8318-4950-81c9-c62d924ea580",
-                  "name": "Kotani Kizuku"
+                  "name": "Go Conference Workshop Team"
                 }
               ],
               "categories": [
@@ -2744,7 +2744,7 @@
               "speakers": [
                 {
                   "id": "899d1bf7-e2c2-4333-b9f1-c07788bca0c7",
-                  "name": "Takuya Ueda"
+                  "name": "tenntenn"
                 }
               ],
               "categories": [
@@ -2806,7 +2806,7 @@
               "speakers": [
                 {
                   "id": "37ae8082-b7e9-4009-af07-3bad0627f74e",
-                  "name": "Hiromasa Senoue"
+                  "name": "Senoue"
                 }
               ],
               "categories": [
@@ -2901,7 +2901,7 @@
               "speakers": [
                 {
                   "id": "d8d975e3-efe8-4b14-9afa-1baed8a9c4dd",
-                  "name": "Keisuke Hidaka"
+                  "name": "ponyo877"
                 }
               ],
               "categories": [
@@ -3187,7 +3187,7 @@
             "speakers": [
               {
                 "id": "f02c223f-8e2f-4e8c-9051-98185b28e81a",
-                "name": "Kanata Miyahana"
+                "name": "Pana"
               }
             ],
             "categories": [
@@ -3937,7 +3937,7 @@
             "speakers": [
               {
                 "id": "fc5fcbb6-163c-4110-b688-c77bcbdc9a0a",
-                "name": "Ryosei Karaki"
+                "name": "karamaru"
               }
             ],
             "categories": [
@@ -4105,7 +4105,7 @@
             "speakers": [
               {
                 "id": "67ebc04e-eeac-45a2-813a-a675ff34595b",
-                "name": "Yuuki Magawa"
+                "name": "magavel"
               }
             ],
             "categories": [
@@ -4333,7 +4333,7 @@
             "speakers": [
               {
                 "id": "f11fdfa9-b120-4fb1-8d89-48564ef645c2",
-                "name": "Yu Serizawa"
+                "name": "upamune"
               }
             ],
             "categories": [
@@ -4447,7 +4447,7 @@
             "speakers": [
               {
                 "id": "221beeb2-9d4f-41f8-9f86-c9818e137d72",
-                "name": "Masaaki Takasago"
+                "name": "sago35"
               }
             ],
             "categories": [
@@ -4504,7 +4504,7 @@
             "speakers": [
               {
                 "id": "a5f2fdf2-4459-4f50-982e-686d4e9832aa",
-                "name": "Asuka Yagi"
+                "name": "asuka"
               }
             ],
             "categories": [
@@ -4643,7 +4643,7 @@
             "speakers": [
               {
                 "id": "398a776b-adf3-48b6-8510-7891a404302d",
-                "name": "Yoshi Yamaguchi"
+                "name": "ymotongpoo"
               }
             ],
             "categories": [
@@ -4775,7 +4775,7 @@
             "speakers": [
               {
                 "id": "64bc44d2-39b3-4740-a51f-e00649e59f13",
-                "name": "Vaibhav Gupta"
+                "name": "Vaibhav Gupta "
               }
             ],
             "categories": [
@@ -4928,7 +4928,7 @@
               "speakers": [
                 {
                   "id": "f02c223f-8e2f-4e8c-9051-98185b28e81a",
-                  "name": "Kanata Miyahana"
+                  "name": "Pana"
                 }
               ],
               "categories": [
@@ -5527,7 +5527,7 @@
               "speakers": [
                 {
                   "id": "398a776b-adf3-48b6-8510-7891a404302d",
-                  "name": "Yoshi Yamaguchi"
+                  "name": "ymotongpoo"
                 }
               ],
               "categories": [
@@ -5959,7 +5959,7 @@
               "speakers": [
                 {
                   "id": "64bc44d2-39b3-4740-a51f-e00649e59f13",
-                  "name": "Vaibhav Gupta"
+                  "name": "Vaibhav Gupta "
                 }
               ],
               "categories": [
@@ -6211,7 +6211,7 @@
               "speakers": [
                 {
                   "id": "fc5fcbb6-163c-4110-b688-c77bcbdc9a0a",
-                  "name": "Ryosei Karaki"
+                  "name": "karamaru"
                 }
               ],
               "categories": [
@@ -6429,7 +6429,7 @@
               "speakers": [
                 {
                   "id": "67ebc04e-eeac-45a2-813a-a675ff34595b",
-                  "name": "Yuuki Magawa"
+                  "name": "magavel"
                 }
               ],
               "categories": [
@@ -6697,7 +6697,7 @@
               "speakers": [
                 {
                   "id": "f11fdfa9-b120-4fb1-8d89-48564ef645c2",
-                  "name": "Yu Serizawa"
+                  "name": "upamune"
                 }
               ],
               "categories": [
@@ -6831,7 +6831,7 @@
               "speakers": [
                 {
                   "id": "221beeb2-9d4f-41f8-9f86-c9818e137d72",
-                  "name": "Masaaki Takasago"
+                  "name": "sago35"
                 }
               ],
               "categories": [
@@ -6898,7 +6898,7 @@
               "speakers": [
                 {
                   "id": "a5f2fdf2-4459-4f50-982e-686d4e9832aa",
-                  "name": "Asuka Yagi"
+                  "name": "asuka"
                 }
               ],
               "categories": [
