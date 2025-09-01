@@ -94,6 +94,7 @@ import S403JobLogo from "../assets/sponsors/S403-jb.png";
 import S404JobLogo from "../assets/sponsors/S404-jb.png";
 import S406JobLogo from "../assets/sponsors/S406-jb.png";
 import S407JobLogo from "../assets/sponsors/S407-jb.png";
+import S409JobLogo from "../assets/sponsors/S409-jb.jpg";
 import S414JobLogo from "../assets/sponsors/S414-jb.png";
 import S415JobLogo from "../assets/sponsors/S415-jb.png";
 import S418JobLogo from "../assets/sponsors/S418-jb.png";
@@ -106,6 +107,7 @@ import S425JobLogo from "../assets/sponsors/S425-jb.png";
 import S428JobLogo from "../assets/sponsors/S428-jb.png";
 import S429JobLogo from "../assets/sponsors/S429-jb.png";
 import S431JobLogo from "../assets/sponsors/S431-jb.png";
+import S432JobLogo from "../assets/sponsors/S432-jb.png";
 import S433JobLogo from "../assets/sponsors/S433-jb.png";
 import S434JobLogo from "../assets/sponsors/S434-jb.jpg";
 import S435JobLogo from "../assets/sponsors/S435-jb.png";
@@ -541,8 +543,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S409JobLogo,
+          link: "https://tech.yappli.io/",
         },
       },
       {
@@ -701,7 +703,7 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
+          imageSrc: S432JobLogo,
           link: undefined,
         },
       },
