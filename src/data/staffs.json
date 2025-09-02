@@ -544,5 +544,137 @@
         "name": "Go Conference"
       }
     ]
+  },
+  {
+    "id": "34",
+    "name": "tattsum",
+    "company": "株式会社ヤプリ",
+    "avatar": "tatsutatsu103.jpg",
+    "sns": {
+      "link": "https://x.com/tatsutatsu103/",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      }
+    ]
+  },
+  {
+    "id": "35",
+    "name": "yag13s",
+    "company": "フリー株式会社",
+    "avatar": "yag13s.png",
+    "sns": {
+      "link": "https://x.com/yag13s",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      }
+    ]
+  },
+  {
+    "id": "36",
+    "name": "convto",
+    "company": "株式会社LayerX",
+    "avatar": "convto.jpg",
+    "sns": {
+      "link": "https://x.com/convto",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      }
+    ]
+  },
+  {
+    "id": "37",
+    "name": "taramanji",
+    "company": "立命館大学",
+    "avatar": "taramanji.png",
+    "communities": [
+      {
+        "name": "Go Conference"
+      },
+      {
+        "name": "kyoto.go"
+      },
+      {
+        "name": "CA.go"
+      }
+    ]
+  },
+  {
+    "id": "38",
+    "name": "オーガ",
+    "avatar": "o_ga09.jpg",
+    "sns": {
+      "link": "https://x.com/o_ga09",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "name": "toshiyuki mannen",
+    "company": "金沢大学",
+    "avatar": "tosshy820.jpg",
+    "sns": {
+      "link": "https://x.com/tosshy820",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      }
+    ]
+  },
+  {
+    "id": "40",
+    "name": "きょー",
+    "company": "株式会社エブリー",
+    "avatar": "Keyl0ve_.jpg",
+    "sns": {
+      "link": "https://x.com/Keyl0ve_",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      }
+    ]
+  },
+  {
+    "id": "41",
+    "name": "soni",
+    "company": "NOT A HOTEL, Inc.",
+    "avatar": "soni.jpg",
+    "communities": [
+      {
+        "name": "Go Conference"
+      }
+    ]
+  },
+  {
+    "id": "42",
+    "name": "Kubbo",
+    "company": "株式会社GROWTH VERSE",
+    "avatar": "senritsu_3150.jpg",
+    "sns": {
+      "link": "https://x.com/senritsu_3150",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      }
+    ]
   }
 ]
