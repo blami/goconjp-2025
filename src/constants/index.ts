@@ -107,7 +107,6 @@ import S425JobLogo from "../assets/sponsors/S425-jb.png";
 import S428JobLogo from "../assets/sponsors/S428-jb.png";
 import S429JobLogo from "../assets/sponsors/S429-jb.png";
 import S431JobLogo from "../assets/sponsors/S431-jb.png";
-import S432JobLogo from "../assets/sponsors/S432-jb.png";
 import S433JobLogo from "../assets/sponsors/S433-jb.png";
 import S434JobLogo from "../assets/sponsors/S434-jb.jpg";
 import S435JobLogo from "../assets/sponsors/S435-jb.png";
@@ -703,7 +702,7 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: S432JobLogo,
+          imageSrc: NoImage,
           link: undefined,
         },
       },
