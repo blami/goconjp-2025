@@ -4003,7 +4003,7 @@
           },
           {
             "id": "75d427fb-af6a-4a26-8cca-4d5a95e98f71",
-            "title": "platinum sponsor",
+            "title": "Platinum Sponsor",
             "description": null,
             "startsAt": "2025-09-28T18:00:00",
             "endsAt": "2025-09-28T18:20:00",
@@ -4048,7 +4048,7 @@
             "speakers": [
               {
                 "id": "b2faf973-7fc5-46b3-97ca-3b4cffaf7c95",
-                "name": "正大朗 山﨑"
+                "name": "Shotaro Yamasaki"
               }
             ],
             "categories": [
@@ -6297,7 +6297,7 @@
             "name": "Room 1",
             "session": {
               "id": "75d427fb-af6a-4a26-8cca-4d5a95e98f71",
-              "title": "platinum sponsor",
+              "title": "Platinum Sponsor",
               "description": null,
               "startsAt": "2025-09-28T18:00:00",
               "endsAt": "2025-09-28T18:20:00",
@@ -6362,7 +6362,7 @@
               "speakers": [
                 {
                   "id": "b2faf973-7fc5-46b3-97ca-3b4cffaf7c95",
-                  "name": "正大朗 山﨑"
+                  "name": "Shotaro Yamasaki"
                 }
               ],
               "categories": [
