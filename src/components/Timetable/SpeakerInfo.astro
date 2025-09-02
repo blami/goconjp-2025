@@ -132,8 +132,12 @@ if (!speaker) {
         }
       </div>
     </div>
-    {/* 会社名を表示する場合はコメントアウト解除する */}
-    {/* <p class="speaker-tagline">{speaker.tagLine}</p> */}
+    {
+      // "-"または"_" の場合は会社名を表示しない
+      !["-", "_"].includes(speaker.tagLine ?? "") && (
+        <p class="speaker-tagline">{speaker.tagLine}</p>
+      )
+    }
   </header>
   <p class="speaker-bio">{speaker.bio}</p>
 </article>
