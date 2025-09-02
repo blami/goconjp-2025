@@ -94,6 +94,7 @@ import S403JobLogo from "../assets/sponsors/S403-jb.png";
 import S404JobLogo from "../assets/sponsors/S404-jb.png";
 import S406JobLogo from "../assets/sponsors/S406-jb.png";
 import S407JobLogo from "../assets/sponsors/S407-jb.png";
+import S409JobLogo from "../assets/sponsors/S409-jb.jpg";
 import S414JobLogo from "../assets/sponsors/S414-jb.png";
 import S415JobLogo from "../assets/sponsors/S415-jb.png";
 import S418JobLogo from "../assets/sponsors/S418-jb.png";
@@ -541,8 +542,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S409JobLogo,
+          link: "https://tech.yappli.io/",
         },
       },
       {
