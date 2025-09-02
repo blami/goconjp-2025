@@ -612,6 +612,25 @@
     "categories": []
   },
   {
+    "id": "b2faf973-7fc5-46b3-97ca-3b4cffaf7c95",
+    "firstName": "",
+    "lastName": "",
+    "fullName": "Shotaro Yamasaki",
+    "bio": null,
+    "tagLine": null,
+    "profilePicture": null,
+    "sessions": [
+      {
+        "id": 1022036,
+        "name": "goplsの拡張によるマイクロサービス間の実装ジャンプ改善"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
     "id": "fe172802-a8f8-4ff5-ba0c-99a9d6a4b14e",
     "firstName": "",
     "lastName": "",
@@ -934,25 +953,6 @@
       {
         "id": 1022070,
         "name": "Goに育てられ開発者向けセキュリティ事業を立ち上げた僕が今向き合う、AI × セキュリティの最前線"
-      }
-    ],
-    "isTopSpeaker": false,
-    "links": [],
-    "questionAnswers": [],
-    "categories": []
-  },
-  {
-    "id": "b2faf973-7fc5-46b3-97ca-3b4cffaf7c95",
-    "firstName": "",
-    "lastName": "",
-    "fullName": "正大朗 山﨑",
-    "bio": null,
-    "tagLine": null,
-    "profilePicture": null,
-    "sessions": [
-      {
-        "id": 1022036,
-        "name": "goplsの拡張によるマイクロサービス間の実装ジャンプ改善"
       }
     ],
     "isTopSpeaker": false,
