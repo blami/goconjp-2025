@@ -70,7 +70,9 @@ import S452Logo from "../assets/sponsors/S452.png";
 import S453Logo from "../assets/sponsors/S453.png";
 import S454Logo from "../assets/sponsors/S454.png";
 import S456Logo from "../assets/sponsors/S456.png";
+import S460Logo from "../assets/sponsors/S460.png";
 import S462Logo from "../assets/sponsors/S462.png";
+import S463Logo from "../assets/sponsors/S463.png";
 
 // ジョブボード
 import EVERYJobLogo from "../assets/sponsors/S102-jb.jpg";
@@ -114,6 +116,7 @@ import S435JobLogo from "../assets/sponsors/S435-jb.png";
 import S436JobLogo from "../assets/sponsors/S436-jb.png";
 import S437JobLogo from "../assets/sponsors/S437-jb.png";
 import S438JobLogo from "../assets/sponsors/S438-jb.png";
+import S440JobLogo from "../assets/sponsors/S440-jb.png";
 import S442JobLogo from "../assets/sponsors/S442-jb.png";
 import S443JobLogo from "../assets/sponsors/S443-jb.png";
 import S444JobLogo from "../assets/sponsors/S444-jb.jpg";
@@ -125,6 +128,8 @@ import S452JobLogo from "../assets/sponsors/S452-jb.png";
 import S453JobLogo from "../assets/sponsors/S453-jb.png";
 import S454JobLogo from "../assets/sponsors/S454-jb.png";
 import S456JobLogo from "../assets/sponsors/S456-jb.png";
+import S460JobLogo from "../assets/sponsors/S460-jb.png";
+import S462JobLogo from "../assets/sponsors/S462-jb.png";
 
 const venueSponsorImageSize = {
   height: 242,
@@ -704,7 +709,7 @@ export const constants = {
         width: bronzeSponsorImageSize.width,
         jobBoard: {
           imageSrc: S432JobLogo,
-          link: undefined,
+          link: "https://www.mirrativ.co.jp/recruit/",
         },
       },
       {
@@ -773,7 +778,7 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
+          imageSrc: S440JobLogo,
           link: undefined,
         },
       },
@@ -904,7 +909,7 @@ export const constants = {
         width: bronzeSponsorImageSize.width,
         jobBoard: {
           imageSrc: S454JobLogo,
-          link: undefined,
+          link: "https://recruit.v-standard.com/engineer",
         },
       },
       {
@@ -918,8 +923,28 @@ export const constants = {
         },
       },
       {
+        name: "株式会社テックオーシャン",
+        imageSrc: S460Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: S460JobLogo,
+          link: "https://recruit.techocean.co.jp/",
+        },
+      },
+      {
         name: "株式会社Kyash",
         imageSrc: S462Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: S462JobLogo,
+          link: "https://www.kyash.co/recruit",
+        },
+      },
+      {
+        name: "株式会社ギークニア",
+        imageSrc: S463Logo,
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
