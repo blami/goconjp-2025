@@ -8,20 +8,16 @@ import NoImage from "../../assets/sponsors/no-image.png";
 <style>
   .job-board {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
     padding: 20px;
     width: 100%;
     gap: 24px;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     .job-board {
-      grid-template-columns: 1fr 1fr; /* 画面が900px以下なら2列 */
-    }
-  }
-  @media (max-width: 600px) {
-    .job-board {
-      grid-template-columns: 1fr; /* 600px以下なら1列 */
+      padding: unset;
+      grid-template-columns: 1fr; /* 1200px以下なら1列 */
     }
   }
 </style>
