@@ -116,7 +116,6 @@ import S435JobLogo from "../assets/sponsors/S435-jb.png";
 import S436JobLogo from "../assets/sponsors/S436-jb.png";
 import S437JobLogo from "../assets/sponsors/S437-jb.png";
 import S438JobLogo from "../assets/sponsors/S438-jb.png";
-import S440JobLogo from "../assets/sponsors/S440-jb.png";
 import S442JobLogo from "../assets/sponsors/S442-jb.png";
 import S443JobLogo from "../assets/sponsors/S443-jb.png";
 import S444JobLogo from "../assets/sponsors/S444-jb.jpg";
@@ -679,7 +678,7 @@ export const constants = {
         width: bronzeSponsorImageSize.width,
         jobBoard: {
           imageSrc: S428JobLogo,
-          link: "https://hrmos.co/pages/cartaholdings/jobs/fl-e001?utm_source=gocon2025&utm_medium=Paid+Other&utm_campaign=gocon2025_sponsor",
+          link: "https://hrmos.co/pages/cartaholdings/jobs?category=1260098130969743360,2004030079573598216&utm_source=gocon2025&utm_medium=Paid+Other&utm_campaign=gocon2025_sponsor",
         },
       },
       {
@@ -778,7 +777,7 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: S440JobLogo,
+          imageSrc: NoImage,
           link: undefined,
         },
       },
